@@ -29,5 +29,11 @@ SASS framework based on SuitCSS naming conventions
     ├── main.scss
     ├── modules
     │   └── _modules-cofig.scss
+    ├── node_modules
+    │   ├── gulp
+    │   ├── gulp-autoprefixer
+    │   ├── gulp-ruby-sass
+    │   └── gulp-sassdoc
+    ├── package.json
     └── vendors
         └── _vendors-config.scss
