@@ -1,0 +1,30 @@
+sassySuit
+=========
+
+SASS framework based on SuitCSS naming conventions 
+
+
+## Project structure tree 
+
+    ├── LICENSE
+    ├── README.md
+    ├── _base.scss
+    ├── _config.scss
+    ├── _normalize.scss
+    ├── _variables.scss
+    ├── components
+    │   └── _components-config.scss
+    ├── core
+    │   ├── _core-config.scss
+    │   ├── functions
+    │   ├── mixins
+    │   └── placeholders
+    ├── fonts
+    ├── gulpfile.js
+    ├── helpers
+    │   └── _helpers-config.scss
+    ├── main.scss
+    ├── modules
+    │   └── _modules-cofig.scss
+    └── vendors
+        └── _vendors-config.scss
