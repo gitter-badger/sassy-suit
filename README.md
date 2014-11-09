@@ -1,7 +1,7 @@
 SassySuit
 =========
 
-SASS framework based on SuitCSS naming conventions 
+SASS framework based on Suit CSS naming [conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md). 
 
 ## SassySuit Trello board 
 
