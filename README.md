@@ -1,10 +1,13 @@
-sassySuit
+SassySuit
 =========
 
 SASS framework based on SuitCSS naming conventions 
 
+## SassySuit Trello board 
 
-## Project structure tree 
+[Trello board](https://trello.com/b/auSCHtYg/development)
+
+## SassySuit structure tree 
 
     ├── LICENSE
     ├── README.md
