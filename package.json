@@ -23,6 +23,7 @@
   "homepage": "https://github.com/SassySuit/sassySuit",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^1.0.1",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-sassdoc": "^1.1.1"
   }
