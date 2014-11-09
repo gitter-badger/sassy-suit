@@ -1,0 +1,28 @@
+{
+  "name": "sassySuit",
+  "version": "0.0.1",
+  "description": "SASS framework based on SuitCSS naming conventions",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SassySuit/sassySuit.git"
+  },
+  "keywords": [
+    "SASS",
+    "framework",
+    "CSS"
+  ],
+  "author": "Vova Skok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SassySuit/sassySuit/issues"
+  },
+  "homepage": "https://github.com/SassySuit/sassySuit",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-sassdoc": "^1.1.1"
+  }
+}
