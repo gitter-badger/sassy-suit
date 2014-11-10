@@ -1,9 +1,8 @@
 @mixin margin-generation($margins, $marginDirections) {
 
-  @each $size, $margin in $margins {
+  	@each $size, $margin in $margins {
 
 	    @each $directionValue, $direction in $marginDirections {
-
 
 			@if $directionValue == "base" {
 
@@ -32,7 +31,6 @@
 				}
 
 			}
-
 
 	    }
   	}
