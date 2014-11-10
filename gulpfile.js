@@ -3,16 +3,16 @@
 var gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
 	autoprefixer 	= require('gulp-autoprefixer'),
-	sassDoc			= reuire('gulp-sassdoc');
+	sassdoc			= require('gulp-sassdoc');
 
 //
 gulp.task('default', function() {
-	return gulp.src('main.scss')
+	return gulp.src('sassySuit.scss')
     	.pipe(sass({
     		style: 'expanded'
     	}))
     	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    	.pipe(gulp.dest('dist/main.css'))
+    	.pipe(gulp.dest('dist/'))
 });
 
 /**
@@ -23,9 +23,9 @@ gulp.task('default', function() {
 *
 **/
 gulp.task('sassdoc', function () {
-  	return gulp.src('/')
+  	return gulp.src('sassySuit.scss')
     	.pipe(sassdoc({
-      		'dest': 'build/sassdocs'
+      		'dest': 'dist/sassdocs'
     	}));
 });
 
