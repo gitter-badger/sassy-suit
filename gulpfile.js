@@ -23,11 +23,15 @@ gulp.task('default', function() {
 *
 **/
 gulp.task('sassdoc', function () {
-  	return gulp.src('sassySuit.scss')
-    	.pipe(sassdoc({
-      		'dest': 'dist/sassdocs'
-    	}));
+  	var options = {
+      'dest': 		'dist/sassdocs',
+      'basePath': 	'https://github.com/SassySuit/sassySuit'
+    };
+
+    return gulp.src('')
+    	.pipe(sassdoc(options));
 });
+
 
 gulp.task('watch', function() {
 	gulp.watch('*.scss', ['sassdoc', 'default']);
