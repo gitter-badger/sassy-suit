@@ -34,5 +34,5 @@ gulp.task('sassdoc', function () {
 
 
 gulp.task('watch', function() {
-	gulp.watch('*.scss', ['default']);
+	gulp.watch('**/*.scss', ['default']);
 });
