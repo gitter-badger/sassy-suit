@@ -1,4 +1,4 @@
-@mixin margin-generation($margins, $marginDirections) {
+@mixin margins-generation($margins, $marginDirections) {
 
   	@each $size, $margin in $margins {
 
