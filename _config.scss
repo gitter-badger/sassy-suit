@@ -21,3 +21,29 @@ $marginDirections: (
 
 /*-----  End of Margins  ------*/
 
+
+
+
+/*===============================
+=            Paddings            =
+===============================*/
+
+$paddings: (
+	Xs:   	5px,
+	Sm:   	10px,
+	Md:   	15px,
+	Lg:   	20px,
+	Xl:   	25px,
+	Xxl: 	30px
+);
+
+$paddingDirections: (
+	base: 		"",
+	top: 		"Top",
+	right: 		"Right",
+	bottom: 	"Bottom",
+	left: 		"Left"
+);
+
+/*-----  End of Paddings  ------*/
+
