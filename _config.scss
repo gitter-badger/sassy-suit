@@ -24,17 +24,18 @@ $marginDirections: (
 
 
 
+
 /*===============================
 =            Paddings            =
 ===============================*/
 
 $paddings: (
-	Xs:   	5px,
-	Sm:   	10px,
-	Md:   	15px,
-	Lg:   	20px,
-	Xl:   	25px,
-	Xxl: 	30px
+	Xs:   		5px,
+	Sm:   		10px,
+	Md:   		15px,
+	Lg:   		20px,
+	Xl:   		25px,
+	Xxl: 		30px
 );
 
 $paddingDirections: (
@@ -46,4 +47,24 @@ $paddingDirections: (
 );
 
 /*-----  End of Paddings  ------*/
+
+
+
+
+
+/*====================================
+=            Break points            =
+====================================*/
+
+$breakpoints: (
+	xs:   		300px,
+	sm:   		400px,
+	md:   		500px,
+	lg:   		650px,
+	xl:   		800px,
+	xxl: 		950px
+);
+
+/*-----  End of Break points  ------*/
+
 
