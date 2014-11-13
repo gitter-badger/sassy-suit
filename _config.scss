@@ -1,3 +1,23 @@
+
+/*====================================
+=            Break points            =
+====================================*/
+
+$breakpoints: (
+	xs:   		300px,
+	sm:   		400px,
+	md:   		500px,
+	lg:   		650px,
+	xl:   		800px,
+	xxl: 		950px
+);
+
+/*-----  End of Break points  ------*/
+
+
+
+
+
 /*===============================
 =            Margins            =
 ===============================*/
@@ -52,19 +72,18 @@ $paddingDirections: (
 
 
 
-/*====================================
-=            Break points            =
-====================================*/
+/*==================================
+=            Typography            =
+==================================*/
 
-$breakpoints: (
-	xs:   		300px,
-	sm:   		400px,
-	md:   		500px,
-	lg:   		650px,
-	xl:   		800px,
-	xxl: 		950px
+$typography: (
+	base: 16px,
+	exponential: 8,
+	common-ratio: 1.333,
+	index: -2,
+	line-height-ratio: 1.15,
+	margin-ratio: 1.15
 );
 
-/*-----  End of Break points  ------*/
-
+/*-----  End of Typography  ------*/
 
