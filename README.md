@@ -19,11 +19,17 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	├── _palette.scss
 	├── _variables.scss
 	├── components
-	│   └── _components-config.scss
+	│   ├── _components-config.scss
+	│   └── _typography.scss
 	├── core
 	│   ├── _core-config.scss
 	│   ├── functions
+	│   │   ├── _array-output.scss
+	│   │   ├── _breakpoints-calc.scss
+	│   │   └── _typography-calc.scss
 	│   └── mixins
+	│       ├── _breakpoints-generation.scss
+	│       ├── _clearfix-generation.scss
 	│       ├── _margins-generation.scss
 	│       ├── _paddings-generation.scss
 	│       └── _triangles-generation.scss
@@ -33,6 +39,7 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	├── fonts
 	│   └── _fonts-config.scss
 	├── gulpfile.js
+	├── index.html
 	├── modules
 	│   └── _modules-config.scss
 	├── node_modules
@@ -45,8 +52,9 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	│   └── _pages-config.scss
 	├── sassySuit.scss
 	├── utils
-	│   ├── _margins-generation.scss
-	│   ├── _paddings-generation.scss
+	│   ├── _clearfix.scss
+	│   ├── _margins.scss
+	│   ├── _paddings.scss
 	│   └── _utils-config.scss
 	└── vendors
 	    ├── _map-into-list.scss
