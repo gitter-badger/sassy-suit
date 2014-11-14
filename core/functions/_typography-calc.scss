@@ -1,19 +1,17 @@
 $base: 						map-get($typography, base);
-$exponential: 				map-get($typography, exponential);
-$common-ratio: 				map-get($typography, common-ratio);
 $index: 					map-get($typography, index);
-$line-height-ratio:			map-get($typography, line-height-ratio);
-$desktop-ratio: 			map-get($typography, desktop-ratio);
-$margin-ratio: 				map-get($typography, margin-ratio);
+$length: 					map-get($typography, length);
+$fontSizeRatio: 			map-get($typography, fontSizeRatio);
+$lineHeightRatio:			map-get($typography, lineHeightRatio);
+$marginRatio: 				map-get($typography, marginRatio);
 
-
-@function font-size-sequence($exponential, $base, $common-ratio, $index) {
+@function font-size-sequence($length, $base, $common-ratio, $index) {
 	$sequence: ($base);
 	@if $index == 0 {
 		$sequence: $base;
 	}
 	@if $index < 0 {
-		@for $i from $index through $exponential - -$index {
+		@for $i from $index through $length - -$index {
 			@if $i < 0 {
 				$new:nth($sequence, length($sequence)) / $common-ratio;
 	    		$sequence: append($sequence, $new);
@@ -29,7 +27,7 @@ $margin-ratio: 				map-get($typography, margin-ratio);
 	  	}
 	}
 	@if $index > 0 {
-	  	@for $i from $index through $exponential {
+	  	@for $i from $index through $length {
 	    	$new: nth($sequence, length($sequence)) * $common-ratio;
 	    	$sequence: append($sequence, $new);
 	  	}
@@ -37,19 +35,19 @@ $margin-ratio: 				map-get($typography, margin-ratio);
   	@return $sequence;
 }
 
-@function line-height-ratio-sequence($value, $line-height-ratio) {
-	@return $value * $line-height-ratio;
+@function line-height-ratio-sequence($value, $lineHeightRatio) {
+	@return $value * $lineHeightRatio;
 }
 
-@function margin-ratio-sequence($value, $margin-ratio) {
-	@return $value * $margin-ratio / 2;
+@function margin-ratio-sequence($value, $marginRatio) {
+	@return $value * $marginRatio / 2;
 }
 
-$font-size-sequence-beta: sl-unique(sl-sort(font-size-sequence($exponential, $base, $common-ratio, $index)));
+$font-size-sequence-beta: sl-unique(sl-sort(font-size-sequence($length, $base, $fontSizeRatio, $index)));
 $font-size-sequence: sl-walk($font-size-sequence-beta, round);
 
-$line-height-sequence-beta: sl-walk($font-size-sequence, line-height-ratio-sequence, $line-height-ratio);
+$line-height-sequence-beta: sl-walk($font-size-sequence, line-height-ratio-sequence, $lineHeightRatio);
 $line-height-sequence: sl-walk($line-height-sequence-beta, round);
 
-$margin-sequence-beta: sl-walk($font-size-sequence, margin-ratio-sequence, $margin-ratio);
+$margin-sequence-beta: sl-walk($font-size-sequence, margin-ratio-sequence, $marginRatio);
 $margin-sequence: sl-walk($margin-sequence-beta, round);
