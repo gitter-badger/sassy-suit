@@ -4,12 +4,12 @@
 ====================================*/
 
 $breakpoints: (
-	xs:   		300px,
-	sm:   		400px,
-	md:   		500px,
-	lg:   		650px,
-	xl:   		800px,
-	xxl: 		950px
+	xs:   				300px,
+	sm:   				400px,
+	md:   				500px,
+	lg:   				650px,
+	xl:   				800px,
+	xxl: 				950px
 );
 
 /*-----  End of Break points  ------*/
@@ -23,20 +23,20 @@ $breakpoints: (
 ===============================*/
 
 $margins: (
-	Xs:   	5px,
-	Sm:   	10px,
-	Md:   	15px,
-	Lg:   	20px,
-	Xl:   	25px,
-	Xxl: 	30px
+	Xs:   				5px,
+	Sm:   				10px,
+	Md:   				15px,
+	Lg:   				20px,
+	Xl:   				25px,
+	Xxl: 				30px
 );
 
 $marginDirections: (
-	base: 		"",
-	top: 		"Top",
-	right: 		"Right",
-	bottom: 	"Bottom",
-	left: 		"Left"
+	base: 				"",
+	top: 				"Top",
+	right: 				"Right",
+	bottom: 			"Bottom",
+	left: 				"Left"
 );
 
 /*-----  End of Margins  ------*/
@@ -50,20 +50,20 @@ $marginDirections: (
 ===============================*/
 
 $paddings: (
-	Xs:   		5px,
-	Sm:   		10px,
-	Md:   		15px,
-	Lg:   		20px,
-	Xl:   		25px,
-	Xxl: 		30px
+	Xs:   				5px,
+	Sm:   				10px,
+	Md:   				15px,
+	Lg:   				20px,
+	Xl:   				25px,
+	Xxl: 				30px
 );
 
 $paddingDirections: (
-	base: 		"",
-	top: 		"Top",
-	right: 		"Right",
-	bottom: 	"Bottom",
-	left: 		"Left"
+	base: 				"",
+	top: 				"Top",
+	right: 				"Right",
+	bottom: 			"Bottom",
+	left: 				"Left"
 );
 
 /*-----  End of Paddings  ------*/
@@ -77,12 +77,12 @@ $paddingDirections: (
 ==================================*/
 
 $typography: (
-	base: 24px,
-	index: -2,
-	length: 8,
-	fontSizeRatio: 1.5,
-	lineHeightRatio: 1.25,
-	paddingRatio: .75
+	base: 				24px,
+	index: 				-2,
+	length: 			8,
+	fontSizeRatio: 		1.5,
+	lineHeightRatio: 	1.25,
+	paddingRatio: 		.75
 );
 
 /*-----  End of Typography  ------*/

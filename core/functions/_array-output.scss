@@ -1,6 +1,8 @@
 @mixin echo($selector, $array, $comment) {
+
 	#{$selector}:after {
 		content: quote(to-string($array, $comment));
 		white-space: pre-wrap;
 	}
+
 }

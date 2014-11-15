@@ -1,5 +1,6 @@
 
 @mixin list-inlined {
+
 	@include list-unstyled;
 
 	display: inline-block;
@@ -7,6 +8,7 @@
 	> li {
     	display: inline-block;
     }
+
 }
 
 @mixin list-unstyled {

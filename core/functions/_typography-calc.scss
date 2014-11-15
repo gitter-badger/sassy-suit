@@ -6,33 +6,46 @@ $lineHeightRatio:			map-get($typography, lineHeightRatio);
 $paddingRatio: 				map-get($typography, paddingRatio);
 
 @function font-size-sequence($length, $base, $common-ratio, $index) {
+
 	$sequence: ($base);
+
 	@if $index == 0 {
 		$sequence: $base;
 	}
+
 	@if $index < 0 {
+
 		@for $i from $index through $length - -$index {
+
 			@if $i < 0 {
 				$new:nth($sequence, length($sequence)) / $common-ratio;
 	    		$sequence: append($sequence, $new);
 	    		$sequence-in-progress: $sequence;
 			}
+
 			@if $i == 0 {
 				$sequence: append($sequence, $base);
 			}
+
 			@if $i > 0 {
 				$new: nth($sequence, length($sequence)) * $common-ratio;
 				$sequence: append($sequence, $new);
 			}
+
 	  	}
+
 	}
+
 	@if $index > 0 {
+
 	  	@for $i from $index through $length {
 	    	$new: nth($sequence, length($sequence)) * $common-ratio;
 	    	$sequence: append($sequence, $new);
 	  	}
 	}
+
   	@return $sequence;
+
 }
 
 $font-size-sequence-beta: sl-unique(sl-sort(font-size-sequence($length, $base, $fontSizeRatio, $index)));

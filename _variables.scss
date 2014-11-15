@@ -2,12 +2,12 @@
 =            Margins            =
 ===============================*/
 
-$marginXs:  	map-get($margins, Xs);
-$marginSm:  	map-get($margins, Sm);
-$marginMd:  	map-get($margins, Md);
-$marginLg:  	map-get($margins, Lg);
-$marginXl:  	map-get($margins, Xl);
-$marginXxl: 	map-get($margins, Xxl);
+$marginXs:  					map-get($margins, Xs);
+$marginSm:  					map-get($margins, Sm);
+$marginMd:  					map-get($margins, Md);
+$marginLg:  					map-get($margins, Lg);
+$marginXl:  					map-get($margins, Xl);
+$marginXxl: 					map-get($margins, Xxl);
 
 /*-----  End of Margins  ------*/
 
@@ -17,12 +17,12 @@ $marginXxl: 	map-get($margins, Xxl);
 =            Paddings            =
 ===============================*/
 
-$paddingXs:  	map-get($paddings, Xs);
-$paddingSm:  	map-get($paddings, Sm);
-$paddingMd:  	map-get($paddings, Md);
-$paddingLg:  	map-get($paddings, Lg);
-$paddingXl:  	map-get($paddings, Xl);
-$paddingXxl: 	map-get($paddings, Xxl);
+$paddingXs:  					map-get($paddings, Xs);
+$paddingSm:  					map-get($paddings, Sm);
+$paddingMd:  					map-get($paddings, Md);
+$paddingLg:  					map-get($paddings, Lg);
+$paddingXl:  					map-get($paddings, Xl);
+$paddingXxl: 					map-get($paddings, Xxl);
 
 /*-----  End of Paddings  ------*/
 
