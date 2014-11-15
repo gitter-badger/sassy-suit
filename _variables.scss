@@ -28,40 +28,18 @@ $paddingXxl: 	map-get($paddings, Xxl);
 
 
 
+/*==================================
+=            Font Size             =
+==================================*/
 
+$fontSizeXs: 					nth($font-size-sequence, 1); // .smallest
+$fontSizeSm: 					nth($font-size-sequence, 2); // h6, .smaller
+$fontSizeMd: 					nth($font-size-sequence, 3); // h5, p
+$fontSizeLg: 					nth($font-size-sequence, 4); // h4
+$fontSizeXl: 					nth($font-size-sequence, 5); // h3
+$fontSizeXxl: 					nth($font-size-sequence, 6); //	h2
+$fontSizeXxxl: 					nth($font-size-sequence, 7); //	h1
+$fontSizeLarger: 				nth($font-size-sequence, 8); // .larger
+$fontSizeLargest: 				nth($font-size-sequence, 9); // .largest
 
-/*==========  $font-size values  ==========*/
-
-$font-size-xs: 					nth($font-size-sequence, 1); // .smallest
-$font-size-sm: 					nth($font-size-sequence, 2); // h6, .smaller
-$font-size-md: 					nth($font-size-sequence, 3); // h5, p
-$font-size-lg: 					nth($font-size-sequence, 4); // h4
-$font-size-xl: 					nth($font-size-sequence, 5); // h3
-$font-size-xxl: 				nth($font-size-sequence, 6); //	h2
-$font-size-xxxl: 				nth($font-size-sequence, 7); //	h1
-$font-size-larger: 				nth($font-size-sequence, 8); // .larger
-$font-size-largest: 			nth($font-size-sequence, 9); // .largest
-
-/*==========  $line-height values  ==========*/
-
-$line-height-xs: 				nth($line-height-sequence, 1); // .smallest
-$line-height-sm: 				nth($line-height-sequence, 2); // h6, .smaller
-$line-height-md: 				nth($line-height-sequence, 3); // h5, p
-$line-height-lg: 				nth($line-height-sequence, 4); // h4
-$line-height-xl: 				nth($line-height-sequence, 5); // h3
-$line-height-xxl: 				nth($line-height-sequence, 6); // h2
-$line-height-xxxl: 				nth($line-height-sequence, 7); // h1
-$line-height-larger: 			nth($line-height-sequence, 8); // .larger
-$line-height-largest: 			nth($line-height-sequence, 9); // .largest
-
-/*==========  $margin values  ==========*/
-
-$text-margin-xs: 				nth($margin-sequence, 1) 0; // .smallest
-$text-margin-sm: 				nth($margin-sequence, 2) 0; // h6, .smaller
-$text-margin-md: 				nth($margin-sequence, 3) 0; // h5, p
-$text-margin-lg: 				nth($margin-sequence, 4) 0; // h4
-$text-margin-xl: 				nth($margin-sequence, 5) 0; // h3
-$text-margin-xxl: 				nth($margin-sequence, 6) 0; // h2
-$text-margin-xxxl: 				nth($margin-sequence, 7) 0; // h1
-$text-margin-larger: 			nth($margin-sequence, 8) 0; // .larger
-$text-margin-largest: 			nth($margin-sequence, 9) 0; // .largest
+/*-----  End of Font Size   ------*/
