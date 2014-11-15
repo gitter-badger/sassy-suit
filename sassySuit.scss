@@ -1,8 +1,6 @@
 @import "_h5bp.scss";
 @import "_normalize.scss";
 
-// @import url('google-web-font');
-@import "fonts/_fonts-config.scss";
 
 @import "vendors/_vendors-config.scss";
 
@@ -11,6 +9,8 @@
 @import "_palette.scss";
 
 @import "core/_core-config.scss";
+
+@import "_web-fonts.scss";
 
 @import "_variables.scss";
 
