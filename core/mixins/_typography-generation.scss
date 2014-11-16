@@ -1,0 +1,29 @@
+@mixin typography-base($fontSize: $fontSizeMd, $fontFamily: $fontText, $lineHeight: false, $color: $colorGrey800, $padding: false, $letter-spacing: false) {
+
+	@if $padding == false {
+		padding: ($fontSize * $paddingRatio / 2) 0;
+	}
+	@else {
+		padding: $padding 0;
+	}
+
+	font-size: $fontSize;
+	font-family: $fontFamily, sans-serif;
+
+	@if $lineHeight == false {
+		line-height: $fontSize * get-map($typography, lineHeightRatio); // lineHeightRatio
+	}
+
+	@else {
+		line-height: $lineHeight;
+	}
+
+	@if $letter-spacing == true {
+		letter-spacing: $letter-spacing;
+	}
+
+	color: $color;
+}
+
+
+// @include typography-base($fontSizeXxxl, $fontFamilyHeaderAlt, $colorRed500);

@@ -72,6 +72,29 @@ $paddingDirections: (
 
 
 
+/*=============================
+=            Fonts            =
+=============================*/
+
+$fonts: (
+	header: 			Roboto,
+	headerAlt:  		Nunito,
+	headerBold: 		(Roboto: 700),
+	headerLight: 		(Roboto: 300),
+	headerItalic: 		"Roboto: 400, italic",
+	text: 				Open Sans,
+	textAlt: 			Dosis,
+	textBold: 			(Open Sans: 700),
+	textLight: 			(Open Sans: 300),
+	textItalic: 		"Open Sans: 400, italic"
+);
+
+/*-----  End of Fonts  ------*/
+
+
+
+
+
 /*==================================
 =            Typography            =
 ==================================*/
@@ -82,7 +105,7 @@ $typography: (
 	length: 			8,
 	fontSizeRatio: 		1.5,
 	lineHeightRatio: 	1.25,
-	paddingRatio: 		.75
+	paddingRatio: 		.465
 );
 
 /*-----  End of Typography  ------*/

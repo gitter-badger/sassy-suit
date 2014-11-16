@@ -1,56 +1,63 @@
 p {
-	padding: 		round($fontSizeMd * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeMd;
-	line-height:  	round($fontSizeMd * $lineHeightRatio);
-	color: 			$colorGrey900;
+	padding: 			round($fontSizeMd * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeMd;
+	font-family: 		$fontFamilyTextAlt, sans-serif;
+	line-height:  		round($fontSizeMd * $lineHeightRatio);
+	letter-spacing: 	-.25px;
+	color: 				$colorGrey900;
 }
 
 
 h6, .h6 {
-	display: 		block;
-	padding: 		round($fontSizeSm * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeSm;
-	line-height:  	round($fontSizeSm * $lineHeightRatio);
-	color: 			$colorGrey800;
+	padding: 			round($fontSizeSm * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeSm;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeSm * $lineHeightRatio);
+	letter-spacing: 	-1px;
+	color: 				$colorGrey800;
 }
 
 h5, .h5 {
-	display: 		block;
-	padding: 		round($fontSizeMd * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeMd;
-	line-height:  	round($fontSizeMd * $lineHeightRatio);
-	color: 			$colorGrey800;
+	padding: 			round($fontSizeMd * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeMd;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeMd * $lineHeightRatio);
+	letter-spacing: 	-1px;
+	color: 				$colorGrey800;
 }
 
 h4,	.h4 {
-	display: 		block;
-	padding: 		round($fontSizeLg * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeLg;
-	line-height:  	round($fontSizeLg * $lineHeightRatio);
-	color: 			$colorGrey800;
-
+	padding: 			round($fontSizeLg * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeLg;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeLg * $lineHeightRatio);
+	letter-spacing: 	-3px;
+	color: 				$colorGrey800;
 }
 
 h3, .h3 {
-	display: 		block;
-	padding: 		round($fontSizeXl * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeXl;
-	line-height:  	round($fontSizeXl * $lineHeightRatio);
-	color: 			$colorGrey800;
+	padding: 			round($fontSizeXl * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeXl;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeXl * $lineHeightRatio);
+	letter-spacing: 	-3px;
+	color: 				$colorGrey800;
 }
 
 h2, .h2 {
-	display: 		block;
-	padding: 		round($fontSizeXxl * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeXxl;
-	line-height:  	round($fontSizeXxl * $lineHeightRatio);
-	color: 			$colorGrey800;
+	padding: 			round($fontSizeXxl * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeXxl;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeXxl * $lineHeightRatio);
+	letter-spacing: 	-3px;
+	color: 				$colorGrey800;
 }
 
 h1, .h1 {
-	display: 		block;
-	padding: 		round($fontSizeXxxl * $paddingRatio / 2) 0;
-	font-size: 		$fontSizeXxxl;
-	line-height:  	round($fontSizeXxxl * $lineHeightRatio);
-	color: 			$colorGrey800;
+	padding: 			round($fontSizeXxxl * $paddingRatio / 2) 0;
+	font-size: 			$fontSizeXxxl;
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	line-height:  		round($fontSizeXxxl * $lineHeightRatio);
+	letter-spacing: 	-5px;
+	color: 				$colorGrey800;
 }

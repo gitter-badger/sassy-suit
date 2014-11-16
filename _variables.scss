@@ -28,8 +28,33 @@ $paddingXxl: 					map-get($paddings, Xxl);
 
 
 
+
+
+/*===================================
+=            Font Families          =
+===================================*/
+
+$fontFamilyHeader: 				map-get($fonts, header);
+$fontFamilyHeaderAlt: 			map-get($fonts, headerAlt);
+$fontFamilyHeaderBold: 			map-get($fonts, headerBold);
+$fontFamilyHeaderLight: 		map-get($fonts, headerLight);
+$fontFamilyHeaderItalic: 		map-get($fonts, headerItalic);
+
+$fontFamilyText: 				map-get($fonts, text);
+$fontFamilyTextAlt: 			map-get($fonts, textAlt);
+$fontFamilyTextBold: 			map-get($fonts, textBold);
+$fontFamilyTextLight: 			map-get($fonts, textLight);
+$fontFamilyTextItalic: 			map-get($fonts, textItalic);
+
+/*-----  End of Font Families  ------*/
+
+
+
+
+
+
 /*==================================
-=            Font Size             =
+=            Font Sizes            =
 ==================================*/
 
 $fontSizeXs: 					nth($font-size-sequence, 1); // .smallest
@@ -42,4 +67,4 @@ $fontSizeXxxl: 					nth($font-size-sequence, 7); //	h1
 $fontSizeLarger: 				nth($font-size-sequence, 8); // .larger
 $fontSizeLargest: 				nth($font-size-sequence, 9); // .largest
 
-/*-----  End of Font Size   ------*/
+/*-----  End of Font Sizes  ------*/
