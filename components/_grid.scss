@@ -1,0 +1,15 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 1200px;
+
+	background-color: $colorGrey500;
+
+	@include clearfix;
+
+	@include bp(md) {
+		padding: 0 150px;
+	}
+
+}
