@@ -45,9 +45,9 @@ $marginDirections: (
 
 
 
-/*===============================
+/*================================
 =            Paddings            =
-===============================*/
+================================*/
 
 $paddings: (
 	Xs:   				5px,
@@ -76,7 +76,7 @@ $paddingDirections: (
 =            Fonts            =
 =============================*/
 
-$fonts: (
+$fontFamilies: (
 	header: 			Roboto,
 	headerAlt:  		Nunito,
 	headerBold: 		(Roboto: 700),
@@ -95,6 +95,25 @@ $fonts: (
 
 
 
+/*=========================================
+=            Font Family Names            =
+=========================================*/
+
+$fontFamilyNames: (
+	header: 			"Roboto, sans-serif",
+	headerAlt: 			"Nunito, sans-serif",
+	text: 				"Open Sans, sans-serif",
+	textAlt: 			"Dosis, sans-serif"
+);
+
+/*-----  End of Font Family Names  ------*/
+
+
+
+
+
+
+
 /*==================================
 =            Typography            =
 ==================================*/
@@ -105,7 +124,7 @@ $typography: (
 	length: 			8,
 	fontSizeRatio: 		1.5,
 	lineHeightRatio: 	1.25,
-	paddingRatio: 		.465
+	paddingRatio: 		1.465
 );
 
 /*-----  End of Typography  ------*/

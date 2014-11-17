@@ -14,7 +14,7 @@ $marginXxl: 					map-get($margins, Xxl);
 
 
 /*===============================
-=            Paddings            =
+=           Paddings            =
 ===============================*/
 
 $paddingXs:  					map-get($paddings, Xs);
@@ -31,23 +31,35 @@ $paddingXxl: 					map-get($paddings, Xxl);
 
 
 /*===================================
-=            Font Families          =
+=      Font Family Configs          =
 ===================================*/
 
-$fontFamilyHeader: 				map-get($fonts, header);
-$fontFamilyHeaderAlt: 			map-get($fonts, headerAlt);
-$fontFamilyHeaderBold: 			map-get($fonts, headerBold);
-$fontFamilyHeaderLight: 		map-get($fonts, headerLight);
-$fontFamilyHeaderItalic: 		map-get($fonts, headerItalic);
+$fontFamilyHeader: 				map-get($fontFamilies, header);
+$fontFamilyHeaderAlt: 			map-get($fontFamilies, headerAlt);
+$fontFamilyHeaderBold: 			map-get($fontFamilies, headerBold);
+$fontFamilyHeaderLight: 		map-get($fontFamilies, headerLight);
+$fontFamilyHeaderItalic: 		map-get($fontFamilies, headerItalic);
 
-$fontFamilyText: 				map-get($fonts, text);
-$fontFamilyTextAlt: 			map-get($fonts, textAlt);
-$fontFamilyTextBold: 			map-get($fonts, textBold);
-$fontFamilyTextLight: 			map-get($fonts, textLight);
-$fontFamilyTextItalic: 			map-get($fonts, textItalic);
+$fontFamilyText: 				map-get($fontFamilies, text);
+$fontFamilyTextAlt: 			map-get($fontFamilies, textAlt);
+$fontFamilyTextBold: 			map-get($fontFamilies, textBold);
+$fontFamilyTextLight: 			map-get($fontFamilies, textLight);
+$fontFamilyTextItalic: 			map-get($fontFamilies, textItalic);
 
-/*-----  End of Font Families  ------*/
+/*-----  End of Font Family Configs  ------*/
 
+
+
+/*=========================================
+=            Font Family Names            =
+=========================================*/
+
+$fontFamilyNameHeader: 			map-get($fontFamilyNames, header);
+$fontFamilyNameHeaderAlt:		map-get($fontFamilyNames, headerAlt);
+$fontFamilyNameText:			map-get($fontFamilyNames, text);
+$fontFamilyNameTextAlt:			map-get($fontFamilyNames, textAlt);
+
+/*-----  End of Font Family Names  ------*/
 
 
 
@@ -68,3 +80,47 @@ $fontSizeLarger: 				nth($fontSizeSequence, 8); // .larger
 $fontSizeLargest: 				nth($fontSizeSequence, 9); // .largest
 
 /*-----  End of Font Sizes  ------*/
+
+
+
+
+
+/*========================================
+=            Font Line Height            =
+========================================*/
+
+$lineHeightXs: 					nth($lineHeightSequence, 1); // .smallest
+$lineHeightSm: 					nth($lineHeightSequence, 2); // h6, .smaller
+$lineHeightMd: 					nth($lineHeightSequence, 3); // h5, p
+$lineHeightLg: 					nth($lineHeightSequence, 4); // h4
+$lineHeightXl: 					nth($lineHeightSequence, 5); // h3
+$lineHeightXxl: 					nth($lineHeightSequence, 6); //	h2
+$lineHeightXxxl: 					nth($lineHeightSequence, 7); //	h1
+$lineHeightLarger: 				nth($lineHeightSequence, 8); // .larger
+$lineHeightLargest: 				nth($lineHeightSequence, 9); // .largest
+
+
+/*-----  End of Font Line Height  ------*/
+
+
+
+
+
+/*=====================================
+=            Font Paddings            =
+=====================================*/
+
+$fontPaddingXs: 					nth($fontPaddingSequence, 1); // .smallest
+$fontPaddingSm: 					nth($fontPaddingSequence, 2); // h6, .smaller
+$fontPaddingMd: 					nth($fontPaddingSequence, 3); // h5, p
+$fontPaddingLg: 					nth($fontPaddingSequence, 4); // h4
+$fontPaddingXl: 					nth($fontPaddingSequence, 5); // h3
+$fontPaddingXxl: 					nth($fontPaddingSequence, 6); //	h2
+$fontPaddingXxxl: 					nth($fontPaddingSequence, 7); //	h1
+$fontPaddingLarger: 				nth($fontPaddingSequence, 8); // .larger
+$fontPaddingLargest: 				nth($fontPaddingSequence, 9); // .largest
+
+
+/*-----  End of Font Paddings  ------*/
+
+
