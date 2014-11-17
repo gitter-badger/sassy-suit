@@ -48,6 +48,6 @@ $paddingRatio: 				map-get($typography, paddingRatio);
 
 }
 
-$font-size-sequence-beta: sl-unique(sl-sort(font-size-sequence($length, $base, $fontSizeRatio, $index)));
+$fontSizeSequenceRaw: sl-unique(sl-sort(font-size-sequence($length, $base, $fontSizeRatio, $index)));
 
-$font-size-sequence: sl-walk($font-size-sequence-beta, round);
+$fontSizeSequence: sl-walk($fontSizeSequenceRaw, round);

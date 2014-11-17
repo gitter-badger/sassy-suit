@@ -57,14 +57,14 @@ $fontFamilyTextItalic: 			map-get($fonts, textItalic);
 =            Font Sizes            =
 ==================================*/
 
-$fontSizeXs: 					nth($font-size-sequence, 1); // .smallest
-$fontSizeSm: 					nth($font-size-sequence, 2); // h6, .smaller
-$fontSizeMd: 					nth($font-size-sequence, 3); // h5, p
-$fontSizeLg: 					nth($font-size-sequence, 4); // h4
-$fontSizeXl: 					nth($font-size-sequence, 5); // h3
-$fontSizeXxl: 					nth($font-size-sequence, 6); //	h2
-$fontSizeXxxl: 					nth($font-size-sequence, 7); //	h1
-$fontSizeLarger: 				nth($font-size-sequence, 8); // .larger
-$fontSizeLargest: 				nth($font-size-sequence, 9); // .largest
+$fontSizeXs: 					nth($fontSizeSequence, 1); // .smallest
+$fontSizeSm: 					nth($fontSizeSequence, 2); // h6, .smaller
+$fontSizeMd: 					nth($fontSizeSequence, 3); // h5, p
+$fontSizeLg: 					nth($fontSizeSequence, 4); // h4
+$fontSizeXl: 					nth($fontSizeSequence, 5); // h3
+$fontSizeXxl: 					nth($fontSizeSequence, 6); //	h2
+$fontSizeXxxl: 					nth($fontSizeSequence, 7); //	h1
+$fontSizeLarger: 				nth($fontSizeSequence, 8); // .larger
+$fontSizeLargest: 				nth($fontSizeSequence, 9); // .largest
 
 /*-----  End of Font Sizes  ------*/
