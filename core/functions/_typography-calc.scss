@@ -5,7 +5,7 @@ $fontSizeRatio: 			map-get($typography, fontSizeRatio);
 $lineHeightRatio:			map-get($typography, lineHeightRatio);
 $paddingRatio: 				map-get($typography, paddingRatio);
 
-@function font-size-sequence($length, $base, $common-ratio, $index) {
+@function font-size-sequence-calc($length, $base, $common-ratio, $index) {
 
 	$sequence: ($base);
 
@@ -48,6 +48,6 @@ $paddingRatio: 				map-get($typography, paddingRatio);
 
 }
 
-$fontSizeSequenceRaw: sl-unique(sl-sort(font-size-sequence($length, $base, $fontSizeRatio, $index)));
+$fontSizeSequenceRaw: sl-unique(sl-sort(font-size-sequence-calc($length, $base, $fontSizeRatio, $index)));
 
 $fontSizeSequence: sl-walk($fontSizeSequenceRaw, round);
