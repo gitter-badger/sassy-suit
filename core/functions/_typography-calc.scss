@@ -48,15 +48,14 @@ $paddingRatio: 				map-get($typography, paddingRatio);
 
 }
 
-$fontSizeSequenceRaw: sl-unique(sl-sort(font-size-sequence-calc($length, $base, $fontSizeRatio, $index)));
+$fontSizeSequenceRaw: sl-sort(font-size-sequence-calc($length, $base, $fontSizeRatio, $index));
 
-$fontSizeSequence: sl-walk($fontSizeSequenceRaw, round);
+$fontSizeSequence: sl-walk(sl-unique($fontSizeSequenceRaw), round);
 
-@function line-height-calc($value, $lineHeightRatio) {
-	$new-value: $value * $lineHeightRatio;
-  	@return $new-value
-}
-
-$lineHeightSequenceRaw: sl-walk($fontSizeSequence, line-height-calc, $lineHeightRatio);
+$lineHeightSequenceRaw: sl-walk($fontSizeSequence, multiply-recalc, $lineHeightRatio);
 
 $lineHeightSequence: sl-walk($lineHeightSequenceRaw, round);
+
+$paddingSequenceRaw: sl-walk($fontSizeSequence, multiply-recalc, $paddingRatio);
+
+$paddingSequence: sl-walk($lineHeightSequenceRaw, round);

@@ -1,0 +1,5 @@
+@function multiply-recalc($value, $multiplier) {
+	$new-value: $value * $multiplier;
+
+  	@return $new-value
+}
