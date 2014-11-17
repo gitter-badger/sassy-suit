@@ -1,4 +1,13 @@
-@mixin echo($selector, $array, $comment) {
+@mixin array-output($selector, $array, $comment) {
+
+	#{$selector}:before {
+		content: quote(to-string($array, $comment));
+		white-space: pre-wrap;
+	}
+
+}
+
+@mixin array-output-after($selector, $array, $comment) {
 
 	#{$selector}:after {
 		content: quote(to-string($array, $comment));
