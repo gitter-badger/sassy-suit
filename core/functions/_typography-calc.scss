@@ -52,10 +52,18 @@ $fontSizeSequenceRaw: sl-sort(font-size-sequence-calc($length, $base, $fontSizeR
 
 $fontSizeSequence: sl-walk(sl-unique($fontSizeSequenceRaw), round);
 
-$lineHeightSequenceRaw: sl-walk($fontSizeSequence, multiply-recalc, $lineHeightRatio);
+
+
+
+$lineHeightSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $lineHeightRatio);
 
 $lineHeightSequence: sl-walk($lineHeightSequenceRaw, round);
 
-$paddingSequenceRaw: sl-walk($fontSizeSequence, multiply-recalc, $paddingRatio);
 
-$paddingSequence: sl-walk($lineHeightSequenceRaw, round);
+
+
+$fontPaddingSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $paddingRatio);
+
+$fontPaddingSequenceDivided: sl-walk($fontPaddingSequenceRaw, divide-calc, 2);
+
+$fontPaddingSequence: sl-walk($fontPaddingSequenceDivided, round);
