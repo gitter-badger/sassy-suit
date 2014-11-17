@@ -1,0 +1,6 @@
+@function divide-calc($value, $divider) {
+	$new-value: $value / $divider;
+
+  	@return $new-value;
+
+}
