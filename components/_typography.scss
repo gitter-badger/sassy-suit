@@ -1,63 +1,55 @@
 p {
-	padding: 			$fontPaddingMd 0;
-	font-size: 			$fontSizeMd;
-	font-family: 		$fontFamilyTextAlt, sans-serif;
-	line-height:  		$lineHeightMd;
-	letter-spacing: 	-.25px;
-	color: 				$colorGrey900;
+
+	@extend %typography-base-md;
+
+	@extend %typography-base-text-alt;
 }
 
 
 h6, .h6 {
-	padding: 			$fontPaddingSm 0;
-	font-size: 			$fontSizeSm;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightSm;
-	letter-spacing: 	-1px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-sm;
+
+	@extend %typography-base-header-alt;
+
 }
 
 h5, .h5 {
-	padding: 			$fontPaddingMd 0;
-	font-size: 			$fontSizeMd;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightMd;
-	letter-spacing: 	-1px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-md;
+
+	@extend %typography-base-header-alt;
+
 }
 
 h4,	.h4 {
-	padding: 			$fontPaddingLg 0;
-	font-size: 			$fontSizeLg;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightLg;
-	letter-spacing: 	-3px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-lg;
+
+	@extend %typography-base-header-alt;
+
 }
 
 h3, .h3 {
-	padding: 			$fontPaddingXl 0;
-	font-size: 			$fontSizeXl;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightXl;
-	letter-spacing: 	-3px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-xl;
+
+	@extend %typography-base-header-alt;
+
 }
 
 h2, .h2 {
-	padding: 			$fontPaddingXxl 0;
-	font-size: 			$fontSizeXxl;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightXxl;
-	letter-spacing: 	-3px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-xxl;
+
+	@extend %typography-base-header-alt;
+
 }
 
 h1, .h1 {
-	padding: 			$fontPaddingXxxl 0;
-	font-size: 			$fontSizeXxxl;
-	font-family: 		$fontFamilyHeaderAlt, sans-serif;
-	line-height:  		$lineHeightXxxl;
-	letter-spacing: 	-5px;
-	color: 				$colorGrey800;
+
+	@extend %typography-base-xxxl;
+
+	@extend %typography-base-header-alt;
+
 }
