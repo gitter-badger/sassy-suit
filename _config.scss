@@ -4,12 +4,12 @@
 ====================================*/
 
 $breakpoints: (
-	xs:   				300px,
-	sm:   				400px,
-	md:   				500px,
-	lg:   				650px,
-	xl:   				800px,
-	xxl: 				950px
+	xs:   					300px,
+	sm:   					400px,
+	md:   					500px,
+	lg:   					650px,
+	xl:   					800px,
+	xxl: 					950px
 );
 
 /*-----  End of Break points  ------*/
@@ -23,20 +23,20 @@ $breakpoints: (
 ===============================*/
 
 $margins: (
-	Xs:   				5px,
-	Sm:   				10px,
-	Md:   				15px,
-	Lg:   				20px,
-	Xl:   				25px,
-	Xxl: 				30px
+	Xs:   					5px,
+	Sm:   					10px,
+	Md:   					15px,
+	Lg:   					20px,
+	Xl:   					25px,
+	Xxl: 					30px
 );
 
 $marginDirections: (
-	base: 				"",
-	top: 				"Top",
-	right: 				"Right",
-	bottom: 			"Bottom",
-	left: 				"Left"
+	base: 					"",
+	top: 					"Top",
+	right: 					"Right",
+	bottom: 				"Bottom",
+	left: 					"Left"
 );
 
 /*-----  End of Margins  ------*/
@@ -50,20 +50,20 @@ $marginDirections: (
 ================================*/
 
 $paddings: (
-	Xs:   				5px,
-	Sm:   				10px,
-	Md:   				15px,
-	Lg:   				20px,
-	Xl:   				25px,
-	Xxl: 				30px
+	Xs:   					5px,
+	Sm:   					10px,
+	Md:   					15px,
+	Lg:   					20px,
+	Xl:   					25px,
+	Xxl: 					30px
 );
 
 $paddingDirections: (
-	base: 				"",
-	top: 				"Top",
-	right: 				"Right",
-	bottom: 			"Bottom",
-	left: 				"Left"
+	base: 					"",
+	top: 					"Top",
+	right: 					"Right",
+	bottom: 				"Bottom",
+	left: 					"Left"
 );
 
 /*-----  End of Paddings  ------*/
@@ -77,16 +77,16 @@ $paddingDirections: (
 =============================*/
 
 $fontFamilies: (
-	header: 			Roboto,
-	headerAlt:  		Nunito,
-	headerBold: 		(Roboto: 700),
-	headerLight: 		(Roboto: 300),
-	headerItalic: 		"Roboto: 400, italic",
-	text: 				Open Sans,
-	textAlt: 			Dosis,
-	textBold: 			(Open Sans: 700),
-	textLight: 			(Open Sans: 300),
-	textItalic: 		"Open Sans: 400, italic"
+	header: 				Roboto,
+	headerAlt:  			Nunito,
+	headerBold: 			(Roboto: 700),
+	headerLight: 			(Roboto: 300),
+	headerItalic: 			"Roboto: 400, italic",
+	text: 					Open Sans,
+	textAlt: 				Dosis,
+	textBold: 				(Open Sans: 700),
+	textLight: 				(Open Sans: 300),
+	textItalic: 			"Open Sans: 400, italic"
 );
 
 /*-----  End of Fonts  ------*/
@@ -100,10 +100,10 @@ $fontFamilies: (
 =========================================*/
 
 $fontFamilyNames: (
-	header: 			"Roboto, sans-serif",
-	headerAlt: 			"Nunito, sans-serif",
-	text: 				"Open Sans, sans-serif",
-	textAlt: 			"Dosis, sans-serif"
+	header: 				"Roboto, sans-serif",
+	headerAlt: 				"Nunito, sans-serif",
+	text: 					"Open Sans, sans-serif",
+	textAlt: 				"Dosis, sans-serif"
 );
 
 /*-----  End of Font Family Names  ------*/
@@ -119,12 +119,13 @@ $fontFamilyNames: (
 ==================================*/
 
 $typography: (
-	base: 				24px,
-	index: 				-2,
-	length: 			8,
-	fontSizeRatio: 		1.5,
-	lineHeightRatio: 	1.25,
-	paddingRatio: 		1.465
+	base: 					24px,
+	index: 					-2,
+	length: 				8,
+	fontSizeRatio: 			1.4,
+	fontLineHeightRatio: 	1.1,
+	fontPaddingRatio: 		1.1,
+	fontLetterSpacingRatio: -.02
 );
 
 /*-----  End of Typography  ------*/

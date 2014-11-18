@@ -2,8 +2,9 @@ $base: 						map-get($typography, base);
 $index: 					map-get($typography, index);
 $length: 					map-get($typography, length);
 $fontSizeRatio: 			map-get($typography, fontSizeRatio);
-$lineHeightRatio:			map-get($typography, lineHeightRatio);
-$paddingRatio: 				map-get($typography, paddingRatio);
+$fontLineHeightRatio:		map-get($typography, fontLineHeightRatio);
+$fontPaddingRatio: 			map-get($typography, fontPaddingRatio);
+$fontLetterSpacingRatio: 	map-get($typography, fontLetterSpacingRatio);
 
 @function font-size-sequence-calc($length, $base, $common-ratio, $index) {
 
@@ -48,22 +49,22 @@ $paddingRatio: 				map-get($typography, paddingRatio);
 
 }
 
-$fontSizeSequenceRaw: sl-sort(font-size-sequence-calc($length, $base, $fontSizeRatio, $index));
 
+
+$fontSizeSequenceRaw: sl-sort(font-size-sequence-calc($length, $base, $fontSizeRatio, $index));
 $fontSizeSequence: sl-walk(sl-unique($fontSizeSequenceRaw), round);
 
 
 
-
-$lineHeightSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $lineHeightRatio);
-
-$lineHeightSequence: sl-walk($lineHeightSequenceRaw, round);
+$fontLineHeightSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $fontLineHeightRatio);
+$fontLineHeightSequence: sl-walk($fontLineHeightSequenceRaw, round);
 
 
 
-
-$fontPaddingSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $paddingRatio);
-
+$fontPaddingSequenceRaw: sl-walk($fontSizeSequence, multiply-calc, $fontPaddingRatio);
 $fontPaddingSequenceDivided: sl-walk($fontPaddingSequenceRaw, divide-calc, 2);
-
 $fontPaddingSequence: sl-walk($fontPaddingSequenceDivided, round);
+
+
+
+$fontLetterSpacingSequence: sl-walk($fontSizeSequence, multiply-calc, $fontLetterSpacingRatio);

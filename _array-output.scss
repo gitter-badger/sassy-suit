@@ -1,3 +1,3 @@
 @include array-output(html, $fontSizeSequence, FONT SIZE SEQUENCE);
 @include array-output-after(html, $fontPaddingSequence, Padding SEQUENCE);
-@include array-output(body, $lineHeightSequence, LINE HEIGHT SEQUENCE);
+@include array-output(body, $fontLineHeightSequence, LINE HEIGHT SEQUENCE);
