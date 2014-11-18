@@ -19,24 +19,28 @@
 %typography-base-md {
 	padding: 			$fontPaddingMd 0;
 	font-size: 			$fontSizeMd;
+	line-height:  		$fontLineHeightMd;
 	letter-spacing: 	$fontLetterSpacingMd;
 }
 
 %typography-base-lg {
 	padding: 			$fontPaddingLg 0;
 	font-size: 			$fontSizeLg;
+	line-height:  		$fontLineHeightLg;
 	letter-spacing: 	$fontLetterSpacingLg;
 }
 
 %typography-base-xl {
 	padding: 			$fontPaddingXl 0;
 	font-size: 			$fontSizeXl;
+	line-height:  		$fontLineHeightXl;
 	letter-spacing: 	$fontLetterSpacingXl;
 }
 
 %typography-base-xxl {
 	padding: 			$fontPaddingXxl 0;
 	font-size: 			$fontSizeXxl;
+	line-height:  		$fontLineHeightXxl;
 	letter-spacing: 	$fontLetterSpacingXxl;
 }
 
@@ -47,6 +51,19 @@
 	letter-spacing: 	$fontLetterSpacingXxxl;
 }
 
+%typography-base-larger {
+	padding: 			$fontPaddingXxxl 0;
+	font-size: 			$fontSizeXxxl;
+	line-height:  		$fontLineHeightXxxl;
+	letter-spacing: 	$fontLetterSpacingXxxl;
+}
+
+%typography-base-largest {
+	padding: 			$fontPaddingXxxl 0;
+	font-size: 			$fontSizeXxxl;
+	line-height:  		$fontLineHeightXxxl;
+	letter-spacing: 	$fontLetterSpacingXxxl;
+}
 /*-----  End of Typography Base  ------*/
 
 
