@@ -94,10 +94,10 @@ $lineHeightSm: 					nth($lineHeightSequence, 2); // h6, .smaller
 $lineHeightMd: 					nth($lineHeightSequence, 3); // h5, p
 $lineHeightLg: 					nth($lineHeightSequence, 4); // h4
 $lineHeightXl: 					nth($lineHeightSequence, 5); // h3
-$lineHeightXxl: 					nth($lineHeightSequence, 6); //	h2
-$lineHeightXxxl: 					nth($lineHeightSequence, 7); //	h1
+$lineHeightXxl: 				nth($lineHeightSequence, 6); //	h2
+$lineHeightXxxl: 				nth($lineHeightSequence, 7); //	h1
 $lineHeightLarger: 				nth($lineHeightSequence, 8); // .larger
-$lineHeightLargest: 				nth($lineHeightSequence, 9); // .largest
+$lineHeightLargest: 			nth($lineHeightSequence, 9); // .largest
 
 
 /*-----  End of Font Line Height  ------*/
