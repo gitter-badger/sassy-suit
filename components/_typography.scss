@@ -3,14 +3,12 @@ p {
 	@extend %typography-base-md;
 
 	@extend %typography-base-text-alt;
-}
 
+}
 
 h6, .h6 {
 
 	@extend %typography-base-sm;
-
-	@extend %typography-base-header-alt;
 
 }
 
@@ -18,15 +16,11 @@ h5, .h5 {
 
 	@extend %typography-base-md;
 
-	@extend %typography-base-header-alt;
-
 }
 
 h4,	.h4 {
 
 	@extend %typography-base-lg;
-
-	@extend %typography-base-header-alt;
 
 }
 
@@ -34,15 +28,11 @@ h3, .h3 {
 
 	@extend %typography-base-xl;
 
-	@extend %typography-base-header-alt;
-
 }
 
 h2, .h2 {
 
 	@extend %typography-base-xxl;
-
-	@extend %typography-base-header-alt;
 
 }
 
@@ -50,6 +40,13 @@ h1, .h1 {
 
 	@extend %typography-base-xxxl;
 
-	@extend %typography-base-header-alt;
+}
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	@extend %typography-base-header-alt;
 }
