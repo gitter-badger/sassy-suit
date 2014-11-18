@@ -109,15 +109,15 @@ $fontLineHeightLargest: 		nth($fontLineHeightSequence, 9); // .largest
 =            Font Paddings            =
 =====================================*/
 
-$fontPaddingXs: 					nth($fontPaddingSequence, 1); // .smallest
-$fontPaddingSm: 					nth($fontPaddingSequence, 2); // h6, .smaller
-$fontPaddingMd: 					nth($fontPaddingSequence, 3); // h5, p
-$fontPaddingLg: 					nth($fontPaddingSequence, 4); // h4
-$fontPaddingXl: 					nth($fontPaddingSequence, 5); // h3
-$fontPaddingXxl: 					nth($fontPaddingSequence, 6); // h2
-$fontPaddingXxxl: 					nth($fontPaddingSequence, 7); // h1
-$fontPaddingLarger: 				nth($fontPaddingSequence, 8); // .larger
-$fontPaddingLargest: 				nth($fontPaddingSequence, 9); // .largest
+$fontPaddingXs: 				nth($fontPaddingSequence, 1); // .smallest
+$fontPaddingSm: 				nth($fontPaddingSequence, 2); // h6, .smaller
+$fontPaddingMd: 				nth($fontPaddingSequence, 3); // h5, p
+$fontPaddingLg: 				nth($fontPaddingSequence, 4); // h4
+$fontPaddingXl: 				nth($fontPaddingSequence, 5); // h3
+$fontPaddingXxl: 				nth($fontPaddingSequence, 6); // h2
+$fontPaddingXxxl: 				nth($fontPaddingSequence, 7); // h1
+$fontPaddingLarger: 			nth($fontPaddingSequence, 8); // .larger
+$fontPaddingLargest: 			nth($fontPaddingSequence, 9); // .largest
 
 
 /*-----  End of Font Paddings  ------*/
@@ -130,15 +130,15 @@ $fontPaddingLargest: 				nth($fontPaddingSequence, 9); // .largest
 =            Font Letter Spacing            =
 ===========================================*/
 
-$fontLetterSpacingXs: 					nth($fontLetterSpacingSequence, 1); // .smallest
-$fontLetterSpacingSm: 					nth($fontLetterSpacingSequence, 2); // h6, .smaller
-$fontLetterSpacingMd: 					nth($fontLetterSpacingSequence, 3); // h5, p
-$fontLetterSpacingLg: 					nth($fontLetterSpacingSequence, 4); // h4
-$fontLetterSpacingXl: 					nth($fontLetterSpacingSequence, 5); // h3
-$fontLetterSpacingXxl: 					nth($fontLetterSpacingSequence, 6); // h2
-$fontLetterSpacingXxxl: 				nth($fontLetterSpacingSequence, 7); // h1
-$fontLetterSpacingLarger: 				nth($fontLetterSpacingSequence, 8); // .larger
-$fontLetterSpacingLargest: 				nth($fontLetterSpacingSequence, 9); // .largest
+$fontLetterSpacingXs: 			nth($fontLetterSpacingSequence, 1); // .smallest
+$fontLetterSpacingSm: 			nth($fontLetterSpacingSequence, 2); // h6, .smaller
+$fontLetterSpacingMd: 			nth($fontLetterSpacingSequence, 3); // h5, p
+$fontLetterSpacingLg: 			nth($fontLetterSpacingSequence, 4); // h4
+$fontLetterSpacingXl: 			nth($fontLetterSpacingSequence, 5); // h3
+$fontLetterSpacingXxl: 			nth($fontLetterSpacingSequence, 6); // h2
+$fontLetterSpacingXxxl: 		nth($fontLetterSpacingSequence, 7); // h1
+$fontLetterSpacingLarger: 		nth($fontLetterSpacingSequence, 8); // .larger
+$fontLetterSpacingLargest: 		nth($fontLetterSpacingSequence, 9); // .largest
 
 /*-----  End of Font Letter Spacing  ------*/
 
