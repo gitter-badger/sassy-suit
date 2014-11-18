@@ -25,9 +25,9 @@ button {
 
 
 body {
-	font-family: 	$fontFamilyText, sans-serif;
+	font-family: 	$fontFamilyTextAlt, sans-serif;
 	font-size: 		$fontSizeMd;
-	line-height: 	$fontSizeMd * $lineHeightRatio;
+	line-height: 	$fontLineHeightMd;
 	font-weight: 	400;
 	color: 			$colorGrey900;
 }
