@@ -1,4 +1,4 @@
-@mixin typography-base($fontSize: $fontSizeMd, $fontFamily: $fontText, $lineHeight: false, $color: $colorGrey800, $padding: false, $letter-spacing: false) {
+@mixin typography-base($fontSize: $fontSizeMd, $lineHeight: $lineHeightMd, $fontFamily: $fontFamilyNameText, $color: $colorGrey800, $padding: $fontPaddingMd, $letter-spacing: false) {
 
 	@if $padding == false {
 		padding: ($fontSize * $paddingRatio / 2) 0;
@@ -26,4 +26,4 @@
 }
 
 
-// @include typography-base($fontSizeXxxl, $fontFamilyHeaderAlt, $colorRed500);
+// @include typography-base($fontSizeXxxl, $lineHeightXxxl, $fontFamilyHeaderAlt,  $colorGrey800, $fontPaddingMd, -5px);
