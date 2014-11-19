@@ -50,3 +50,16 @@ h5, .h5,
 h6, .h6 {
 	@extend %typography-base-header-alt;
 }
+
+blockquote {
+	margin: $marginXl 0;
+	background-color: $colorGrey200;
+	border: 1px solid $colorGrey300;
+	border-left: 5px solid $colorPink700;
+	padding: $paddingXxl $paddingMd;
+
+	> p {
+		text-shadow: 0 1px 0 #fff;
+	}
+
+}
