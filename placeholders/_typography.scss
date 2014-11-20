@@ -98,11 +98,13 @@
 %typography-base-text {
 	font-family: 		$fontFamilyText, sans-serif;
 	color: 				$colorGrey900;
+	letter-spacing: 	0;
 }
 
 %typography-base-text-alt {
 	font-family: 		$fontFamilyTextAlt, sans-serif;
 	color: 				$colorGrey900;
+	letter-spacing: 	0;
 }
 
 /*-----  End of Typography Text Base  -------*/

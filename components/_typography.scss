@@ -1,8 +1,6 @@
 p {
 
-	@extend %typography-base-md;
-
-	@extend %typography-base-text-alt;
+	@include typography("md", "textAlt");
 
 }
 
