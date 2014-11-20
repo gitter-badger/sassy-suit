@@ -64,3 +64,26 @@ blockquote {
 	}
 
 }
+
+
+
+/*=========================================
+=            Temporary classes            =
+=========================================*/
+
+
+.typography {
+
+	@include typography("xl", "headerAlt");
+
+}
+
+.typography-custom {
+
+	@include typography($fontSizeXxl, $fontFamilyNameHeaderAlt, $colorBlue700, $fontLineHeightLargest, $fontPaddingXl, $fontLetterSpacingXs, italic);
+
+}
+
+
+/*-----  End of Temporary classes  ------*/
+

@@ -1,29 +1,112 @@
-@mixin typography-base($fontSize: $fontSizeMd, $lineHeight: $lineHeightMd, $fontFamily: $fontFamilyNameText, $color: $colorGrey800, $padding: $fontPaddingMd, $letter-spacing: false) {
+@mixin typography($fontSize, $fontFamily, $color: "", $lineHeight: "", $fontPadding: "", $letterSpacing: "", $fontStyle: "") {
 
-	@if $padding == false {
-		padding: ($fontSize * $paddingRatio / 2) 0;
+/*==========  Typography Base Placeholder Matching  ==========*/
+
+
+	@if $fontSize == "xs" {
+
+		@extend %typography-base-xs;
+
 	}
+
+	@else if $fontSize == "sm" {
+
+		@extend %typography-base-sm;
+
+	}
+
+	@else if $fontSize == "md" {
+
+		@extend %typography-base-md;
+
+	}
+
+	@else if $fontSize == "lg" {
+
+		@extend %typography-base-lg;
+
+	}
+
+	@else if $fontSize == "xl" {
+
+		@extend %typography-base-xl;
+
+	}
+
+	@else if $fontSize == "xxl" {
+
+		@extend %typography-base-xxl;
+
+	}
+
+	@else if $fontSize == "xxxl" {
+
+		@extend %typography-base-xxxl;
+
+	}
+
+	@else if $fontSize == "larger" {
+
+		@extend %typography-base-larger;
+
+	}
+
+
+	@else if $fontSize == "largest" {
+
+		@extend %typography-base-largest;
+
+	}
+
+
+
 	@else {
-		padding: $padding 0;
+
+		padding: unquote($fontPadding) 0;
+		font-size: $fontSize;
+		font-family: $fontFamily;
+		line-height: unquote($lineHeight);
+		letter-spacing: unquote($letterSpacing);
+		color:  unquote($color);
+		font-style: unquote($fontStyle);
 	}
 
-	font-size: $fontSize;
-	font-family: $fontFamily, sans-serif;
+// /*==========  Typography Base Font Family Matching  ==========*/
 
-	@if $lineHeight == false {
-		line-height: $fontSize * get-map($typography, lineHeightRatio); // lineHeightRatio
+	@if $fontFamily == "header" {
+
+		@extend %typography-base-header;
+
+	}
+
+	@else if $fontFamily == "headerAlt" {
+
+		@extend %typography-base-header-alt;
+
+	}
+
+	@else if $fontFamily == "text" {
+
+		@extend %typography-base-text;
+
+	}
+
+	@else if $fontFamily == "textAlt" {
+
+		@extend %typography-base-text-alt;
+
 	}
 
 	@else {
-		line-height: $lineHeight;
+
+		padding: unquote($fontPadding) 0;
+		font-size: $fontSize;
+		font-family: $fontFamily;
+		line-height: unquote($lineHeight);
+		letter-spacing: unquote($letterSpacing);
+		color:  unquote($color);
+		font-style: unquote($fontStyle);
 	}
 
-	@if $letter-spacing == true {
-		letter-spacing: $letter-spacing;
-	}
 
-	color: $color;
 }
-
-
-// @include typography-base($fontSizeXxxl, $lineHeightXxxl, $fontFamilyHeaderAlt,  $colorGrey800, $fontPaddingMd, -5px);
