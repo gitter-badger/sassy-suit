@@ -1,112 +1,104 @@
-@mixin typography($fontSize, $fontFamily, $color: "", $lineHeight: "", $fontPadding: "", $letterSpacing: "", $fontStyle: "") {
+@mixin typography-base($values: "", $style: "") {
 
 /*==========  Typography Base Placeholder Matching  ==========*/
 
 
-	@if $fontSize == "xs" {
+	@if $values == "xs" {
 
 		@extend %typography-base-xs;
 
 	}
 
-	@else if $fontSize == "sm" {
+	@else if $values == "sm" {
 
 		@extend %typography-base-sm;
 
 	}
 
-	@else if $fontSize == "md" {
+	@else if $values == "md" {
 
 		@extend %typography-base-md;
 
 	}
 
-	@else if $fontSize == "lg" {
+	@else if $values == "lg" {
 
 		@extend %typography-base-lg;
 
 	}
 
-	@else if $fontSize == "xl" {
+	@else if $values == "xl" {
 
 		@extend %typography-base-xl;
 
 	}
 
-	@else if $fontSize == "xxl" {
+	@else if $values == "xxl" {
 
 		@extend %typography-base-xxl;
 
 	}
 
-	@else if $fontSize == "xxxl" {
+	@else if $values == "xxxl" {
 
 		@extend %typography-base-xxxl;
 
 	}
 
-	@else if $fontSize == "larger" {
+	@else if $values == "larger" {
 
 		@extend %typography-base-larger;
 
 	}
 
 
-	@else if $fontSize == "largest" {
+	@else if $values == "largest" {
 
 		@extend %typography-base-largest;
 
 	}
 
-
-
 	@else {
 
-		padding: unquote($fontPadding) 0;
-		font-size: $fontSize;
-		font-family: $fontFamily;
-		line-height: unquote($lineHeight);
-		letter-spacing: unquote($letterSpacing);
-		color:  unquote($color);
-		font-style: unquote($fontStyle);
+		@warn "Please, check your $values in `@mixin typography-base`";
+
 	}
 
 // /*==========  Typography Base Font Family Matching  ==========*/
 
-	@if $fontFamily == "header" {
+	@if $style != null {
 
-		@extend %typography-base-header;
+		@if $style == "header" {
+
+			@extend %typography-base-header;
+
+		}
+
+		@else if $style == "headerAlt" {
+
+			@extend %typography-base-header-alt;
+
+		}
+
+		@else if $style == "text" {
+
+			@extend %typography-base-text;
+
+		}
+
+		@else if $style == "textAlt" {
+
+			@extend %typography-base-text-alt;
+
+		}
+
+		@else {
+
+			@warn "Please, check your $style in `@mixin typography-base`";
+
+		}
+
 
 	}
-
-	@else if $fontFamily == "headerAlt" {
-
-		@extend %typography-base-header-alt;
-
-	}
-
-	@else if $fontFamily == "text" {
-
-		@extend %typography-base-text;
-
-	}
-
-	@else if $fontFamily == "textAlt" {
-
-		@extend %typography-base-text-alt;
-
-	}
-
-	@else {
-
-		padding: unquote($fontPadding) 0;
-		font-size: $fontSize;
-		font-family: $fontFamily;
-		line-height: unquote($lineHeight);
-		letter-spacing: unquote($letterSpacing);
-		color:  unquote($color);
-		font-style: unquote($fontStyle);
-	}
-
 
 }

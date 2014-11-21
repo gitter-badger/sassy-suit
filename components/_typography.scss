@@ -1,52 +1,43 @@
 p {
 
-	@include typography("md", "textAlt");
+	@include typography-base(md, textAlt);
 
 }
 
 h6, .h6 {
 
-	@extend %typography-base-sm;
+	@include typography-base(sm, headerAlt);
 
 }
 
 h5, .h5 {
 
-	@extend %typography-base-md;
+	@include typography-base(md, headerAlt);
 
 }
 
 h4,	.h4 {
 
-	@extend %typography-base-lg;
+	@include typography-base(lg, headerAlt);
 
 }
 
 h3, .h3 {
 
-	@extend %typography-base-xl;
+	@include typography-base(xl, headerAlt);
 
 }
 
 h2, .h2 {
 
-	@extend %typography-base-xxl;
+	@include typography-base(xxl, headerAlt);
 
 }
 
 h1, .h1 {
 
-	@extend %typography-base-xxxl;
+	@include typography-base(xxxl, headerAlt);
 
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-	@extend %typography-base-header-alt;
 }
 
 blockquote {
@@ -72,16 +63,9 @@ blockquote {
 
 .typography {
 
-	@include typography("xl", "headerAlt");
+	@include typography-base(xl, headerAlt);
 
 }
-
-.typography-custom {
-
-	@include typography($fontSizeXxl, $fontFamilyNameHeaderAlt, $colorBlue700, $fontLineHeightLargest, $fontPaddingXl, $fontLetterSpacingXs, italic);
-
-}
-
 
 /*-----  End of Temporary classes  ------*/
 
