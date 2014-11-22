@@ -10,15 +10,16 @@
 
 @import "core/_core-config.scss";
 
-@import "typography/_config.scss";
 
 @import "_variables.scss";
 
-@import "placeholders/_placeholders-config.scss";
+// @import "placeholders/_placeholders-config.scss";
 
-@import "_web-fonts.scss";
+// @import "_web-fonts.scss";
 
 @import "_base.scss";
+
+@import "typography/_config.scss";
 
 @import "components/_components-config.scss";
 @import "modules/_modules-config.scss";

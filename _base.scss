@@ -25,22 +25,21 @@ button {
 
 
 body {
-	font-family: 	$fontFamilyText, sans-serif;
-	font-size: 		$fontSizeMd;
-	line-height: 	$fontLineHeightMd;
+	font-family: 	sans-serif;
+	font-size: 		16px;
+	line-height: 	18px;
 	font-weight: 	400;
-	color: 			$colorGrey900;
+	color: 			#212121;
 }
 
 a {
-	color: $colorPinkA700;
-	text-decoration: none;
+	color: #c51162;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $colorPinkA400;
-		text-decoration: underline;
+		color: #f50057;
+		text-decoration: none;
 	}
 }
 

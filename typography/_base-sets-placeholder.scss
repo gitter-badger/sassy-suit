@@ -1,0 +1,113 @@
+/*=======================================
+=            Typography Base            =
+=======================================*/
+
+%typography-base-xs {
+	padding: 			$fontPaddingXs 0;
+	font-size: 			$fontSizeXs;
+	line-height:  		$fontLineHeightXs;
+	letter-spacing: 	$fontLetterSpacingXs;
+}
+
+%typography-base-sm {
+	padding: 			$fontPaddingSm 0;
+	font-size: 			$fontSizeSm;
+	line-height:  		$fontLineHeightSm;
+	letter-spacing: 	$fontLetterSpacingSm;
+}
+
+%typography-base-md {
+	padding: 			$fontPaddingMd 0;
+	font-size: 			$fontSizeMd;
+	line-height:  		$fontLineHeightMd;
+	letter-spacing: 	$fontLetterSpacingMd;
+}
+
+%typography-base-lg {
+	padding: 			$fontPaddingLg 0;
+	font-size: 			$fontSizeLg;
+	line-height:  		$fontLineHeightLg;
+	letter-spacing: 	$fontLetterSpacingLg;
+}
+
+%typography-base-xl {
+	padding: 			$fontPaddingXl 0;
+	font-size: 			$fontSizeXl;
+	line-height:  		$fontLineHeightXl;
+	letter-spacing: 	$fontLetterSpacingXl;
+}
+
+%typography-base-xxl {
+	padding: 			$fontPaddingXxl 0;
+	font-size: 			$fontSizeXxl;
+	line-height:  		$fontLineHeightXxl;
+	letter-spacing: 	$fontLetterSpacingXxl;
+}
+
+%typography-base-xxxl {
+	padding: 			$fontPaddingXxxl 0;
+	font-size: 			$fontSizeXxxl;
+	line-height:  		$fontLineHeightXxxl;
+	letter-spacing: 	$fontLetterSpacingXxxl;
+}
+
+%typography-base-larger {
+	padding: 			$fontPaddingXxxl 0;
+	font-size: 			$fontSizeXxxl;
+	line-height:  		$fontLineHeightXxxl;
+	letter-spacing: 	$fontLetterSpacingXxxl;
+}
+
+%typography-base-largest {
+	padding: 			$fontPaddingXxxl 0;
+	font-size: 			$fontSizeXxxl;
+	line-height:  		$fontLineHeightXxxl;
+	letter-spacing: 	$fontLetterSpacingXxxl;
+}
+
+/*-----  End of Typography Base  ------*/
+
+
+
+
+
+/*==============================================
+=            Typography Header Base            =
+==============================================*/
+
+%typography-base-header {
+	font-family: 		$fontFamilyHeader, sans-serif;
+	color: 				$colorGrey800;
+}
+
+%typography-base-header-alt {
+	font-family: 		$fontFamilyHeaderAlt, sans-serif;
+	color: 				$colorGrey800;
+}
+
+/*-----  End of Typography Header Base  ------*/
+
+
+
+
+
+/*==============================================
+=            Typography Text Base              =
+==============================================*/
+
+%typography-base-text {
+	font-family: 		$fontFamilyText, sans-serif;
+	color: 				$colorGrey900;
+	letter-spacing: 	0;
+}
+
+%typography-base-text-alt {
+	font-family: 		$fontFamilyTextAlt, sans-serif;
+	color: 				$colorGrey900;
+	letter-spacing: 	0;
+}
+
+/*-----  End of Typography Text Base  -------*/
+
+
+
