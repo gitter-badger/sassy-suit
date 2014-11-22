@@ -42,6 +42,7 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	│       ├── _paddings-generation.scss
 	│       ├── _triangles-generation.scss
 	│       ├── _typography-generation.scss
+	│       ├── _typography-responsive-generation.scss
 	│       └── _web-fonts-generation.scss
 	├── dist
 	│   ├── sassySuit.css
@@ -68,6 +69,7 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	│   ├── _clearfix.scss
 	│   ├── _margins.scss
 	│   ├── _paddings.scss
+	│   ├── _typography.scss
 	│   └── _utils-config.scss
 	└── vendors
 	    ├── _map-into-list.scss
@@ -75,4 +77,4 @@ SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss
 	    ├── sassylists
 	    └── susy
 
-`32 directories, 74 files`
+`32 directories, 76 files`
