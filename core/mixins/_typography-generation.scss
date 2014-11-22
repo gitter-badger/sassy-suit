@@ -1,7 +1,6 @@
-@mixin typography-base($values: "", $style: "") {
-
 /*==========  Typography Base Placeholder Matching  ==========*/
 
+@mixin typography-base($values: "", $style: "") {
 
 	@if $values == "xs" {
 
