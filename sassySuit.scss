@@ -10,20 +10,15 @@
 
 @import "core/_core-config.scss";
 
-
 @import "_variables.scss";
-
-// @import "placeholders/_placeholders-config.scss";
-
-// @import "_web-fonts.scss";
 
 @import "_base.scss";
 
-@import "typography/_config.scss";
+@import "typography/_index.scss";
 
 @import "components/_components-config.scss";
-@import "modules/_modules-config.scss";
-@import "pages/_pages-config.scss";
+// @import "modules/_modules-config.scss";
+// @import "pages/_pages-config.scss";
 
-@import "utils/_utils-config.scss";
+// @import "utils/_utils-config.scss";
 @import "_array-output.scss";
