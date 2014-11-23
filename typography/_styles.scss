@@ -1,42 +1,42 @@
 p {
 
-	@include typography-base(md, textAlt);
+	@include typography-base(md, text);
 
 }
 
 h6, .h6 {
 
-	@include typography-base(sm, headerAlt);
+	@include typography-base(sm, header);
 
 }
 
 h5, .h5 {
 
-	@include typography-base(md, headerAlt);
+	@include typography-base(md, header);
 
 }
 
 h4,	.h4 {
 
-	@include typography-base(lg, headerAlt);
+	@include typography-base(lg, header);
 
 }
 
 h3, .h3 {
 
-	@include typography-base(xl, headerAlt);
+	@include typography-base(xl, header);
 
 }
 
 h2, .h2 {
 
-	@include typography-base(xxl, headerAlt);
+	@include typography-base(xxl, header);
 
 }
 
 h1, .h1 {
 
-	@include typography-base(xxxl, headerAlt);
+	@include typography-base(xxxl, header);
 
 }
 
@@ -56,6 +56,33 @@ blockquote {
 
 
 
+/*=============================
+=            Lists            =
+=============================*/
+
+ul,
+ol {
+
+	@include typography-base(md, text);
+
+	padding-left: 30px;
+}
+
+.List--inlined {
+	@include list-inlined;
+}
+
+.List--unstyled {
+	@include list-unstyled;
+}
+
+
+/*-----  End of Lists  ------*/
+
+
+
+
+
 /*=========================================
 =            Temporary classes            =
 =========================================*/
@@ -63,7 +90,7 @@ blockquote {
 
 .typography {
 
-	@include typography-base(xl, headerAlt);
+	@include typography-base(xl, header);
 
 }
 
