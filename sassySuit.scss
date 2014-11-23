@@ -2,13 +2,13 @@
 @import "_normalize.scss";
 
 
-@import "vendors/_vendors-config.scss";
+@import "vendors/_index.scss";
 
 @import "_config.scss";
 
 @import "_palette.scss";
 
-@import "core/_core-config.scss";
+@import "core/_index.scss";
 
 @import "_variables.scss";
 
@@ -16,9 +16,9 @@
 
 @import "typography/_index.scss";
 
-@import "components/_components-config.scss";
-// @import "modules/_modules-config.scss";
-// @import "pages/_pages-config.scss";
+@import "components/_index.scss";
+@import "modules/_index.scss";
+@import "pages/_index.scss";
 
-// @import "utils/_utils-config.scss";
+@import "utils/_index.scss";
 @import "_array-output.scss";
