@@ -1,24 +1,24 @@
 @import "_h5bp.scss";
 @import "_normalize.scss";
 
-
 @import "vendors/_index.scss";
 
 @import "_config.scss";
 
 @import "_palette.scss";
 
-@import "core/_index.scss";
+@import "math-operations/_index.scss";
+@import "breakpoints/_index.scss";
 
-@import "_variables.scss";
+@import "extras/_index.scss";
 
 @import "_base.scss";
 
 @import "typography/_index.scss";
+@import "grids/_index.scss";
 
-@import "components/_index.scss";
 @import "modules/_index.scss";
 @import "pages/_index.scss";
 
 @import "utils/_index.scss";
-@import "_array-output.scss";
+@import "helpers/_index.scss";
