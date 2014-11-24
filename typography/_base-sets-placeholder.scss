@@ -22,7 +22,7 @@
 	line-height:  		$fontLineHeightMd;
 	letter-spacing: 	$fontLetterSpacingMd;
 
-	@include typography-responsive($fontBreakpoints, $fontResponsiveRatios, md);
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, md);
 
 }
 

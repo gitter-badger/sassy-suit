@@ -1,22 +1,4 @@
-@function ratio($i) {
-
-	@if $i > 1 {
-
-		$oldI: nth(map-get($typography, fontBreakpointsRatios), $i - 1 ) * nth(map-get($typography, fontBreakpointsRatios), $i);
-
-		@return $oldI * $i;
-
-	}
-
-	@else {
-
-		@return nth(map-get($typography, fontBreakpointsRatios), $i);
-
-	}
-
-}
-
-@mixin typography-responsive($typographyBaseSet, $fontBreakpoints, $fontResponsiveRatios) {
+@mixin typography-bp($baseSetPlaceholder, $fontBreakpoints, $fontResponsiveRatios) {
 
 	@if length($fontBreakpoints) != 0 {
 
@@ -26,7 +8,7 @@
 
 			@include bp($bp) {
 
-				font-size: ratio($i);
+				font-size: 1;
 
 			}
 
