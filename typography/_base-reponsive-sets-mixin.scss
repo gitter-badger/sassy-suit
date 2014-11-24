@@ -1,3 +1,5 @@
+$newSeq: calc-responsive-ratios($fontResponsiveRatios);
+
 @mixin typography-bp($baseSetPlaceholder, $fontBreakpoints, $fontResponsiveRatios) {
 
 	@if length($fontBreakpoints) != 0 {
@@ -8,7 +10,11 @@
 
 			@include bp($bp) {
 
-				font-size: 1;
+				// padding: $fontPaddingXs 0;
+				// font-size: $fontSizeXs;
+				// line-height:  $fontLineHeightXs;
+				// letter-spacing:$fontLetterSpacingXs;
+				font-size: 1 * nth($newSeq, $i);
 
 			}
 
