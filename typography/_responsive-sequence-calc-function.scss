@@ -1,0 +1,14 @@
+@function calc-responsive-ratios($seq) {
+
+	$length: length($seq);
+
+	@return $seq;
+
+};
+
+
+.xxx {
+	font-size: calc-responsive-ratios($fontResponsiveRatios);
+	// 1.1 1.21 1.331 1.4641 1.16051
+
+}
