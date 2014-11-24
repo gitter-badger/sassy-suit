@@ -126,8 +126,8 @@ $typography: (
 	fontLineHeightRatio: 	1.1,
 	fontPaddingRatio: 		1.1,
 	fontLetterSpacingRatio: -.02,
-	fontBreakPoints: 		( md, xl, xxl ),
-	fontBreakPointsRatio: 	( 1.2, 1.5, 2 )
+	fontBreakpoints: 		(sm, md, lg, xl, xxl),
+	fontBreakpointsRatios: 	( 1.1, 1.1, 1.1, 1.1, 1.1 )
 );
 
 /*-----  End of Typography  ------*/

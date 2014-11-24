@@ -1,0 +1,13 @@
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+$bpXs:   	map-get($breakpoints, xs);
+$bpSm:   	map-get($breakpoints, sm);
+$bpMd:   	map-get($breakpoints, md);
+$bpLg:   	map-get($breakpoints, lg);
+$bpXl:   	map-get($breakpoints, xl);
+$bpXxl: 	map-get($breakpoints, xxl);
+
+/*-----  End of Breakpoints  ------*/
+
