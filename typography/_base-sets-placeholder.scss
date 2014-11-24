@@ -21,6 +21,9 @@
 	font-size: 			$fontSizeMd;
 	line-height:  		$fontLineHeightMd;
 	letter-spacing: 	$fontLetterSpacingMd;
+
+	@include typography-responsive($fontBreakpoints, $fontResponsiveRatios, md);
+
 }
 
 %typography-base-lg {

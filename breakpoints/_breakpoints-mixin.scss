@@ -3,7 +3,9 @@
 	@if get-breakpoint(sm) {
 
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
 			@content;
+
 		}
 
 	}
@@ -11,7 +13,9 @@
 	@else if get-breakpoint(md) {
 
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
 			@content;
+
 		}
 
 	}
@@ -19,7 +23,9 @@
 	@else if get-breakpoint(lg) {
 
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
 			@content;
+
 		}
 
 	}
@@ -27,7 +33,9 @@
 	@else if get-breakpoint(xl) {
 
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
 			@content;
+
 		}
 
 	}
@@ -35,7 +43,9 @@
 	@else if get-breakpoint(xxl) {
 
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
 			@content;
+
 		}
 
 	}
@@ -44,13 +54,17 @@
 
 		@if get-breakpoint(xs) {
 
+
 			@content;
+
 
 		}
 
 		@else {
+
 			@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
 				"Please make sure it is defined in `$breakpoints` map in `core/_core-config.scss`.";
+
 		}
 
 	}

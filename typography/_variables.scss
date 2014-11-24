@@ -119,8 +119,8 @@ $fontLetterSpacingLargest: 		nth($fontLetterSpacingSequence, 9); // .largest
 =            Font responsive values            =
 ==============================================*/
 
-$fontResponsiveBreakpoints: 	map-get($typography, fontBreakPoints);
-$fontResponsiveRatio: 			map-get($typography, breakPointRatio);
+$fontBreakpoints: 				map-get($typography, fontBreakpoints);
+$fontResponsiveRatios: 			map-get($typography, fontBreakpointsRatios);
 
 /*-----  End of Font responsive values  ------*/
 
