@@ -21,7 +21,6 @@ $fontLetterSpacingRatio: 	map-get($typography, fontLetterSpacingRatio);
 			@if $i < 0 {
 				$new:nth($sequence, length($sequence)) / $common-ratio;
 	    		$sequence: append($sequence, $new);
-	    		$sequence-in-progress: $sequence;
 			}
 
 			@if $i == 0 {
