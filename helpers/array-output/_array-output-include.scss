@@ -1,3 +1,3 @@
-@include array-output(html, $fontSizeSequence, FONT SIZE SEQUENCE);
-@include array-output-after(html, $fontPaddingSequence, Padding SEQUENCE);
-@include array-output(body, $fontLineHeightSequence, LINE HEIGHT SEQUENCE);
+@include array-output(html, (map-get($typographyResponsiveBase, padding)), padding);
+@include array-output(body, $newSeq, new ratios - multipliers);
+@include array-output-after(html, $fontPaddingSequence, fontPaddingSequence which is used in original typography);

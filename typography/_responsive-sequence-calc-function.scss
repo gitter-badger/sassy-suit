@@ -1,0 +1,32 @@
+@function calc-responsive-ratios($seq) {
+
+	// Add error handling for correct values
+
+	$length: length($seq);
+	$newSeq: null;
+
+	@for $i from 1 through $length {
+
+		@if $i == 1 {
+
+			$newSeq: nth($seq, 1);
+
+		}
+
+		$newValue: nth($seq, $i) * nth($newSeq, length($newSeq));
+		$newSeq: append($newSeq, $newValue);
+
+	}
+
+	$newSeq: sl-remove-nth($newSeq, length($newSeq));
+
+		@return $newSeq;
+
+};
+
+
+.newSeq {
+	font-size: calc-responsive-ratios($fontResponsiveRatios);
+	// 1.1 1.1 1.1 1.1 1.1
+ 	// 1.1 1.21 1.331 1.4641 1.16051
+}
