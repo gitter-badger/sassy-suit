@@ -1,7 +1,38 @@
-$typographyResponsive :(
-	sm:  	(sm),
-	md:  	(md),
-	lg:  	(lg),
-	xl:  	(xl),
-	xxl: 	(xxl)
-)
+$typographyResponsiveBase: (
+
+    padding  		: ( $fontPaddingXs 0,
+    					$fontPaddingSm 0,
+    					$fontPaddingMd 0,
+    					$fontPaddingLg 0,
+    					$fontPaddingXl 0,
+    					$fontPaddingXxl 0,
+    					$fontPaddingLarger 0,
+    					$fontPaddingLargest 0 ),
+
+    font-size  		: ( $fontSizeXs,
+    					$fontSizeSm,
+    					$fontSizeMd,
+    					$fontSizeLg,
+    					$fontSizeXl,
+    					$fontSizeXxl,
+    					$fontSizeLarger,
+    					$fontSizeLargest ),
+
+    line-height  	: ( $fontLineHeightXs,
+    					$fontLineHeightSm,
+    					$fontLineHeightMd,
+    					$fontLineHeightLg,
+    					$fontLineHeightXl,
+    					$fontLineHeightXxl,
+    					$fontLineHeightLarger,
+    					$fontLineHeightLargest ),
+
+    letter-spacing  : ( $fontLetterSpacingXs,
+						$fontLetterSpacingSm,
+						$fontLetterSpacingMd,
+						$fontLetterSpacingLg,
+						$fontLetterSpacingXl,
+						$fontLetterSpacingXxl,
+						$fontLetterSpacingLarger,
+						$fontLetterSpacingLargest )
+);
