@@ -1,6 +1,6 @@
 $newSeq: calc-responsive-ratios($fontResponsiveRatios);
 
-@mixin typography-bp($baseSetPlaceholder, $fontBreakpoints, $fontResponsiveRatios) {
+@mixin typography-bp($fontBreakpoints, $fontResponsiveRatios, $baseSetPlaceholder) {
 
 	@if length($fontBreakpoints) != 0 {
 
@@ -8,13 +8,21 @@ $newSeq: calc-responsive-ratios($fontResponsiveRatios);
 
 			$bp: nth(map-get($typography, fontBreakpoints), $i);
 
+			$padding: map-get($typographyResponsiveBase, padding);
+			$fontSize: map-get($typographyResponsiveBase, font-size);
+			$lineHeight: map-get($typographyResponsiveBase, line-height);
+
+			$letterSpacing: map-get($typographyResponsiveBase, letter-spacing);
+
 			@include bp($bp) {
 
-				// padding: $fontPaddingXs 0;
-				// font-size: $fontSizeXs;
-				// line-height:  $fontLineHeightXs;
-				// letter-spacing:$fontLetterSpacingXs;
-				font-size: 1 * nth($newSeq, $i);
+				$n: 		base-set-checker($baseSetPlaceholder);
+				$ratio:		nth($newSeq, $i);
+
+				padding: floor(nth($padding, $n) * $ratio) 0;
+				font-size: floor(nth($fontSize, $n)  * $ratio);
+				line-height: floor(nth($lineHeight, $n)  * $ratio);
+				letter-spacing: floor(nth($letterSpacing, $n)  * $ratio);
 
 			}
 
