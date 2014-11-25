@@ -7,6 +7,9 @@
 	font-size: 			$fontSizeXs;
 	line-height:  		$fontLineHeightXs;
 	letter-spacing: 	$fontLetterSpacingXs;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, xs);
+
 }
 
 %typography-base-sm {
@@ -14,6 +17,9 @@
 	font-size: 			$fontSizeSm;
 	line-height:  		$fontLineHeightSm;
 	letter-spacing: 	$fontLetterSpacingSm;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, sm);
+
 }
 
 %typography-base-md {
@@ -31,6 +37,9 @@
 	font-size: 			$fontSizeLg;
 	line-height:  		$fontLineHeightLg;
 	letter-spacing: 	$fontLetterSpacingLg;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, lg);
+
 }
 
 %typography-base-xl {
@@ -38,6 +47,9 @@
 	font-size: 			$fontSizeXl;
 	line-height:  		$fontLineHeightXl;
 	letter-spacing: 	$fontLetterSpacingXl;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, xl);
+
 }
 
 %typography-base-xxl {
@@ -45,6 +57,9 @@
 	font-size: 			$fontSizeXxl;
 	line-height:  		$fontLineHeightXxl;
 	letter-spacing: 	$fontLetterSpacingXxl;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, xxl);
+
 }
 
 %typography-base-xxxl {
@@ -52,6 +67,9 @@
 	font-size: 			$fontSizeXxxl;
 	line-height:  		$fontLineHeightXxxl;
 	letter-spacing: 	$fontLetterSpacingXxxl;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, xxxl);
+
 }
 
 %typography-base-larger {
@@ -59,6 +77,9 @@
 	font-size: 			$fontSizeLarger;
 	line-height:  		$fontLineHeightLarger;
 	letter-spacing: 	$fontLetterSpacingLarger;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, larger);
+
 }
 
 %typography-base-largest {
@@ -66,6 +87,8 @@
 	font-size: 			$fontSizeLargest;
 	line-height:  		$fontLineHeightLargest;
 	letter-spacing: 	$fontLetterSpacingLargest;
+
+	@include typography-bp($fontBreakpoints, $fontResponsiveRatios, largest);
 }
 
 /*-----  End of Typography Base  ------*/
