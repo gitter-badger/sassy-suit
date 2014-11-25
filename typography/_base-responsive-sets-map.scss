@@ -1,13 +1,14 @@
 $typographyResponsiveBase: (
 
-    padding  		: ( $fontPaddingXs 0,
-    					$fontPaddingSm 0,
-    					$fontPaddingMd 0,
-    					$fontPaddingLg 0,
-    					$fontPaddingXl 0,
-    					$fontPaddingXxl 0,
-    					$fontPaddingLarger 0,
-    					$fontPaddingLargest 0 ),
+    padding  		: ( $fontPaddingXs,
+    					$fontPaddingSm,
+    					$fontPaddingMd,
+    					$fontPaddingLg,
+    					$fontPaddingXl,
+    					$fontPaddingXxl,
+    					$fontPaddingXxxl,
+    					$fontPaddingLarger,
+    					$fontPaddingLargest ),
 
     font-size  		: ( $fontSizeXs,
     					$fontSizeSm,
@@ -15,6 +16,7 @@ $typographyResponsiveBase: (
     					$fontSizeLg,
     					$fontSizeXl,
     					$fontSizeXxl,
+    					$fontSizeXxxl,
     					$fontSizeLarger,
     					$fontSizeLargest ),
 
@@ -24,6 +26,7 @@ $typographyResponsiveBase: (
     					$fontLineHeightLg,
     					$fontLineHeightXl,
     					$fontLineHeightXxl,
+    					$fontLineHeightXxxl,
     					$fontLineHeightLarger,
     					$fontLineHeightLargest ),
 
@@ -33,6 +36,8 @@ $typographyResponsiveBase: (
 						$fontLetterSpacingLg,
 						$fontLetterSpacingXl,
 						$fontLetterSpacingXxl,
+						$fontLetterSpacingXxxl,
 						$fontLetterSpacingLarger,
 						$fontLetterSpacingLargest )
+
 );
