@@ -1,0 +1,15 @@
+@function seqLiquidRatios($baseSize, $mediaRatio, $liquidWidth) {
+
+	$seqLiquidRatios: $baseSize;
+
+	@for $i from 1 through $liquidWidth {
+
+		$newValue: nth($seqLiquidRatios, length($seqLiquidRatios)) * $mediaRatio;
+
+		$seqLiquidRatios: append($seqLiquidRatios, $newValue);
+
+	}
+
+}
+
+
