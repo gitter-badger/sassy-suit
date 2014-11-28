@@ -2,6 +2,7 @@ SassySuit
 =========
 
 SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md). 
+<br>
 __WARNING__: this is work in progress! 
 If you have any questions, please open an issue.
 
