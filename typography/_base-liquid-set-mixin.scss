@@ -11,6 +11,7 @@
 
 
 $liquidWidth: $bpXxl - $bpSm;
+$counter: 1200 - 300;
 $liquidRatio: map-get($typography, liquidRatio);
 
 $mediaRatio: ($liquidRatio / $liquidWidth) + 1;
@@ -31,7 +32,11 @@ $mediaRatio: ($liquidRatio / $liquidWidth) + 1;
 	@for $i from $bpSm through $bpXxl {
 
 		@media (min-width: $i) {
-			font-size: nth($seqLiquid, $i);
+
+			// @for $n from 1 through ($counter - 1) {
+				font-size: length($seqLiquidRatios);
+				// font-size: $n;
+			// }
 		}
 
 	}
