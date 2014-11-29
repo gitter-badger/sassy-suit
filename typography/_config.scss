@@ -1,0 +1,18 @@
+/*============================================================
+=            Stored values from root _config.scss            =
+============================================================*/
+
+$typoBase: 					map-get($typo, base);
+$typoIndexStart: 			map-get($typo, indexStart);
+$typoIndexEnd: 				map-get($typo, indexEnd);
+$typoSizeRatio: 			map-get($typo, sizeRatio);
+$typoLineHeightRatio: 		map-get($typo, lineHeight);
+$typoPaddingRatio: 			map-get($typo, paddingRatio);
+$typoLetterSpacingRatio: 	map-get($typo, leterSpacingRatio);
+$typoOutputStyle: 			map-get($typo, outputStyle);
+$typoBps:	 				map-get($typo, bps);
+$typoBpsRatioList: 			map-get($typo, bpsRatios);
+$typoLiquidRatio: 			map-get($typo, liquidRatio);
+
+/*-----  End of Stored values from root _config.scss  ------*/
+
