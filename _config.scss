@@ -120,17 +120,17 @@ $fontFamilyNames: (
 
 // approach: static, responsive, liquid;
 
-$typography: (
+$typo: (
 	base: 					16px,
-	index: 					-2,
-	length: 				8,
-	fontSizeRatio: 			1.4,
-	fontLineHeightRatio: 	1.1,
-	fontPaddingRatio: 		1.1,
-	fontLetterSpacingRatio: -.02,
-	approach: 				liquid,
-	fontBreakpoints: 		( sm, md, lg, xl, xxl ),
-	fontBreakpointsRatios: 	( 1.1, 1.1, 1.1, 1.1, 1.1 ),
+	indexStart: 			-2,
+	indexEnd: 				8,
+	sizeRatio: 				1.4,
+	lineHeightRatio: 		1.1,
+	paddingRatio: 			1.1,
+	letterSpacingRatio: 	-.02,
+	outputStyle: 			static,
+	bps: 					( sm, md, lg, xl, xxl ),
+	bpsRatios: 				( 1.1, 1.1, 1.1, 1.1, 1.1 ),
 	liquidRatio: 			2
 );
 
