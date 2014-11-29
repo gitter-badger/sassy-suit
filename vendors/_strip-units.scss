@@ -1,0 +1,8 @@
+// http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass/12335841#12335841
+// https://github.com/sass/sass/issues/533
+
+@function strip-units($number) {
+
+	@return $number / ($number * 0 + 1);
+
+}
