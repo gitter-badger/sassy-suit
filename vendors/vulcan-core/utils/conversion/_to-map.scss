@@ -1,0 +1,20 @@
+/**
+ * Convert to map
+ *
+ * @since 1.0.0
+ *
+ * @requires to-map
+ * @requires v-invoke
+ *
+ * @param {*} $value - value to cast
+ *
+ * @return {map}
+ */
+
+@function v-toMap($value...) {
+    @return v-invoke(
+        $params: $value,
+        $types: any,
+        $callback: to-map
+    );
+}

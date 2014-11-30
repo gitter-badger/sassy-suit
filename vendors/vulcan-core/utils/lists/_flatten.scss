@@ -1,0 +1,20 @@
+/**
+ * Turns multidimensional `$list` into a one-level list.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-flatten
+ * @requires v-invoke
+ *
+ * @param {list} $list - list to flatten
+ *
+ * @return {list|false}
+ */
+
+@function v-list_flatten($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: any,
+        $callback: sl-flatten
+    );
+}

@@ -1,0 +1,21 @@
+/**
+ * Returns whether `$list` contains `$value`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-contain
+ * @requires v-invoke
+ *
+ * @param {list}   $list  - list to check
+ * @param {*}  $value - value to look for
+ *
+ * @return {bool}
+ */
+
+@function v-list_contains($list, $value) {
+    @return v-invoke(
+        $params: ($list, $value),
+        $types: (list, any),
+        $callback: sl-contain
+    );
+}

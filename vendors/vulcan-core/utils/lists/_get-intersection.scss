@@ -1,0 +1,40 @@
+@function __list_getIntersection($list, $lists) {
+    $result: $list;
+
+    @each $list in $lists {
+        $temp: ();
+
+        @each $item in $result {
+            @if not not index($list, $item) {
+                $temp: append($temp, $item, list-separator($list));
+            }
+        }
+
+        $result: $temp;
+    }
+
+    @return sl-remove-duplicates($result);
+}
+
+
+/**
+ * Returns a list of shared value from `$list` and `$lists` minus duplicates.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-intersection
+ * @requires v-invoke
+ *
+ * @param {list}    $list  - list to update
+ * @param {argList} $index - other lists
+ *
+ * @return {list|false}
+ */
+
+@function v-list_getIntersection($list, $lists...) {
+    @return v-invoke(
+        $params: ($list, $lists),
+        $types: (list, any),
+        $callback: __list_getIntersection
+    );
+}

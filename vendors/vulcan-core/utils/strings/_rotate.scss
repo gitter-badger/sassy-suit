@@ -1,0 +1,24 @@
+/**
+ * Rotate all characters from the alphabet in $string by $rot positions
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-rot
+ *
+ * @param {string} $string - string to reverse
+ * @param {number} $rot    - number of positions to switch in alphabet
+ *
+ * @return {string|false}
+ *
+ * @example
+ *  v-string_rotate(test) //returns 'grfg'
+ */
+
+@function v-string_rotate($string, $rotate: 13) {
+    @return v-invoke(
+        $params: ($string, $rotate),
+        $types: (string, number),
+        $callback: str-rot
+    );
+}

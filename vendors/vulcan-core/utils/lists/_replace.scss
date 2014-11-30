@@ -1,0 +1,22 @@
+/**
+ * Replaces `$old` by `$new` in `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-replace
+ * @requires v-invoke
+
+ * @param {List} $list   - list to update
+ * @param {value} $old   - value to replace
+ * @param {value} $value - new value for $old
+ *
+ * @return {list}
+ */
+
+@function v-list_replace($list, $old, $value) {
+    @return v-invoke(
+        $params: ($list, $old, $value),
+        $types: (list, any, any),
+        $callback: sl-replace
+    );
+}

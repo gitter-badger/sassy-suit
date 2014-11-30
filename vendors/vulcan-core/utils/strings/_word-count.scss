@@ -1,0 +1,23 @@
+/**
+ * Count number of words in $string
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-word-count
+ *
+ * @param {string} $string - string to count words in
+ *
+ * @return {string|false}
+ *
+ * @example
+ * v-string_countWords('this is a test') //returns 4
+ */
+
+@function v-string_countWords($string) {
+    @return v-invoke(
+        $params: $string,
+        $types: string,
+        $callback: str-word-count
+    );
+}

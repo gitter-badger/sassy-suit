@@ -1,0 +1,32 @@
+@function __list_some($list, $function, $args) {
+    @each $item in $list {
+        @if call($function, $item, $args...) {
+            @return true;
+        }
+    }
+
+    @return false;
+}
+
+/**
+ * Tests whether some items from `$list` pass the test implemented by `$function`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-some
+ * @requires v-invoke
+ *
+ * @param {List}    $list     - list to run test against
+ * @param {String}  $function - function to run against every item from list
+ * @param {ArgList} $args     - extra arguments to pass to the function
+ *
+ * @return {bool}
+ */
+
+@function v-list_some($list, $function, $args...) {
+    @return v-invoke(
+        $params: ($list, $function, $args),
+        $types: (list, string, any),
+        $callback: __list_some
+    );
+}

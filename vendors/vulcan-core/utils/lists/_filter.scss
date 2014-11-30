@@ -1,0 +1,21 @@
+/**
+ * Removes value from `$list` at index `$index`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-remove-nth
+ * @requires v-invoke
+ *
+ * @param {list}   $list - list to remove value from
+ * @param {number} $index - index to remove
+ *
+ * @return {list|false}
+ */
+
+@function v-list_filter($list, $index) {
+    @return v-invoke(
+        $params: ($list, $index),
+        $types: (list, number),
+        $callback: sl-remove-nth
+    );
+}

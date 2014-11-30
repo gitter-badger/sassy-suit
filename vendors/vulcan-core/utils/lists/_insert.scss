@@ -1,0 +1,22 @@
+/**
+ * Adds `$value` at `$index` in `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-insert-nth
+ * @requires v-invoke
+ *
+ * @param {list}   $list  - list to flatten
+ * @param {number} $index - index to add
+ * @param {any}    $value - value to add
+ *
+ * @return {list|false}
+ */
+
+@function v-list_insert($list, $index, $value) {
+    @return v-invoke(
+        $params: ($list, $index, $value),
+        $types: (list, number, any),
+        $callback: sl-insert-nth
+    );
+}

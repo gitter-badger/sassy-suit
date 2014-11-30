@@ -1,0 +1,55 @@
+/**
+ * checks for dependant mixins or functions
+ *
+ * @since 1.0.0
+ *
+ * @param {list|string|nothing} $dependencies - names of functions and mixins to check for
+ *
+ * @throws Sorry, you entered invalid parameter for $dependencies of v-missingDependencies.
+ * @throws Unmet dependencies! The following functions are required: $missingDependencies.
+ *
+ * @returns {number|false}
+ *
+ * @example
+ *  v-missingDependencies(test-function)
+ *  v-missingDependencies(test-function, another-test-function)
+ *
+ */
+
+@function v-missingDependencies($dependencies...) {
+    //flatten dependencies if its a list
+    $dependencies: sl-flatten($dependencies);
+    $errors: ();
+    @each $dependency in $dependencies {
+        @if type-of($dependency) == number {
+            $errors: append($errors, 'Sorry, you entered invalid parameter for $dependencies of v-missingDependencies.');
+        }
+    }
+    @if length($errors) == 0 {
+        @if $dependencies != 'nothing' {
+            $missingDependencies: ();
+
+            @each $dependency in $dependencies {
+                @if type-of($dependency) == bool or $dependency == null {
+                    @return false;
+                }
+                @if not function-exists($dependency) and not mixin-exists($dependency) {
+                    $missingDependencies: append($missingDependencies, $dependency, comma);
+                }
+            }
+
+            @if length($missingDependencies) > 0 {
+                @warn "Unmet dependencies! The following functions are required: #{$missingDependencies}.";
+            }
+
+            @return length($missingDependencies) != 0;
+        } @else {
+            @return true;
+        }
+    } @else {
+        @each $error in $errors {
+            @warn $error;
+        }
+        @return false;
+    }
+}

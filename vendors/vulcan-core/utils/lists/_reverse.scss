@@ -1,0 +1,20 @@
+/**
+ * Reverses the order of `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-reverse
+ * @requires v-invoke
+
+ * @param {list} $list - list to reverse
+ *
+ * @return {list|false}
+ */
+
+@function v-list_reverse($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: list,
+        $callback: sl-reverse
+    );
+}

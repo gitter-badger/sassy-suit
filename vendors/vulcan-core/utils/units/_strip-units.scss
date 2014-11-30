@@ -1,0 +1,34 @@
+/**
+ * removes all units from a value
+ * @access private
+ */
+
+@function __stripUnits($measure) {
+    @return $measure / ($measure * 0 + 1);
+}
+
+/**
+ * removes all units from a value
+ *
+ * @access public
+ *
+ * @since 1.0.0
+ *
+ * @param {measure} $measure - measure to strip unit off
+ *
+ * @return {number}
+ *
+ * @example
+ *  v-stripUnits(1em) //returns 1
+ *  v-stripUnits(10cm) //returns 10
+ *  v-stripUnits(10) //returns 10
+ *  v-stripUnits(test) //returns false
+ */
+
+@function v-stripUnits($measure) {
+    @return v-invoke(
+        $params: $measure,
+        $types: measure number,
+        $callback: __stripUnits
+    );
+}

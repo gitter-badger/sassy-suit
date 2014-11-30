@@ -1,0 +1,24 @@
+/**
+ * Count the number of occurrences of $needle in $string
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ *
+ * @param {string} $string - string to test
+ * @param {string} $needle - substring to count in $string
+ *
+ * @return {number|false}
+ *
+ * @example
+ *  v-string_countSubstring('just a test', test) //returns 1
+ *  v-string_countSubstring('just a test test', test) //returns 2
+ */
+
+@function v-string_countSubstring($string, $needle) {
+    @return v-invoke(
+        $params: ($string, $needle),
+        $types: (string, string),
+        $callback: str-count
+    );
+}

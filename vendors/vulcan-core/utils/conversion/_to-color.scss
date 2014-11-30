@@ -1,0 +1,26 @@
+/**
+ * Convert to color
+ *
+ * @since 1.0.0
+ *
+ * @requires to-color
+ * @requires v-invoke
+ *
+ * @param {color} $value - value to cast
+ *
+ * @return {color|false}
+ *
+ * @example
+ *  v-toColor(#000) //black
+ *  v-toColor(rgb(0,0,0)) //black
+ *  v-toColor(null) //false
+ *  v-toColor(test) //false
+ */
+
+@function v-toColor($value...) {
+    @return v-invoke(
+        $params: $value,
+        $types: color,
+        $callback: to-color
+    );
+}

@@ -1,0 +1,34 @@
+@function __pxToRem($size, $base) {
+    @if $size == 0 or $base == 0 {
+        @return 0;
+    }
+    $size: v-stripUnits($size);
+    $base: v-stripUnits($base);
+    $remSize: $size / $base;
+    @return v-addUnit($remSize, rem);
+}
+
+/**
+ * calculates rems out of pixels
+ *
+ * @requires __pxToRem
+ * @requires v-invoke
+ * @requires v-stripUnits
+ * @requires v-addUnit
+ *
+ * @param {measure} $size                   - the pixel value that will be converted, with or without unit
+ * @param {number}  $base ($v-baseFontSize) - the base for the calculation of rems
+ *
+ * @return {measure}
+ *
+ * @since 1.0.0
+ */
+
+@function v-pxToRem($size, $base: $v-baseFontSize) {
+    @return v-invoke(
+        $params: ($size, $base),
+        $types: (measure number, number),
+        $callback: __pxToRem,
+        $requires: (v-stripUnits, v-addUnit)
+    );
+}

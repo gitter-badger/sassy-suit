@@ -1,0 +1,38 @@
+@function __selector_getBlock($selector) {
+    @if type-of($selector) == list {
+        $selector: v-list_toString($selector);
+    }
+    $block: '';
+    @if str-index($selector, $v-modifierSeparator) {
+        $modifierStart: str-index($selector, $v-modifierSeparator) - 1;
+        $block: str-slice($selector, 0, $modifierStart);
+    }
+    @if str-index($selector, $v-elementSeparator) {
+        $elementStart: str-index($selector, $v-elementSeparator) - 1;
+        $block: str-slice($selector, 0, $elementStart);
+    }
+    @return $block;
+}
+
+/**
+ * Get a BEM block from a selector
+ *
+ * @since 1.0.0
+ *
+ * @requires __selector_getBlock
+ * @requires v-invoke
+ * @requires v-list_toString
+ *
+ * @param {list|string} $value - selector to get block from
+ *
+ * @return {bool}
+ */
+
+@function v-selector_getBlock($selector) {
+    @return v-invoke(
+        $params: $selector,
+        $types: list string,
+        $callback: __selector_getBlock,
+        $requires: v-list_toString
+    );
+}

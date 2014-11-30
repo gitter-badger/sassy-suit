@@ -1,0 +1,23 @@
+/**
+ * Shuffle characters from $string
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-shuffle
+ *
+ * @param {string} $string - string to shuffle
+ *
+ * @return {string|false}
+ *
+ * @example
+ * v-string_shuffle(test) //returns random string, e.g. 'tste'
+ */
+
+@function v-string_shuffle($string) {
+    @return v-invoke(
+        $params: $string,
+        $types: string,
+        $callback: str-shuffle
+    );
+}

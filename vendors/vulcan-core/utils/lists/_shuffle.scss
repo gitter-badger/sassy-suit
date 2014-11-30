@@ -1,0 +1,20 @@
+/**
+ * Shuffle `$list` using Fisher-Yates method.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-shuffle
+ * @requires v-invoke
+
+ * @param {list} $list - list to shuffle
+ *
+ * @return {list|false}
+ */
+
+@function v-list_shuffle($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: list,
+        $callback: sl-shuffle
+    );
+}

@@ -1,0 +1,22 @@
+/**
+ * Slices `$list` between `$start` and `$end`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-slice
+ * @requires v-invoke
+
+ * @param {list}   $list                  - list to slice
+ * @param {number} $start (1)             - start index
+ * @param {number} $end   (length($list)) - end index
+ *
+ * @return {list|false}
+ */
+
+@function v-list_slice($list, $start: 1, $end: length($list)) {
+    @return v-invoke(
+        $params: ($list, $start, $end),
+        $types: (list, number, number),
+        $callback: sl-slice
+    );
+}

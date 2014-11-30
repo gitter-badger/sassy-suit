@@ -1,0 +1,34 @@
+@function __pxToEm($px, $base) {
+    @if $px == 0 or $base == 0 {
+        @return 0;
+    }
+    $px: v-stripUnits($px);
+    $base: v-stripUnits($base);
+    $result: $px / $base;
+    $result: v-addUnit($result, em);
+    @return $result;
+}
+
+/**
+ * calculates ems out of pixels
+ *
+ * @requires __pxToEm
+ * @requires v-invoke
+ * @requires v-stripUnits
+ *
+ * @param {measure|number} $px   - the pixel value that will be converted
+ * @param {measure|number}  $base - the base for the calculation of ems
+ *
+ * @return {measure}
+ *
+ * @since 1.0.0
+ */
+
+@function v-pxToEm($px, $base){
+    @return v-invoke(
+        $params: ($px, $base),
+        $callback: __pxToEm,
+        $types: (measure number, measure number),
+        $requires: v-stripUnits
+    );
+}

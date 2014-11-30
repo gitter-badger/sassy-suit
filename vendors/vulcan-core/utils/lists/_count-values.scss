@@ -1,0 +1,20 @@
+/**
+ * Counts the number of occurrences of each value of `$list`.
+ *
+ * @requires sl-count-values
+ * @requires v-invoke
+ *
+ * @param {list}   $list  - list to count values from
+ *
+ * @return {number|false}
+ *
+ * @since 1.0.0
+ */
+
+@function v-list_countValues($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: list string,
+        $callback: sl-count-values
+    );
+}

@@ -1,0 +1,20 @@
+/**
+ * Returns a list of values from `$lists` minus duplicates.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-union
+ * @requires v-invoke
+ *
+ * @param {ArgList} $lists - lists to unify
+ *
+ * @return {list|false}
+ */
+
+@function v-list_union($lists...) {
+    @return v-invoke(
+        $params: $lists,
+        $types: any,
+        $callback: sl-union
+    );
+}
