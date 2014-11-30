@@ -49,11 +49,11 @@ You can also pass a list of multiple parametrs (avoid using commas)
 
 ### Logger
 
-* `@mixin FATAL($message)` - Severe errors that cause premature termination
-* `@mixin ERROR($message)` - Other runtime errors or unexpected conditions
-* `@mixin  WARN($message)` - Use of deprecated APIs, poor use of API, 'almost' errors, other runtime situations that are undesirable or unexpected, but not necessarily wrong
-* `@mixin  INFO($message)` - Interesting runtime events (startup/shutdown).
-* `@mixin DEBUG($message)` - Detailed information on the flow through the system.
+* `@include FATAL($message)` - Severe errors that cause premature termination
+* `@include ERROR($message)` - Other runtime errors or unexpected conditions
+* `@include  WARN($message)` - Use of deprecated APIs, poor use of API, 'almost' errors, other runtime situations that are undesirable or unexpected, but not necessarily wrong
+* `@include  INFO($message)` - Interesting runtime events (startup/shutdown).
+* `@include DEBUG($message)` - Detailed information on the flow through the system.
 
 
 
