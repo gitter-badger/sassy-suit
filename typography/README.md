@@ -29,40 +29,40 @@
 
 ### Data Type Validation
 
-* validate($value, bool)
-* validate($value, color)
-* validate($value, empty)
-* validate($value, list)
-* validate($value, measure)
-* validate($value, null)
-* validate($value, numeric)
-* validate($value, string)
-* validate($value, unit)
+* `validate($value, bool)`
+* `validate($value, color)`
+* `validate($value, empty)`
+* `validate($value, list)`
+* `validate($value, measure)`
+* `validate($value, null)`
+* `validate($value, numeric)`
+* `validate($value, string)`
+* `validate($value, unit)`
 
 You can also pass a list of multiple parametrs (avoid using commas)
 
-* validate($value, unit numeric color)
-* validate($value, bool color)
-* validate($value, bool measure color numeric string)
+* `validate($value, unit numeric color)`
+* `validate($value, bool color)`
+* `validate($value, bool measure color numeric string)`
 
 
 
 ### Logger
 
-`@mixin FATAL($message)` - Severe errors that cause premature termination
-`@mixin ERROR($message)` - Other runtime errors or unexpected conditions
-`@mixin  WARN($message)` - Use of deprecated APIs, poor use of API, 'almost' errors, other runtime situations that are undesirable or unexpected, but not necessarily wrong
-`@mixin  INFO($message)` - Interesting runtime events (startup/shutdown).
-`@mixin DEBUG($message)` - Detailed information on the flow through the system.
+* `@mixin FATAL($message)` - Severe errors that cause premature termination
+* `@mixin ERROR($message)` - Other runtime errors or unexpected conditions
+* `@mixin  WARN($message)` - Use of deprecated APIs, poor use of API, 'almost' errors, other runtime situations that are undesirable or unexpected, but not necessarily wrong
+* `@mixin  INFO($message)` - Interesting runtime events (startup/shutdown).
+* `@mixin DEBUG($message)` - Detailed information on the flow through the system.
 
 
 
 ### Modular Scale 
 
-`ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
+* `ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
 
 
 
 ### SassyLists
 
-`sl-walk($list, function)` - apply function for each $list value 
+* `sl-walk($list, function)` - apply function for each $list value 
