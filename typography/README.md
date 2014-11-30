@@ -1,12 +1,12 @@
 # File Structure 
 
 * `_config.scss` - store values from root _config.scss
-* `_googleFontsFunction.scss` - 
-* `_googleFontsMixin.scss` - 
+* `_googleFontsFunction.scss` - URL encoder function for Google Fonts 
+* `_googleFontsMixin.scss` - Google Fonts URL generator mixin
 * `_baseSetsFunctions.scss` - 
 * `_baseSetsLists.scss` - 
 * `_variables.scss` - 
-* `_webFontsInclude.scss` - 
+* `_googleFontsInclude.scss` - Google Fonts URL import mixin
 * `_baseSetsBp.scss` - 
 * `_baseSetsBpLists.scss` - 
 * `_baseSetsLiquid.scss` - 
