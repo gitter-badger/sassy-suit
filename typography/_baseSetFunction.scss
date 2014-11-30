@@ -1,0 +1,30 @@
+@function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio) {
+
+		// Argument validation
+
+		// `$typoBase`
+		@if validate($typoBase, measure) == true and validate($typoBase, negative) == false and
+			validate($typoIndexStart, negative) == true  {
+
+				@warn "Hoorey!";
+
+		} @else if validate($typoBase, number) == true {
+
+			@warn "Add units for `$typoBase` variables in root _config.scss";
+
+		} @else if validate($typoBase, measure) == false {
+
+			@warn " `$typoBase` value has wrong data type. It has to be `measure`";
+
+		}
+
+			@warn "This is getBaseSet log after @if statements";
+
+			@return "Hello!";
+
+
+};
+
+.getBaseSet {
+	xxx: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio)
+};
