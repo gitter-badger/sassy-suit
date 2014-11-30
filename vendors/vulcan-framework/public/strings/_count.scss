@@ -1,0 +1,29 @@
+/**
+ * Count the number of occurrences of $needle in $string
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * ---
+ * @param {string} $string - string to test
+ * @param {string} $needle - substring to count in $string
+ * ---
+ * @return {number|false}
+ * ---
+ * @example
+ *  string-count('just a test', test) //returns 1
+ * @example
+ *  string-count('just a test test', test) //returns 2
+ */
+
+@function string-count($string, $needle) {
+    $conf: (
+        params: ($string, $needle),
+        types: (string, string)
+    );
+    @return invoke(_ss-str-count,$conf);
+}

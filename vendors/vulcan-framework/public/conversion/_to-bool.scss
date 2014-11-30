@@ -1,0 +1,32 @@
+/**
+ * Convert to bool
+ * ---
+ * @access public
+ * ---
+ * @group conversion
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _sc-to-bool
+ * @requires invoke
+ * ---
+ * @param {literal} $value - value to cast
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ * to-bool(1) //true
+ * to-bool(true) //true
+ * to-bool(test) //true
+ * to-bool(0) //false
+ * to-bool(null) //false
+ * to-bool(false) //false
+ */
+
+@function to-bool($value...) {
+    $conf: (
+        params: $value,
+        types: any
+    );
+    @return invoke(_sc-to-bool, $conf);
+}

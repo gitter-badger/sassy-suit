@@ -1,0 +1,24 @@
+/**
+ * Convert to string
+ * ---
+ * @access public
+ * ---
+ * @group conversion
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _sc-to-string
+ * @requires invoke
+ * ---
+ * @param {*} $value - value to cast
+ * ---
+ * @return {string}
+ */
+
+@function to-string($value...) {
+    $conf: (
+        params: $value,
+        types: any
+    );
+    @return invoke(_sc-to-string, $conf);
+}

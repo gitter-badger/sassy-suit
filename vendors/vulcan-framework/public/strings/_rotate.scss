@@ -1,0 +1,28 @@
+/**
+ * Rotate all characters from the alphabet in $string by $rot positions
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-rot
+ * ---
+ * @param {string} $string - string to reverse
+ * @param {number} $rot    - number of positions to switch in alphabet
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ *  string-rotate(test) //returns 'grfg'
+ */
+
+@function string-rotate($string, $rotate: 13) {
+    $conf: (
+        params: ($string, $rotate),
+        types: (string, number)
+    );
+    @return invoke(_ss-str-rot, $conf);
+}

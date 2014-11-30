@@ -1,0 +1,27 @@
+/**
+ * Count number of words in $string
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-word-count
+ * ---
+ * @param {string} $string - string to count words in
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ * string-count-words('this is a test') //returns 4
+ */
+
+@function string-count-words($string) {
+    $conf:(
+        params: $string,
+        types: string
+    );
+    @return invoke(_ss-str-word-count, $conf);
+}

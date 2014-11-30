@@ -1,0 +1,36 @@
+/**
+ * Pad $string from $direction with $pad to reach $length characters
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-pad
+ * ---
+ * @param {string} $string    - string
+ * @param {number} $length    - number of characters to go for in returned string
+ * @param {string} $pad       - string to use to pad $string
+ * @param {string} $direction - direction left or right for padding
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ *  string-pad('test', 9, '_', left) //returns _____test
+ * @example
+ *  string-pad('test', 5, '_', left) //returns _test
+ * @example
+ *  string-pad('test', 1, '_', left) //returns test
+ * @example
+ *  string-pad('test', 5, '_', right) //returns test_
+ */
+
+@function string-pad($string, $length, $pad: " ", $direction: left) {
+    $conf: (
+        params: ($string, $length, $pad, $direction),
+        types: (string, number, string, string)
+    );
+    @return invoke(_ss-str-pad, $conf);
+}

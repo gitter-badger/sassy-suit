@@ -1,0 +1,26 @@
+/**
+ * Tests whether `$var` is string.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {literal} $var  - check for string type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-string(test) //returns true
+ * @example
+ *  is-string(1)    //returns false
+ */
+
+@function is-string($var) {
+    @if type-of($var) != string {
+        @return false;
+    } @else {
+        @return true;
+    }
+}

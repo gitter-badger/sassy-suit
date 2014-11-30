@@ -1,0 +1,24 @@
+/**
+ * Returns first element of `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-first
+ * @requires invoke
+ * ---
+ * @param {list}   $list - list to retrieve first item from
+ * ---
+ * @return {value|false}
+ */
+
+@function list-first($list) {
+    $conf: (
+        params: $list,
+        types: any
+    );
+    @return invoke(sl-first, $conf);
+}

@@ -1,0 +1,31 @@
+/**
+ * Remove all trailing and leading whitespaces from $string
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-trim
+ * ---
+ * @param {string} $string - string to trim
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ *  string-trim('  test') //returns 'test'
+ * @example
+ *  string-trim('  test   ') //returns 'test'
+ * @example
+ *  string-trim('  test is nice   ') //returns 'test is nice'
+ */
+
+@function string-trim($string) {
+    $conf:(
+        params: $string,
+        types: string,
+    );
+    @return invoke(_ss-str-trim, $conf);
+}

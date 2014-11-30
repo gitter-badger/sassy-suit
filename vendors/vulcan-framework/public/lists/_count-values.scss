@@ -1,0 +1,24 @@
+/**
+ * Counts the number of occurrences of each value of `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @requires sl-count-values
+ * @requires invoke
+ * ---
+ * @param {list}   $list  - list to count values from
+ * ---
+ * @return {number|false}
+ * ---
+ * @since 1.0.0
+ */
+
+@function list-count-values($list...) {
+    $conf: (
+        params: $list,
+        types: list string
+    );
+    @return invoke(sl-count-values, $conf);
+}

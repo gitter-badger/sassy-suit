@@ -1,0 +1,28 @@
+/**
+ * convert em or rem to px
+ * ---
+ * @access public
+ * ---
+ * @group units
+ * ---
+ * @requires _v-px
+ * @requires unit-strip
+ * @requires unit-add
+ * @requires invoke
+ * ---
+ * @param {measure|number} $em   - the em value that will be converted
+ * @param {measure|number} $base - the base for the calculation of ems
+ * ---
+ * @return {number}px
+ * ---
+ * @since 1.0.0
+ */
+
+@function px($em, $base){
+    $conf: (
+        params: ($em, $base),
+        types: (measure number, measure number),
+        requires: unit-strip
+    );
+    @return invoke(_v-px, $conf);
+}

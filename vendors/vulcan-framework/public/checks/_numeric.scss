@@ -1,0 +1,31 @@
+/**
+ * Tests whether `$var` is numeric.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _sc-to-string
+ * ---
+ * @param {literal} $var  - check for numeric type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-numeric(1)   //returns true
+ * @example
+ *  is-numeric('1') //returns true
+ * @example
+ *  is-numeric(1em) //returns false
+ * @example
+ *  is-numeric(test) //returns false
+ */
+
+@function is-numeric($var) {
+    @if type-of($var) == string {
+        @return _sc-to-number($var) != 0;
+    }
+    @return is-number($var);
+}

@@ -1,0 +1,28 @@
+/**
+ * calculates rems out of pixels
+ * ---
+ * @access public
+ * ---
+ * @group units
+ * ---
+ * @requires _v-rem
+ * @requires invoke
+ * @requires unit-strip
+ * @requires unit-add
+ * ---
+ * @param {measure} $value                   - the pixel value that will be converted, with or without unit
+ * @param {number}  $base ($base-font-size) - the base for the calculation of rems
+ * ---
+ * @return {measure}
+ * ---
+ * @since 1.0.0
+ */
+
+@function rem($value, $base: $base-font-size) {
+    $conf: (
+        params: ($value, $base),
+        types: (measure number, number measure),
+        requires: (unit-strip, unit-add)
+    );
+    @return invoke(_v-rem, $conf);
+}

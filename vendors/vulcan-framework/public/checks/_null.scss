@@ -1,0 +1,28 @@
+/**
+ * Tests whether `$var` is bool.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {literal} $var  - check for bool type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-null(null)  //returns true
+ * @example
+ *  is-null(false) //returns false
+ * @example
+ *  is-null(0) //returns false
+ */
+
+@function is-null($var) {
+    @if $var == null {
+        @return true;
+    } @else {
+        @return false;
+    }
+}

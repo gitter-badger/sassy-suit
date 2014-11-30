@@ -1,0 +1,28 @@
+/**
+ * convert px to em
+ * ---
+ * @access public
+ * ---
+ * @group units
+ * ---
+ * @requires _v-em
+ * @requires invoke
+ * @requires unit-strip
+ * @requires unit-add
+ * ---
+ * @param {measure|number} $px                     - the pixel value that will be converted
+ * @param {measure|number} $base ($base-font-size) - the base for the calculation of ems
+ * ---
+ * @return {measure}
+ * ---
+ * @since 1.0.0
+ */
+
+@function em($px, $base: $base-font-size){
+    $conf: (
+        params: ($px, $base),
+        types: (measure number, measure number),
+        requires: unit-strip
+    );
+    @return invoke(_v-em, $conf);
+}

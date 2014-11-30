@@ -1,0 +1,24 @@
+/**
+ * Convert to map
+ * ---
+ * @access public
+ * ---
+ * @group conversion
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _sc-to-map
+ * @requires invoke
+ * ---
+ * @param {literal} $value - value to cast
+ * ---
+ * @return {map}
+ */
+
+@function to-map($value...) {
+    $conf: (
+        params: $value,
+        types: any
+    );
+    @return invoke(_sc-to-map, $conf);
+}

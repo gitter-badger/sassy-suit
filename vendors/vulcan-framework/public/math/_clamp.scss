@@ -1,0 +1,26 @@
+/**
+ * checks whether number is between two other values and set it to either maximum or minimum value.
+ * ---
+ * @access public
+ * ---
+ * @group math
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _v-math-clamp
+ * @requires invoke
+ * ---
+ * @param {number} $number - the number to check for
+ * @param {number} $min    - number that defines the lower range
+ * @param {number} $max    - number that defines the upper range
+ * ---
+ * @return {number|false}
+ */
+
+@function math-clamp($number, $min, $max) {
+    $conf: (
+        params: ($number, $min, $max),
+        types: (number, number, number),
+    );
+    @return invoke(_v-math-clamp, $conf);
+}

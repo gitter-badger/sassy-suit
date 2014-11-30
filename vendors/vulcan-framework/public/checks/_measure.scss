@@ -1,0 +1,41 @@
+/**
+ * Tests whether `$var` is measure.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {literal} $var  - check for measure type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-measure(1px)   //returns true
+ * @example
+ *  is-measure(5em)   //returns true
+ * @example
+ *  is-measure(5)     //returns false
+ * @example
+ *  is-measure(test)  //returns false
+ * @example
+ *  is-measure(em)    //returns false
+ */
+
+@function is-measure($var) {
+    @if type-of($var) == number {
+        @if unitless($var) {
+            @return false;
+        }
+    }
+    @else {
+        @return false;
+    }
+    @if not index($UNITS, unit($var)) {
+        @return false;
+    }
+    @else {
+        @return true;
+    }
+}

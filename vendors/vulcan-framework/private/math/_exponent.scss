@@ -1,0 +1,36 @@
+/**
+ * applies the exponent to a number and calculates the result
+ * ---
+ * @since 1.0.0
+ * ---
+ * @access private
+ * ---
+ * @param {number} $base     - number that defines the lower range
+ * @param {number} $exponent - the number to check for
+ * ---
+ * @return {number}
+ */
+
+@function _v-math-exponent($base, $exponent){
+    @if $base == 0 and $exponent == 0 {
+        @return 1;
+    }
+    @if $base == 0 {
+        @return 0;
+    }
+    @if $exponent == 0 {
+        @return 1;
+    }
+    // reset value
+    $value: $base;
+    // positive intergers get multiplied
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $base; } }
+    // negitive intergers get divided. A number divided by itself is 1
+    @if $exponent < 1 {
+        @for $i from 0 through -$exponent {
+            $value: $value / $base; } }
+    // return the last value written
+    @return $value;
+}
