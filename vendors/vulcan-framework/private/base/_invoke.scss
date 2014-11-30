@@ -1,0 +1,102 @@
+/**
+ * calls a function after requires and parameters are checked for validity
+ * ---
+ * @access private
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires missing-dependencies
+ * @requires validate
+ * ---
+ * @param {string} $callback  - function to call without braces
+ * @param {map}    $conf (()) - configuration object defining params, types and requires
+ * ---
+ * @return {function}
+ */
+
+@function _v-invoke($callback, $conf:()){
+    $dependencies: validate, $callback;
+    $params: map-get($conf, params);
+    $types: map-get($conf, types);
+    $requires: map-get($conf, requires);
+    
+    @if $types == false {
+        @return _v-throw('you need to specify the type! use `any` if you dont care.');
+    }
+    
+    @each $type in $types {
+        @if $type == 'args' and index($types, $type) != length($types) {
+            @return _v-throw('type `args` must be the last item in the list.');
+        }
+    } 
+
+    //if there are any further requirements, add these to the dependencies
+    @if $requires {
+        @each $item in $requires {
+            $dependencies: append($dependencies, $item);
+        }
+    }
+
+    $multiple-types: false;
+    @if list-separator($types) == 'comma' {
+        $multiple-types: true;
+    }
+
+    $multiple-parameters: false;
+    @if list-separator($params) == 'comma' {
+        $multiple-parameters: true;
+    }
+
+    @if $multiple-types and $multiple-parameters {
+        @if length($types) != length($params) {
+            @return _v-throw('`$types` of `invoke` does not match number of parameters');
+        }
+    }
+
+    //loop through each dependency and check whether its missing
+    @if not _v-exists($dependencies) {
+        @return _v-exists($dependencies);
+    }
+
+    $arg-list: ();
+    $n: 1;
+    @if $multiple-parameters {
+        //create a map $arg-list that contains param-x: (data: $param, type: $type))
+        @each $param in $params {
+            @if $multiple-types {
+                $arg-list: map-merge($arg-list, (param-#{$n}: (data: $param, type: nth($types, $n))));
+            } @else {
+                $arg-list: map-merge($arg-list, (param-#{$n}: (data: $param, type: $types)));
+            }
+            $n: $n+1;
+        }
+    } @else {
+        $arg-list: map-merge($arg-list, (param-#{$n}: (data: $params, type: $types)));
+    }
+
+    $args: ();
+    @each $item, $info in $arg-list {
+        $data: map-get($info, data);
+        $type: map-get($info, type);
+        @if $type != 'any' and $type != 'args' {
+            @if not validate($data, $type) {
+                @return _v-throw('#{$data} is no valid input.');
+            }
+        }
+        @if $type == 'args' {
+            @each $item in $data {
+                @if not sl-empty($item) {
+                    $args: append($args, $item, comma);
+                }
+            }
+        } @else {
+            @if not sl-empty($data) {
+                $args: append($args, $data, comma);
+            } @else {
+                $args: append($args, (), comma);
+            }
+        }
+    }
+
+    @return call($callback, $args...);
+}

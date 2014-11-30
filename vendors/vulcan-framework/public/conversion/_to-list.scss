@@ -1,0 +1,28 @@
+/**
+ * Convert to list
+ * ---
+ * @access public
+ * ---
+ * @group conversion
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _sc-to-list
+ * @requires invoke
+ * ---
+ * @param {literal} $value - value to cast
+ * ---
+ * @return {list}
+ * ---
+ * @example
+ *  to-list(string) //returns string (type is list)
+ *  to-list(1) //returns 1 (type is list)
+ */
+
+@function to-list($value...) {
+    $conf: (
+        params: $value,
+        types: any
+    );
+    @return invoke(_sc-to-list, $conf);
+}

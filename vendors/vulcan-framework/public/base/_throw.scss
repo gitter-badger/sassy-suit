@@ -1,0 +1,23 @@
+/**
+ * Throws an error message and returns it as an error.
+ * If `$quiet` is enabled it will throw a warning and return false instead.
+ * ---
+ * @access public
+ * ---
+ * @group base
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {string} $message - error message
+ * ---
+ * @example
+ *  throw('invalid parameter')
+ */
+
+@function throw($message) {
+    $conf: (
+        params: $message,
+        types: string
+    );
+    @return invoke(_v-throw, $conf);
+}

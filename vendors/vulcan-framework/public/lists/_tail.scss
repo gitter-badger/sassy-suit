@@ -1,0 +1,24 @@
+/**
+ * Returns the tail of `$list`: all items except the first (head).
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-tail
+ * @requires invoke
+ * ---
+ * @param {list} $list - list to retrieve tail from
+ * ---
+ * @return {list|false}
+ */
+
+@function list-tail($list) {
+    $conf: (
+        params: $list,
+        types: list
+    );
+    @return invoke(sl-tail, $conf);
+}

@@ -1,0 +1,29 @@
+/**
+ * convert em or rem to px
+ * ---
+ * @access private
+ * ---
+ * @requires unit-strip
+ * @requires unit-add
+ * ---
+ * @param {measure|number} $value - the em or rem value that will be converted
+ * @param {measure|number} $base  - the base for the calculation
+ * ---
+ * @return {number}px
+ * ---
+ * @since 1.0.0
+ */
+
+@function _v-px($value, $base){
+    @if unit($value) != 'em' and unit($value) != 'rem' and not unitless($value) {
+        @return _v-throw('`value` must be em or rem.');
+    }
+    @if $value == 0 or $base == 0 {
+        @return 0;
+    }
+    $value: _v-unit-strip($value);
+    $base: _v-unit-strip($base);
+    $result: $value * $base;
+    $result: _v-unit-add($result, px);
+    @return $result;
+}

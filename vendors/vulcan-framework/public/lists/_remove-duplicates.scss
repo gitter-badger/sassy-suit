@@ -1,0 +1,24 @@
+/**
+ * Removes duplicate values from `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-remove-duplicates
+ * @requires invoke
+ * ---
+ * @param {List} $list - list to remove duplicates from
+ * ---
+ * @return {list}
+ */
+
+@function list-remove-duplicates($list) {
+    $conf: (
+        params: $list,
+        types: list
+    );
+    @return invoke(sl-remove-duplicates, $conf);
+}

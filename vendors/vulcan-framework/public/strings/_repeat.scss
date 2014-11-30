@@ -1,0 +1,28 @@
+/**
+ * Repeat $string $times times
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-repeat
+ * ---
+ * @param {string} $string - string
+ * @param {number} $times  - number of times to repeat $string
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ * string-repeat(test, 2) //returns testtest
+ */
+
+@function string-repeat($string, $times) {
+    $conf: (
+        params: ($string, $times),
+        types: (string, number)
+    );
+    @return invoke(_ss-str-repeat, $conf);
+}

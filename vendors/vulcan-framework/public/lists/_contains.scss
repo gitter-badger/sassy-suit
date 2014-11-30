@@ -1,0 +1,25 @@
+/**
+ * Returns whether `$list` contains `$value`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-contain
+ * @requires invoke
+ * ---
+ * @param {list}   $list  - list to check
+ * @param {*}  $value - value to look for
+ * ---
+ * @return {bool}
+ */
+
+@function list-contains($list, $value) {
+    $conf: (
+        params: ($list, $value),
+        types: (list, any)
+    );
+    @return invoke(sl-contain, $conf);
+}

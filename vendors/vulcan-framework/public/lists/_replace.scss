@@ -1,0 +1,27 @@
+/**
+ * Replaces `$old` by `$new` in `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-replace
+ * @requires invoke
+ * ---
+ * @param {List} $list   - list to update
+ * @param {value} $old   - value to replace
+ * @param {value} $value - new value for $old
+ * ---
+ * @return {list}
+ */
+
+@function list-replace($list, $old, $value) {
+    $conf: (
+        params: ($list, $old, $value),
+        types: (list, any, any)
+
+    );
+    @return invoke(sl-replace, $conf);
+}

@@ -1,0 +1,29 @@
+/**
+ * Joins all elements of `$list` with `$glue`
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires sl-to-string
+ * ---
+ * @param {List}   $list      - list to cast
+ * @param {String} $glue ('') - value to use as a join string
+ * ---
+ * @return {string|false}
+ * ---
+ * @example
+ * list-to-string(a b c) // abc
+ * list-to-string(a b c, '-') // a-b-c
+ */
+
+@function list-to-string($list, $glue: '') {
+    $conf: (
+        params: ($list, $glue),
+        types: (list, string)
+    );
+    @return invoke(sl-to-string, $conf);
+}

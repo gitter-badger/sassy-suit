@@ -1,0 +1,28 @@
+/**
+ * Tests whether `$var` is unit.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * ---
+ * @param {literal} $value  - string or list to test
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-unit(em) //returns true
+ * @example
+ *  is-unit(1em) //returns false
+ */
+
+@function is-unit($var) {
+    @if type-of($var) == string {
+        @return if(index($UNITS, $var), true, false);
+    } @else {
+        @return false;
+    }
+}

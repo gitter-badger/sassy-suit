@@ -1,0 +1,26 @@
+/**
+ * Slices `$list` between `$start` and `$end`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-slice
+ * @requires invoke
+ * ---
+ * @param {list}   $list                  - list to slice
+ * @param {number} $start (1)             - start index
+ * @param {number} $end   (length($list)) - end index
+ * ---
+ * @return {list|false}
+ */
+
+@function list-slice($list, $start: 1, $end: length($list)) {
+    $conf: (
+        params: ($list, $start, $end),
+        types: (list, number, number)
+    );
+    @return invoke(sl-slice, $conf);
+}

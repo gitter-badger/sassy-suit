@@ -1,0 +1,30 @@
+/**
+ * calculates the average of $values
+ * ---
+ * @access public
+ * ---
+ * @group math
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _v-math-average
+ * @requires invoke
+ * ---
+ * @param {list} $values - list of numbers and/or measures for calculation
+ * ---
+ * @return {number|false}
+ * ---
+ * @example
+ *  average(0,10) //returns 5
+ *  average(1,10) //returns 5.5
+ *  average(0px,10px) //returns 5px
+ *  average(0px,10) //returns 5px
+ */
+
+@function math-average($values...) {
+    $conf: (
+        params: $values,
+        types: list measure number
+    );
+    @return invoke(_v-math-average, $conf);
+}

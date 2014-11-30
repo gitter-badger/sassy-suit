@@ -1,0 +1,18 @@
+/* Throws an error message and returns it as an error.
+ * If `$quiet` is enabled it will throw a warning and return false instead.
+ * ---
+ * @access private
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {string} $message - error message
+ */
+
+@function _v-throw($message) {
+    @if $quiet {
+        @warn $message;
+        @return false;
+    } @else {
+        @error $message;
+    }
+}

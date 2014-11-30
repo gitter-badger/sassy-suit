@@ -1,0 +1,26 @@
+/**
+ * Tests whether all items from `$list` pass the test implemented by `$function`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires _v-list-every
+ * @requires invoke
+ * ---
+ * @param {list}    $list     - list to run test against
+ * @param {string}  $function - function to run against every item from list
+ * @param {args} $args     - extra arguments to pass to the function
+ * ---
+ * @return {bool|false}
+ */
+
+@function list-every($list, $function, $args...) {
+    $conf: (
+        params: ($list, $function, $args),
+        types: (list, string, args),
+    );
+    @return invoke(sl-every, $conf);
+}

@@ -1,0 +1,25 @@
+/**
+ * Returns last index of `$value` in `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-last-index
+ * @requires invoke
+ * ---
+ * @param {list}  $list  - list to search
+ * @param {value} $value - value to be searched for
+ * ---
+ * @return {number|false}
+ */
+
+@function list-last-index($list, $value) {
+    $conf: (
+        params: ($list, $value),
+        types: (list, any)
+    );
+    @return invoke(sl-last-index, $conf);
+}

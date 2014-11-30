@@ -1,0 +1,15 @@
+/**
+ * removes all units from a value
+ * ---
+ * @access private
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {measure} $measure - measure to strip unit off
+ * ---
+ * @return {number}
+ */
+
+@function _v-unit-strip($measure) {
+    @return $measure / ($measure * 0 + 1);
+}

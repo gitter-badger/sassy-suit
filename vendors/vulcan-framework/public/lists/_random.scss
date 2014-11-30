@@ -1,0 +1,24 @@
+/**
+ * Returns a random value of `$list`.
+ * ---
+ * @access public
+ * ---
+ * @group lists
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires sl-random-value
+ * @requires invoke
+ * ---
+ * @param {list} $list - list to receive random value from
+ * ---
+ * @return {value}
+ */
+
+@function list-random($list...) {
+    $conf: (
+        params: $list,
+        types: list
+    );
+    @return invoke(sl-random-value, $conf);
+}

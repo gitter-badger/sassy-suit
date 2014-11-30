@@ -1,0 +1,28 @@
+/**
+ * replaces a unit with another unit
+ * ---
+ * @access public
+ * ---
+ * @group units
+ * ---
+ * @requires _v-replace-unit
+ * @requires invoke
+ * @requires unit-strip
+ * @requires unit-add
+ * ---
+ * @param {measure|number} $value - value that gets another unit
+ * @param {string} $unit  - new unit that will be added
+ * ---
+ * @return {measure}
+ * ---
+ * @since 1.0.0
+ */
+
+@function unit-replace($value, $unit){
+    $conf: (
+        params: ($value, $unit),
+        types: (measure number, string),
+        requires: (unit-strip, unit-add)
+    );
+    @return invoke(_v-unit-replace,$conf);
+}

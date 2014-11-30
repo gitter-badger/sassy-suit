@@ -1,0 +1,30 @@
+/**
+ * Return last index of $needle in $string
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-last-index
+ * ---
+ * @param {string} $string - string to test
+ * @param {string} $needle - substring to check
+ * ---
+ * @return {number | null | false}
+ * ---
+ * @example
+ *  string-last-index(test, t) //returns 4
+ * @example
+ *  string-last-index(test, f) //returns null
+ */
+
+@function string-last-index($string, $needle) {
+    $conf: (
+        params: ($string, $needle),
+        types: (string, string)
+    );
+    @return invoke(_ss-str-last-index, $conf);
+}

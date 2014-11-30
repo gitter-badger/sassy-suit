@@ -1,0 +1,30 @@
+/**
+ * Check whether $string ends with $needle
+ * ---
+ * @access public
+ * ---
+ * @group strings
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires invoke
+ * @requires str-ends-with
+ * ---
+ * @param {string} $string - string to test
+ * @param {string} $needle - substring to check
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  string-ends-with('just a test', test) //returns true
+ * @example
+ *  string-ends-with('just a test', bla) //returns false
+ */
+
+@function string-ends-with($string, $needle) {
+    $conf: (
+        params: ($string, $needle),
+        types: (string, string),
+    );
+    @return invoke(_ss-str-ends-with, $conf);
+}

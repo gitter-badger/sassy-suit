@@ -1,0 +1,23 @@
+/**
+ * checks for dependant mixins or functions
+ * ---
+ * @access private
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {list|string} $dependencies - names of functions and mixins to check for
+ * ---
+ * @throws Unmet dependencies! The following functions are required: $missing-dependencies.
+ * ---
+ * @returns {bool}
+ */
+
+@function _v-exists($dependencies...) {
+    $dependencies: sl-flatten($dependencies);
+    @each $dependency in $dependencies {
+        @if not function-exists($dependency) and not mixin-exists($dependency) {
+            @return _v-throw("Unmet dependencies! The following functions are required: #{$dependencies}.");
+        }
+    }
+    @return true;
+}

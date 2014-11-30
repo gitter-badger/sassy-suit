@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+//Author: Marc Mintel, marc@mintel.me
+//Twitter: @marcmintel
+//Repositories: https://github.com/vulcan-framework
+//Inspired by Zurb Foundation, Twitter Bootstrap, Gumby and many more
+//Some awesome code snippets and plugins by http://hugogiraudel.com/
+//Licensed under MIT Open Source
+
+//**
+//* PLEASE REPORT ISSUES ON GITHUB https://github.com/vulcan-framework/core
+//**
+
+// =============================================================================
+// Third party
+// =============================================================================
+@import 'sassy-strings/stylesheets/private/all';
+@import 'sassy-cast/stylesheets/private/all';
+@import 'SassyLists/stylesheets/SassyLists';
+
+// =============================================================================
+// Vulcan
+// =============================================================================
+
+// check if settings are imported
+@if variable-exists(settings-imported) == false {
+    @error 'You need to import settings of vulcan-core first!';
+}
+
+@import 'private/all';
+@import 'public/all';
