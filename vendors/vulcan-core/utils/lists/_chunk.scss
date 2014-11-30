@@ -1,0 +1,21 @@
+/**
+ * Chunks `$list` into `$size` large lists.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-chunk
+ * @requires v-invoke
+ *
+ * @param {list}   $list  - list to chunk
+ * @param {number} $size  - length of lists
+ *
+ * @return {list|false}
+ */
+
+@function v-list_chunk($list, $size) {
+    @return v-invoke(
+        $params: ($list, $size),
+        $types: (list, number),
+        $callback: sl-chunk
+    );
+}

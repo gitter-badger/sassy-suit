@@ -1,0 +1,34 @@
+@function __isEmpty($value) {
+    @if type-of($value) == list {
+        @return length($value) == 0;
+    }
+    @else if type-of($value) == string {
+        @return str-length($value) == 0;
+    } @else if type-of($value) == number {
+        @return $value != 0;
+    } @else if $value == false {
+        @return true;
+    } @else if $value == null {
+        @return true;
+    }
+}
+
+/**
+ * Tests whether `$list` is empty.
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ *
+ * @param {*} $value  - string or list to test
+ *
+ * @return {bool}
+ */
+
+@function v-isEmpty($value) {
+    @return v-invoke(
+        $params: $value,
+        $types: any,
+        $callback: __isEmpty
+    );
+}

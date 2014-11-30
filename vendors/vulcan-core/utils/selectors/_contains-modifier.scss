@@ -1,0 +1,33 @@
+@function __selector_containsModifier($selector) {
+    @if type-of($selector) == list {
+        $selector: v-list_toString($selector);
+    }
+    @if str-index($selector, $v-modifierSeparator) {
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+/**
+ * Check for the presence of a BEM modifier in a selector
+ *
+ * @since 1.0.0
+ *
+ * @requires v-list_toString
+ * @requires v-invoke
+ * @requires v-selector_parseAsString
+ *
+ * @param {list|string} $selector - selector to check
+ *
+ * @return {bool}
+ */
+
+@function v-selector_containsModifier($selector) {
+    @return v-invoke(
+        $params: $selector,
+        $types: list string,
+        $callback: __selector_containsModifier,
+        $requires: v-list_toString
+    );
+}

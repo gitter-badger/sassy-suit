@@ -1,0 +1,46 @@
+@if $v-debug {
+    body {
+        background-image: linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.4 ) 100%);
+        background-size: 100% v-addUnit($v-baseLineHeight/$v-baseFontSize, rem);
+    }
+}
+
+@function __baseLine($size, $adaption) {
+    $size: v-stripUnits($size);
+    $size: $size * ($v-baseLineHeight/$v-baseFontSize);
+    @if $adaption != 0 {
+        $adaption: v-pxToRem($adaption);
+        $adaption: v-stripUnits($adaption);
+        $size: $size + $adaption;
+    }
+    $size: v-precision($size, 2);
+    $size: v-addUnit($size, rem);
+    @return $size;
+}
+
+/**
+ * calculates the next matching baseline for a number
+ *
+ * @requires __baseLine
+ * @requires v-invoke
+ * @requires v-stripUnits
+ * @requires v-pxToRem
+ * @requires v-precision
+ * @requires v-addUnit
+ *
+ * @param {number}  $size         - expects a number for the font scale
+ * @param {number}  $adaption (0) - add or substract pixels from the baseline for finetuning
+ *
+ * @return {measure}
+ *
+ * @since 1.0.0
+ */
+
+@function v-baseLine($size, $adaption: 0) {
+    @return v-invoke(
+        $params: ($size, $adaption),
+        $types: (number measure, number measure),
+        $callback: __baseLine,
+        $requires: (v-precision, v-addUnit, v-pxToRem, v-stripUnits)
+    );
+}

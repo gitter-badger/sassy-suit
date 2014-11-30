@@ -1,0 +1,20 @@
+/**
+ * Returns last element of `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-last
+ * @requires v-invoke
+ *
+ * @param {list}   $list  - list to retrieve last value from
+ *
+ * @return {value}
+ */
+
+@function v-list_last($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: any,
+        $callback: sl-last
+    );
+}

@@ -1,0 +1,26 @@
+@function __getFontScale($size) {
+    @return v-modularScale(1, $size, $v-fontScale);
+}
+
+/**
+ * retrieves a number for the position in a scale and returns the font size for that scale
+ *
+ * @requires __getFontScale
+ * @requires v-invoke
+ * @requires v-modularScale
+ *
+ * @param {number} $size - Number for the calculation of modular scale with minor thirds
+ *
+ * @return {number}
+ *
+ * @since 1.0.0
+ */
+
+@function v-getFontScale($size){
+    @return v-invoke(
+        $params: $size,
+        $types: number,
+        $callback: __getFontScale,
+        $requires: v-modularScale
+    );
+}

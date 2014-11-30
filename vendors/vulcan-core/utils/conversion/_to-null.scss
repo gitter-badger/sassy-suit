@@ -1,0 +1,20 @@
+/**
+ * Convert to null
+ *
+ * @since 1.0.0
+ *
+ * @requires to-null
+ * @requires v-invoke
+ *
+ * @param {*} $value - value to cast
+ *
+ * @return {null}
+ */
+
+@function v-toNull($value...) {
+    @return v-invoke(
+        $params: $value,
+        $types: any,
+        $callback: to-null
+    );
+}

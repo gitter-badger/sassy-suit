@@ -1,0 +1,39 @@
+@function __list_every($list, $function, $args) {
+    @each $item in $list {
+        @if $args {
+            @if not call($function, $item, $args...) {
+                @return false;
+            }
+        } @else {
+            @if not call($function, $item) {
+                @return false;
+            }
+        }
+    }
+
+    @return true;
+}
+
+/**
+ * Tests whether all items from `$list` pass the test implemented by `$function`.
+ *
+ * @since 1.0.0
+ *
+ * @requires __list-every
+ * @requires v-invoke
+ *
+ * @param {list}    $list     - list to run test against
+ * @param {string}  $function - function to run against every item from list
+ * @param {argList} $args     - extra arguments to pass to the function
+ *
+ * @return {bool}
+ */
+
+
+@function v-list_every($list, $function, $args:false) {
+    @return v-invoke(
+        $params: ($list, $function, $args),
+        $types: (list, string, any),
+        $callback: __list_every
+    );
+}

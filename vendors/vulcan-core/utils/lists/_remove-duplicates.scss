@@ -1,0 +1,20 @@
+/**
+ * Removes duplicate values from `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-remove-duplicates
+ * @requires v-invoke
+
+ * @param {List} $list - list to remove duplicates from
+ *
+ * @return {list}
+ */
+
+@function v-list_removeDuplicates($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: list,
+        $callback: sl-remove-duplicates
+    );
+}

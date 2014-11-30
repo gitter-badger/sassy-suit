@@ -1,0 +1,29 @@
+/**
+ * Pad $string from $direction with $pad to reach $length characters
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-pad
+ *
+ * @param {string} $string    - string
+ * @param {number} $length    - number of characters to go for in returned string
+ * @param {string} $pad       - string to use to pad $string
+ * @param {string} $direction - direction left or right for padding
+ *
+ * @return {string|false}
+ *
+ * @example
+ *  v-string_pad('test', 9, '_', left) //returns _____test
+ *  v-string_pad('test', 5, '_', left) //returns _test
+ *  v-string_pad('test', 1, '_', left) //returns test
+ *  v-string_pad('test', 5, '_', right) //returns test_
+ */
+
+@function v-string_pad($string, $length, $pad: " ", $direction: left) {
+    @return v-invoke(
+        $params: ($string, $length, $pad, $direction),
+        $types: (string, number, string, string),
+        $callback: str-pad
+    );
+}

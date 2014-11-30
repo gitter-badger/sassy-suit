@@ -1,0 +1,40 @@
+@function __average($values...) {
+    $length: length($values);
+    $summary: 0;
+    @each $value in $values {
+        @if not v-validate($value, number measure) {
+            @warn v-invalidParameterException(__average);
+            @return false;
+        }
+        $summary: $summary + $value;
+    }
+    $average: ($summary / $length);
+    @return $average;
+}
+
+/**
+ * calculates the average of $values
+ *
+ * @since 1.0.0
+ *
+ * @requires __average
+ * @requires v-invoke
+ *
+ * @param {*} $values - list of numbers and/or measures for calculation
+ *
+ * @return {number}
+ *
+ * @example
+ *  v-average(0,10) //returns 5
+ *  v-average(1,10) //returns 5.5
+ *  v-average(0px,10px) //returns 5px
+ *  v-average(0px,10) //returns 5px
+ */
+
+@function v-average($values...) {
+    @return v-invoke(
+        $params: $values,
+        $types: any,
+        $callback: __average
+    );
+}

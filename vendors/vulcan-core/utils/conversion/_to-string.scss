@@ -1,0 +1,20 @@
+/**
+ * Convert to string
+ *
+ * @since 1.0.0
+ *
+ * @requires to-string
+ * @requires v-invoke
+ *
+ * @param {*} $value - value to cast
+ *
+ * @return {string}
+ */
+
+@function v-toString($value...) {
+    @return v-invoke(
+        $params: $value,
+        $types: any,
+        $callback: to-string
+    );
+}

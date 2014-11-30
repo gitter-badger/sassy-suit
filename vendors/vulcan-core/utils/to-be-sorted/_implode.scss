@@ -1,0 +1,20 @@
+/**
+ * Implode $list into a string
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-implode
+ *
+ * @param {$list} $list - list to convert to string
+ *
+ * @return {list|false}
+ */
+
+@function v-implode($list) {
+    @return v-invoke(
+        $params: $list,
+        $types: list,
+        $callback: str-implode
+    );
+}

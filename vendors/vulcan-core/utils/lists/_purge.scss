@@ -1,0 +1,20 @@
+/**
+ * Removes all false and null values from `$list`.
+ *
+ * @since 1.0.0
+ *
+ * @requires sl-purge
+ * @requires v-invoke
+ *
+ * @param {list} $list - list to purge
+ *
+ * @return {list}
+ */
+
+@function v-list_purge($list...) {
+    @return v-invoke(
+        $params: $list,
+        $types: list,
+        $callback: sl-purge
+    );
+}

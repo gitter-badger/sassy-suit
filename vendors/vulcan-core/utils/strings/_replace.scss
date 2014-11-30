@@ -1,0 +1,26 @@
+/**
+ * Replace $old occurrences by $new in $string respecting $case-sensitive
+ *
+ * @since 1.0.0
+ *
+ * @requires v-invoke
+ * @requires str-replace
+ *
+ * @param {string} $string - string
+ * @param {string} $old   - old substring to replace by $new
+ * @param {string} $new   - new substring to replace $old
+ * @param {bool}   $case  - sensitive: case-sensitivity
+ *
+ * @return {string|false}
+ *
+ * @example
+ *  v-string_replace('test this stuff', stuff, thing) //returns 'test this thing'
+ */
+
+@function v-string_replace($string, $old, $new: '', $caseSensitive: true) {
+    @return v-invoke(
+        $params: ($string, $old, $new, $caseSensitive),
+        $types: (string, string, string, bool),
+        $callback: str-replace
+    );
+}
