@@ -432,9 +432,9 @@
  */
 
 @function is-measurePositive($var) {
-	@if is-measure($var) and is-positive(unitless($var)) == true {
+	@if is-measure($var) and $var > 0 {
 		@return true;
-	} @else if is-measure($var) and unitless($var) == 0 {
+	} @else if is-measure($var) and $var == 0 {
 		@warn "Using zero value with units is a lame idea";
 		@return false;
 	} @else {
@@ -471,9 +471,9 @@
  */
 
 @function is-measureNegative($var) {
-	@if is-measure($var) and is-negative(unitless($var)) == true {
+	@if is-measure($var) and $var < 0 {
 		@return true;
-	} @else if is-measure($var) and unitless($var) == 0 {
+	} @else if is-measure($var) and $var == 0 {
 		@warn "Using zero value with units is a lame idea";
 		@return false;
 	} @else {
