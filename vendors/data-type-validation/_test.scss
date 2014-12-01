@@ -281,20 +281,14 @@
 	negative: validate(false, negative);
 	negative: validate(777rem, negative);
 
-	measurePositive: validate(1111vh, measurePositive);
-	measurePositive: validate(0rem, measurePositive);
+	measurePositive: validate(1111vh, measurePositive); // true
+	measurePositive: validate(40px, measurePositive); // true
+	measurePositive: validate(.333pt, measurePositive); // true
+	measurePositive: validate(1234.333ex, measurePositive); // true
 	measurePositive: validate(-9px, measurePositive);
 	measurePositive: validate(-1.776em, measurePositive);
 	measurePositive: validate(-.776pc, measurePositive);
 	measurePositive: validate(.333pt, measurePositive);
-	measurePositive: validate(1234.333ex, measurePositive);
-	measurePositive: validate(1111vmin, measurePositive);
-	measurePositive: validate(0, measurePositive);
-	measurePositive: validate(-9, measurePositive);
-	measurePositive: validate(-1.776, measurePositive);
-	measurePositive: validate(-.776, measurePositive);
-	measurePositive: validate(.333, measurePositive);
-	measurePositive: validate(1234.333, measurePositive);
 	measurePositive: validate(three, measurePositive);
 	measurePositive: validate("three", measurePositive);
 	measurePositive: validate(unquote("measurePositive"), measurePositive);
@@ -314,20 +308,15 @@
 	measurePositive: validate(false, measurePositive);
 	measurePositive: validate(777rem, measurePositive);
 
+	measureNegative: validate(-9px, measureNegative); // true
+	measureNegative: validate(-1.776em, measureNegative); // true
+	measureNegative: validate(-.776pc, measureNegative); // true
 	measureNegative: validate(1111vh, measureNegative);
 	measureNegative: validate(0rem, measureNegative);
-	measureNegative: validate(-9px, measureNegative);
-	measureNegative: validate(-1.776em, measureNegative);
-	measureNegative: validate(-.776pc, measureNegative);
 	measureNegative: validate(.333pt, measureNegative);
 	measureNegative: validate(1234.333ex, measureNegative);
 	measureNegative: validate(1111vmin, measureNegative);
-	measureNegative: validate(0, measureNegative);
 	measureNegative: validate(-9, measureNegative);
-	measureNegative: validate(-1.776, measureNegative);
-	measureNegative: validate(-.776, measureNegative);
-	measureNegative: validate(.333, measureNegative);
-	measureNegative: validate(1234.333, measureNegative);
 	measureNegative: validate(three, measureNegative);
 	measureNegative: validate('measureNegative', measureNegative);
 	measureNegative: validate(11 33 44 44 55, measureNegative);
