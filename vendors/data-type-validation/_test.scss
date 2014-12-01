@@ -1,78 +1,347 @@
 .testDataTypeValidation {
- 	bool: validate(true, bool);
- 	bool: validate(false, bool);
- 	bool: validate(100px, bool);
- 	bool: validate(hello, bool);
- 	bool: validate("string", bool);
+	bool: validate(true, bool); // true
+	bool: validate(false, bool); // true
+	bool: validate(100px, bool);
+	bool: validate(hello, bool);
+	bool: validate("string", bool);
 
- 	color: validate(red, color);
- 	color: validate(#BADA55, color);
- 	color: validate(#eee, color);
- 	color: validate(true, color);
- 	color: validate(false, color);
- 	color: validate(777rem, color);
- 	color: validate("Lorem Ipsum", color);
+	color: validate(red, color); // true
+	color: validate(#BADA55, color); // true
+	color: validate(#eee, color); // true
+	color: validate(#gzxcxs, color);
+	color: validate(false, color);
+	color: validate(777rem, color);
+	color: validate("Lorem Ipsum", color);
 
+	empty: is-empty(''); // true
+	empty: is-empty(""); // true
+	empty: is-empty(()); // true
 	empty: validate(unquote(''), empty);
 	empty: validate(unquote(""), empty);
 	empty: validate("", empty);
 	empty: validate('', empty);
 	empty: validate((), empty);
 	empty: validate(red, empty);
- 	empty: validate(#BADA55, empty);
- 	empty: validate(#eee, empty);
- 	empty: validate(true, empty);
- 	empty: validate(false, empty);
- 	empty: validate(777rem, empty);
- 	empty: validate("Lorem Ipsum", empty);
+	empty: validate(#BADA55, empty);
+	empty: validate(#eee, empty);
+	empty: validate(true, empty);
+	empty: validate(false, empty);
+	empty: validate(777rem, empty);
+	empty: validate("Lorem Ipsum", empty);
 
-	list: validate(11 33 44 44 55, list);
-	list: validate('12' '23' '33', list);
-	list: validate(11, 33, 44, 44, 55, list);
-	list: validate('12', '23', '33', list);
+	list: validate(11 33 44 44 55, list); // true
+	list: validate('12' '23' '33', list); // true
+	list: validate(a b c d e, list); // true
+	list: validate('a' 'b' 'c', list); // true
 	list: validate(unquote(''), list);
 	list: validate(unquote(""), list);
 	list: validate("", list);
 	list: validate('', list);
 	list: validate((), list);
 	list: validate(red, list);
- 	list: validate(#BADA55, list);
- 	list: validate(#eee, list);
- 	list: validate(true, list);
- 	list: validate(false, list);
- 	list: validate(777rem, list);
- 	list: validate("Lorem Ipsum", list);
+	list: validate(#BADA55, list);
+	list: validate(#eee, list);
+	list: validate(true, list);
+	list: validate(false, list);
+	list: validate(777rem, list);
+	list: validate("Lorem Ipsum", list);
 
-
-	null: validate(null, null);
-	null: validate(unquote("null"), null);
+	null: validate(null, null); // true
 	null: validate(unquote('null'), null);
 	null: validate(unquote(''), null);
 	null: validate(unquote(""), null);
 	null: validate('null', null);
-	null: validate(11 33 44 44 55, null);
-	null: validate('12' '23' '33', null);
-	null: validate(11, 33, 44, 44, 55, null);
-	null: validate('12', '23', '33', null);
 	null: validate("", null);
 	null: validate('', null);
 	null: validate((), null);
+	null: validate(11 33 44 44 55, null);
+	null: validate('12' '23' '33', null);
+	null: validate(unquote("null"), null);
 	null: validate(red, null);
- 	null: validate(#BADA55, null);
- 	null: validate(#eee, null);
- 	null: validate(true, null);
- 	null: validate(false, null);
- 	null: validate(777rem, null);
- 	null: validate("Lorem Ipsum", null);
+	null: validate(#BADA55, null);
+	null: validate(#eee, null);
+	null: validate(true, null);
+	null: validate(false, null);
+	null: validate(777rem, null);
+	null: validate("Lorem Ipsum", null);
 
-// * number +
-// * measure +
-// * string +
-// * unit +
-// * integer +
-// * float +
-// * positive +
-// * negative +
-// * negativeMeasure +
-// * positiveMeasure +
+	number: validate(1111, number); // true
+	number: validate(0, number); // true
+	number: validate(-9, number); // true
+	number: validate(-1.776, number); // true
+	number: validate(-.776, number); // true
+	number: validate(.333, number); // true
+	number: validate(three, number);
+	number: validate("three", number);
+	number: validate(unquote("number"), number);
+	number: validate(unquote('number'), number);
+	number: validate(unquote(''), number);
+	number: validate(unquote(""), number);
+	number: validate('number', number);
+	number: validate(11 33 44 44 55, number);
+	number: validate('12' '23' '33', number);
+	number: validate("", number);
+	number: validate('', number);
+	number: validate((), number);
+	number: validate(red, number);
+	number: validate(#BADA55, number);
+	number: validate(#eee, number);
+	number: validate(true, number);
+	number: validate(false, number);
+	number: validate(777rem, number);
+	number: validate("Lorem Ipsum", number);
+
+	measure: validate(777rem, measure); // true
+	measure: validate(8em, measure); // true
+	measure: validate(-30vw, measure); // true
+	measure: validate(0vh, measure);// true
+	measure: validate(.8888px, measure); // true
+	measure: validate(0.2323rem, measure); // true
+	measure: validate(1111, measure);
+	measure: validate(0, measure);
+	measure: validate(-9, measure);
+	measure: validate(-1.776, measure);
+	measure: validate(-.776, measure);
+	measure: validate(.333, measure);
+	measure: validate(three, measure);
+	measure: validate("three", measure);
+	measure: validate(unquote("measure"), measure);
+	measure: validate(unquote('measure'), measure);
+	measure: validate(unquote(''), measure);
+	measure: validate(unquote(""), measure);
+	measure: validate('measure', measure);
+	measure: validate(11 33 44 44 55, measure);
+	measure: validate('12' '23' '33', measure);
+	measure: validate("", measure);
+	measure: validate('', measure);
+	measure: validate((), measure);
+	measure: validate(red, measure);
+	measure: validate(#BADA55, measure);
+	measure: validate(#eee, measure);
+	measure: validate(true, measure);
+	measure: validate(false, measure);
+	measure: validate("Lorem Ipsum", measure);
+
+	string: validate("three", string); // true
+	string: validate(hello, string); // true
+	string: validate(fifty, string); // true
+	string: validate(unquote("string"), string); // true
+	string: validate(unquote('string'), string); // true
+	string: validate("Lorem Ipsum", string); // true
+	string: validate(unquote(''), string); // true
+	string: validate(unquote(""), string); // true
+	string: validate("", string); // true
+	string: validate('', string); // true
+	string: validate('string', string); // true
+	string: validate((), string);
+	string: validate('12' '23' '33', string);
+	string: validate(11 33 44 44 55, string);
+	string: validate(777rem, string);
+	string: validate(8em, string);
+	string: validate(-30vw, string);
+	string: validate(0vh, string);
+	string: validate(.8888px, string);
+	string: validate(0.2323rem, string);
+	string: validate(1111, string);
+	string: validate(0, string);
+	string: validate(-9, string);
+	string: validate(-1.776, string);
+	string: validate(-.776, string);
+	string: validate(.333, string);
+	string: validate(#BADA55, string);
+	string: validate(#eee, string);
+	string: validate(true, string);
+	string: validate(false, string);
+	string: validate(red, string);
+
+
+	unit: validate(px, unit); // true
+	unit: validate(em, unit); // true
+	unit: validate("px", unit); // true
+	unit: validate(unquote("px"), unit); // true
+	unit: validate(unquote('rem'), unit); // true
+	unit: validate(777rem, unit);
+	unit: validate(8em, unit);
+	unit: validate(-30vw, unit);
+	unit: validate(0vh, unit);
+	unit: validate(.8888px, unit);
+	unit: validate(0.2323rem, unit);
+	unit: validate(1111, unit);
+	unit: validate(0, unit);
+	unit: validate(-9, unit);
+	unit: validate(-1.776, unit);
+	unit: validate(-.776, unit);
+	unit: validate(.333, unit);
+
+	integer: validate(1111, integer); // true
+	integer: validate(0, integer); // true
+	integer: validate(-9, integer); // true
+	integer: validate(-1.776, integer);
+	integer: validate(-.776, integer);
+	integer: validate(.333, integer);
+	integer: validate(1234.333, integer);
+	integer: validate(three, integer);
+	integer: validate("three", integer);
+	integer: validate(11 33 44 44 55, integer);
+	integer: validate('12' '23' '33', integer);
+	integer: validate(unquote("integer"), integer);
+	integer: validate(unquote('integer'), integer);
+	integer: validate(unquote(''), integer);
+	integer: validate(unquote(""), integer);
+	integer: validate('integer', integer);
+	integer: validate("", integer);
+	integer: validate('', integer);
+	integer: validate((), integer);
+	integer: validate(red, integer);
+	integer: validate(#BADA55, integer);
+	integer: validate(#eee, integer);
+	integer: validate(true, integer);
+	integer: validate(false, integer);
+	integer: validate(777rem, integer);
+	integer: validate("Lorem Ipsum", integer);
+
+	float: validate(-1.776, float); // true
+	float: validate(-.776, float); // true
+	float: validate(.333, float); // true
+	float: validate(1234.333, float); // true
+	float: validate(11 33 44 44 55, float);
+	float: validate('12' '23' '33', float);
+	float: validate(0, float);
+	float: validate(1111, float);
+	float: validate(-9, float);
+	float: validate(three, float);
+	float: validate("three", float);
+	float: validate(unquote("float"), float);
+	float: validate(unquote('float'), float);
+	float: validate(unquote(''), float);
+	float: validate(unquote(""), float);
+	float: validate('float', float);
+	float: validate("", float);
+	float: validate('', float);
+	float: validate((), float);
+	float: validate(red, float);
+	float: validate(#BADA55, float);
+	float: validate(#eee, float);
+	float: validate(true, float);
+	float: validate(false, float);
+	float: validate(777rem, float);
+	float: validate("Lorem Ipsum", float);
+
+	positive: validate(1111, positive); // true
+	positive: validate(.333, positive); // true
+	positive: validate(1234.333, positive); // true
+	positive: validate(three, positive);
+	positive: validate("three", positive);
+	positive: validate(unquote("positive"), positive);
+	positive: validate(unquote('positive'), positive);
+	positive: validate(unquote(''), positive);
+	positive: validate(unquote(""), positive);
+	positive: validate('positive', positive);
+	positive: validate(11 33 44 44 55, positive);
+	positive: validate('12' '23' '33', positive);
+	positive: validate(0, positive);
+	positive: validate(-9, positive);
+	positive: validate(-1.776, positive);
+	positive: validate(-.776, positive);
+	positive: validate("", positive);
+	positive: validate('', positive);
+	positive: validate((), positive);
+	positive: validate(red, positive);
+	positive: validate(#BADA55, positive);
+	positive: validate(#eee, positive);
+	positive: validate(true, positive);
+	positive: validate(false, positive);
+	positive: validate(777rem, positive);
+
+	negative: validate(-9, negative); // true
+	negative: validate(-1.776, negative); // true
+	negative: validate(-.776, negative); // true
+	negative: validate(.333, negative);
+	negative: validate(1234.333, negative);
+	negative: validate(0, negative);
+	negative: validate(11 33 44 44 55, negative);
+	negative: validate('12' '23' '33', negative);
+	negative: validate(three, negative);
+	negative: validate("three", negative);
+	negative: validate(unquote("negative"), negative);
+	negative: validate(unquote('negative'), negative);
+	negative: validate(1111, negative);
+	negative: validate(unquote(''), negative);
+	negative: validate(unquote(""), negative);
+	negative: validate('negative', negative);
+	negative: validate("", negative);
+	negative: validate('', negative);
+	negative: validate((), negative);
+	negative: validate(red, negative);
+	negative: validate(#BADA55, negative);
+	negative: validate(#eee, negative);
+	negative: validate(true, negative);
+	negative: validate(false, negative);
+	negative: validate(777rem, negative);
+
+	positiveMeasure: validate(1111vh, positiveMeasure);
+	positiveMeasure: validate(0rem, positiveMeasure);
+	positiveMeasure: validate(-9px, positiveMeasure);
+	positiveMeasure: validate(-1.776em, positiveMeasure);
+	positiveMeasure: validate(-.776pc, positiveMeasure);
+	positiveMeasure: validate(.333pt, positiveMeasure);
+	positiveMeasure: validate(1234.333ex, positiveMeasure);
+	positiveMeasure: validate(1111vmin, positiveMeasure);
+	positiveMeasure: validate(0, positiveMeasure);
+	positiveMeasure: validate(-9, positiveMeasure);
+	positiveMeasure: validate(-1.776, positiveMeasure);
+	positiveMeasure: validate(-.776, positiveMeasure);
+	positiveMeasure: validate(.333, positiveMeasure);
+	positiveMeasure: validate(1234.333, positiveMeasure);
+	positiveMeasure: validate(three, positiveMeasure);
+	positiveMeasure: validate("three", positiveMeasure);
+	positiveMeasure: validate(unquote("positiveMeasure"), positiveMeasure);
+	positiveMeasure: validate(unquote('positiveMeasure'), positiveMeasure);
+	positiveMeasure: validate(unquote(''), positiveMeasure);
+	positiveMeasure: validate(unquote(""), positiveMeasure);
+	positiveMeasure: validate('positiveMeasure', positiveMeasure);
+	positiveMeasure: validate(11 33 44 44 55, positiveMeasure);
+	positiveMeasure: validate('12' '23' '33', positiveMeasure);
+	positiveMeasure: validate("", positiveMeasure);
+	positiveMeasure: validate('', positiveMeasure);
+	positiveMeasure: validate((), positiveMeasure);
+	positiveMeasure: validate(red, positiveMeasure);
+	positiveMeasure: validate(#BADA55, positiveMeasure);
+	positiveMeasure: validate(#eee, positiveMeasure);
+	positiveMeasure: validate(true, positiveMeasure);
+	positiveMeasure: validate(false, positiveMeasure);
+	positiveMeasure: validate(777rem, positiveMeasure);
+
+	negativeMeasure: validate(1111vh, negativeMeasure);
+	negativeMeasure: validate(0rem, negativeMeasure);
+	negativeMeasure: validate(-9px, negativeMeasure);
+	negativeMeasure: validate(-1.776em, negativeMeasure);
+	negativeMeasure: validate(-.776pc, negativeMeasure);
+	negativeMeasure: validate(.333pt, negativeMeasure);
+	negativeMeasure: validate(1234.333ex, negativeMeasure);
+	negativeMeasure: validate(1111vmin, negativeMeasure);
+	negativeMeasure: validate(0, negativeMeasure);
+	negativeMeasure: validate(-9, negativeMeasure);
+	negativeMeasure: validate(-1.776, negativeMeasure);
+	negativeMeasure: validate(-.776, negativeMeasure);
+	negativeMeasure: validate(.333, negativeMeasure);
+	negativeMeasure: validate(1234.333, negativeMeasure);
+	negativeMeasure: validate(three, negativeMeasure);
+	negativeMeasure: validate('negativeMeasure', negativeMeasure);
+	negativeMeasure: validate(11 33 44 44 55, negativeMeasure);
+	negativeMeasure: validate('12' '23' '33', negativeMeasure);
+	negativeMeasure: validate("three", negativeMeasure);
+	negativeMeasure: validate(unquote("negativeMeasure"), negativeMeasure);
+	negativeMeasure: validate(unquote('negativeMeasure'), negativeMeasure);
+	negativeMeasure: validate(unquote(''), negativeMeasure);
+	negativeMeasure: validate(unquote(""), negativeMeasure);
+	negativeMeasure: validate("", negativeMeasure);
+	negativeMeasure: validate('', negativeMeasure);
+	negativeMeasure: validate((), negativeMeasure);
+	negativeMeasure: validate(red, negativeMeasure);
+	negativeMeasure: validate(#BADA55, negativeMeasure);
+	negativeMeasure: validate(#eee, negativeMeasure);
+	negativeMeasure: validate(true, negativeMeasure);
+	negativeMeasure: validate(false, negativeMeasure);
+	negativeMeasure: validate(777rem, negativeMeasure);
 }
