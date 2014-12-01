@@ -25,29 +25,31 @@
 
 ## Shortcuts
 
+### Data Type Validation Functions
 
-
-### Data Type Validation
-
-* `validate($value, bool)`
-* `validate($value, color)`
-* `validate($value, empty)`
-* `validate($value, list)`
-* `validate($value, measure)`
-* `validate($value, null)`
-* `validate($value, numeric)`
-* `validate($value, string)`
-* `validate($value, unit)`
-
-You can also pass a list of multiple parametrs (avoid using commas)
-
-* `validate($value, unit numeric color)`
-* `validate($value, bool color)`
-* `validate($value, bool measure color numeric string)`
-
+* `validate($var, bool)`
+* `validate($var, color)`
+* `validate($var, empty)`
+* `validate($var, list)`
+* `validate($var, measure)`
+* `validate($var, null)`
+* `validate($var, number)`
+* `validate($var, string)`
+* `validate($var, unit)`
+* `validate($var, integer)`
+* `validate($var, float)`
+* `validate($var, positive)`
+* `validate($var, negative)`
+* `validate($var, negativeMeasure)`
+* `validate($var, positiveMeasure)`
+* `validate($var, zero)` - work in progress
+* `validate($var, map)` - work in progress
+* `validate($var, numeric)` - Not sure about including this one, I suppose it's better to avoid using numeric values, which are `strings`, but in the same time are `numbers`, like: `two`, `fourty`, `eleven`, etc..  yeah, that's what I meant, too complicated)
 
 
 ### Logger
+
+__NOTE__: can't be used inside of functions (that's how currently SASS works)
 
 * `@include FATAL($message)` - Severe errors that cause premature termination
 * `@include ERROR($message)` - Other runtime errors or unexpected conditions
