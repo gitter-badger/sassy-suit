@@ -42,14 +42,11 @@
 * `validate($var, negative)`
 * `validate($var, negativeMeasure)`
 * `validate($var, positiveMeasure)`
-* `validate($var, zero)` - work in progress
-* `validate($var, map)` - work in progress
-* `validate($var, numeric)` - Not sure about including this one, I suppose it's better to avoid using numeric values, which are `strings`, but in the same time are `numbers`, like: `two`, `fourty`, `eleven`, etc..  yeah, that's what I meant, too complicated)
-
+* `validate($var, map)`
 
 ### Logger
 
-__NOTE__: can't be used inside of functions (that's how currently SASS works)
+__NOTE__: can't be used inside of functions (that's how SASS works)
 
 * `@include FATAL($message)` - Severe errors that cause premature termination
 * `@include ERROR($message)` - Other runtime errors or unexpected conditions
@@ -62,7 +59,7 @@ __NOTE__: can't be used inside of functions (that's how currently SASS works)
 ### Modular Scale 
 
 * `ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
-
+* `ms-list($Start: 0, $End: 0, $Bases: $ms-base, $Ratios: $ms-ratio)`
 
 
 ### SassyLists

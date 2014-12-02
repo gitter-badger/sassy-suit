@@ -159,7 +159,7 @@
 	}
 }
 
-// Short alias for validate($var)
+// Short alias for `validate` function
 @function val($var, $validations) {
 	@return validate($var, $validations);
 }
