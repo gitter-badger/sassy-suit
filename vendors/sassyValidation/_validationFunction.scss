@@ -14,6 +14,7 @@
  * @requires is_positive
  * @requires is_integer
  * @requires is_float
+ * @requires is_map
  * @requires is_measurePositive
  * @requires is_measureNegative
  * ---
@@ -36,7 +37,7 @@
 
 @function validate($var, $validations) {
 	//set a list of testable validation types
-	$allTypes: measure, list, bool, string, color, number, unit, negative, positive, integer, float, measurePositive, measureNegative;
+	$allTypes: measure, list, bool, string, color, number, unit, negative, positive, integer, float, map, measurePositive, measureNegative;
 
 	//do not test anything if type equals "any"
 	@if $validations == any {
@@ -125,6 +126,11 @@
 				$errors: append($errors, 1);
 			}
 		}
+		@else if $validation == map {
+			@if not is_map($var) {
+				$errors: append($errors, 1);
+			}
+		}
 		@else if $validation == measureNegative {
 			@if not is_measureNegative($var) {
 				$errors: append($errors, 1);
@@ -151,4 +157,9 @@
 	@else {
 		@return true;
 	}
+}
+
+// Short alias for validate($var)
+@function val($var) {
+	@return validate($var);
 }
