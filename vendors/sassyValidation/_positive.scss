@@ -1,0 +1,33 @@
+/**
+ * Tests whether `$var` is positive.
+ * ---
+ * @access public
+ * ---
+ * @group checks
+ * ---
+ * @since 1.0.0
+ * ---
+ * @requires is-number
+ * ---
+ * @param {literal} $var  - check whether $var is positive
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is-positive(1)   //returns true
+ * @example
+ *  is-positive(0)   //returns false
+ * @example
+ *  is-positive(-1)   //returns false
+ */
+
+@function is-positive($var) {
+    @if is-number($var) and $var > 0 == true {
+        @return true;
+    } @else if $var == 0 {
+		@warn "Number is not positive! Number equals zero";
+		@return false;
+    } @else {
+        @return false;
+    }
+}

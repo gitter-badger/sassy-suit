@@ -1,0 +1,34 @@
+/**
+ * Tests whether `$var` is empty.
+ * ---
+ * @access public
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {*} $var  - check for emptiness
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is_empty('')     //returns true
+ *  is_empty(())     //returns true
+ *  is_empty('test') //returns false
+ */
+
+@function is_empty($var) {
+	@if type-of($var) == string {
+		@return str-length($var) == 0;
+	}
+	@if type-of($var) == number {
+		@return $var != 0;
+	}
+	@if type-of($var) == list {
+		@return length($var) == 0;
+	}
+	@if $var == false {
+		@return true;
+	}
+	@if $var == null {
+		@return true;
+	}
+}
