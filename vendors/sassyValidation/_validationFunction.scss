@@ -160,6 +160,6 @@
 }
 
 // Short alias for validate($var)
-@function val($var) {
-	@return validate($var);
+@function val($var, $validations) {
+	@return validate($var, $validations);
 }
