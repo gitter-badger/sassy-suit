@@ -1,0 +1,27 @@
+/**
+ * Tests whether `$var` is map.
+ * ---
+ * @access public
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {*} $var  - check for list type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is_map( a: 1, b: 2)          //returns true
+ *  is_map(1 2 3)        //returns true
+ *  is_map((test, test)) //returns true
+ *  is_map(test)         //returns false
+ *  is_map(1)            //returns false
+ */
+
+@function is_map($var) {
+	@if type-of($var) == map {
+		@return true;
+	}
+	@else {
+		@return false;
+	}
+}
