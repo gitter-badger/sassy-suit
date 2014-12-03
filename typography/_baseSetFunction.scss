@@ -14,7 +14,15 @@
 
 // $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio
 
-@function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio) {
+@function multiply($value, $multiplier) {
+	$new-value: $value * $multiplier;
+
+  	@return $new-value;
+
+}
+
+
+@function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio) {
 
 	@if val($typoBase, measurePositive) {}
 	@else {
@@ -26,15 +34,36 @@
 		@error #{$typoSizeRatio} " is not a positive integer or float, which is more than 1 !";
 	}
 
+	@if val($typoLineHeightRatio, positive) and $typoSizeRatio > 1 {}
+	@else {
+		@error #{$typoLineHeightRatio} " is not positive and more than 1 !";
+	}
+
+	@if val($typoLetterSpacingRatio, number) and $typoLetterSpacingRatio != 0 {}
+	@else {
+		@error #{$typoLetterSpacingRatio} " is not measure or equals 0 !";
+	}
+
 	@if val($typoIndexEnd, positive) and val($typoIndexEnd, integer) {}
 	@else {
 		@error #{$typoIndexEnd} " is not a positive integer !";
 	}
 
 	@if (val($typoIndexStart, negative) and val($typoIndexStart, integer) or $typoIndexStart == 0) and $typoIndexStart < $typoIndexEnd {
-		$baseSet: ms-list($typoIndexStart,  $typoIndexEnd, $typoBase, $typoSizeRatio);
-		@warn #{$baseSet};
-		@return $baseSet;
+		$fontSize: ms-list($typoIndexStart,  $typoIndexEnd, $typoBase, $typoSizeRatio);
+
+		@warn #{$fontSize};
+
+		$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+
+		@warn #{$lineHeight};
+
+		$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+
+		@warn #{$letterSpacing};
+
+		@return $fontSize, $lineHeight, $letterSpacing;
+
 	} @else {
 		@error #{$typoIndexStart} " is not 0 or negative integer !";
 	}
@@ -47,8 +76,18 @@
 
 };
 
-.baseSetFunction {
-	content: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio);
+$getBaseSet: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio);
+
+$fontSize: nth($getBaseSet, 1);
+
+$lineHeight: nth($getBaseSet, 2);
+
+$letterSpacing: nth($getBaseSet, 3);
+
+.baseSet {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	letter-spacing: $letterSpacing;
 };
 
 
