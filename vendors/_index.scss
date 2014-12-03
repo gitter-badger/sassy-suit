@@ -1,6 +1,7 @@
 // Edit import paths and wrap in @if wrapper with ERROR log(Vendor assests are missing! Please, run `gulp-copy` to copy vendor assests in the proper project root!), when will be re-written with Gulp copy paths plugin
-@import "_strip-units.scss";
 @import "sassyValidation/_index.scss";
+@import "sassyExists/stylesheets/_sassyExists.scss";
+@import "_strip-units.scss";
 // @import "vulcan-framework/_settings.scss";
 // @import "vulcan-framework/vulcan-core.scss";
 @import "sassyLists/_index.scss";
