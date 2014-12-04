@@ -21,6 +21,10 @@
 
 }
 
+@function addZero($value) {
+	$value: append($value, 0);
+	@return $value;
+}
 
 @function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio) {
 
@@ -44,6 +48,11 @@
 		@error #{$typoLetterSpacingRatio} " is not measure or equals 0 !";
 	}
 
+	@if val($typoPaddingRatio, number) and $typoPaddingRatio > 0 {}
+	@else {
+		@error #{$typoPaddingRatio} " is not measure or equals 0 !";
+	}
+
 	@if val($typoIndexEnd, positive) and val($typoIndexEnd, integer) {}
 	@else {
 		@error #{$typoIndexEnd} " is not a positive integer !";
@@ -62,12 +71,36 @@
 
 		@warn #{$letterSpacing};
 
-		@return $fontSize, $lineHeight, $letterSpacing;
+		$padding: sl-walk($fontSize, multiply, $typoPaddingRatio);
+
+		$padding: sl-walk($fontSize, addZero);
+
+		@warn #{$padding};
+
+		@return $fontSize, $lineHeight, $letterSpacing, $padding;
 
 	} @else {
 		@error #{$typoIndexStart} " is not 0 or negative integer !";
 	}
 
+	// @if (val($typoPaddingRatio, positive) and $typoPaddingRatio > 1 {
+	// 	$padding: ms-list($typoIndexStart, $typoIndexEnd, $typoBase, $typoPaddingRatio);
+
+	// 	@warn #{$typoPaddingRatio};
+
+	// 	$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+
+	// 	@warn #{$lineHeight};
+
+	// 	$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+
+	// 	@warn #{$letterSpacing};
+
+	// 	@return $fontSize, $lineHeight, $letterSpacing;
+
+	// } @else {
+	// 	@error #{$typoIndexStart} " is not 0 or negative integer !";
+	// }
 
 
 	@return "THE END";
@@ -75,6 +108,8 @@
 	// `ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
 
 };
+
+
 
 $getBaseSet: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio);
 
@@ -84,10 +119,13 @@ $lineHeight: nth($getBaseSet, 2);
 
 $letterSpacing: nth($getBaseSet, 3);
 
+$padding: nth($getBaseSet, 4);
+
 .baseSet {
 	font-size: $fontSize;
 	line-height: $lineHeight;
 	letter-spacing: $letterSpacing;
+	padding: $padding;
 };
 
 
