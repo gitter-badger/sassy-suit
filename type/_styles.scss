@@ -1,0 +1,110 @@
+h1,
+.h1,
+.h1--alt {
+
+	@extend %baseSetXxxl;
+
+}
+
+h2,
+.h2,
+.h2--alt {
+
+	@extend %baseSetXxl;
+
+}
+
+h3,
+.h3,
+.h3--alt {
+
+	@extend %baseSetXl;
+
+}
+
+h4,
+.h4,
+.h4--alt {
+
+	@extend %baseSetLg;
+
+}
+
+h5,
+.h5,
+.h5--alt {
+
+	@extend %baseSetMd;
+
+}
+
+h6,
+.h6,
+.h6--alt {
+
+	@extend %baseSetSm;
+
+}
+
+p,
+.p,
+.p--alt {
+
+	@extend %baseSetMd;
+
+}
+
+small,
+.small,
+.small--alt {
+
+	@extend %baseSetSm;
+
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+
+	@extend %baseStyleHeader;
+
+}
+
+.h1--alt,
+.h2--alt,
+.h3--alt,
+.h4--alt,
+.h5--alt,
+.h6--alt {
+
+	@extend %baseStyleHeaderAlt;
+
+}
+
+.p--alt,
+.small--alt {
+
+	@extend %baseStyleTextAlt;
+
+}
+
+
+p,
+.p,
+.p--alt,
+small,
+.small,
+.small--alt {
+
+	@extend %baseStyleText, %baseStyleLetterSpacingReset;
+
+}
