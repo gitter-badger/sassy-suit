@@ -1,0 +1,211 @@
+%baseSetXs {
+	font-size: nth($fontSize, 1);
+	line-height: nth($lineHeight, 1);
+	letter-spacing: nth($letterSpacing, 1);
+	padding: nth($fontPadding, 1);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 1);
+		line-height: nth($lineHeightResponsive, 1);
+		letter-spacing: nth($letterSpacingResponsive, 1);
+		padding: nth($fontPaddingResponsive, 1);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetSm {
+	font-size: nth($fontSize, 2);
+	line-height: nth($lineHeight, 2);
+	letter-spacing: nth($letterSpacing, 2);
+	padding: nth($fontPadding, 2);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 2);
+		line-height: nth($lineHeightResponsive, 2);
+		letter-spacing: nth($letterSpacingResponsive, 2);
+		padding: nth($fontPaddingResponsive, 2);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetMd {
+	font-size: nth($fontSize, 3);
+	line-height: nth($lineHeight, 3);
+	letter-spacing: nth($letterSpacing, 3);
+	padding: nth($fontPadding, 3);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 3);
+		line-height: nth($lineHeightResponsive, 3);
+		letter-spacing: nth($letterSpacingResponsive, 3);
+		padding: nth($fontPaddingResponsive, 3);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetLg {
+	font-size: nth($fontSize, 4);
+	line-height: nth($lineHeight, 4);
+	letter-spacing: nth($letterSpacing, 4);
+	padding: nth($fontPadding, 4);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 4);
+		line-height: nth($lineHeightResponsive, 4);
+		letter-spacing: nth($letterSpacingResponsive, 4);
+		padding: nth($fontPaddingResponsive, 4);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+%baseSetXl {
+	font-size: nth($fontSize, 5);
+	line-height: nth($lineHeight, 5);
+	letter-spacing: nth($letterSpacing, 5);
+	padding: nth($fontPadding, 5);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 5);
+		line-height: nth($lineHeightResponsive, 5);
+		letter-spacing: nth($letterSpacingResponsive, 5);
+		padding: nth($fontPaddingResponsive, 5);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetXxl {
+	font-size: nth($fontSize, 6);
+	line-height: nth($lineHeight, 6);
+	letter-spacing: nth($letterSpacing, 6);
+	padding: nth($fontPadding, 6);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 6);
+		line-height: nth($lineHeightResponsive, 6);
+		letter-spacing: nth($letterSpacingResponsive, 6);
+		padding: nth($fontPaddingResponsive, 6);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetXxxl {
+	font-size: nth($fontSize, 7);
+	line-height: nth($lineHeight, 7);
+	letter-spacing: nth($letterSpacing, 7);
+	padding: nth($fontPadding, 7);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 7);
+		line-height: nth($lineHeightResponsive, 7);
+		letter-spacing: nth($letterSpacingResponsive, 7);
+		padding: nth($fontPaddingResponsive, 7);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+%baseSetLarger {
+	font-size: nth($fontSize, 8);
+	line-height: nth($lineHeight, 8);
+	letter-spacing: nth($letterSpacing, 8);
+	padding: nth($fontPadding, 8);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 8);
+		line-height: nth($lineHeightResponsive, 8);
+		letter-spacing: nth($letterSpacingResponsive, 8);
+		padding: nth($fontPaddingResponsive, 8);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
+
+
+
+%baseSetLargest {
+	font-size: nth($fontSize, 9);
+	line-height: nth($lineHeight, 9);
+	letter-spacing: nth($letterSpacing, 9);
+	padding: nth($fontPadding, 9);
+
+	@if $typoOutputStyle == responsive {
+		font-size: nth($fontSizeResponsive, 9);
+		line-height: nth($lineHeightResponsive, 9);
+		letter-spacing: nth($letterSpacingResponsive, 9);
+		padding: nth($fontPaddingResponsive, 9);
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x;
+	}
+
+}
