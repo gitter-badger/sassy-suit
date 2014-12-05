@@ -1,0 +1,134 @@
+// $typo: (
+// 	base: 					16px,
+// 	indexStart: 			-2,
+// 	indexEnd: 				8,
+// 	sizeRatio: 				1.4,
+// 	lineHeightRatio: 		1.1,
+// 	paddingRatio: 			1.1,
+// 	letterSpacingRatio: 	-.02,
+// 	outputStyle: 			static,
+// 	bps: 					( sm, md, lg, xl, xxl ),
+// 	bpsRatios: 				( 1.1, 1.1, 1.1, 1.1, 1.1 ),
+// 	liquidRatio: 			2
+// );
+
+
+@function multiply($value, $multiplier) {
+	$new-value: $value * $multiplier;
+
+  	@return $new-value;
+
+}
+
+@function divide($value, $divider) {
+	$new-value: $value / $divider;
+
+  	@return $new-value;
+
+}
+
+@function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio) {
+
+	@if val($typoBase, measurePositive) {}
+	@else {
+		@error #{$typoBase} " is not a measure!";
+	}
+
+	@if val($typoSizeRatio, positive) and $typoSizeRatio > 1 {}
+	@else {
+		@error #{$typoSizeRatio} " is not a positive integer or float, which is more than 1 !";
+	}
+
+	@if val($typoLineHeightRatio, positive) and $typoSizeRatio > 1 {}
+	@else {
+		@error #{$typoLineHeightRatio} " is not positive and more than 1 !";
+	}
+
+	@if val($typoLetterSpacingRatio, number) and $typoLetterSpacingRatio != 0 {}
+	@else {
+		@error #{$typoLetterSpacingRatio} " is not measure or equals 0 !";
+	}
+
+	@if val($typoPaddingRatio, number) and $typoPaddingRatio > 0 {}
+	@else {
+		@error #{$typoPaddingRatio} " is not measure or equals 0 !";
+	}
+
+	@if val($typoIndexEnd, positive) and val($typoIndexEnd, integer) {}
+	@else {
+		@error #{$typoIndexEnd} " is not a positive integer !";
+	}
+
+	@if (val($typoIndexStart, negative) and val($typoIndexStart, integer) or $typoIndexStart == 0) and $typoIndexStart < $typoIndexEnd {
+		$fontSize: ms-list($typoIndexStart,  $typoIndexEnd, $typoBase, $typoSizeRatio);
+
+		@warn #{$fontSize};
+
+		$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+
+		@warn #{$lineHeight};
+
+		$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+
+		@warn #{$letterSpacing};
+
+		$fontPadding: sl-walk($fontSize, multiply, $typoPaddingRatio);
+
+		$fontPadding: sl-walk($fontPadding, divide, 2);
+
+		$fontPadding: sl-walk($fontPadding, append, 0);
+
+		@warn #{$fontPadding};
+
+		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
+
+	} @else {
+		@error #{$typoIndexStart} " is not 0 or negative integer !";
+	}
+
+	// @if (val($typoPaddingRatio, positive) and $typoPaddingRatio > 1 {
+	// 	$padding: ms-list($typoIndexStart, $typoIndexEnd, $typoBase, $typoPaddingRatio);
+
+	// 	@warn #{$typoPaddingRatio};
+
+	// 	$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+
+	// 	@warn #{$lineHeight};
+
+	// 	$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+
+	// 	@warn #{$letterSpacing};
+
+	// 	@return $fontSize, $lineHeight, $letterSpacing;
+
+	// } @else {
+	// 	@error #{$typoIndexStart} " is not 0 or negative integer !";
+	// }
+
+
+	@return "THE END";
+
+	// `ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
+
+};
+
+
+
+$getBaseSet: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio);
+
+$fontSize: nth($getBaseSet, 1);
+
+$lineHeight: nth($getBaseSet, 2);
+
+$letterSpacing: nth($getBaseSet, 3);
+
+$fontPadding: nth($getBaseSet, 4);
+
+.baseSet {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	letter-spacing: $letterSpacing;
+	padding: $fontPadding;
+};
+
+
