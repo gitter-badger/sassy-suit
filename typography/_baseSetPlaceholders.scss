@@ -1,0 +1,216 @@
+%baseSetXs {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+}
+.baseSetXs {
+	@extend %baseSetXs;
+}
+
+%baseSetSm {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetSm {
+	@extend %baseSetSm;
+}
+
+%baseSetMd {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetMd {
+	@extend %baseSetMd;
+}
+
+%baseSetLg {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetLg {
+	@extend %baseSetLg;
+}
+
+%baseSetXl {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetXl {
+	@extend %baseSetXl;
+}
+
+%baseSetXxl {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetXxl {
+	@extend %baseSetXxl;
+}
+
+%baseSetXxxl {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetXxxl {
+	@extend %baseSetXxxl;
+}
+
+%baseSetLarger {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetLarger {
+	@extend %baseSetLarger;
+}
+
+%baseSetLargest {
+	font-size: x;
+	line-height: x;
+	letter-spacing: x;
+	padding: x 0;
+
+	@if $typoOutputStyle == responsive {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+
+	@if $typoOutputStyle == liquid {
+		font-size: x;
+		line-height: x;
+		letter-spacing: x;
+		padding: x 0;
+	}
+}
+.baseSetLargest {
+	@extend %baseSetLargest;
+}
