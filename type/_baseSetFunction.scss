@@ -27,7 +27,7 @@
 
 }
 
-@function getBaseSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
+@function getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
 	@if val($typeBase, measurePositive) {}
 	@else {
@@ -114,15 +114,15 @@
 
 
 
-$getBaseSet: getBaseSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+$getTypeSet: getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
-$fontSize: nth($getBaseSet, 1);
+$fontSize: nth($getTypeSet, 1);
 
-$lineHeight: nth($getBaseSet, 2);
+$lineHeight: nth($getTypeSet, 2);
 
-$letterSpacing: nth($getBaseSet, 3);
+$letterSpacing: nth($getTypeSet, 3);
 
-$fontPadding: nth($getBaseSet, 4);
+$fontPadding: nth($getTypeSet, 4);
 
 .baseSet {
 	font-size: $fontSize;
