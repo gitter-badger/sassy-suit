@@ -1,25 +1,15 @@
 # Typography README.md 
 
-
-
 ## File Structure 
 
-* `_config.scss` - store values from root _config.scss
-* `_googleFontsFunction.scss` - URL encoder function for Google Fonts 
-* `_googleFontsMixin.scss` - Google Fonts URL generator mixin
-* `_baseSetsFunctions.scss` - 
-* `_baseSetsLists.scss` - 
-* `_variables.scss` - 
-* `_googleFontsInclude.scss` - Google Fonts URL import mixin
-* `_baseSetsBp.scss` - 
-* `_baseSetsBpLists.scss` - 
-* `_baseSetsLiquid.scss` - 
-* `_baseSetsLiquidLists.scss` - 
-* `_baseSetsPlaceholders.scss` - 
-* `_baseSetsPlaceholderExtendMixin.scss` - 
-* `_listsMixin.scss` - 
-* `_tablesMixin.scss` - 
-* `_styles.scss` - 
+* `_config.scss` - Alias for root _config.scss, stores values in variables
+* `_webFontsFunction.scss` - URL encoder for Google Web Fonts 
+* `_webFontsMixin.scss` - Google Web Fonts URL generator
+* `_typeSetsFunction.scss` -  Base typography values calculation
+* `_typeSetPlaceholders.scss` -  Base typography values grouping
+* `_typeStylePlaceholders.scss` - Base typography style values grouping
+* `_webFontsInclude.scss` - Google Fonts URL import mixin
+* `_styles.scss` - All typography styles
 
 
 
@@ -27,22 +17,22 @@
 
 ### Data Type Validation Functions
 
-* `validate($var, bool)`
-* `validate($var, color)`
-* `validate($var, empty)`
-* `validate($var, list)`
-* `validate($var, measure)`
-* `validate($var, null)`
-* `validate($var, number)`
-* `validate($var, string)`
-* `validate($var, unit)`
-* `validate($var, integer)`
-* `validate($var, float)`
-* `validate($var, positive)`
-* `validate($var, negative)`
-* `validate($var, negativeMeasure)`
-* `validate($var, positiveMeasure)`
-* `validate($var, map)`
+* `val($var, bool)`
+* `val($var, color)`
+* `val($var, empty)`
+* `val($var, list)`
+* `val($var, measure)`
+* `val($var, null)`
+* `val($var, number)`
+* `val($var, string)`
+* `val($var, unit)`
+* `val($var, integer)`
+* `val($var, float)`
+* `val($var, positive)`
+* `val($var, negative)`
+* `val($var, negativeMeasure)`
+* `val($var, positiveMeasure)`
+* `val($var, map)`
 
 ### Logger
 
