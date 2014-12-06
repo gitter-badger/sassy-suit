@@ -1,4 +1,4 @@
-%baseSetXs {
+%typeSetXs {
 	font-size: nth($fontSize, 1);
 	line-height: nth($lineHeight, 1);
 	letter-spacing: nth($letterSpacing, 1);
@@ -22,7 +22,7 @@
 
 
 
-%baseSetSm {
+%typeSetSm {
 	font-size: nth($fontSize, 2);
 	line-height: nth($lineHeight, 2);
 	letter-spacing: nth($letterSpacing, 2);
@@ -46,7 +46,7 @@
 
 
 
-%baseSetMd {
+%typeSetMd {
 	font-size: nth($fontSize, 3);
 	line-height: nth($lineHeight, 3);
 	letter-spacing: nth($letterSpacing, 3);
@@ -70,7 +70,7 @@
 
 
 
-%baseSetLg {
+%typeSetLg {
 	font-size: nth($fontSize, 4);
 	line-height: nth($lineHeight, 4);
 	letter-spacing: nth($letterSpacing, 4);
@@ -93,7 +93,7 @@
 }
 
 
-%baseSetXl {
+%typeSetXl {
 	font-size: nth($fontSize, 5);
 	line-height: nth($lineHeight, 5);
 	letter-spacing: nth($letterSpacing, 5);
@@ -117,7 +117,7 @@
 
 
 
-%baseSetXxl {
+%typeSetXxl {
 	font-size: nth($fontSize, 6);
 	line-height: nth($lineHeight, 6);
 	letter-spacing: nth($letterSpacing, 6);
@@ -141,7 +141,7 @@
 
 
 
-%baseSetXxxl {
+%typeSetXxxl {
 	font-size: nth($fontSize, 7);
 	line-height: nth($lineHeight, 7);
 	letter-spacing: nth($letterSpacing, 7);
@@ -164,7 +164,7 @@
 }
 
 
-%baseSetLarger {
+%typeSetLarger {
 	font-size: nth($fontSize, 8);
 	line-height: nth($lineHeight, 8);
 	letter-spacing: nth($letterSpacing, 8);
@@ -188,7 +188,7 @@
 
 
 
-%baseSetLargest {
+%typeSetLargest {
 	font-size: nth($fontSize, 9);
 	line-height: nth($lineHeight, 9);
 	letter-spacing: nth($letterSpacing, 9);

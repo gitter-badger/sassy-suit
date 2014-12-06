@@ -1,49 +1,49 @@
-%baseStyleHeader {
+%typeStyleHeader {
 	font-family: unquote($fontFamilyHeaderName);
 }
 
-%baseStyleHeaderAlt {
+%typeStyleHeaderAlt {
 	font-family: unquote($fontFamilyHeaderAltName);
 }
 
-%baseStyleHeader,
-%baseStyleHeaderAlt {
+%typeStyleHeader,
+%typeStyleHeaderAlt {
 	color: #333;
 }
 
-%baseStyleText {
+%typeStyleText {
 	font-family: unquote($fontFamilyTextName);
 }
 
-%baseStyleTextAlt {
+%typeStyleTextAlt {
 	font-family: unquote($fontFamilyTextAltName);
 }
 
-%baseStyleText,
-%baseStyleTextAlt {
+%typeStyleText,
+%typeStyleTextAlt {
 	color: #111;
 }
 
-%baseStyleItalic {
+%typeStyleItalic {
 	font-style: italic;
 }
 
-%baseStyleBold {
+%typeStyleBold {
 	font-weight: bold;
 }
 
-%baseStyleLight {
+%typeStyleLight {
 	font-weight: lighter;
 }
 
-%baseStyleLetterSpacingReset {
+%typeStyleLetterSpacingReset {
 	letter-spacing: 0;
 }
 
-%baseStyleTextShadow {
+%typeStyleTextShadow {
 	text-shadow: 1px 1px 0 #000;
 }
 
-%baseStyleTextShadowAlt {
+%typeStyleTextShadowAlt {
 	text-shadow: 1px 1px 0 #fff;
 }

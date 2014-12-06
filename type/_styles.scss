@@ -2,7 +2,7 @@ h1,
 .h1,
 .h1--alt {
 
-	@extend %baseSetXxxl;
+	@extend %typeSetXxxl;
 
 }
 
@@ -10,7 +10,7 @@ h2,
 .h2,
 .h2--alt {
 
-	@extend %baseSetXxl;
+	@extend %typeSetXxl;
 
 }
 
@@ -18,7 +18,7 @@ h3,
 .h3,
 .h3--alt {
 
-	@extend %baseSetXl;
+	@extend %typeSetXl;
 
 }
 
@@ -26,7 +26,7 @@ h4,
 .h4,
 .h4--alt {
 
-	@extend %baseSetLg;
+	@extend %typeSetLg;
 
 }
 
@@ -34,7 +34,7 @@ h5,
 .h5,
 .h5--alt {
 
-	@extend %baseSetMd;
+	@extend %typeSetMd;
 
 }
 
@@ -42,7 +42,7 @@ h6,
 .h6,
 .h6--alt {
 
-	@extend %baseSetSm;
+	@extend %typeSetSm;
 
 }
 
@@ -50,7 +50,7 @@ p,
 .p,
 .p--alt {
 
-	@extend %baseSetMd;
+	@extend %typeSetMd;
 
 }
 
@@ -58,7 +58,7 @@ small,
 .small,
 .small--alt {
 
-	@extend %baseSetSm;
+	@extend %typeSetSm;
 
 }
 
@@ -75,7 +75,7 @@ h5,
 h6,
 .h6 {
 
-	@extend %baseStyleHeader;
+	@extend %typeStyleHeader;
 
 }
 
@@ -86,14 +86,14 @@ h6,
 .h5--alt,
 .h6--alt {
 
-	@extend %baseStyleHeaderAlt;
+	@extend %typeStyleHeaderAlt;
 
 }
 
 .p--alt,
 .small--alt {
 
-	@extend %baseStyleTextAlt;
+	@extend %typeStyleTextAlt;
 
 }
 
@@ -105,6 +105,6 @@ small,
 .small,
 .small--alt {
 
-	@extend %baseStyleText, %baseStyleLetterSpacingReset;
+	@extend %typeStyleText, %typeStyleLetterSpacingReset;
 
 }
