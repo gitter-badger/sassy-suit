@@ -1,4 +1,4 @@
-// $typo: (
+// $type: (
 // 	base: 					16px,
 // 	indexStart: 			-2,
 // 	indexEnd: 				8,
@@ -27,52 +27,52 @@
 
 }
 
-@function getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio) {
+@function getBaseSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
-	@if val($typoBase, measurePositive) {}
+	@if val($typeBase, measurePositive) {}
 	@else {
-		@error #{$typoBase} " is not a measure!";
+		@error #{$typeBase} " is not a measure!";
 	}
 
-	@if val($typoSizeRatio, positive) and $typoSizeRatio > 1 {}
+	@if val($typeSizeRatio, positive) and $typeSizeRatio > 1 {}
 	@else {
-		@error #{$typoSizeRatio} " is not a positive integer or float, which is more than 1 !";
+		@error #{$typeSizeRatio} " is not a positive integer or float, which is more than 1 !";
 	}
 
-	@if val($typoLineHeightRatio, positive) and $typoSizeRatio > 1 {}
+	@if val($typeLineHeightRatio, positive) and $typeSizeRatio > 1 {}
 	@else {
-		@error #{$typoLineHeightRatio} " is not positive and more than 1 !";
+		@error #{$typeLineHeightRatio} " is not positive and more than 1 !";
 	}
 
-	@if val($typoLetterSpacingRatio, number) and $typoLetterSpacingRatio != 0 {}
+	@if val($typeLetterSpacingRatio, number) and $typeLetterSpacingRatio != 0 {}
 	@else {
-		@error #{$typoLetterSpacingRatio} " is not measure or equals 0 !";
+		@error #{$typeLetterSpacingRatio} " is not measure or equals 0 !";
 	}
 
-	@if val($typoPaddingRatio, number) and $typoPaddingRatio > 0 {}
+	@if val($typePaddingRatio, number) and $typePaddingRatio > 0 {}
 	@else {
-		@error #{$typoPaddingRatio} " is not measure or equals 0 !";
+		@error #{$typePaddingRatio} " is not measure or equals 0 !";
 	}
 
-	@if val($typoIndexEnd, positive) and val($typoIndexEnd, integer) {}
+	@if val($typeIndexEnd, positive) and val($typeIndexEnd, integer) {}
 	@else {
-		@error #{$typoIndexEnd} " is not a positive integer !";
+		@error #{$typeIndexEnd} " is not a positive integer !";
 	}
 
-	@if (val($typoIndexStart, negative) and val($typoIndexStart, integer) or $typoIndexStart == 0) and $typoIndexStart < $typoIndexEnd {
-		$fontSize: ms-list($typoIndexStart,  $typoIndexEnd, $typoBase, $typoSizeRatio);
+	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart < $typeIndexEnd {
+		$fontSize: ms-list($typeIndexStart,  $typeIndexEnd, $typeBase, $typeSizeRatio);
 
 		@warn #{$fontSize};
 
-		$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
 
 		@warn #{$lineHeight};
 
-		$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+		$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
 
 		@warn #{$letterSpacing};
 
-		$fontPadding: sl-walk($fontSize, multiply, $typoPaddingRatio);
+		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
 
 		$fontPadding: sl-walk($fontPadding, divide, 2);
 
@@ -83,26 +83,26 @@
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
 	} @else {
-		@error #{$typoIndexStart} " is not 0 or negative integer !";
+		@error #{$typeIndexStart} " is not 0 or negative integer !";
 	}
 
-	// @if (val($typoPaddingRatio, positive) and $typoPaddingRatio > 1 {
-	// 	$padding: ms-list($typoIndexStart, $typoIndexEnd, $typoBase, $typoPaddingRatio);
+	// @if (val($typePaddingRatio, positive) and $typePaddingRatio > 1 {
+	// 	$padding: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typePaddingRatio);
 
-	// 	@warn #{$typoPaddingRatio};
+	// 	@warn #{$typePaddingRatio};
 
-	// 	$lineHeight: sl-walk($fontSize, multiply, $typoLineHeightRatio);
+	// 	$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
 
 	// 	@warn #{$lineHeight};
 
-	// 	$letterSpacing: sl-walk($fontSize, multiply, $typoLetterSpacingRatio);
+	// 	$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
 
 	// 	@warn #{$letterSpacing};
 
 	// 	@return $fontSize, $lineHeight, $letterSpacing;
 
 	// } @else {
-	// 	@error #{$typoIndexStart} " is not 0 or negative integer !";
+	// 	@error #{$typeIndexStart} " is not 0 or negative integer !";
 	// }
 
 
@@ -114,7 +114,7 @@
 
 
 
-$getBaseSet: getBaseSet($typoBase, $typoIndexStart, $typoIndexEnd, $typoSizeRatio, $typoLineHeightRatio, $typoPaddingRatio, $typoLetterSpacingRatio);
+$getBaseSet: getBaseSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
 $fontSize: nth($getBaseSet, 1);
 
