@@ -45,3 +45,6 @@ Each function returns boolean value.
 * `funcExst($name)` - checks if function exists
 * `featExst($feature)` - checks if SASS feauture exists
 
+## TO DO 
+
+* Add multiple checkup (sl-walk every item)
