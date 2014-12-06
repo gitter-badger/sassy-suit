@@ -124,7 +124,7 @@ $letterSpacing: nth($getTypeSet, 3);
 
 $fontPadding: nth($getTypeSet, 4);
 
-.baseSet {
+.typeSetStatic {
 	font-size: $fontSize;
 	line-height: $lineHeight;
 	letter-spacing: $letterSpacing;
