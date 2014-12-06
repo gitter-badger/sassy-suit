@@ -1,0 +1,31 @@
+@function divide($value, $divider) {
+
+	@if val($divider, number) and $divider != 0  and
+		val($value, number) or val($value, measure) {
+
+		$new-value: $value / $divider;
+
+  		@return $new-value;
+
+	}
+	@else if not val($value, number) or val($val, measure) {
+
+			@warn #{$value} "is not a number or measure";
+
+			@return false;
+
+	}	@else if $divider == 0 {
+
+			@warn "We can not divide on 0";
+
+			@return false;
+
+	}  @else {
+
+		@warn #{$divider} "is not a number";
+
+		@return false;
+
+	}
+
+}
