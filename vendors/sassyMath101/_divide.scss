@@ -1,7 +1,7 @@
 @function divide($value, $divider) {
 
-	@if val($divider, number) and $divider != 0  and
-		val($value, number) or val($value, measure) {
+	@if val($value, number) or val($value, measure) and
+		val($divider, number) and $divider != 0 {
 
 		$new-value: $value / $divider;
 
