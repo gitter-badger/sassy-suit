@@ -1,98 +1,31 @@
-SassySuit
+SassySuit :bowtie:
 =========
 
-SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md). 
+Handcrafted SASS framework based on [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and __cutting edge__ best pactices. 
+
 <br>
-__WARNING__: this is work in progress! 
-If you have any questions, please open an issue.
 
-## SassySuit Trello board 
+__WARNING__: HARD CORE SASS :warning:
 
-[Trello board](https://trello.com/b/auSCHtYg/development)
+This is work in progress, we are still trying out new things things and concepts.
+If you have any questions or sugestions, please open a new [issue](https://github.com/SassySuit/sassySuit/issues/new) or tweet me [@Skoks](https://twitter.com/VladimirSkoks).
 
-## SassySuit structure tree 
+## SassySuit Trello board :construction:
 
-	├── CHANGELOG.md
-	├── LICENSE
-	├── README.md
-	├── _base.scss
-	├── _config.scss
-	├── _h5bp.scss
-	├── _normalize.scss
-	├── _palette.scss
-	├── _styles.scss
-	├── breakpoints
-	│   ├── _breakpoints-function.scss
-	│   ├── _breakpoints-mixin.scss
-	│   ├── _index.scss
-	│   └── _variables.scss
-	├── dist
-	│   ├── sassySuit.css
-	│   └── sassySuit.css.map
-	├── extras
-	│   ├── _index.scss
-	│   └── triangles
-	│       ├── _triangles-include.scss
-	│       └── _triangles-mixin.scss
-	├── fonts
-	│   └── _index.scss
-	├── grids
-	│   ├── _containers.scss
-	│   └── _index.scss
-	├── gulpfile.js
-	├── helpers
-	│   ├── _clearfix-mixin.scss
-	│   ├── _index.scss
-	│   └── array-output
-	│       ├── _array-output-include.scss
-	│       └── _array-output-mixin.scss
-	├── index.html
-	├── math-operations
-	│   ├── _divide-function.scss
-	│   ├── _index.scss
-	│   └── _multiply-function.scss
-	├── modules
-	│   └── _index.scss
-	├── node_modules
-	│   ├── gulp
-	│   ├── gulp-autoprefixer
-	│   ├── gulp-ruby-sass
-	│   └── gulp-sassdoc
-	├── package.json
-	├── pages
-	│   └── _index.scss
-	├── sassySuit.scss
-	├── typography
-	│   ├── _base-reponsive-sets-mixin.scss
-	│   ├── _base-sets-mixin.scss
-	│   ├── _base-sets-placeholder.scss
-	│   ├── _index.scss
-	│   ├── _lists-mixin.scss
-	│   ├── _responsive-sequence-calc-function.scss
-	│   ├── _sequence-calc-function.scss
-	│   ├── _styles.scss
-	│   ├── _variables.scss
-	│   ├── _web-fonts-function.scss
-	│   ├── _web-fonts-include-mixin.scss
-	│   └── _web-fonts-mixin.scss
-	├── utils
-	│   ├── _index.scss
-	│   ├── _typography-include.scss
-	│   ├── clearfix
-	│   │   ├── _clearfix-include.scss
-	│   │   └── _clearfix-mixin.scss
-	│   ├── margins
-	│   │   ├── _margins-generation.scss
-	│   │   ├── _margins.scss
-	│   │   └── _variables.scss
-	│   └── paddings
-	│       ├── _paddings-generation.scss
-	│       ├── _paddings.scss
-	│       └── _variables.scss
-	└── vendors
-	    ├── _index.scss
-	    ├── _map-into-list.scss
-	    ├── sassylists
-	    └── susy
+Check out my To Do list on [Trello board](https://trello.com/b/auSCHtYg/development).
 
-`38 directories, 85 files`
+## Dependencies :gem:
+
+1. [SassyValidation](https://github.com/Skoks/sassyValidation)
+2. [SassyLists](https://github.com/at-import/SassyLists)
+
+## Contributing :bulb:
+
+Thanks for considering contributing to SassySuit.
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -m 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
