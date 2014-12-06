@@ -1,14 +1,14 @@
 // https://github.com/SassySuit/sassySuit/find/typography-backup
 
 @import "_config.scss";
-@import "_googleFontsFunction.scss";
-@import "_googleFontsMixin.scss";
+@import "_webFontsFunction.scss";
+@import "_webFontsMixin.scss";
 @import "_typeSetFunction.scss";
 @import "_typeSetPlaceholders.scss";
 @import "_typeStylePlaceholders.scss";
 // @import "_typeSetsLists.scss";
 // @import "_variables.scss";
-@import "_googleFontsInclude.scss";
+@import "_webFontsInclude.scss";
 // @import "_typeSetsBp.scss"; // wrap in @if $bp-approach: true;
 // @import "_typeSetsBpLists.scss";
 // @import "_typeSetsLiquid.scss";
