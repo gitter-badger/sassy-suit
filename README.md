@@ -4,8 +4,9 @@ SassySuit :star:
 SassySuit - is a handcrafted SASS framework, built with [modular numbers](https://github.com/at-import/modular-scale) in mind, [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and __sophisticated__ functions and mixins. 
 <hr>
 
-This is work in progress, we are still trying out new things and concepts, will be awesome if .
-If you have any questions or sugestions, please open a new [issue](https://github.com/SassySuit/sassySuit/issues/new) or tweet me [@Skoks](https://twitter.com/VladimirSkoks).
+This is work in progress, we are still trying out new things and concepts.
+If you have any questions or sugestions, please open a new [issue](https://github.com/SassySuit/sassySuit/issues/new) 
+or tweet me [@Skoks](https://twitter.com/VladimirSkoks).
 
 ## SassySuit Trello board :construction:
 
