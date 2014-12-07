@@ -28,16 +28,22 @@
 	}
 
 	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart < $typeIndexEnd {
+
 		$fontSize: ms-list($typeIndexStart,  $typeIndexEnd, $typeBase, $typeSizeRatio);
+		@if index($typeRound, size) or
+			index($typeRound, fontSize) or
+			index($typeRound, font-size) {
+
+			$fontSize: sl-walk($fontSize, round);
+
+		}
 
 		@debug #{$fontSize};
 
 		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
-
 		@debug #{$lineHeight};
 
 		$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
-
 		@debug #{$letterSpacing};
 
 		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
@@ -45,7 +51,6 @@
 		$fontPadding: sl-walk($fontPadding, divide, 2);
 
 		$fontPadding: sl-walk($fontPadding, append, 0);
-
 		@debug #{$fontPadding};
 
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
