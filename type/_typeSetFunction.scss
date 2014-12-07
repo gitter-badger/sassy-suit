@@ -33,15 +33,15 @@
 	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart < $typeIndexEnd {
 		$fontSize: ms-list($typeIndexStart,  $typeIndexEnd, $typeBase, $typeSizeRatio);
 
-		@warn #{$fontSize};
+		@debug #{$fontSize};
 
 		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
 
-		@warn #{$lineHeight};
+		@debug #{$lineHeight};
 
 		$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
 
-		@warn #{$letterSpacing};
+		@debug #{$letterSpacing};
 
 		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
 
@@ -49,7 +49,7 @@
 
 		$fontPadding: sl-walk($fontPadding, append, 0);
 
-		@warn #{$fontPadding};
+		@debug #{$fontPadding};
 
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
@@ -60,15 +60,15 @@
 	// @if (val($typePaddingRatio, positive) and $typePaddingRatio > 1 {
 	// 	$padding: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typePaddingRatio);
 
-	// 	@warn #{$typePaddingRatio};
+	// 	@debug #{$typePaddingRatio};
 
 	// 	$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
 
-	// 	@warn #{$lineHeight};
+	// 	@debug #{$lineHeight};
 
 	// 	$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
 
-	// 	@warn #{$letterSpacing};
+	// 	@debug #{$letterSpacing};
 
 	// 	@return $fontSize, $lineHeight, $letterSpacing;
 
