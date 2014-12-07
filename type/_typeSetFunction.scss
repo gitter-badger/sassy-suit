@@ -1,32 +1,29 @@
 @function getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
-	@if val($typeBase, measurePositive) {}
-	@else {
+
+
+	@if not val($typeBase, measurePositive) {
 		@error #{$typeBase} " is not a measure!";
 	}
 
-	@if val($typeSizeRatio, positive) and $typeSizeRatio > 1 {}
-	@else {
+	@if not val($typeSizeRatio, positive) and $typeSizeRatio > 1 {
 		@error #{$typeSizeRatio} " is not a positive integer or float, which is more than 1 !";
 	}
 
-	@if val($typeLineHeightRatio, positive) and $typeSizeRatio > 1 {}
-	@else {
+	@if not val($typeLineHeightRatio, positive) and $typeSizeRatio > 1 {
 		@error #{$typeLineHeightRatio} " is not positive and more than 1 !";
 	}
 
-	@if val($typeLetterSpacingRatio, number) and $typeLetterSpacingRatio != 0 {}
-	@else {
+	@if not val($typeLetterSpacingRatio, number) and $typeLetterSpacingRatio != 0 {
 		@error #{$typeLetterSpacingRatio} " is not measure or equals 0 !";
 	}
 
-	@if val($typePaddingRatio, number) and $typePaddingRatio > 0 {}
-	@else {
+	@if not val($typePaddingRatio, number) and $typePaddingRatio > 0 {
 		@error #{$typePaddingRatio} " is not measure or equals 0 !";
 	}
 
-	@if val($typeIndexEnd, positive) and val($typeIndexEnd, integer) {}
-	@else {
+
+	@if not val($typeIndexEnd, positive) and val($typeIndexEnd, integer) {
 		@error #{$typeIndexEnd} " is not a positive integer !";
 	}
 
@@ -54,7 +51,7 @@
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
 	} @else {
-		@error #{$typeIndexStart} " is not 0 or negative integer !";
+		@error #{$typeIndexStart} " is not 0 or a negative integer !";
 	}
 
 	// @if (val($typePaddingRatio, positive) and $typePaddingRatio > 1 {
