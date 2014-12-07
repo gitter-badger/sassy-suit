@@ -11,7 +11,7 @@ $typePaddingRatio: 			map-get($type, paddingRatio);
 $typeLetterSpacingRatio: 	map-get($type, letterSpacingRatio);
 $typeOutputStyle: 			map-get($type, outputStyle);
 $typeBps:	 				map-get($type, bps);
-$typeBpsRatioList: 			map-get($type, bpsRatios);
+$typeBpsRatios: 			map-get($type, bpsRatios);
 $typeLiquidRatio: 			map-get($type, liquidRatio);
 
 /*-----  End of Stored values from root _config.scss  ------*/
