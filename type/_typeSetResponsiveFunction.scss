@@ -19,7 +19,7 @@
 		index(sl-walk($typeBpsRatios, val, number), false) != true and
 		$typeBpsRatios == sl-sort($typeBpsRatios) {
 
-		$typeSetResponsive: unquote("") !global;
+		$typeSetResponsive: null !global;
 
 		@for $i from 1 through length($typeBpsRatios) {
 			// get recalculated $typeSetResponsiveRatios
@@ -31,7 +31,7 @@
 
 				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
-				$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp) !global;
+				$typeSetResponsive: append(unquote($typeSetResponsive), $typeSetResponsiveBp) !global;
 
 			}
 
