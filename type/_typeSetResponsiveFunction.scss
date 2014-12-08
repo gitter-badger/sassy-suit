@@ -19,9 +19,22 @@
 		index(sl-walk($typeBpsRatios, val, number), false) != true and
 		$typeBpsRatios == sl-sort($typeBpsRatios) {
 
-		@debug "There are multiple break points with positiveMeasure values and break point ratios with positive values and they are all properly sorted";
+		@for $i from 1 through length($typeBpsRatios) {
+			// get recalculated $typeSetResponsiveRatios
+			$ratio: nth(getTypeSetResponsiveRatios($typeBpsRatios), $i);
 
-		@return "getTypeSetResponsive - multiple";
+			$typeSetResponsiveBp: getTypeSet($typeBase * $ratio, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) !global;
+
+			$typeSetResponsive: start;
+			$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp) !global;
+		}
+
+		@debug "There are multiple break points with positiveMeasure values and break point ratios with positive values and they are all properly sorted";
+		@debug $typeSet;
+		@debug $typeSetResponsiveBp;
+		@debug $typeSetResponsive;
+
+		@return #{$typeSetResponsive};
 
 	} @else {
 		@error "Number of break points and number of break points ratios has to be equal";
@@ -37,5 +50,6 @@
 }
 
 .TYPE_SET_RESPONSIVE {
-	getTypeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios);
+	typeSet: $typeSet;
+	typeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios);
 }
