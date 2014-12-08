@@ -86,33 +86,10 @@
 		@error #{$typeIndexStart} " is not 0 or a negative integer !";
 	}
 
-	// @if (val($typePaddingRatio, positive) and $typePaddingRatio > 1 {
-	// 	$padding: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typePaddingRatio);
-
-	// 	@debug #{$typePaddingRatio};
-
-	// 	$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
-
-	// 	@debug #{$lineHeight};
-
-	// 	$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
-
-	// 	@debug #{$letterSpacing};
-
-	// 	@return $fontSize, $lineHeight, $letterSpacing;
-
-	// } @else {
-	// 	@error #{$typeIndexStart} " is not 0 or negative integer !";
-	// }
-
-
-	@return "THE END";
-
-	// `ms-generate-list($Value, $Bases, $Ratios)` - calculate list, `Ratios` - maybe a list of values, which will return comma seperate multi-level list
+	@error "Something went wrong!";
+	@return false;
 
 };
-
-
 
 $getTypeSet: getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
