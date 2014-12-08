@@ -19,7 +19,7 @@
 		index(sl-walk($typeBpsRatios, val, number), false) != true and
 		$typeBpsRatios == sl-sort($typeBpsRatios) {
 
-		$typeSetResponsive: START !global;
+		$typeSetResponsive: () !global;
 
 		@for $i from 1 through length($typeBpsRatios) {
 			// get recalculated $typeSetResponsiveRatios
