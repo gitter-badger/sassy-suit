@@ -29,26 +29,53 @@
 
 	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart < $typeIndexEnd {
 
+		// Validating and rounding each value in $fontSize
+		// add multiple possible truthy values
 		$fontSize: ms-list($typeIndexStart,  $typeIndexEnd, $typeBase, $typeSizeRatio);
-		@if index($typeRound, size) or
-			index($typeRound, fontSize) or
-			index($typeRound, font-size) {
+		@if index($typeRound, fontSize) or
+			index($typeRound, font-size) or
+			index($typeRound, size) {
 
 			$fontSize: sl-walk($fontSize, round);
 
 		}
-
 		@debug #{$fontSize};
 
+		// Validating and rounding each value in $lineHeight
+		// add multiple possible truthy values
 		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
+		@if index($typeRound, lineHeight) or
+			index($typeRound, line-height) {
+
+			$lineHeight: sl-walk($lineHeight, round);
+
+		}
+
 		@debug #{$lineHeight};
 
+
+		// Validating and rounding each value in $letterSpacing
+		// add multiple possible truthy values
 		$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
+		@if index($typeRound, letterSpacing) or
+			index($typeRound, letter-spacing) {
+
+			$letterSpacing: sl-walk($letterSpacing, round);
+
+		}
+
 		@debug #{$letterSpacing};
 
 		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
-
 		$fontPadding: sl-walk($fontPadding, divide, 2);
+
+		@if index($typeRound, fontPadding) or
+			index($typeRound, padding) or
+			index($typeRound, font-padding) {
+
+			$fontPadding: sl-walk($fontPadding, round);
+
+		}
 
 		$fontPadding: sl-walk($fontPadding, append, 0);
 		@debug #{$fontPadding};
