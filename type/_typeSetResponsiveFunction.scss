@@ -19,20 +19,33 @@
 		index(sl-walk($typeBpsRatios, val, number), false) != true and
 		$typeBpsRatios == sl-sort($typeBpsRatios) {
 
+		$typeSetResponsive: unquote("") !global;
+
 		@for $i from 1 through length($typeBpsRatios) {
 			// get recalculated $typeSetResponsiveRatios
-			$ratio: nth(getTypeSetResponsiveRatios($typeBpsRatios), $i);
+			$ratioBp: nth(getTypeSetResponsiveRatios($typeBpsRatios), $i) !global;
 
-			$typeSetResponsiveBp: getTypeSet($typeBase * $ratio, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) !global;
+			// $typeSetResponsiveBp: getTypeSet($typeBase * $ratio, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) !global;
 
-			$typeSetResponsive: start;
-			$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp) !global;
+			@each $i in $typeBpsRatios {
+
+				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+
+				$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp) !global;
+
+			}
+
 		}
 
 		@debug "There are multiple break points with positiveMeasure values and break point ratios with positive values and they are all properly sorted";
 		@debug $typeSet;
-		@debug $typeSetResponsiveBp;
+		// @debug $typeSetResponsiveBp;
 		@debug $typeSetResponsive;
+
+		@debug "font-size: " nth(nth($typeSetResponsive, 1), 1);
+		@debug "line-height: " nth(nth($typeSetResponsive, 2), 1);
+		@debug "letter-spacing: " nth(nth($typeSetResponsive, 3), 1);
+		@debug "padding: " nth(nth($typeSetResponsive, 4), 1);
 
 		@return #{$typeSetResponsive};
 
