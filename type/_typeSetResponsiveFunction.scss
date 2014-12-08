@@ -1,0 +1,43 @@
+// $typeBps:	 				map-get($type, bps);
+// $typeBpsRatios: 			map-get($type, bpsRatios);
+
+// .TYPE_SET_RESPONSIVE {
+// 	content: $typeBps;
+// 	content: val($typeBps, list);
+// }
+
+@function getTypeSetResponsive($typeBps, $typeBpsRatios) {
+
+	@if val($typeBps, measurePositive) {
+		@debug "$typeBps" #{$typeBps} "was validated as a positive measure";
+		// @return "$typeBps is a positive measure";
+	}
+
+	@if val($typeBps, list) and
+		sl-walk($typeBps, val, meaurePositive) and
+		$typeBps == sl-sort($typeBps) {
+		@debug "$typeBps" #{$typeBps} "was validated as properly sorted list and each value was validated as a positiveMeasure";
+		// @return "$typeBps is a list with positive measures";
+	}
+
+	@if val($typeBpsRatios, positive) {
+			@debug "$typeBpsRatios" #{$typeBpsRatios} "was validated as a positive number";
+			@return "$typeBpsRatios is a positive number";
+	}
+
+	@if val($typeBpsRatios, list) and
+		sl-walk($typeBpsRatios, val, number) and
+		$typeBpsRatios == sl-sort($typeBpsRatios) {
+			@debug "$typeBpsRatios" #{$typeBpsRatios} "was validated as properly sorted list and each value was validated as a positive numbers";
+			@return "$typeBpsRatios is a list with positive numbers";
+	}
+
+
+
+// $typeBpsRatios: getTypeSetResponsiveRatios($typeBpsRatios);
+	@return "@return or @error of getTypeSetResponsive function value will go here";
+}
+
+.TYPE_SET_RESPONSIVE {
+	getTypeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios);
+}
