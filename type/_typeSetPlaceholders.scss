@@ -5,10 +5,13 @@
 	padding: nth($fontPadding, 1);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 1);
-		line-height: nth($lineHeightResponsive, 1);
-		letter-spacing: nth($letterSpacingResponsive, 1);
-		padding: nth($fontPaddingResponsive, 1);
+		// nth($typeSetResponsive, 1) - first lists from fontSize responsive list
+		// nth(nth($typeSetResponsive, 1), 1) - first value from first lists from fontSize responsive list
+		// $fontSize, $lineHeight, $letterSpacing, $fontPadding - order
+		font-size: nth(nth($typeSetResponsive, 1), 1);
+		line-height: nth(nth($typeSetResponsive, 2), 1);
+		letter-spacing: nth(nth($typeSetResponsive, 3), 1);
+		padding: nth(nth($typeSetResponsive, 4), 1);
 	}
 
 	@if $typeOutputStyle == liquid {

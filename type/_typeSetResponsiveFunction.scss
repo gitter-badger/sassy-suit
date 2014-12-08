@@ -30,42 +30,9 @@
 
 	}
 
-	// @if val($typeBps, measurePositive) {
-	// 	@debug "$typeBps" #{$typeBps} "was validated as a positive measure";
-	// } @else if val($typeBps, list) and
-	// 	index(sl-walk($typeBps, val, measurePositive), false) != true and
-	// 	$typeBps == sl-sort($typeBps) {
-	// 	@debug "$typeBps" #{sl-walk($typeBps, val, measurePositive)} "was validated as properly sorted list and each value was validated as a positiveMeasure";
-	// } @else {
-	// 	@debug #{sl-walk($typeBps, val, measurePositive)} ;
-	// 		@error "$typeBps" #{$typeBps} "was NOT validated as a proper list or measure";
-
-	// 		@return fasle;
-	// }
-
-	// @if val($typeBpsRatios, positive) {
-	// 		@debug "$typeBpsRatios" #{$typeBpsRatios} "was validated as a positive number";
-
-	// 		@return "$typeBpsRatios is a positive number";
-
-	// } @else if val($typeBpsRatios, list) and
-	// 	index(sl-walk($typeBpsRatios, val, number), false) != true and
-	// 	$typeBpsRatios == sl-sort($typeBpsRatios) {
-	// 		@debug "$typeBpsRatios" #{sl-walk($typeBpsRatios, val, number)} "was validated as properly sorted list and each value was validated as a positive numbers";
-
-	// 		@return "$typeBpsRatios is a list with positive numbers";
-
-	// } @else {
-	// 	@debug #{sl-walk($typeBps, val, typeBpsRatios)} ;
-	// 		@error "typeBpsRatios" #{$typeBpsRatios} "was NOT validated as a proper list or measure";
-
-	// 		@return fasle;
-
-	// }
-
 	@error "Something went wrong!";
 
-	@return "@return or @error of getTypeSetResponsive function value will go here";
+	@return false;
 
 }
 
