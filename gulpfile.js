@@ -1,3 +1,6 @@
+// add colored output for SASS LOGGER
+// https://github.com/SassySuit/colors.js
+
 'use strict';
 
 var gulp 			= require('gulp'),
