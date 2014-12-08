@@ -25,7 +25,9 @@
 			}
 		}
 
-		// include @else if statement ...
+	} @else if val($value, positive) {
+
+		@return $value;
 
 	} @else {
 		@debug #{$typeBpsRatios} "was NOT validated as a list with positive numbers";
