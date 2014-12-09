@@ -1,0 +1,33 @@
+@mixin typeSetResponsive($bp, $scale) {
+
+	$value: map-get($typeSetResponsive, $bp);
+	$font-size: nth($value, 1);
+	$line-height: nth($value, 2);
+	$letter-spacing: nth($value, 3);
+	$padding: nth($value, 4);
+	font-size: nth($font-size, $scale);
+	line-height: nth($line-height, $scale);
+	letter-spacing: nth($letter-spacing, $scale);
+	padding: nth($padding, $scale);
+}
+
+.typeSetResponsive1-3 {
+	@include typeSetResponsive(1, 3);
+}
+
+.typeSetResponsive2-3 {
+	@include typeSetResponsive(2, 3);
+}
+
+
+.typeSetResponsive3-3 {
+	@include typeSetResponsive(3, 3);
+}
+
+.typeSetResponsive4-3 {
+	@include typeSetResponsive(4, 3);
+}
+
+.typeSetResponsive5-3 {
+	@include typeSetResponsive(5, 3);
+}
