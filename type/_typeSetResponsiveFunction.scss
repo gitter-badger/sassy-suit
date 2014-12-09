@@ -68,13 +68,13 @@
 }
 // @add map debug
 
-$tsr:  getTypeSetResponsive($typeBps, $typeBpsRatios);
-@debug 'WWWW '$tsr;
+$typeSetResponsive:  getTypeSetResponsive($typeBps, $typeBpsRatios) !global;
+@debug 'WWWW '$typeSetResponsive;
 
 .TYPE_SET_RESPONSIVE {
 	typeSet: $typeSet;
-	typeSetResponsive: map-values($tsr);
-	typeSetResponsive: map-keys($tsr);
-	content: sl-debug($tsr);
+	typeSetResponsive: map-values($typeSetResponsive);
+	typeSetResponsive: map-keys($typeSetResponsive);
+	content: sl-debug($typeSetResponsive);
 	x: $ratioBp;
 }
