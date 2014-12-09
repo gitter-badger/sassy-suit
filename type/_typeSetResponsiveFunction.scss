@@ -42,7 +42,7 @@
 				//   m: map-values($m), map-keys($m);
 				// }
 
-				$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp, comma) !global;
+				$typeSetResponsive: map-set($typeSetResponsive, $i, $typeSetResponsiveBp) !global;
 				@debug $typeSetResponsive "$typeSetResponsive" "/////////////////////////////////////////////////////////";
 
 		}
@@ -52,12 +52,7 @@
 		// @debug $typeSetResponsiveBp;
 		@debug $typeSetResponsive;
 
-		@debug "font-size: " nth(nth($typeSetResponsive, 1), 1);
-		@debug "line-height: " nth(nth($typeSetResponsive, 2), 1);
-		@debug "letter-spacing: " nth(nth($typeSetResponsive, 3), 1);
-		@debug "padding: " nth(nth($typeSetResponsive, 4), 1);
-
-		@return #{$typeSetResponsive};
+		@return $typeSetResponsive;
 
 	} @else {
 		@error "Number of break points and number of break points ratios has to be equal";
@@ -71,9 +66,15 @@
 	@return false;
 
 }
+// @add map debug
+
+$tsr:  getTypeSetResponsive($typeBps, $typeBpsRatios);
+@debug 'WWWW '$tsr;
 
 .TYPE_SET_RESPONSIVE {
 	typeSet: $typeSet;
-	typeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios);
+	typeSetResponsive: map-values($tsr);
+	typeSetResponsive: map-keys($tsr);
+	content: sl-debug($tsr);
 	x: $ratioBp;
 }
