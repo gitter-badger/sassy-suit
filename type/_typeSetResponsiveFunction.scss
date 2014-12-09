@@ -30,6 +30,18 @@
 				@debug $i "$i" "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 				@debug $typeSetResponsiveBp "$typeSetResponsiveBp" "++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+
+				// $m: ();
+				// $m: map-set($m, key, hello world this is map);
+				// $m: map-set($m, key2, hello world this is map 2);
+
+
+				// h1 {
+				//   m: map-get($m, key);
+				//   m: map-get($m, key2);
+				//   m: map-values($m), map-keys($m);
+				// }
+
 				$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp, comma) !global;
 				@debug $typeSetResponsive "$typeSetResponsive" "/////////////////////////////////////////////////////////";
 
