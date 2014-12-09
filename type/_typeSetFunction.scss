@@ -77,7 +77,7 @@
 
 		}
 
-		// $fontPadding: sl-walk($fontPadding, append, 0);
+		$fontPadding: sl-walk($fontPadding, append, 0);
 		// @debug "$fontPadding" #{$fontPadding};
 
 		@return $fontSize, $lineHeight, $fontPadding, $letterSpacing;
