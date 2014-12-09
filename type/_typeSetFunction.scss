@@ -31,7 +31,7 @@
 
 		// Validating and rounding each value in $fontSize
 		// add multiple possible truthy values
-		$fontSize: ms-list($typeIndexStart,  $typeIndexEnd, $typeBase, $typeSizeRatio);
+		$fontSize: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typeSizeRatio);
 		@if index($typeRound, fontSize) or
 			index($typeRound, font-size) or
 			index($typeRound, size) {

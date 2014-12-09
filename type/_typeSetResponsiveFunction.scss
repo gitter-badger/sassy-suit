@@ -30,7 +30,7 @@
 				@debug $i "$i" "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 				@debug $typeSetResponsiveBp "$typeSetResponsiveBp" "++++++++++++++++++++++++++++++++++++++++++++++++++++++";
-				$typeSetResponsive: append(unquote($typeSetResponsive), $typeSetResponsiveBp) !global;
+				$typeSetResponsive: append($typeSetResponsive, $typeSetResponsiveBp, comma) !global;
 				@debug $typeSetResponsive "$typeSetResponsive" "/////////////////////////////////////////////////////////";
 
 		}
