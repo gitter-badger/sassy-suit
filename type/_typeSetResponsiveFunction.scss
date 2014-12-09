@@ -24,16 +24,14 @@
 		@for $i from 1 through length($typeBpsRatios) {
 			// get recalculated $typeSetResponsiveRatios
 			$ratioBp: nth(getTypeSetResponsiveRatios($typeBpsRatios), $i) !global;
-
+			@debug $ratioBp "$ratioBp" "_____________________________________________________";
 			// $typeSetResponsiveBp: getTypeSet($typeBase * $ratio, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) !global;
 
-			@each $i in $typeBpsRatios {
-
+				@debug $i "$i" "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
-
+				@debug $typeSetResponsiveBp "$typeSetResponsiveBp" "++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 				$typeSetResponsive: append(unquote($typeSetResponsive), $typeSetResponsiveBp) !global;
-
-			}
+				@debug $typeSetResponsive "$typeSetResponsive" "/////////////////////////////////////////////////////////";
 
 		}
 
@@ -65,4 +63,5 @@
 .TYPE_SET_RESPONSIVE {
 	typeSet: $typeSet;
 	typeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios);
+	x: $ratioBp;
 }
