@@ -1,0 +1,23 @@
+@function multiply($value, $multiplier) {
+
+	@if val($value, number) or val($value, measure) and val($multiplier, number) {
+
+			$new-value: $value * $multiplier;
+
+		  	@return $new-value;
+
+	} @else if not val($value, number) or val($value, measure) {
+
+		@warn #{$value} "is not a number or measure";
+
+		@return false;
+
+	} @else {
+
+		@warn #{$multiplier} "is not a number";
+
+		@return false;
+
+	}
+
+}

@@ -1,7 +1,14 @@
-.container {
-	width: 100%;
+.Grid-container {
+	width: 80%;
 	margin: 0 auto;
 	padding: 0 30px;
 	max-width: 1440px;
+	background-color: $colorGrey100;
+}
+
+.Grid-container--static {
+	width: 540px;
+	margin: 0 auto;
+	padding: 0 30px;
 	background-color: $colorGrey100;
 }

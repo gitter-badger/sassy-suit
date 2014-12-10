@@ -1,0 +1,24 @@
+/**
+ * Tests whether `$var` is color.
+ * ---
+ * @access public
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {*} $var  - check for color type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is_color(#333)   //returns true
+ *  is_color(black)  //returns true
+ *  is_color(test)   //returns false
+ */
+
+@function is_color($var) {
+	@if type-of($var) == color {
+		@return true;
+	} @else {
+		@return false;
+	}
+}

@@ -1,0 +1,25 @@
+/**
+ * Tests whether `$var` is number.
+ * ---
+ * @access public
+ * ---
+ * @since 1.0.0
+ * ---
+ * @param {*} $var  - check for number type
+ * ---
+ * @return {bool}
+ * ---
+ * @example
+ *  is_number(1)   //returns true
+ *  is_number('1') //returns false
+ *  is_number(1em) //returns false
+ */
+
+@function is_number($var) {
+	@if type-of($var) == number {
+		@return unitless($var);
+	}
+	@else {
+		@return false;
+	}
+}

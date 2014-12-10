@@ -2,17 +2,18 @@
 =            Stored values from root _config.scss            =
 ============================================================*/
 
-$typoBase: 					map-get($typo, base);
-$typoIndexStart: 			map-get($typo, indexStart);
-$typoIndexEnd: 				map-get($typo, indexEnd);
-$typoSizeRatio: 			map-get($typo, sizeRatio);
-$typoLineHeightRatio: 		map-get($typo, lineHeightRatio);
-$typoPaddingRatio: 			map-get($typo, paddingRatio);
-$typoLetterSpacingRatio: 	map-get($typo, letterSpacingRatio);
-$typoOutputStyle: 			map-get($typo, outputStyle);
-$typoBps:	 				map-get($typo, bps);
-$typoBpsRatioList: 			map-get($typo, bpsRatios);
-$typoLiquidRatio: 			map-get($typo, liquidRatio);
+$typeBase: 					map-get($type, base);
+$typeIndexStart: 			map-get($type, indexStart);
+$typeIndexEnd: 				map-get($type, indexEnd);
+$typeSizeRatio: 			map-get($type, sizeRatio);
+$typeLineHeightRatio: 		map-get($type, lineHeightRatio);
+$typePaddingRatio: 			map-get($type, paddingRatio);
+$typeLetterSpacingRatio: 	map-get($type, letterSpacingRatio);
+$typeOutputStyle: 			map-get($type, outputStyle);
+$typeBps:	 				map-get($type, bps);
+$typeBpsRatios: 			map-get($type, bpsRatios);
+$typeLiquidRatio: 			map-get($type, liquidRatio);
+$typeRound: 				map-get($type, round);
 
 /*-----  End of Stored values from root _config.scss  ------*/
 
@@ -48,14 +49,3 @@ $fontFamilyTextName:		map-get($fontFamilyNames, text);
 $fontFamilyTextAltName:		map-get($fontFamilyNames, textAlt);
 
 /*-----  End of Font Family Names  ------*/
-
-
-
-/*==============================================
-=            Font responsive values            =
-==============================================*/
-
-$fontBreakpoints: 			map-get($typo, fontBreakpoints);
-$fontResponsiveRatios: 		map-get($typo, fontBreakpointsRatios);
-
-/*-----  End of Font responsive values  ------*/

@@ -1,0 +1,16 @@
+@mixin typeSetResponsive($bp, $scale) {
+
+	$value: map-get($typeSetResponsive, $bp);
+	$font-size: nth($value, 1);
+	$line-height: nth($value, 2);
+	$letter-spacing: nth($value, 3);
+	$padding: nth($value, 4);
+
+	@media (min-width: nth($typeBps, $bp)) {
+		font-size: nth($font-size, $scale);
+		line-height: nth($line-height, $scale);
+		letter-spacing: nth($letter-spacing, $scale);
+		padding: nth($padding, $scale);
+	}
+
+}
