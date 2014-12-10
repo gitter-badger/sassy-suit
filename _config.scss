@@ -107,20 +107,6 @@ $fontFamilyNames: (
 
 // outputStyle: static, responsive, liquid
 
-<<<<<<< HEAD
-$typo: (
-	base: 					16px,
-	indexStart: 			-2,
-	indexEnd: 				8,
-	sizeRatio: 				1.4,
-	lineHeightRatio: 		1.1,
-	paddingRatio: 			1.1,
-	letterSpacingRatio: 	-.02,
-	outputStyle: 			static,
-	bps: 					( sm, md, lg, xl, xxl ),
-	bpsRatios: 				( 1.1, 1.1, 1.1, 1.1, 1.1 ),
-	liquidRatio: 			2
-=======
 $type: (
 	base: 					16px,
 	indexStart: 			-2,
@@ -134,5 +120,4 @@ $type: (
 	bpsRatios: 				1.1 1.1 1.1 1.1 1.1,
 	liquidRatio: 			2,
 	round: 					(fontSize, lineHeight, padding)
->>>>>>> typography
 );
