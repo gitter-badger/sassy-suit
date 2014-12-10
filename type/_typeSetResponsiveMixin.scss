@@ -5,10 +5,14 @@
 	$line-height: nth($value, 2);
 	$letter-spacing: nth($value, 3);
 	$padding: nth($value, 4);
-	font-size: nth($font-size, $scale);
-	line-height: nth($line-height, $scale);
-	letter-spacing: nth($letter-spacing, $scale);
-	padding: nth($padding, $scale);
+
+	@media (min-width: nth($typeBps, $bp)) {
+		font-size: nth($font-size, $scale);
+		line-height: nth($line-height, $scale);
+		letter-spacing: nth($letter-spacing, $scale);
+		padding: nth($padding, $scale);
+	}
+
 }
 
 .typeSetResponsive1-3 {
