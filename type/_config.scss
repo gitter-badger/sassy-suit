@@ -49,14 +49,3 @@ $fontFamilyTextName:		map-get($fontFamilyNames, text);
 $fontFamilyTextAltName:		map-get($fontFamilyNames, textAlt);
 
 /*-----  End of Font Family Names  ------*/
-
-
-
-/*==============================================
-=            Font responsive values            =
-==============================================*/
-
-$fontBreakpoints: 			map-get($type, fontBreakpoints);
-$fontResponsiveRatios: 		map-get($type, fontBreakpointsRatios);
-
-/*-----  End of Font responsive values  ------*/
