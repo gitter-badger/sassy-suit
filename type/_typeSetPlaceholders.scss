@@ -5,16 +5,11 @@
 	padding: nth($fontPadding, 1);
 
 	@if $typeOutputStyle == responsive {
-		// nth($typeSetResponsive, 1) - first lists from fontSize responsive list
-		// nth(nth($typeSetResponsive, 1), 1) - first value from first lists from fontSize responsive list
-		// $fontSize, $lineHeight, $letterSpacing, $fontPadding - order
-		// 1 - break point number from 1 through length($typeBps)
-		// 2 - property. 1 - fontSize, 2 - lineHeight, 3 -letterSpacing, 4 - padding
-		// 3 - value of property from 1 through length of type index list ($indexStart and $indexEnd)
-		font-size: nth(nth($typeSetResponsive, 1), 1);
-		line-height: nth(nth($typeSetResponsive, 2), 1);
-		letter-spacing: nth(nth($typeSetResponsive, 3), 1);
-		padding: nth(nth($typeSetResponsive, 4), 1);
+		@include typeSetResponsive(1, 1);
+		@include typeSetResponsive(2, 1);
+		@include typeSetResponsive(3, 1);
+		@include typeSetResponsive(4, 1);
+		@include typeSetResponsive(5, 1);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -35,10 +30,11 @@
 	padding: nth($fontPadding, 2);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 2);
-		line-height: nth($lineHeightResponsive, 2);
-		letter-spacing: nth($letterSpacingResponsive, 2);
-		padding: nth($fontPaddingResponsive, 2);
+		@include typeSetResponsive(1, 2);
+		@include typeSetResponsive(2, 2);
+		@include typeSetResponsive(3, 2);
+		@include typeSetResponsive(4, 2);
+		@include typeSetResponsive(5, 2);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -59,10 +55,11 @@
 	padding: nth($fontPadding, 3);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 3);
-		line-height: nth($lineHeightResponsive, 3);
-		letter-spacing: nth($letterSpacingResponsive, 3);
-		padding: nth($fontPaddingResponsive, 3);
+		@include typeSetResponsive(1, 3);
+		@include typeSetResponsive(2, 3);
+		@include typeSetResponsive(3, 3);
+		@include typeSetResponsive(4, 3);
+		@include typeSetResponsive(5, 3);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -83,10 +80,11 @@
 	padding: nth($fontPadding, 4);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 4);
-		line-height: nth($lineHeightResponsive, 4);
-		letter-spacing: nth($letterSpacingResponsive, 4);
-		padding: nth($fontPaddingResponsive, 4);
+		@include typeSetResponsive(1, 4);
+		@include typeSetResponsive(2, 4);
+		@include typeSetResponsive(3, 4);
+		@include typeSetResponsive(4, 4);
+		@include typeSetResponsive(5, 4);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -106,10 +104,11 @@
 	padding: nth($fontPadding, 5);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 5);
-		line-height: nth($lineHeightResponsive, 5);
-		letter-spacing: nth($letterSpacingResponsive, 5);
-		padding: nth($fontPaddingResponsive, 5);
+		@include typeSetResponsive(1, 5);
+		@include typeSetResponsive(2, 5);
+		@include typeSetResponsive(3, 5);
+		@include typeSetResponsive(4, 5);
+		@include typeSetResponsive(5, 5);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -130,10 +129,11 @@
 	padding: nth($fontPadding, 6);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 6);
-		line-height: nth($lineHeightResponsive, 6);
-		letter-spacing: nth($letterSpacingResponsive, 6);
-		padding: nth($fontPaddingResponsive, 6);
+		@include typeSetResponsive(1, 6);
+		@include typeSetResponsive(2, 6);
+		@include typeSetResponsive(3, 6);
+		@include typeSetResponsive(4, 6);
+		@include typeSetResponsive(5, 6);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -154,10 +154,11 @@
 	padding: nth($fontPadding, 7);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 7);
-		line-height: nth($lineHeightResponsive, 7);
-		letter-spacing: nth($letterSpacingResponsive, 7);
-		padding: nth($fontPaddingResponsive, 7);
+		@include typeSetResponsive(1, 7);
+		@include typeSetResponsive(2, 7);
+		@include typeSetResponsive(3, 7);
+		@include typeSetResponsive(4, 7);
+		@include typeSetResponsive(5, 7);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -177,10 +178,11 @@
 	padding: nth($fontPadding, 8);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 8);
-		line-height: nth($lineHeightResponsive, 8);
-		letter-spacing: nth($letterSpacingResponsive, 8);
-		padding: nth($fontPaddingResponsive, 8);
+		@include typeSetResponsive(1, 8);
+		@include typeSetResponsive(2, 8);
+		@include typeSetResponsive(3, 8);
+		@include typeSetResponsive(4, 8);
+		@include typeSetResponsive(5, 8);
 	}
 
 	@if $typeOutputStyle == liquid {
@@ -201,10 +203,11 @@
 	padding: nth($fontPadding, 9);
 
 	@if $typeOutputStyle == responsive {
-		font-size: nth($fontSizeResponsive, 9);
-		line-height: nth($lineHeightResponsive, 9);
-		letter-spacing: nth($letterSpacingResponsive, 9);
-		padding: nth($fontPaddingResponsive, 9);
+		@include typeSetResponsive(1, 9);
+		@include typeSetResponsive(2, 9);
+		@include typeSetResponsive(3, 9);
+		@include typeSetResponsive(4, 9);
+		@include typeSetResponsive(5, 9);
 	}
 
 	@if $typeOutputStyle == liquid {
