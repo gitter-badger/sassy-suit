@@ -1,5 +1,7 @@
 # Inverted Triangle Methodology
 
+[Slides](https://speakerdeck.com/dafed/managing-css-projects-with-itcss)
+
 * Settings
 * Tools
 * Generic
@@ -62,3 +64,15 @@ More explicitly named [ e.g. .products-lists {} ]
 Overrides, helpers, utilities.
 Only affect one piece of the DOM at a time.
 Usually carry `!important`
+
+Specificity __slowly increases__ layer-by-layer 
+We affect __smaller and smaller__ bits of the DOM at a time
+Progressively adding styles; __never undoing__
+
+
+#### ITCSS 
+
+__Manages source order__
+Filters __explicitness__
+__Tames__ the cascade.
+__Sanitises__ inheritance.
