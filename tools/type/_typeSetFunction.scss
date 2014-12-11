@@ -80,7 +80,7 @@
 		$fontPadding: sl-walk($fontPadding, append, 0);
 		// @debug "$fontPadding" #{$fontPadding};
 
-		@return $fontSize, $lineHeight, $fontPadding, $letterSpacing;
+		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
 	} @else {
 		@error #{$typeIndexStart} " is not 0 or a negative integer !";
@@ -101,12 +101,12 @@ $letterSpacing: nth($typeSet, 3);
 
 $fontPadding: nth($typeSet, 4);
 
-.typeSetStatic {
-	typeSet: $typeSet;
-	font-size: $fontSize;
-	line-height: $lineHeight;
-	letter-spacing: $letterSpacing;
-	padding: $fontPadding;
-};
+// .typeSetStatic {
+// 	typeSet: $typeSet;
+// 	font-size: $fontSize;
+// 	line-height: $lineHeight;
+// 	letter-spacing: $letterSpacing;
+// 	padding: $fontPadding;
+// };
 
 

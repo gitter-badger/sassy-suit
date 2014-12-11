@@ -1,220 +1,220 @@
-%typeSetXs {
-	font-size: nth($fontSize, 1);
-	line-height: nth($lineHeight, 1);
-	letter-spacing: nth($letterSpacing, 1);
-	padding: nth($fontPadding, 1);
+// %typeSetXs {
+// 	font-size: nth($fontSize, 1);
+// 	line-height: nth($lineHeight, 1);
+// 	letter-spacing: nth($letterSpacing, 1);
+// 	padding: nth($fontPadding, 1);
 
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 1);
-		@include typeSetResponsive(2, 1);
-		@include typeSetResponsive(3, 1);
-		@include typeSetResponsive(4, 1);
-		@include typeSetResponsive(5, 1);
-	}
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 1);
+// 		@include typeSetResponsive(2, 1);
+// 		@include typeSetResponsive(3, 1);
+// 		@include typeSetResponsive(4, 1);
+// 		@include typeSetResponsive(5, 1);
+// 	}
 
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
 
-}
-
-
-
-%typeSetSm {
-	font-size: nth($fontSize, 2);
-	line-height: nth($lineHeight, 2);
-	letter-spacing: nth($letterSpacing, 2);
-	padding: nth($fontPadding, 2);
-
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 2);
-		@include typeSetResponsive(2, 2);
-		@include typeSetResponsive(3, 2);
-		@include typeSetResponsive(4, 2);
-		@include typeSetResponsive(5, 2);
-	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
-}
+// }
 
 
 
-%typeSetMd {
-	font-size: nth($fontSize, 3);
-	line-height: nth($lineHeight, 3);
-	letter-spacing: nth($letterSpacing, 3);
-	padding: nth($fontPadding, 3);
+// %typeSetSm {
+// 	font-size: nth($fontSize, 2);
+// 	line-height: nth($lineHeight, 2);
+// 	letter-spacing: nth($letterSpacing, 2);
+// 	padding: nth($fontPadding, 2);
 
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 3);
-		@include typeSetResponsive(2, 3);
-		@include typeSetResponsive(3, 3);
-		@include typeSetResponsive(4, 3);
-		@include typeSetResponsive(5, 3);
-	}
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 2);
+// 		@include typeSetResponsive(2, 2);
+// 		@include typeSetResponsive(3, 2);
+// 		@include typeSetResponsive(4, 2);
+// 		@include typeSetResponsive(5, 2);
+// 	}
 
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
 
-}
-
-
-
-%typeSetLg {
-	font-size: nth($fontSize, 4);
-	line-height: nth($lineHeight, 4);
-	letter-spacing: nth($letterSpacing, 4);
-	padding: nth($fontPadding, 4);
-
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 4);
-		@include typeSetResponsive(2, 4);
-		@include typeSetResponsive(3, 4);
-		@include typeSetResponsive(4, 4);
-		@include typeSetResponsive(5, 4);
-	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
-}
-
-
-%typeSetXl {
-	font-size: nth($fontSize, 5);
-	line-height: nth($lineHeight, 5);
-	letter-spacing: nth($letterSpacing, 5);
-	padding: nth($fontPadding, 5);
-
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 5);
-		@include typeSetResponsive(2, 5);
-		@include typeSetResponsive(3, 5);
-		@include typeSetResponsive(4, 5);
-		@include typeSetResponsive(5, 5);
-	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
-}
+// }
 
 
 
-%typeSetXxl {
-	font-size: nth($fontSize, 6);
-	line-height: nth($lineHeight, 6);
-	letter-spacing: nth($letterSpacing, 6);
-	padding: nth($fontPadding, 6);
+// %typeSetMd {
+// 	font-size: nth($fontSize, 3);
+// 	line-height: nth($lineHeight, 3);
+// 	letter-spacing: nth($letterSpacing, 3);
+// 	padding: nth($fontPadding, 3);
 
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 6);
-		@include typeSetResponsive(2, 6);
-		@include typeSetResponsive(3, 6);
-		@include typeSetResponsive(4, 6);
-		@include typeSetResponsive(5, 6);
-	}
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 3);
+// 		@include typeSetResponsive(2, 3);
+// 		@include typeSetResponsive(3, 3);
+// 		@include typeSetResponsive(4, 3);
+// 		@include typeSetResponsive(5, 3);
+// 	}
 
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
 
-}
-
-
-
-%typeSetXxxl {
-	font-size: nth($fontSize, 7);
-	line-height: nth($lineHeight, 7);
-	letter-spacing: nth($letterSpacing, 7);
-	padding: nth($fontPadding, 7);
-
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 7);
-		@include typeSetResponsive(2, 7);
-		@include typeSetResponsive(3, 7);
-		@include typeSetResponsive(4, 7);
-		@include typeSetResponsive(5, 7);
-	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
-}
-
-
-%typeSetLarger {
-	font-size: nth($fontSize, 8);
-	line-height: nth($lineHeight, 8);
-	letter-spacing: nth($letterSpacing, 8);
-	padding: nth($fontPadding, 8);
-
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 8);
-		@include typeSetResponsive(2, 8);
-		@include typeSetResponsive(3, 8);
-		@include typeSetResponsive(4, 8);
-		@include typeSetResponsive(5, 8);
-	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
-}
+// }
 
 
 
-%typeSetLargest {
-	font-size: nth($fontSize, 9);
-	line-height: nth($lineHeight, 9);
-	letter-spacing: nth($letterSpacing, 9);
-	padding: nth($fontPadding, 9);
+// %typeSetLg {
+// 	font-size: nth($fontSize, 4);
+// 	line-height: nth($lineHeight, 4);
+// 	letter-spacing: nth($letterSpacing, 4);
+// 	padding: nth($fontPadding, 4);
 
-	@if $typeOutputStyle == responsive {
-		@include typeSetResponsive(1, 9);
-		@include typeSetResponsive(2, 9);
-		@include typeSetResponsive(3, 9);
-		@include typeSetResponsive(4, 9);
-		@include typeSetResponsive(5, 9);
-	}
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 4);
+// 		@include typeSetResponsive(2, 4);
+// 		@include typeSetResponsive(3, 4);
+// 		@include typeSetResponsive(4, 4);
+// 		@include typeSetResponsive(5, 4);
+// 	}
 
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
 
-}
+// }
+
+
+// %typeSetXl {
+// 	font-size: nth($fontSize, 5);
+// 	line-height: nth($lineHeight, 5);
+// 	letter-spacing: nth($letterSpacing, 5);
+// 	padding: nth($fontPadding, 5);
+
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 5);
+// 		@include typeSetResponsive(2, 5);
+// 		@include typeSetResponsive(3, 5);
+// 		@include typeSetResponsive(4, 5);
+// 		@include typeSetResponsive(5, 5);
+// 	}
+
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
+
+// }
+
+
+
+// %typeSetXxl {
+// 	font-size: nth($fontSize, 6);
+// 	line-height: nth($lineHeight, 6);
+// 	letter-spacing: nth($letterSpacing, 6);
+// 	padding: nth($fontPadding, 6);
+
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 6);
+// 		@include typeSetResponsive(2, 6);
+// 		@include typeSetResponsive(3, 6);
+// 		@include typeSetResponsive(4, 6);
+// 		@include typeSetResponsive(5, 6);
+// 	}
+
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
+
+// }
+
+
+
+// %typeSetXxxl {
+// 	font-size: nth($fontSize, 7);
+// 	line-height: nth($lineHeight, 7);
+// 	letter-spacing: nth($letterSpacing, 7);
+// 	padding: nth($fontPadding, 7);
+
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 7);
+// 		@include typeSetResponsive(2, 7);
+// 		@include typeSetResponsive(3, 7);
+// 		@include typeSetResponsive(4, 7);
+// 		@include typeSetResponsive(5, 7);
+// 	}
+
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
+
+// }
+
+
+// %typeSetLarger {
+// 	font-size: nth($fontSize, 8);
+// 	line-height: nth($lineHeight, 8);
+// 	letter-spacing: nth($letterSpacing, 8);
+// 	padding: nth($fontPadding, 8);
+
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 8);
+// 		@include typeSetResponsive(2, 8);
+// 		@include typeSetResponsive(3, 8);
+// 		@include typeSetResponsive(4, 8);
+// 		@include typeSetResponsive(5, 8);
+// 	}
+
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
+
+// }
+
+
+
+// %typeSetLargest {
+// 	font-size: nth($fontSize, 9);
+// 	line-height: nth($lineHeight, 9);
+// 	letter-spacing: nth($letterSpacing, 9);
+// 	padding: nth($fontPadding, 9);
+
+// 	@if $typeOutputStyle == responsive {
+// 		@include typeSetResponsive(1, 9);
+// 		@include typeSetResponsive(2, 9);
+// 		@include typeSetResponsive(3, 9);
+// 		@include typeSetResponsive(4, 9);
+// 		@include typeSetResponsive(5, 9);
+// 	}
+
+// 	@if $typeOutputStyle == liquid {
+// 		font-size: x;
+// 		line-height: x;
+// 		letter-spacing: x;
+// 		padding: x;
+// 	}
+
+// }

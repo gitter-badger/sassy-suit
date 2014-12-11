@@ -1,110 +1,110 @@
-h1,
-.h1,
-.h1--alt {
+// h1,
+// .h1,
+// .h1--alt {
 
-	@extend %typeSetXxxl;
+// 	@extend %typeSetXxxl;
 
-}
+// }
 
-h2,
-.h2,
-.h2--alt {
+// h2,
+// .h2,
+// .h2--alt {
 
-	@extend %typeSetXxl;
+// 	@extend %typeSetXxl;
 
-}
+// }
 
-h3,
-.h3,
-.h3--alt {
+// h3,
+// .h3,
+// .h3--alt {
 
-	@extend %typeSetXl;
+// 	@extend %typeSetXl;
 
-}
+// }
 
-h4,
-.h4,
-.h4--alt {
+// h4,
+// .h4,
+// .h4--alt {
 
-	@extend %typeSetLg;
+// 	@extend %typeSetLg;
 
-}
+// }
 
-h5,
-.h5,
-.h5--alt {
+// h5,
+// .h5,
+// .h5--alt {
 
-	@extend %typeSetMd;
+// 	@extend %typeSetMd;
 
-}
+// }
 
-h6,
-.h6,
-.h6--alt {
+// h6,
+// .h6,
+// .h6--alt {
 
-	@extend %typeSetSm;
+// 	@extend %typeSetSm;
 
-}
+// }
 
-p,
-.p,
-.p--alt {
+// p,
+// .p,
+// .p--alt {
 
-	@extend %typeSetMd;
+// 	@extend %typeSetMd;
 
-}
+// }
 
-small,
-.small,
-.small--alt {
+// small,
+// .small,
+// .small--alt {
 
-	@extend %typeSetSm;
+// 	@extend %typeSetSm;
 
-}
+// }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+// h1,
+// .h1,
+// h2,
+// .h2,
+// h3,
+// .h3,
+// h4,
+// .h4,
+// h5,
+// .h5,
+// h6,
+// .h6 {
 
-	@extend %typeStyleHeader;
+// 	@extend %typeStyleHeader;
 
-}
+// }
 
-.h1--alt,
-.h2--alt,
-.h3--alt,
-.h4--alt,
-.h5--alt,
-.h6--alt {
+// .h1--alt,
+// .h2--alt,
+// .h3--alt,
+// .h4--alt,
+// .h5--alt,
+// .h6--alt {
 
-	@extend %typeStyleHeaderAlt;
+// 	@extend %typeStyleHeaderAlt;
 
-}
+// }
 
-.p--alt,
-.small--alt {
+// .p--alt,
+// .small--alt {
 
-	@extend %typeStyleTextAlt;
+// 	@extend %typeStyleTextAlt;
 
-}
+// }
 
 
-p,
-.p,
-.p--alt,
-small,
-.small,
-.small--alt {
+// p,
+// .p,
+// .p--alt,
+// small,
+// .small,
+// .small--alt {
 
-	@extend %typeStyleText, %typeStyleLetterSpacingReset;
+// 	@extend %typeStyleText, %typeStyleLetterSpacingReset;
 
-}
+// }
