@@ -31,6 +31,18 @@
 /* ==========  Blacks  ========== */
 /* ==========  Color Palettes  ========== */
 /* ==========  Color definitions  ========== */
+/*============================================================
+=            Stored values from root _config.scss            =
+============================================================*/
+/*-----  End of Stored values from root _config.scss  ------*/
+/*===================================
+=      Font Family Configs          =
+===================================*/
+/*-----  End of Font Family Configs  ------*/
+/*=========================================
+=            Font Family Names            =
+=========================================*/
+/*-----  End of Font Family Names  ------*/
 /**
  * Tests whether `$var` is bool.
  * ---
@@ -1359,18 +1371,6 @@ body {
 =            Breakpoints            =
 ===================================*/
 /*-----  End of Breakpoints  ------*/
-/*============================================================
-=            Stored values from root _config.scss            =
-============================================================*/
-/*-----  End of Stored values from root _config.scss  ------*/
-/*===================================
-=      Font Family Configs          =
-===================================*/
-/*-----  End of Font Family Configs  ------*/
-/*=========================================
-=            Font Family Names            =
-=========================================*/
-/*-----  End of Font Family Names  ------*/
 @import url("https://fonts.googleapis.com/css?family=Roboto|Nunito|Roboto%3A700|Roboto%3A300|Roboto%3A%20400%2C%20italic|Open|Sans|Dosis|Open%20Sans%3A700|Open%20Sans%3A300|Open%20Sans%3A%20400%2C%20italic");
 .RESPONSIVE_RATIOS {
   content: 1.1 1.21 1.331 1.4641 1.61051;
