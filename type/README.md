@@ -55,3 +55,8 @@ __NOTE__: can't be used inside of functions (that's how SASS works)
 ### SassyLists
 
 * `sl-walk($list, function)` - apply function for each $list value 
+
+### Parker.js
+
+* `parker -f human sassySuit.css` - output CSS specificity
+
