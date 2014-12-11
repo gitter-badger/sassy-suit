@@ -1,3 +1,5 @@
+/*==========  Base Sets Placeholders  ==========*/
+
 %typeSetXs {
 	font-size: nth($fontSize, 1);
 	line-height: nth($lineHeight, 1);
@@ -20,8 +22,6 @@
 	}
 
 }
-
-
 
 %typeSetSm {
 	font-size: nth($fontSize, 2);
@@ -46,8 +46,6 @@
 
 }
 
-
-
 %typeSetMd {
 	font-size: nth($fontSize, 3);
 	line-height: nth($lineHeight, 3);
@@ -70,8 +68,6 @@
 	}
 
 }
-
-
 
 %typeSetLg {
 	font-size: nth($fontSize, 4);
@@ -96,7 +92,6 @@
 
 }
 
-
 %typeSetXl {
 	font-size: nth($fontSize, 5);
 	line-height: nth($lineHeight, 5);
@@ -119,8 +114,6 @@
 	}
 
 }
-
-
 
 %typeSetXxl {
 	font-size: nth($fontSize, 6);
@@ -145,8 +138,6 @@
 
 }
 
-
-
 %typeSetXxxl {
 	font-size: nth($fontSize, 7);
 	line-height: nth($lineHeight, 7);
@@ -170,7 +161,6 @@
 
 }
 
-
 %typeSetLarger {
 	font-size: nth($fontSize, 8);
 	line-height: nth($lineHeight, 8);
@@ -193,8 +183,6 @@
 	}
 
 }
-
-
 
 %typeSetLargest {
 	font-size: nth($fontSize, 9);

@@ -1,4 +1,7 @@
 p {
  	@extend %typeSetMd;
  	@extend %typeStyleText;
+
+	// no letter-spacing needed for plain text
+ 	letter-spacing: 0;
 }

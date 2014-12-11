@@ -2233,6 +2233,7 @@ video {
   height: auto;
 }
 
+/*==========  Base Sets Placeholders  ==========*/
 h6 {
   font-size: 11px;
   line-height: 17px;
@@ -2540,6 +2541,10 @@ p {
 
 p {
   color: #111;
+}
+
+p {
+  letter-spacing: 0;
 }
 
 logger-help {
