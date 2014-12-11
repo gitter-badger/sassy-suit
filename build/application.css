@@ -2522,7 +2522,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Droid Serif, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 h1,
@@ -2532,6 +2532,14 @@ h4,
 h5,
 h6 {
   color: #333;
+}
+
+p {
+  font-family: Open Sans, sans-serif;
+}
+
+p {
+  color: #111;
 }
 
 logger-help {
