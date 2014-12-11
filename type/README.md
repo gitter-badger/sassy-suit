@@ -60,3 +60,6 @@ __NOTE__: can't be used inside of functions (that's how SASS works)
 
 * `parker -f human sassySuit.css` - output CSS specificity
 
+### CSS Specifity Graph Generator
+
+* [CSS Specifity](http://jonassebastianohlsson.com/specificity-graph/)
