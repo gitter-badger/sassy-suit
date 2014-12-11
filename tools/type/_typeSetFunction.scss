@@ -1,7 +1,5 @@
 @function getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
-
-
 	@if not val($typeBase, measurePositive) {
 		@error #{$typeBase} " is not a measure!";
 	}
@@ -39,10 +37,7 @@
 			$fontSize: sl-walk($fontSize, round);
 
 		}
-		// @debug "$fontSize" #{$fontSize};
 
-		// Validating and rounding each value in $lineHeight
-		// add multiple possible truthy values
 		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
 		@if index($typeRound, lineHeight) or
 			index($typeRound, line-height) {
@@ -50,9 +45,6 @@
 			$lineHeight: sl-walk($lineHeight, round);
 
 		}
-
-		// @debug "$lineHeight" #{$lineHeight};
-
 
 		// Validating and rounding each value in $letterSpacing
 		// add multiple possible truthy values
@@ -63,8 +55,6 @@
 			$letterSpacing: sl-walk($letterSpacing, round);
 
 		}
-
-		// @debug "$letterSpacing" #{$letterSpacing};
 
 		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
 		$fontPadding: sl-walk($fontPadding, divide, 2);
@@ -78,7 +68,6 @@
 		}
 
 		$fontPadding: sl-walk($fontPadding, append, 0);
-		// @debug "$fontPadding" #{$fontPadding};
 
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
@@ -87,26 +76,14 @@
 	}
 
 	@error "Something went wrong!";
+
 	@return false;
 
 };
 
-$typeSet: append(getTypeSet(16px, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio), getTypeSet(32px, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio));
+$typeSet: getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
 $fontSize: nth($typeSet, 1);
-
 $lineHeight: nth($typeSet, 2);
-
 $letterSpacing: nth($typeSet, 3);
-
 $fontPadding: nth($typeSet, 4);
-
-// .typeSetStatic {
-// 	typeSet: $typeSet;
-// 	font-size: $fontSize;
-// 	line-height: $lineHeight;
-// 	letter-spacing: $letterSpacing;
-// 	padding: $fontPadding;
-// };
-
-
