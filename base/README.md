@@ -20,3 +20,45 @@
 6. `Components` - designed components, chunks of UI
 7. `Trumps` - Helpers and overrides 
 
+#### Settings 
+
+Globally avaliable settings.
+Config switches.
+Brand colors, etc 
+
+#### Tools
+
+Globally aaliable mixins.
+Public mixins.
+Helper functions.
+
+#### Generic 
+
+Ground zero styles.
+Low-specifity, far-reaching 
+Resets, Normalize.css, etc. 
+
+#### Base 
+
+Unclassed HTML elements.
+H1-H6, basic links, lists, etc.
+Last layer we see type selectors
+[ e.g. a {}, blockquote {} ]
+
+#### OOCSS
+
+Design patterns. 
+No cosmetics.
+Begin using classes exclusively. 
+
+#### Components 
+
+Designed peaces of UI.
+Still only using classes.
+More explicitly named [ e.g. .products-lists {} ]
+
+#### Trumps
+
+Overrides, helpers, utilities.
+Only affect one piece of the DOM at a time.
+Usually carry `!important`
