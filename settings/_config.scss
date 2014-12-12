@@ -116,8 +116,8 @@ $type: (
 	paddingRatio: 			1.5,
 	letterSpacingRatio: 	-.025,
 	outputStyle: 			responsive,
-	bps: 					320px 480px 768px 960px 1140px,
-	bpsRatios: 				1.1 1.1 1.1 1.1 1.1,
+	bps: 					(320px 480px 768px 960px 1140px),
+	bpsRatios: 				(1.1 1.1 1.1 1.1 1.1),
 	liquidRatio: 			2,
 	round: 					(fontSize, lineHeight, padding)
 );
