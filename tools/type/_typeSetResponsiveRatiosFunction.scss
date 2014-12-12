@@ -5,10 +5,12 @@
 
 	// $typeBpsRatios deep validation
 	@if val($value, list) {
+
 		@debug #{$typeBpsRatios} "was validated as a list";
 
 		@for $n from 1 through $length {
 			@if val(nth($value, $n), positive) {
+
 				@debug "Each value of "#{$typeBpsRatios} "was validated as a number";
 
 				@for $i from 1 through $length {
@@ -34,9 +36,7 @@
 	}
 
 	@error "Something went really wrong";
-	@return false;
-};
 
-.RESPONSIVE_RATIOS {
-	content: #{getTypeSetResponsiveRatios($typeBpsRatios)};
-}
+	@return false;
+
+};

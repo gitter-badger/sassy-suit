@@ -1,0 +1,21 @@
+h1 { @extend %typeSetXxxl; }
+
+h2 { @extend %typeSetXxl; }
+
+h3 { @extend %typeSetXl; }
+
+h4 { @extend %typeSetLg; }
+
+h5 { @extend %typeSetMd; }
+
+h6 { @extend %typeSetSm; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %typeStyleHeader;
+}
+
