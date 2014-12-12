@@ -2,7 +2,8 @@
 
 
 @import "sassyValidation/_index.scss";
-@import "sassyExists/stylesheets/_sassyExists.scss";
+// @import "sassyExists/stylesheets/_sassyExists.scss";
+@import "SassyExists/_index.scss";
 @import "sassyMath101/_index.scss";
 @import "sassy-maps/_sassy-maps.scss";
 @import "_strip-units.scss";
@@ -14,3 +15,8 @@
 @import "_logger.scss";
 @import "_map-into-list.scss";
 @import "_map-search.scss";
+
+
+.XXX {
+	content: exists(sl-walxk, function);
+}
