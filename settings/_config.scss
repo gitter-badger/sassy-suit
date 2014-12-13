@@ -63,61 +63,35 @@ $paddingDirections: (
 
 /*-----  End of Paddings  ------*/
 
-
-
-/*=============================
-=            Fonts            =
-=============================*/
-
-$fontFamilies: (
-	header: 				Roboto,
-	headerAlt:  			Nunito,
-	headerBold: 			(Roboto: 700),
-	headerLight: 			(Roboto: 300),
-	headerItalic: 			"Roboto: 400, italic",
-	text: 					Open Sans,
-	textAlt: 				Dosis,
-	textBold: 				(Open Sans: 700),
-	textLight: 				(Open Sans: 300),
-	textItalic: 			"Open Sans: 400, italic"
-);
-
-/*-----  End of Fonts  ------*/
-
-
-
-/*=========================================
-=            Font Family Names            =
-=========================================*/
-
-$fontFamilyNames: (
-	header: 				"Roboto, sans-serif",
-	headerAlt: 				"Nunito, sans-serif",
-	text: 					"Open Sans, sans-serif",
-	textAlt:  				"Dosis, sans-serif"
-);
-
-/*-----  End of Font Family Names  ------*/
-
-
-
-/*==================================
-=            Typography            =
-==================================*/
-
-// outputStyle: static, responsive, liquid
-
 $type: (
-	base: 					16px,
 	indexStart: 			-2,
 	indexEnd: 				6,
+	base: 					16px,
 	sizeRatio: 				1.5,
 	lineHeightRatio: 		1.5,
-	paddingRatio: 			.5,
-	letterSpacingRatio: 	-.05,
+	paddingRatio: 			1.5,
+	letterSpacingRatio: 	-.025,
 	outputStyle: 			responsive,
 	bps: 					(320px 480px 768px 960px 1140px),
 	bpsRatios: 				(1.1 1.1 1.1 1.1 1.1),
 	liquidRatio: 			2,
-	round: 					(fontSize, lineHeight, padding)
+	round: 					(fontSize, lineHeight, padding),
+	webFonts: (
+		header: 				"Roboto",
+		headerBold: 			"Roboto: 700",
+		headerLight: 		  	"Roboto: 300",
+		headerItalic: 			"Roboto: 400, italic",
+		headerAlt:  			"Nunito",
+		text: 					"Open Sans",
+		textBold: 				"Open Sans: 700",
+		textLight: 				"Open Sans: 300",
+		textItalic: 			"Open Sans: 400, italic",
+		textAlt: 				"Dosis"
+	),
+	fontFamilies: (
+		header: 				"Roboto, serif",
+		headerAlt: 				"Nunito, serif",
+		text: 					"Open Sans, sans-serif",
+		textAlt:  				"Dosis, sans-serif"
+	)
 );

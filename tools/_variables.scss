@@ -23,17 +23,17 @@ $typeRound: 				map-get($type, round);
 =      Font Family Configs          =
 ===================================*/
 
-$fontFamilyHeader: 			map-get($fontFamilies, header);
-$fontFamilyHeaderAlt: 		map-get($fontFamilies, headerAlt);
-$fontFamilyHeaderBold: 		map-get($fontFamilies, headerBold);
-$fontFamilyHeaderLight: 	map-get($fontFamilies, headerLight);
-$fontFamilyHeaderItalic: 	map-get($fontFamilies, headerItalic);
+$fontFamilyHeader: 			map-get-deep($type, webFonts header);
+$fontFamilyHeaderAlt: 		map-get-deep($type, webFonts headerAlt);
+$fontFamilyHeaderBold: 		map-get-deep($type, webFonts headerBold);
+$fontFamilyHeaderLight: 	map-get-deep($type, webFonts headerLight);
+$fontFamilyHeaderItalic: 	map-get-deep($type, webFonts headerItalic);
 
-$fontFamilyText: 			map-get($fontFamilies, text);
-$fontFamilyTextAlt: 		map-get($fontFamilies, textAlt);
-$fontFamilyTextBold: 		map-get($fontFamilies, textBold);
-$fontFamilyTextLight: 		map-get($fontFamilies, textLight);
-$fontFamilyTextItalic: 		map-get($fontFamilies, textItalic);
+$fontFamilyText: 			map-get-deep($type, webFonts text);
+$fontFamilyTextAlt: 		map-get-deep($type, webFonts textAlt);
+$fontFamilyTextBold: 		map-get-deep($type, webFonts textBold);
+$fontFamilyTextLight: 		map-get-deep($type, webFonts textLight);
+$fontFamilyTextItalic: 		map-get-deep($type, webFonts textItalic);
 
 /*-----  End of Font Family Configs  ------*/
 
@@ -43,9 +43,9 @@ $fontFamilyTextItalic: 		map-get($fontFamilies, textItalic);
 =            Font Family Names            =
 =========================================*/
 
-$fontFamilyHeaderName: 		map-get($fontFamilyNames, header);
-$fontFamilyHeaderAltName:   map-get($fontFamilyNames, headerAlt);
-$fontFamilyTextName:		map-get($fontFamilyNames, text);
-$fontFamilyTextAltName:		map-get($fontFamilyNames, textAlt);
+$fontFamilyHeaderName: 		map-get-deep($type, fontFamilies header);
+$fontFamilyHeaderAltName:   map-get-deep($type, fontFamilies headerAlt);
+$fontFamilyTextName:		map-get-deep($type, fontFamilies text);
+$fontFamilyTextAltName:		map-get-deep($type, fontFamilies textAlt);
 
 /*-----  End of Font Family Names  ------*/
