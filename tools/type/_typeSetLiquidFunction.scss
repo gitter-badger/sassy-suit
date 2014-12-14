@@ -1,0 +1,62 @@
+@function typeSetLiquid($liquidBps, $typeLiquidRatio) {
+	/**
+
+		TODO:
+		- Add $liquidBps, $typeLiquidRatio validation
+
+	**/
+
+	// Calculate liquid range
+	$liquidRange: nth($liquidBps, 2) - nth($liquidBps, 1);
+	// Calculate BP ratio for each breakpoint
+	$liquidBpRatio: $typeLiquidRatio / strip-units($liquidRange);
+	// set empty list
+	$liquidBpsList: () !global;
+
+	// generate $liquidBpsList - appending $liquidBpRatio
+	@for $i from 1 through strip-units($liquidRange) {
+		$liquidBpsList: append($liquidBpsList, nth($liquidBps, 1) + $i) !global;
+	}
+
+	// set empty list
+	$liquidBpsRatios: () !global;
+
+	// raw $liquidBpsRatios
+	@for $i from 1 through strip-units($liquidRange) {
+		$liquidBpsRatios: append($liquidBpsRatios, $liquidBpRatio) !global;
+	}
+
+	@debug $liquidBpsList;
+	// @debug nth($liquidBps, 1);
+	@debug $liquidBpsRatios;
+
+
+	$length: length($liquidBpsRatios);
+	@debug length - $length;
+
+
+		@for $n from 1 through $length {
+
+			@for $i from 1 through $length {
+
+				@if $i == 1 {
+					$newLiquidBpsRatios: nth($liquidBpsRatios, 1) !global;
+
+					@debug newLiquidBpsRatios - $newLiquidBpsRatios;
+				} @else {
+					$newLiquidBpsRatio: nth($liquidBpsRatios, $i) * nth($liquidBpsRatios, length($liquidBpsRatios));
+					$newLiquidBpsRatios: append($newLiquidBpsRatios, $newLiquidBpsRatio) !global;
+				}
+			}
+
+			@return $newLiquidBpsRatios;
+		}
+}
+
+.LIQUID {
+	content: typeSetLiquid($liquidBps, $typeLiquidRatio);
+	liquidBpsList: $liquidBpsList;
+	liquidBpsRatios: $liquidBpsRatios;
+	newLiquidBpsRatios: $newLiquidBpsRatios;
+	count: length($liquidBpsList), length($liquidBpsRatios);
+}
