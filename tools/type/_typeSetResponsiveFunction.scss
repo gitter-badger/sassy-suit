@@ -25,7 +25,7 @@
 				// get recalculated $typeSetResponsiveRatios
 				$ratioBp: nth(getTypeSetResponsiveRatios($typeBpsRatios), $i) !global;
 
-				$typeSetResponsiveBp: getTypeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+				$typeSetResponsiveBp: typeSet($typeBase * $ratioBp, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 				$typeSetResponsive: map-set($typeSetResponsive, $i, $typeSetResponsiveBp) !global;
 
 			}

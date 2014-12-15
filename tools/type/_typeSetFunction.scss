@@ -1,4 +1,4 @@
-@function getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
+@function typeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
 	@if not val($typeBase, measurePositive) {
 		@error #{$typeBase} " is not a measure!";
@@ -81,7 +81,7 @@
 
 };
 
-$typeSet: getTypeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+$typeSet: typeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
 $fontSize: nth($typeSet, 1);
 $lineHeight: nth($typeSet, 2);
