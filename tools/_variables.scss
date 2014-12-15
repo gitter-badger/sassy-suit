@@ -13,7 +13,8 @@ $typeOutputStyle: 			map-get($type, outputStyle);
 $typeBps:	 				map-get($type, bps);
 $typeBpsRatios: 			map-get($type, bpsRatios);
 $typeLiquidRatio: 			map-get($type, liquidRatio);
-$liquidBps: 				map-get($type, liquidBps);
+$typeLiquidBps: 			map-get($type, liquidBps);
+$typeLiquidBpsRatio: 		map-get($type, liquidBpsRatio);
 $typeRound: 				map-get($type, round);
 
 /*-----  End of Stored values from root _config.scss  ------*/

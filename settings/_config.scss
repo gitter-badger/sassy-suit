@@ -74,8 +74,8 @@ $type: (
 	outputStyle: 			responsive,
 	bps: 					(320px 480px 768px 960px 1140px),
 	bpsRatios: 				(1.1 1.1 1.1 1.1 1.1),
-	liquidRatio: 			2,
-	liquidBps: 				(320px 1140px),
+	liquidRatio: 			1.5,
+	liquidBps: 				(300px 400px),
 	round: 					(fontSize, lineHeight, padding),
 	webFonts: (
 		header: 				"Roboto",
