@@ -11,7 +11,8 @@ var 	gulp 			= require('gulp'),
 gulp.task('default', function() {
 	return gulp.src('application.scss')
     	.pipe(sass({
-    		style: 'expanded'
+    		style: 'expanded',
+    		precision: 100
     	}))
     	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     	.pipe(gulp.dest('build/'))
