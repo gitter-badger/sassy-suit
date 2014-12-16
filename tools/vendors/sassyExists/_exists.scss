@@ -1,27 +1,27 @@
 @function exists($name, $value) {
 
-  $values: variable global-variable function mixin feature;
+  	$values: variable global-variable function mixin feature;
 
-  @if index($values, $value) {
-    $function: #{$value}-exists;
-    $result: call($function, $name);
+  	@if index($values, $value) {
+    	$function: #{$value}-exists;
+    	$result: call($function, $name);
 
-    @return #{$result};
+    	@return #{$result};
 
-  } @else {
+  	} @else {
 
 		@if map-get($config, output) == warn {
 			@warn unquote(map-get($config, message));
 
 			@return false;
 
-		} @else if map-get($config, output) == error {
-			@error unquote(map-get($config, message));
+		} 	@else if map-get($config, output) == error {
+				@error unquote(map-get($config, message));
 
 			@return false;
 
-		} @else {
-			@return false;
+		} 	@else {
+				@return false;
 		}
   	}
 
