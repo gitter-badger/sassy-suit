@@ -8,9 +8,13 @@ This is work in progress, we are still trying out new things and concepts.
 If you have any questions or sugestions, please open a new [issue](https://github.com/SassySuit/sassySuit/issues/new) 
 or tweet me [@Skoks](https://twitter.com/VladimirSkoks).
 
-## SassySuit Trello board :construction:
+## Documentation
 
-Check out my To Do list on [Trello board](https://trello.com/b/auSCHtYg/development).
+[sassysuit.github.io](http://sassysuit.github.io/)
+
+## To Do :construction:
+
+Check out our To Do list on [Trello board](https://trello.com/b/auSCHtYg/development).
 
 ## Dependencies :gem:
 
