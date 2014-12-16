@@ -1,3 +1,8 @@
+/**
+*
+* @author Vova Skok
+*
+*/
 @function typeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
 	@if not val($typeBase, measurePositive) {

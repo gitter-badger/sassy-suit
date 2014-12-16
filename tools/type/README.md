@@ -1,5 +1,10 @@
 # Typography README.md 
 
+## SASS docs
+
+`sassdoc ./ sassdoc -c yml` - sassdoc generate docs from current directory to
+sassdoc folder, use YML
+
 ## File Structure 
 
 * `_webFontsFunction.scss"` - URL encoder for Google Web Fonts

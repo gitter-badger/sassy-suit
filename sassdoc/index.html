@@ -1,0 +1,371 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>SassDoc</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
+
+</head>
+<body>
+
+  
+  <aside class="sidebar" role="nav">
+    
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      SassDoc
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="typeSet" data-type="function">
+              <a href="#function-typeSet">typeSet
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
+
+  </aside>
+
+  
+  <article class="main" role="main">
+
+    
+    <header class="header" role="banner">
+  <div class="container">
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    <div class="container">
+    
+
+  
+  
+
+    
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="undefined">General</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="undefined-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-typeSet">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-typeSet">typeSet</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function typeSet() { 
+
+	@if not val($typeBase, measurePositive) {
+		@error #{$typeBase} &quot; is not a measure!&quot;;
+	}
+
+	@if not val($typeSizeRatio, positive) and $typeSizeRatio &gt; 1 {
+		@error #{$typeSizeRatio} &quot; is not a positive integer or float, which is more than 1 !&quot;;
+	}
+
+	@if not val($typeLineHeightRatio, positive) and $typeSizeRatio &gt; 1 {
+		@error #{$typeLineHeightRatio} &quot; is not positive and more than 1 !&quot;;
+	}
+
+	@if not val($typeLetterSpacingRatio, number) and $typeLetterSpacingRatio != 0 {
+		@error #{$typeLetterSpacingRatio} &quot; is not measure or equals 0 !&quot;;
+	}
+
+	@if not val($typePaddingRatio, number) and $typePaddingRatio &gt; 0 {
+		@error #{$typePaddingRatio} &quot; is not measure or equals 0 !&quot;;
+	}
+
+
+	@if not val($typeIndexEnd, positive) and val($typeIndexEnd, integer) {
+		@error #{$typeIndexEnd} &quot; is not a positive integer !&quot;;
+	}
+
+	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart &lt; $typeIndexEnd {
+
+		// Validating and rounding each value in $fontSize
+		// add multiple possible truthy values
+		$fontSize: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typeSizeRatio);
+		@if index($typeRound, fontSize) or
+			index($typeRound, font-size) or
+			index($typeRound, size) {
+
+			$fontSize: sl-walk($fontSize, round);
+
+		}
+
+		$lineHeight: sl-walk($fontSize, multiply, $typeLineHeightRatio);
+		@if index($typeRound, lineHeight) or
+			index($typeRound, line-height) {
+
+			$lineHeight: sl-walk($lineHeight, round);
+
+		}
+
+		// Validating and rounding each value in $letterSpacing
+		// add multiple possible truthy values
+		$letterSpacing: sl-walk($fontSize, multiply, $typeLetterSpacingRatio);
+		@if index($typeRound, letterSpacing) or
+			index($typeRound, letter-spacing) {
+
+			$letterSpacing: sl-walk($letterSpacing, round);
+
+		}
+
+		$fontPadding: sl-walk($fontSize, multiply, $typePaddingRatio);
+		$fontPadding: sl-walk($fontPadding, divide, 2);
+
+		@if index($typeRound, fontPadding) or
+			index($typeRound, padding) or
+			index($typeRound, font-padding) {
+
+			$fontPadding: sl-walk($fontPadding, round);
+
+		}
+
+		$fontPadding: sl-walk($fontPadding, append, 0);
+
+		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
+
+	} @else {
+		@error #{$typeIndexStart} &quot; is not 0 or a negative integer !&quot;;
+	}
+
+	@error &quot;Something went wrong!&quot;;
+
+	@return false;
+
+ }"
+    data-collapsed="@function typeSet() { ... }"><code>@function typeSet() { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Something went wrong!</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+
+  
+
+
+    </div>
+
+    
+    
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <span class="project-info__name">SassDoc</span>
+          
+
+          <!-- Version -->
+          
+
+          <!-- License -->
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+  </article>
+
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.min.js"></script>
+
+</body>
+</html>
