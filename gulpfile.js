@@ -25,14 +25,13 @@ gulp.task('default', function() {
 * API - http://sassdoc.com/annotations/
 *
 **/
+// Example with external view configuration file.
 gulp.task('sassdoc', function () {
-  	var options = {
-      		'dest': 'dist/sassdocs',
-      		'basePath': 'https://github.com/SassySuit/sassySuit'
-    };
-
-    return gulp.src('')
-    	.pipe(sassdoc(options));
+  return gulp
+    .src('tools/type')
+    .pipe(sassdoc({
+      'dest': 'sassdoc'
+    }));
 });
 
 
