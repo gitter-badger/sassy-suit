@@ -3,9 +3,9 @@
 
 'use strict';
 
-var 	gulp 			= require('gulp'),
+var gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
-	autoprefixer 		= require('gulp-autoprefixer'),
+	autoprefixer 	= require('gulp-autoprefixer'),
 	sassdoc			= require('gulp-sassdoc');
 
 gulp.task('default', function() {
@@ -25,7 +25,7 @@ gulp.task('default', function() {
 * API - http://sassdoc.com/annotations/
 *
 **/
-// Example with external view configuration file.
+
 gulp.task('sassdoc', function () {
   return gulp
     .src('tools/type')
@@ -36,7 +36,7 @@ gulp.task('sassdoc', function () {
 
 // gulp.task('sassdoc', function () {
 //   var options = {
-//       'dest': 'test/docs',
+//       'dest': 'sassdoc',
 //       'verbose': true,
 //       'display': {
 //         'access': ['public', 'private'],
@@ -50,11 +50,11 @@ gulp.task('sassdoc', function () {
 //       },
 //       'package': './package.json',
 //       'theme': 'default',
-//       'basePath': 'https://github.com/SassDoc/sassdoc'
+//       'basePath': 'https://github.com/SassySuit/SassySuit'
 //     };
 
 //     return gulp
-//       .src('test/fixture')
+//       .src('./tools/type')
 //       .pipe(sassdoc(options));
 // });
 
