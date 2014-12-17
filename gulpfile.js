@@ -34,7 +34,11 @@ gulp.task('sassdoc', function () {
       	'verbose': true,
       	'groups': {
       		undefined: "Ungrouped",
-      		type: "Typography"
+      		typography: "Typography",
+      		variables: "Variables",
+      		configurations: "Map Configurations",
+      		functions: "Functions",
+      		mixins: "Mixins"
       	},
 		'display': {
 			'access': ['public', 'private'],
