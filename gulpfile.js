@@ -30,7 +30,17 @@ gulp.task('sassdoc', function () {
   return gulp
     .src('tools/type')
     .pipe(sassdoc({
-      'dest': 'sassdoc'
+      	'dest': 'sassdoc',
+      	'verbose': true,
+      	'groups': {
+      		undefined: "Ungrouped",
+      		type: "Typography"
+      	},
+		'display': {
+			'access': ['public', 'private'],
+			'alias': true
+		},
+      	'basePath': 'https://github.com/SassySuit/SassySuit'
     }));
 });
 
