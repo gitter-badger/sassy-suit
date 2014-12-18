@@ -1,7 +1,7 @@
 {
   "name": "SassySuit",
   "version": "0.1.0",
-  "description": "Sassy framework",
+  "description": " The sassy framework you have been waiting for",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
