@@ -1362,9 +1362,23 @@ body {
 /*-----  End of Breakpoints  ------*/
 /**
 *
+* Get base typography values
+*
 * @author Vova Skok
 *
-* @group type
+* @group Type
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss
+*
+* @param {Number} $typeBase - core value
+* @param {Number} $typeIndexBegin - starting point
+* @param {Number} $typeIndexEnd - last point
+* @param {Number} $typeSizeRatio - `font-size` ratio value
+* @param {Number} $typeLineHeightRatio - `line-height` ratio value
+* @param {Number} $typePaddingRatio - `padding` ratio value
+* @param {Number} $typeLetterSpacingRatio - `letter-spacing` ratio value
+*
+* @requires {function} validate
 *
 */
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */

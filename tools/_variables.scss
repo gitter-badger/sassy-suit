@@ -3,7 +3,7 @@
 ============================================================*/
 
 $typeBase: 					map-get($type, base);
-$typeIndexStart: 			map-get($type, indexStart);
+$typeIndexBegin: 			map-get($type, indexBegin);
 $typeIndexEnd: 				map-get($type, indexEnd);
 $typeSizeRatio: 			map-get($type, sizeRatio);
 $typeLineHeightRatio: 		map-get($type, lineHeightRatio);

@@ -143,11 +143,81 @@
 
 
 
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function typeSet() { 
+    data-expanded="@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) { 
 
 	@if not val($typeBase, measurePositive) {
 		@error #{$typeBase} &quot; is not a measure!&quot;;
@@ -174,11 +244,11 @@
 		@error #{$typeIndexEnd} &quot; is not a positive integer !&quot;;
 	}
 
-	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart &lt; $typeIndexEnd {
+	@if (val($typeIndexBegin, negative) and val($typeIndexBegin, integer) or $typeIndexBegin == 0) and $typeIndexBegin &lt; $typeIndexEnd {
 
 		// Validating and rounding each value in $fontSize
 		// add multiple possible truthy values
-		$fontSize: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typeSizeRatio);
+		$fontSize: ms-list($typeIndexBegin, $typeIndexEnd, $typeBase, $typeSizeRatio);
 		@if index($typeRound, fontSize) or
 			index($typeRound, font-size) or
 			index($typeRound, size) {
@@ -221,7 +291,7 @@
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
 	} @else {
-		@error #{$typeIndexStart} &quot; is not 0 or a negative integer !&quot;;
+		@error #{$typeIndexBegin} &quot; is not 0 or a negative integer !&quot;;
 	}
 
 	@error &quot;Something went wrong!&quot;;
@@ -229,10 +299,10 @@
 	@return false;
 
  }"
-    data-collapsed="@function typeSet() { ... }"><code>@function typeSet() { ... }</code></pre>
+    data-collapsed="@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) { ... }"><code>@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/_typeSetFunction.scss#L8-L89" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/_typeSetFunction.scss#L22-L104" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -244,6 +314,11 @@
   
     
     
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Get base typography values</p>
+</div>
+
 
   
     
@@ -251,7 +326,131 @@
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeBase</code></th>
+          <td data-label="desc"><p>core value</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeIndexBegin</code></th>
+          <td data-label="desc"><p>starting point</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeIndexEnd</code></th>
+          <td data-label="desc"><p>last point</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeSizeRatio</code></th>
+          <td data-label="desc"><p><code>font-size</code> ratio value</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeLineHeightRatio</code></th>
+          <td data-label="desc"><p><code>line-height</code> ratio value</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typePaddingRatio</code></th>
+          <td data-label="desc"><p><code>padding</code> ratio value</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeLetterSpacingRatio</code></th>
+          <td data-label="desc"><p><code>letter-spacing</code> ratio value</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -281,6 +480,10 @@
     
 
 
+  
+
+
+
 
 
   
@@ -309,6 +512,20 @@
   
     
     
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
   
     
     

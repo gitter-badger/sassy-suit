@@ -1,11 +1,26 @@
 /**
 *
+* Get base typography values
+*
 * @author Vova Skok
 *
-* @group type
+* @group Type
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss
+*
+* @param {Number} $typeBase - core value
+* @param {Number} $typeIndexBegin - starting point
+* @param {Number} $typeIndexEnd - last point
+* @param {Number} $typeSizeRatio - `font-size` ratio value
+* @param {Number} $typeLineHeightRatio - `line-height` ratio value
+* @param {Number} $typePaddingRatio - `padding` ratio value
+* @param {Number} $typeLetterSpacingRatio - `letter-spacing` ratio value
+*
+* @requires {function} validate
 *
 */
-@function typeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
+
+@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) {
 
 	@if not val($typeBase, measurePositive) {
 		@error #{$typeBase} " is not a measure!";
@@ -32,11 +47,11 @@
 		@error #{$typeIndexEnd} " is not a positive integer !";
 	}
 
-	@if (val($typeIndexStart, negative) and val($typeIndexStart, integer) or $typeIndexStart == 0) and $typeIndexStart < $typeIndexEnd {
+	@if (val($typeIndexBegin, negative) and val($typeIndexBegin, integer) or $typeIndexBegin == 0) and $typeIndexBegin < $typeIndexEnd {
 
 		// Validating and rounding each value in $fontSize
 		// add multiple possible truthy values
-		$fontSize: ms-list($typeIndexStart, $typeIndexEnd, $typeBase, $typeSizeRatio);
+		$fontSize: ms-list($typeIndexBegin, $typeIndexEnd, $typeBase, $typeSizeRatio);
 		@if index($typeRound, fontSize) or
 			index($typeRound, font-size) or
 			index($typeRound, size) {
@@ -79,7 +94,7 @@
 		@return $fontSize, $lineHeight, $letterSpacing, $fontPadding;
 
 	} @else {
-		@error #{$typeIndexStart} " is not 0 or a negative integer !";
+		@error #{$typeIndexBegin} " is not 0 or a negative integer !";
 	}
 
 	@error "Something went wrong!";
@@ -88,7 +103,7 @@
 
 };
 
-$typeSet: typeSet($typeBase, $typeIndexStart, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+$typeSet: typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
 $fontSize: nth($typeSet, 1);
 $lineHeight: nth($typeSet, 2);
