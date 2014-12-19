@@ -22,11 +22,11 @@
 * @param {Number} $typePaddingRatio - `padding` ratio value
 * @param {Number} $typeLetterSpacingRatio - `letter-spacing` ratio value
 *
-* @require {function} val
-* @require {function} ms-list
-* @require {function} sl-walk
-* @require {function} multiply
-* @require {function} divide
+* @require val
+* @require ms-list
+* @require sl-walk
+* @require multiply
+* @require divide
 *
 * @throw `$typeBase` - is not a measure!
 * @throw `$typeSizeRatio` - is not a positive integer or float, which is more than 1!
@@ -38,7 +38,7 @@
 * @throw `$typeIndexBegin` - is not 0 or a negative integer!
 * @throw `$typeIndexEnd` - is not a positive integer!
 *
-* @return {list}
+* @return {List}
 *
 */
 
