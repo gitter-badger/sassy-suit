@@ -294,15 +294,11 @@
 		@error #{$typeIndexBegin} &quot; is not 0 or a negative integer !&quot;;
 	}
 
-	@error &quot;Something went wrong!&quot;;
-
-	@return false;
-
  }"
     data-collapsed="@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) { ... }"><code>@function typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/_typeSetFunction.scss#L23-L105" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/_typeSetFunction.scss#L44-L122" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -316,7 +312,14 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Get base typography values</p>
+  <div class="item__description"><p>Core typography function, which validates and calculates base values for:</p>
+<ul>
+<li><code>font-size</code></li>
+<li><code>line-height</code></li>
+<li><code>letter-spacing</code></li>
+<li><code>padding</code></li>
+</ul>
+<p>Has option to <code>round</code> selected values</p>
 </div>
 
 
@@ -355,7 +358,7 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$typeIndexBegin</code></th>
-          <td data-label="desc"><p>starting point</p>
+          <td data-label="desc"><p>list&#39;s starting point</p>
 </td>
           <td data-label="type">
           
@@ -371,7 +374,7 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$typeIndexEnd</code></th>
-          <td data-label="desc"><p>last point</p>
+          <td data-label="desc"><p>list&#39;s last point</p>
 </td>
           <td data-label="type">
           
@@ -457,6 +460,14 @@
   
     
     
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    List
+  
+  </p>
+
 
   
     
@@ -469,7 +480,31 @@
 
   <ul class="list-unstyled">
     
-      <li><p>Something went wrong!</p>
+      <li><p><code>$typeBase</code> - is not a measure!</p>
+</li>
+    
+      <li><p><code>$typeSizeRatio</code> - is not a positive integer or float, which is more than 1!</p>
+</li>
+    
+      <li><p><code>$typeLineHeightRatio</code> - is not positive and more than 1!</p>
+</li>
+    
+      <li><p><code>$typeLetterSpacingRatio</code> - is not a positive integer or float, which is more than 1!</p>
+</li>
+    
+      <li><p><code>$typeLetterSpacingRatio</code> - is not measure or equals 0!</p>
+</li>
+    
+      <li><p><code>$typePaddingRatio</code> - is not measure or equals 0!</p>
+</li>
+    
+      <li><p><code>$typeIndexBegin</code> - is not measure or equals 0!</p>
+</li>
+    
+      <li><p><code>$typeIndexBegin</code> - is not 0 or a negative integer!</p>
+</li>
+    
+      <li><p><code>$typeIndexEnd</code> - is not a positive integer!</p>
 </li>
     
   </ul>
@@ -478,6 +513,18 @@
   
     
     
+
+
+  
+
+
+
+  
+
+
+
+  
+
 
 
   
