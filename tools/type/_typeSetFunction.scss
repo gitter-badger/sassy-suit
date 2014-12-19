@@ -16,7 +16,9 @@
 * @param {Number} $typePaddingRatio - `padding` ratio value
 * @param {Number} $typeLetterSpacingRatio - `letter-spacing` ratio value
 *
-* @requires {function} validate
+* @require {function} validate
+* @require {function} ms-list
+* @require {function} sl-walk
 *
 */
 
@@ -102,10 +104,3 @@
 	@return false;
 
 };
-
-$typeSet: typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
-
-$fontSize: nth($typeSet, 1);
-$lineHeight: nth($typeSet, 2);
-$letterSpacing: nth($typeSet, 3);
-$fontPadding: nth($typeSet, 4);

@@ -1378,7 +1378,9 @@ body {
 * @param {Number} $typePaddingRatio - `padding` ratio value
 * @param {Number} $typeLetterSpacingRatio - `letter-spacing` ratio value
 *
-* @requires {function} validate
+* @require {function} validate
+* @require {function} ms-list
+* @require {function} sl-walk
 *
 */
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
