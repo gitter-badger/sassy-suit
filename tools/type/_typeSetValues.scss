@@ -1,0 +1,6 @@
+$typeSet: typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+
+$fontSize: nth($typeSet, 1);
+$lineHeight: nth($typeSet, 2);
+$letterSpacing: nth($typeSet, 3);
+$fontPadding: nth($typeSet, 4);
