@@ -1405,6 +1405,21 @@ body {
 */
 /**
 *
+* Variable, which holds `typeSetFunction` result.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
+*
+* @require typeSet
+*
+* @todo Check if function-exists($typeSet)
+*
+*/
+/**
+*
 * Typography function, which validates, generates and calculates responsive ratios for each typography break point.
 *
 * Number of ratios - `$typeBpsRatios` has to be eqaul to a number of typography breakpoints - `$typeBps`.
@@ -1459,7 +1474,7 @@ body {
 */
 /**
 *
-* Global variable, which holds `@return` of `typeSetResponsive` funciton.
+* Variable, which holds `typeSetResponsiveFunction` result.
 *
 * @group Type
 *
@@ -1469,7 +1484,8 @@ body {
 *
 * @require typeSetResponsiveRatios
 *
-* @todo Add @if wrapper, because this global variable is optional
+* @todo Add @if wrapper, which validates and checks for existance, because
+* `$typeSetResponsive` - is optional variable
 *
 */
 /**

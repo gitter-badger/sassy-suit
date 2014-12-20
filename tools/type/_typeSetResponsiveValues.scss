@@ -1,0 +1,18 @@
+/**
+*
+* Variable, which holds `typeSetResponsiveFunction` result.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
+*
+* @require typeSetResponsiveRatios
+*
+* @todo Add @if wrapper, which validates and checks for existance, because
+* `$typeSetResponsive` - is optional variable
+*
+*/
+
+$typeSetResponsive:  getTypeSetResponsive($typeBps, $typeBpsRatios);
