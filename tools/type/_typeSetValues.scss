@@ -1,3 +1,20 @@
+/**
+*
+* Variable, which holds `typeSetFunction` result.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
+*
+* @require typeSet
+*
+* @todo Check if function-exists($typeSet)
+*
+*/
+
+
 $typeSet: typeSet($typeBase, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
 
 $fontSize: nth($typeSet, 1);
