@@ -1,20 +1,46 @@
+/**
+*
+* Typography function, which validates, generates and calculates responsive ratios for each typography break point.
+*
+* Number of ratios - `$typeBpsRatios` has to be eqaul to a number of typography breakpoints - `$typeBps`.
+*
+* Each value of `$typeBpsRatios` has to match every value of `$typeBps`.
+*
+* If `$typeBpsRatios` is a single number and `$typeBps` is a list, than
+* `typeSetResponsiveRatios` function will generate a list with `length($typeBps)` length and `$value` values in it.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveRatiosFunction.scss
+*
+* @param {Number | List} $value - responsive ratios or ratio
+*
+* @require val
+*
+* @throw `$typeBpsRatios` - is not a list with positive numbers or a number
+*
+* @return {List | Number}
+*
+*/
+
+
 @function getTypeSetResponsiveRatios($value) {
 
 	$length: length($value);
 	$typeSetResponsiveRatios: nth($value, 1);
 
-	// $typeBpsRatios deep validation
 	@if val($value, list) {
 
-		@debug #{$typeBpsRatios} "was validated as a list";
+		@debug #{$typeBpsRatios} " - $typeBpsRatios was validated as a list";
 
 		@for $n from 1 through $length {
 			@if val(nth($value, $n), positive) {
 
-				@debug "Each value of "#{$typeBpsRatios} "was validated as a number";
+				@debug "Each value of "#{$typeBpsRatios} " - $typeBpsRatios was validated as a number";
 
 				@for $i from 1 through $length {
-
 					@if $i == 1 {
 						$typeSetResponsiveRatios: nth($value, 1);
 					} @else {
@@ -24,6 +50,7 @@
 				}
 
 				@return $typeSetResponsiveRatios;
+
 			}
 		}
 
@@ -32,11 +59,9 @@
 		@return $value;
 
 	} @else {
-		@debug #{$typeBpsRatios} "was NOT validated as a list with positive numbers";
+
+		@error #{$typeBpsRatios} "is not a list with positive numbers or a number";
+
 	}
-
-	@error "Something went really wrong";
-
-	@return false;
 
 };
