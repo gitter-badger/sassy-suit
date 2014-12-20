@@ -1362,6 +1362,109 @@ body {
 /*-----  End of Breakpoints  ------*/
 /**
 *
+* Google Web Fonts URL encoder.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @todo
+	- Add argument validation
+	- Function/mixin existance check up
+	- Error/warn handling
+	- Chunk functions in seperate files
+*/
+/**
+*
+* Google Web Fonts string replacing function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @param {String} $string - string to replace
+* @param {String} $find - string to find
+* @param {String} $replace - string to replace
+*
+* @return {String}
+*
+*/
+/**
+*
+* Google Web Fonts URL encoding function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @require wf-str-replace
+*
+* @param {String} $string - string to encode
+*
+* @return {String}
+*
+*/
+/**
+*
+* Google Web Fonts string implode function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @require wf-str-replace
+*
+* @param {List | String} $list - string to replace
+* @param {String} $separator - list seperator
+*
+* @return {String}
+*
+*/
+/**
+*
+* Google Web Fonts string serializing function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @param {List | String} $fonts - list or string of fonts
+*
+* @require wf-serialize
+* @require wf-implode
+* @require wf-str-replace
+* @require wf-url-encode
+*
+* @throw Unsupported font type
+*
+* @return {String}
+*
+*/
+/**
+*
+* Google Web Fonts protocol variable.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @type String
+*
+*/
+/**
+*
 * Core typography function, which validates and calculates base values for:
 	- `font-size`
 	- `line-height`
