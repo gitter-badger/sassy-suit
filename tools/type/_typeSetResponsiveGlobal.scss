@@ -1,0 +1,17 @@
+/**
+*
+* Global variable, which holds `@return` of `typeSetResponsive` funciton.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
+*
+* @require typeSetResponsiveRatios
+*
+* @todo Add @if wrapper, because this global variable is optional
+*
+*/
+
+$typeSetResponsive:  getTypeSetResponsive($typeBps, $typeBpsRatios) !global;
