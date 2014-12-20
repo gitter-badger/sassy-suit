@@ -1,3 +1,21 @@
+/**
+*
+* Typography mixin, which generates `font-size`, `line-height`, `letter-spacing` and `padding` for each break point.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveMixin.scss
+*
+* @param {Number} $scale - typography scale set index
+*
+* @require map-get
+*
+* @todo Add scale validation, check if $typeSetResponsive exists, add @require
+*
+*/
+
 @mixin typeSetResponsive($scale) {
 
 	@for $i from 1 through length($typeBps) {
