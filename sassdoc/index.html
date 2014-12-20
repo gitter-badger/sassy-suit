@@ -63,8 +63,40 @@
             
           
             
+            <li class="sidebar__item  sassdoc__item" data-name="getTypeSetResponsive" data-type="function">
+              <a href="#function-getTypeSetResponsive">getTypeSetResponsive
+              
+              
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="typeSetResponsiveRatios" data-type="function">
               <a href="#function-typeSetResponsiveRatios">typeSetResponsiveRatios
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="type-variable"><a href="#type-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="typeSetResponsive" data-type="variable">
+              <a href="#variable-typeSetResponsive">typeSetResponsive
               
               
               </a>
@@ -552,6 +584,21 @@
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getTypeSetResponsive"><code>getTypeSetResponsive</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -580,6 +627,327 @@
       <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss">
         
           https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-getTypeSetResponsive">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getTypeSetResponsive">getTypeSetResponsive</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function getTypeSetResponsive($typeBps, $typeBpsRatios) { 
+
+	@if length($typeBps) == length($typeBpsRatios) and
+		length($typeBps) == 1 and
+		val($typeBps, measurePositive) and
+		val($typeBpsRatios, positive) {
+
+		@debug &quot;There is a single break point - measurePositive and a single break point ratio - positive&quot;;
+
+		@return &quot;getTypeSetResponsive - 1&quot;;
+
+	} @else if length($typeBps) == length($typeBpsRatios) and
+	 	length($typeBps) &gt; 1 and
+	 	val($typeBps, list) and
+		index(sl-walk($typeBps, val, measurePositive), false) != true and
+		$typeBps == sl-sort($typeBps) and
+		val($typeBpsRatios, list) and
+		index(sl-walk($typeBpsRatios, val, number), false) != true and
+		$typeBpsRatios == sl-sort($typeBpsRatios) {
+
+			$typeSetResponsive: () !global;
+
+			@for $i from 1 through length($typeBpsRatios) {
+				$ratioBp: nth(typeSetResponsiveRatios($typeBpsRatios), $i) !global;
+				$typeSetResponsiveBp: typeSet($typeBase * $ratioBp, $typeIndexBegin, $typeIndexEnd, $typeSizeRatio, $typeLineHeightRatio, $typePaddingRatio, $typeLetterSpacingRatio);
+				$typeSetResponsive: map-set($typeSetResponsive, $i, $typeSetResponsiveBp) !global;
+
+			}
+
+			@debug &quot;There are multiple break points with positiveMeasure values and break point ratios with positive values and they are all properly sorted&quot;;
+
+			@return $typeSetResponsive;
+
+	} @else {
+
+		@error &quot;Number of break points and number of break points ratios has to be equal&quot;;
+
+	}
+
+ }"
+    data-collapsed="@function getTypeSetResponsive($typeBps, $typeBpsRatios) { ... }"><code>@function getTypeSetResponsive($typeBps, $typeBpsRatios) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/_typeSetResponsiveFunction.scss#L29-L69" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Typography function, which validates and calculates responsive ratios for each typography break point, using previously generated responsive ratios.</p>
+<p>Number of ratios - <code>$typeBpsRatios</code> has to be eqaul to a number of typography breakpoints - <code>$typeBps</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeBps</code></th>
+          <td data-label="desc"><p>responsive ratios or ratio</p>
+</td>
+          <td data-label="type">
+          
+            Number, List
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$typeBpsRatios</code></th>
+          <td data-label="desc"><p>responsive break point or break points</p>
+</td>
+          <td data-label="type">
+          
+            Number, List
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    List
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p><code>$typeBpsRatios</code> - is not a list with positive numbers or a number</p>
+</li>
+    
+      <li><p>Number of break points and number of break points ratios has to be equal</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-typeSet"><code>typeSet</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-typeSetResponsive"><code>typeSetResponsive</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-typeSetResponsiveRatios"><code>typeSetResponsiveRatios</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveFunction.scss
         
       </a>
     </li>
@@ -789,6 +1157,30 @@
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getTypeSetResponsive"><code>getTypeSetResponsive</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#variable-typeSetResponsive"><code>typeSetResponsive</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -817,6 +1209,174 @@
       <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveRatiosFunction.scss">
         
           https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveRatiosFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="type-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-typeSetResponsive">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-typeSetResponsive">typeSetResponsive</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$typeSetResponsive: getTypeSetResponsive($typeBps, $typeBpsRatios) !global;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/_typeSetResponsiveGlobal.scss#L16-L17" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Global variable, which holds <code>@return</code> of <code>typeSetResponsive</code> funciton.</p>
+</div>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-typeSetResponsiveRatios"><code>typeSetResponsiveRatios</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getTypeSetResponsive"><code>getTypeSetResponsive</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
         
       </a>
     </li>
