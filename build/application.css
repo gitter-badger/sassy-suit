@@ -1415,6 +1415,8 @@ body {
 *
 * @require typeSet
 *
+* @type List
+*
 * @todo Check if function-exists($typeSet)
 *
 */
@@ -1483,6 +1485,8 @@ body {
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
 *
 * @require typeSetResponsiveRatios
+*
+* @type List
 *
 * @todo Add @if wrapper, which validates and checks for existance, because
 * `$typeSetResponsive` - is optional variable
