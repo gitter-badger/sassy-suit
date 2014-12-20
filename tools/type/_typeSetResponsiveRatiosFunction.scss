@@ -26,7 +26,7 @@
 */
 
 
-@function getTypeSetResponsiveRatios($value) {
+@function typeSetResponsiveRatios($value) {
 
 	$length: length($value);
 	$typeSetResponsiveRatios: nth($value, 1);

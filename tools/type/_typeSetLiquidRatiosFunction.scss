@@ -33,7 +33,7 @@
 	@debug rawLiquidBps - $rawLiquidBps;
 	@debug length($rawLiquidBps);
 
-	$typeSetResponsiveRatios: getTypeSetResponsiveRatios($rawLiquidBps);
+	$typeSetResponsiveRatios: typeSetResponsiveRatios($rawLiquidBps);
 
 	@return $typeSetResponsiveRatios;
 
