@@ -146,35 +146,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="webFontsImplode" data-type="function">
-              <a href="#function-webFontsImplode">webFontsImplode
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="webFontsSerialize" data-type="function">
-              <a href="#function-webFontsSerialize">webFontsSerialize
-              
-              
-              </a>
-            </li>
-            
-          
-            
             <li class="sidebar__item  sassdoc__item" data-name="webFontsStringReplace" data-type="function">
               <a href="#function-webFontsStringReplace">webFontsStringReplace
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="webFontsURLEncode" data-type="function">
-              <a href="#function-webFontsURLEncode">webFontsURLEncode
               
               
               </a>
@@ -198,15 +171,6 @@
             <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="typeSetResponsive" data-type="mixin">
               <a href="#mixin-typeSetResponsive">typeSetResponsive
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="webFonts" data-type="mixin">
-              <a href="#mixin-webFonts">webFonts
               
               
               </a>
@@ -239,15 +203,6 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="typeSet" data-type="variable">
               <a href="#variable-typeSet">typeSet
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="webFontsProtocol" data-type="variable">
-              <a href="#variable-webFontsProtocol">webFontsProtocol
               
               
               </a>
@@ -1011,6 +966,99 @@
             <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="sl-debug" data-type="mixin">
               <a href="#mixin-sl-debug">sl-debug
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="webfonts"><a href="#webfonts">Web Fonts</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-function"><a href="#webfonts-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="webFontsImplode" data-type="function">
+              <a href="#function-webFontsImplode">webFontsImplode
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="webFontsSerialize" data-type="function">
+              <a href="#function-webFontsSerialize">webFontsSerialize
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="webFontsURLEncode" data-type="function">
+              <a href="#function-webFontsURLEncode">webFontsURLEncode
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-mixin"><a href="#webfonts-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="webFonts" data-type="mixin">
+              <a href="#mixin-webFonts">webFonts
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-variable"><a href="#webfonts-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="webFontsProtocol" data-type="variable">
+              <a href="#variable-webFontsProtocol">webFontsProtocol
               
               
               </a>
@@ -3297,558 +3345,6 @@
 
 </section>
               
-                <section class="main__item  item" id="function-webFontsImplode">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-webFontsImplode">webFontsImplode</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function webFontsImplode($list, $separator) { 
-
-	$string: &#39;&#39;;
-
-	@for $i from 1 through length($list) {
-
-		$el: nth($list, $i);
-		$string: $string + $el;
-
-		@if ($i &lt; length($list)) {
-			$string: $string + $separator;
-		}
-
-	}
-
-	@return $string;
-
- }"
-    data-collapsed="@function webFontsImplode($list, $separator) { ... }"><code>@function webFontsImplode($list, $separator) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsImplode.scss#L19-L37" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Google Web Fonts string implode function.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$list</code></th>
-          <td data-label="desc"><p>string to replace</p>
-</td>
-          <td data-label="type">
-          
-            List, String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$separator</code></th>
-          <td data-label="desc"><p>list seperator</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    String
-  
-  </p>
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
-        
-          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="function-webFontsSerialize">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-webFontsSerialize">webFontsSerialize</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function webFontsSerialize($fonts) { 
-
-	@if type-of($fonts) == &#39;list&#39; or type-of($fonts) == &#39;arglist&#39; {
-		$serialized: ();
-
-		@each $font in $fonts {
-			$serialized: append($serialized, webFontsSerialize($font));
-		}
-
-		@return webFontsImplode($serialized, &#39;|&#39;);
-
-	}
-
-	@if type-of($fonts) == &#39;map&#39; {
-
-		$serialized: ();
-
-		@each $family, $variants in $fonts {
-			$variants: webFontsImplode($variants, &#39;,&#39;);
-			$variants: webFontsStringReplace($variants, &#39; &#39;, &#39;&#39;);
-			$serialized: append($serialized, &quot;#{$family}:#{$variants}&quot;);
-		}
-
-		@return webFontsSerialize($serialized);
-
-	}
-
-	@if type-of($fonts) == &#39;string&#39; {
-
-		@return webFontsURLEncode($fonts);
-
-	}
-
-	@warn &quot;Unsupported font type: #{type-of($fonts)}&quot;;
-
- }"
-    data-collapsed="@function webFontsSerialize($fonts) { ... }"><code>@function webFontsSerialize($fonts) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsSerialize.scss#L23-L59" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Google Web Fonts string serialize function.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fonts</code></th>
-          <td data-label="desc"><p>list or string of fonts</p>
-</td>
-          <td data-label="type">
-          
-            List, String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    String
-  
-  </p>
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Throws</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Unsupported font type</p>
-</li>
-    
-  </ul>
-
-
-  
-    
-    
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#function-webFontsImplode"><code>webFontsImplode</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a>
-        
-      </li>
-    
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
-        
-          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
                 <section class="main__item  item" id="function-webFontsStringReplace">
 
 <h3 class="item__heading">
@@ -4082,266 +3578,16 @@
 
     
 
-    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
 
 
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
-        
-          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="function-webFontsURLEncode">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-webFontsURLEncode">webFontsURLEncode</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function webFontsURLEncode($string) { 
-
-	$replacements: (
-		&quot;!&quot;: &quot;%21&quot;,
-		&quot;#&quot;: &quot;%23&quot;,
-		&quot;$&quot;: &quot;%24&quot;,
-		&quot;&amp;&quot;: &quot;%26&quot;,
-		&quot;&#39;&quot;: &quot;%27&quot;,
-		&quot;(&quot;: &quot;%28&quot;,
-		&quot;)&quot;: &quot;%29&quot;,
-		&quot;*&quot;: &quot;%2A&quot;,
-		&quot;+&quot;: &quot;%2B&quot;,
-		&quot;,&quot;: &quot;%2C&quot;,
-		&quot;/&quot;: &quot;%2F&quot;,
-		&quot;:&quot;: &quot;%3A&quot;,
-		&quot;;&quot;: &quot;%3B&quot;,
-		&quot;=&quot;: &quot;%3D&quot;,
-		&quot;?&quot;: &quot;%3F&quot;,
-		&quot;@&quot;: &quot;%40&quot;,
-		&quot;[&quot;: &quot;%5B&quot;,
-		&quot;]&quot;: &quot;%5D&quot;,
-		&quot; &quot;: &quot;%20&quot;
-	);
-
-	@each $from, $to in $replacements {
-		$string: webFontsStringReplace($string, $from, $to);
-	}
-
-	@return $string;
-
- }"
-    data-collapsed="@function webFontsURLEncode($string) { ... }"><code>@function webFontsURLEncode($string) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsURLEncode.scss#L18-L49" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Google Web Fonts URL encoding function.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$string</code></th>
-          <td data-label="desc"><p>string to encode</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    String
-  
-  </p>
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
   
 
     
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
 
-    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
   
 
 
@@ -4613,238 +3859,6 @@
       <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveMixin.scss">
         
           https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveMixin.scss
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-webFonts">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-webFonts">webFonts</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin webFonts($fonts) { 
-	$webFontsProtocol: &#39;&#39; !default;
-	$protocol: $webFontsProtocol;
-
-	@if str-length($protocol) &gt; 0 {
-		$protocol: $protocol + &#39;:&#39;;
-	}
-
-	$url: &quot;#{$protocol}//fonts.googleapis.com/css?family=&quot;;
-	$url: $url + webFontsSerialize($fonts);
-
-	@import url($url);
-
- }"
-    data-collapsed="@mixin webFonts($fonts) { ... }"><code>@mixin webFonts($fonts) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsMixin.scss#L18-L32" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Typography mixin, which outputs Google Web Fonts.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fonts</code></th>
-          <td data-label="desc"><p>font or list of fonts</p>
-</td>
-          <td data-label="type">
-          
-            List, String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#variable-webFontsProtocol"><code>webFontsProtocol</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">TODO's</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Add validation, check if wf-serialize funciton exists</p>
-</li>
-    
-  </ul>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_webFontsMixin.scss">
-        
-          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_webFontsMixin.scss
         
       </a>
     </li>
@@ -5196,149 +4210,6 @@
       <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss">
         
           https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetResponsiveGlobal.scss
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="variable-webFontsProtocol">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-webFontsProtocol">webFontsProtocol</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$webFontsProtocol: &quot;https&quot;;</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsProtocol.scss#L14-L15" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Google Web Fonts protocol variable.</p>
-</div>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>String</code>
-  
-  </p>
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
-        
-          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
         
       </a>
     </li>
@@ -17746,7 +16617,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
+    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
   
 
 
@@ -17755,7 +16626,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
+    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
   
 
 
@@ -17782,7 +16653,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -17791,7 +16662,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
   
 
 
@@ -17899,7 +16770,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
+    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
   
 
 
@@ -17908,7 +16779,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -21276,6 +20147,1233 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   
     
     
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="webfonts">Web Fonts</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-webFontsImplode">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-webFontsImplode">webFontsImplode</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function webFontsImplode($list, $separator) { 
+
+	$string: &#39;&#39;;
+
+	@for $i from 1 through length($list) {
+
+		$el: nth($list, $i);
+		$string: $string + $el;
+
+		@if ($i &lt; length($list)) {
+			$string: $string + $separator;
+		}
+
+	}
+
+	@return $string;
+
+ }"
+    data-collapsed="@function webFontsImplode($list, $separator) { ... }"><code>@function webFontsImplode($list, $separator) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsImplode.scss#L19-L37" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Google Web Fonts string implode function.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$list</code></th>
+          <td data-label="desc"><p>string to replace</p>
+</td>
+          <td data-label="type">
+          
+            List, String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$separator</code></th>
+          <td data-label="desc"><p>list seperator</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-webFontsSerialize">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-webFontsSerialize">webFontsSerialize</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function webFontsSerialize($fonts) { 
+
+	@if type-of($fonts) == &#39;list&#39; or type-of($fonts) == &#39;arglist&#39; {
+		$serialized: ();
+
+		@each $font in $fonts {
+			$serialized: append($serialized, webFontsSerialize($font));
+		}
+
+		@return webFontsImplode($serialized, &#39;|&#39;);
+
+	}
+
+	@if type-of($fonts) == &#39;map&#39; {
+
+		$serialized: ();
+
+		@each $family, $variants in $fonts {
+			$variants: webFontsImplode($variants, &#39;,&#39;);
+			$variants: webFontsStringReplace($variants, &#39; &#39;, &#39;&#39;);
+			$serialized: append($serialized, &quot;#{$family}:#{$variants}&quot;);
+		}
+
+		@return webFontsSerialize($serialized);
+
+	}
+
+	@if type-of($fonts) == &#39;string&#39; {
+
+		@return webFontsURLEncode($fonts);
+
+	}
+
+	@warn &quot;Unsupported font type: #{type-of($fonts)}&quot;;
+
+ }"
+    data-collapsed="@function webFontsSerialize($fonts) { ... }"><code>@function webFontsSerialize($fonts) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsSerialize.scss#L23-L59" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Google Web Fonts string serialize function.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fonts</code></th>
+          <td data-label="desc"><p>list or string of fonts</p>
+</td>
+          <td data-label="type">
+          
+            List, String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Unsupported font type</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-webFontsImplode"><code>webFontsImplode</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-webFontsURLEncode">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-webFontsURLEncode">webFontsURLEncode</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function webFontsURLEncode($string) { 
+
+	$replacements: (
+		&quot;!&quot;: &quot;%21&quot;,
+		&quot;#&quot;: &quot;%23&quot;,
+		&quot;$&quot;: &quot;%24&quot;,
+		&quot;&amp;&quot;: &quot;%26&quot;,
+		&quot;&#39;&quot;: &quot;%27&quot;,
+		&quot;(&quot;: &quot;%28&quot;,
+		&quot;)&quot;: &quot;%29&quot;,
+		&quot;*&quot;: &quot;%2A&quot;,
+		&quot;+&quot;: &quot;%2B&quot;,
+		&quot;,&quot;: &quot;%2C&quot;,
+		&quot;/&quot;: &quot;%2F&quot;,
+		&quot;:&quot;: &quot;%3A&quot;,
+		&quot;;&quot;: &quot;%3B&quot;,
+		&quot;=&quot;: &quot;%3D&quot;,
+		&quot;?&quot;: &quot;%3F&quot;,
+		&quot;@&quot;: &quot;%40&quot;,
+		&quot;[&quot;: &quot;%5B&quot;,
+		&quot;]&quot;: &quot;%5D&quot;,
+		&quot; &quot;: &quot;%20&quot;
+	);
+
+	@each $from, $to in $replacements {
+		$string: webFontsStringReplace($string, $from, $to);
+	}
+
+	@return $string;
+
+ }"
+    data-collapsed="@function webFontsURLEncode($string) { ... }"><code>@function webFontsURLEncode($string) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsURLEncode.scss#L18-L49" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Google Web Fonts URL encoding function.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$string</code></th>
+          <td data-label="desc"><p>string to encode</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-webFonts">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-webFonts">webFonts</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin webFonts($fonts) { 
+	$webFontsProtocol: &#39;&#39; !default;
+	$protocol: $webFontsProtocol;
+
+	@if str-length($protocol) &gt; 0 {
+		$protocol: $protocol + &#39;:&#39;;
+	}
+
+	$url: &quot;#{$protocol}//fonts.googleapis.com/css?family=&quot;;
+	$url: $url + webFontsSerialize($fonts);
+
+	@import url($url);
+
+ }"
+    data-collapsed="@mixin webFonts($fonts) { ... }"><code>@mixin webFonts($fonts) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsMixin.scss#L18-L32" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Typography mixin, which outputs Google Web Fonts.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fonts</code></th>
+          <td data-label="desc"><p>font or list of fonts</p>
+</td>
+          <td data-label="type">
+          
+            List, String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-webFontsProtocol"><code>webFontsProtocol</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Add validation, check if wf-serialize funciton exists</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_webFontsMixin.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_webFontsMixin.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-webFontsProtocol">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-webFontsProtocol">webFontsProtocol</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$webFontsProtocol: &quot;https&quot;;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsProtocol.scss#L14-L15" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Google Web Fonts protocol variable.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss">
+        
+          https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+        
+      </a>
+    </li>
+  
+  </ul>
+
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
 
   
 
