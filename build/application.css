@@ -1513,7 +1513,7 @@ body {
 *
 * Google Web Fonts string replacing function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1524,8 +1524,13 @@ body {
 * @param {String} $replace - string to replace
 *
 * @require webFontsStringReplace
+* @require val
 *
-* @return {String}
+* @return {String | false
+*
+* @throw `$string` - is not a string
+* @throw `$find` - is not a find
+* @throw `$replace` - is not a replace
 *
 */
 /**
@@ -1549,7 +1554,7 @@ body {
 *
 * Google Web Fonts string replacing function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1560,8 +1565,13 @@ body {
 * @param {String} $replace - string to replace
 *
 * @require webFontsStringReplace
+* @require val
 *
-* @return {String}
+* @return {String | false
+*
+* @throw `$string` - is not a string
+* @throw `$find` - is not a find
+* @throw `$replace` - is not a replace
 *
 */
 /**

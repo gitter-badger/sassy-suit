@@ -2,7 +2,7 @@
 *
 * Google Web Fonts string replacing function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -13,25 +13,48 @@
 * @param {String} $replace - string to replace
 *
 * @require webFontsStringReplace
+* @require val
 *
-* @return {String}
+* @return {String | false}
+*
+* @throw `$string` - is not a string
+* @throw `$find` - is not a find
+* @throw `$replace` - is not a replace
 *
 */
 
 @function webFontsStringReplace($string, $find, $replace, $all: true) {
-	$index: str-index($string, $find);
 
-	@if $index {
-		$before: str-slice($string, 1, $index - 1);
-		$after: str-slice($string, $index + str-length($find), str-length($string));
-		$string: $before + $replace + $after;
+	@if val($string, string) and val($find, string) and val($replace, string) {
+			$index: str-index($string, $find);
 
-		@if $all and not str-index($find, $replace) {
-			$string: webFontsStringReplace($string, $find, $replace);
-		}
+			@if $index {
+				$before: str-slice($string, 1, $index - 1);
+				$after: str-slice($string, $index + str-length($find), str-length($string));
+				$string: $before + $replace + $after;
+
+				@if $all and not str-index($find, $replace) {
+					$string: webFontsStringReplace($string, $find, $replace);
+				}
+
+			}
+
+		@return $string;
+
+	}	@else if not val($string, string) {
+
+			@error #{$string} " - `$string` is not a string !";
+
+	}	@else if not val($replace, string) {
+
+			@error #{$replace} " - `$replace` is not a string !";
+
+	} 	@else if not val($find, string) {
+
+			@error #{$find} " - `$find` is not a string !";
 
 	}
 
-	@return $string;
+		@return false;
 
 }
