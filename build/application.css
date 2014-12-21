@@ -21,23 +21,21 @@
 /* ==========  Color Palettes  ========== */
 /* ==========  Color definitions  ========== */
 /**
- * Tests whether `$var` is bool.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for bool type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_bool(true)    //returns true
- *  is_bool(false)   //returns true
- *  is_bool(test)    //returns false
- *  is_bool(1)       //returns false
- *  is_bool(null)    //returns false
- */
+* Tests whether `$var` is bool.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for bool type
+*
+* @return {bool}
+*
+* @example
+* is_bool(true)    //returns true
+* is_bool(false)   //returns true
+* is_bool(test)    //returns false
+* is_bool(1)       //returns false
+* is_bool(null)    //returns false
+*/
 /**
  * Tests whether `$var` is color.
  * ---

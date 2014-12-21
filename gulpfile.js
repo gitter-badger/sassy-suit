@@ -39,7 +39,8 @@ gulp.task('sassdoc', function () {
       		configs: "Map Configurations",
       		functions: "Functions",
       		mixins: "Mixins",
-      		webFonts: "Web Fonts"
+      		webFonts: "Web Fonts",
+      		sassyValidation: "sassyValidation"
       	},
 		'display': {
 			'access': ['public', 'private'],
