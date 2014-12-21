@@ -27,7 +27,7 @@
 *
 */
 
-@function getTypeSetResponsive($typeBps, $typeBpsRatios) {
+@function typeSetResponsive($typeBps, $typeBpsRatios) {
 
 	@if length($typeBps) == length($typeBpsRatios) and
 		length($typeBps) == 1 and
@@ -36,7 +36,7 @@
 
 		@debug "There is a single break point - measurePositive and a single break point ratio - positive";
 
-		@return "getTypeSetResponsive - 1";
+		@return "typeSetResponsive - 1";
 
 	} @else if length($typeBps) == length($typeBpsRatios) and
 	 	length($typeBps) > 1 and
