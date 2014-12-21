@@ -10,10 +10,10 @@
 *
 * @param {List | String} $fonts - list or string of fonts
 *
-* @require wf-serialize
-* @require wf-implode
-* @require wf-str-replace
-* @require wf-url-encode
+* @require webFontsSerialize
+* @require webFontsImplode
+* @require webFontsStringReplace
+* @require webFontsURLEncode
 *
 * @throw Unsupported font type
 *
@@ -21,16 +21,16 @@
 *
 */
 
-@function wf-serialize($fonts) {
+@function webFontsSerialize($fonts) {
 
 	@if type-of($fonts) == 'list' or type-of($fonts) == 'arglist' {
 		$serialized: ();
 
 		@each $font in $fonts {
-			$serialized: append($serialized, wf-serialize($font));
+			$serialized: append($serialized, webFontsSerialize($font));
 		}
 
-		@return wf-implode($serialized, '|');
+		@return webFontsImplode($serialized, '|');
 
 	}
 
@@ -39,18 +39,18 @@
 		$serialized: ();
 
 		@each $family, $variants in $fonts {
-			$variants: wf-implode($variants, ',');
-			$variants: wf-str-replace($variants, ' ', '');
+			$variants: webFontsImplode($variants, ',');
+			$variants: webFontsStringReplace($variants, ' ', '');
 			$serialized: append($serialized, "#{$family}:#{$variants}");
 		}
 
-		@return wf-serialize($serialized);
+		@return webFontsSerialize($serialized);
 
 	}
 
 	@if type-of($fonts) == 'string' {
 
-		@return wf-url-encode($fonts);
+		@return webFontsURLEncode($fonts);
 
 	}
 

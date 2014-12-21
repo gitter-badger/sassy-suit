@@ -16,7 +16,7 @@
 *
 */
 
-@mixin web-fonts($fonts...) {
+@mixin webFonts($fonts...) {
 	$webFontsProtocol: '' !default;
 	$protocol: $webFontsProtocol;
 
@@ -25,7 +25,7 @@
 	}
 
 	$url: "#{$protocol}//fonts.googleapis.com/css?family=";
-	$url: $url + wf-serialize($fonts);
+	$url: $url + webFontsSerialize($fonts);
 
 	@import url($url);
 

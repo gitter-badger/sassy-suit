@@ -17,7 +17,7 @@
 *
 */
 
-@function wf-implode($list, $separator: ',') {
+@function webFontsImplode($list, $separator: ',') {
 
 	$string: '';
 

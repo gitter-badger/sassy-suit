@@ -1552,7 +1552,7 @@ body {
 *
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
 *
-* @require wf-str-replace
+* @require webFontsStriongReplace
 *
 * @param {String} $string - string to encode
 *
@@ -1622,10 +1622,10 @@ body {
 *
 * @param {List | String} $fonts - list or string of fonts
 *
-* @require wf-serialize
-* @require wf-implode
-* @require wf-str-replace
-* @require wf-url-encode
+* @require webFontsSerialize
+* @require webFontsImplode
+* @require webFontsStringReplace
+* @require webFontsURLEncode
 *
 * @throw Unsupported font type
 *

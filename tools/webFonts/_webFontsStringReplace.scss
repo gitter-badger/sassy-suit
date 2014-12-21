@@ -33,7 +33,7 @@
 *
 */
 
-@function wf-str-replace($string, $find, $replace, $all: true) {
+@function webFontsStringReplace($string, $find, $replace, $all: true) {
 	$index: str-index($string, $find);
 
 	@if $index {
@@ -42,7 +42,7 @@
 		$string: $before + $replace + $after;
 
 		@if $all and not str-index($find, $replace) {
-			$string: wf-str-replace($string, $find, $replace);
+			$string: webFontsStringReplace($string, $find, $replace);
 		}
 
 	}
