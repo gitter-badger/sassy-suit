@@ -1583,14 +1583,17 @@ body {
 *
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
 *
-* @param {List | String} $fonts - list or string of fonts
-*
+* @require val
 * @require webFontsSerialize
 * @require webFontsImplode
 * @require webFontsStringReplace
 * @require webFontsURLEncode
 *
+* @param {List | String} $fonts - stores list of font values
+*
 * @throw Unsupported font type
+* @throw $fonts was not validated as a map with string data type keys and values
+* @throw $fonts was not validated as a list with string values
 *
 * @return {String}
 *

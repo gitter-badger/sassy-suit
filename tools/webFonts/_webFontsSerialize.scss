@@ -8,14 +8,17 @@
 *
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
 *
-* @param {List | String} $fonts - list or string of fonts
-*
+* @require val
 * @require webFontsSerialize
 * @require webFontsImplode
 * @require webFontsStringReplace
 * @require webFontsURLEncode
 *
+* @param {List | String} $fonts - stores list of font values
+*
 * @throw Unsupported font type
+* @throw $fonts was not validated as a map with string data type keys and values
+* @throw $fonts was not validated as a list with string values
 *
 * @return {String}
 *
@@ -27,7 +30,13 @@
 		$serialized: ();
 
 		@each $font in $fonts {
-			$serialized: append($serialized, webFontsSerialize($font));
+			@if val($font, string) {
+				$serialized: append($serialized, webFontsSerialize($font));
+			} @else {
+
+				@error #{$fonts} " - $fonts was not validated as a list with string values"
+
+			}
 		}
 
 		@return webFontsImplode($serialized, '|');
@@ -39,9 +48,15 @@
 		$serialized: ();
 
 		@each $family, $variants in $fonts {
-			$variants: webFontsImplode($variants, ',');
-			$variants: webFontsStringReplace($variants, ' ', '');
-			$serialized: append($serialized, "#{$family}:#{$variants}");
+			@if val($family, string) and val($variants, string) {
+				$variants: webFontsImplode($variants, ',');
+				$variants: webFontsStringReplace($variants, ' ', '');
+				$serialized: append($serialized, "#{$family}:#{$variants}");
+			} 	@else {
+
+					@error "$fonts was not validated as a map with string data type keys and values"
+
+			}
 		}
 
 		@return webFontsSerialize($serialized);
