@@ -1555,35 +1555,13 @@ body {
 */
 /**
 *
-* Google Web Fonts string replacing function.
-*
-* @group WebFonts
-*
-* @author Vova Skok
-*
-* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-*
-* @param {String} $string - string to replace
-* @param {String} $find - string to find
-* @param {String} $replace - string to replace
-*
-* @require webFontsStringReplace
-* @require val
-*
-* @return {String}
-*
-* @throw `$string` - is not a string
-* @throw `$find` - is not a find
-* @throw `$replace` - is not a replace
-*
-*/
-/**
-*
 * Google Web Fonts string implode function.
 *
 * @group WebFonts
 *
 * @author Vova Skok
+*
+* @require val
 *
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
 *
@@ -1591,6 +1569,8 @@ body {
 * @param {String} $separator - list seperator
 *
 * @return {String}
+*
+* @throw $list was not validated as a list or a string
 *
 */
 /**

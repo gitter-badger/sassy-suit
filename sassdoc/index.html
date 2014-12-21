@@ -14469,7 +14469,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -14478,7 +14478,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -16423,7 +16423,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -16432,7 +16432,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -19922,26 +19922,33 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     data-current-state="collapsed"
     data-expanded="@function webFontsImplode($list, $separator) { 
 
-	$string: &#39;&#39;;
+	@if index(val($list, list) val($list, string), true) {
+		$string: &#39;&#39;;
 
-	@for $i from 1 through length($list) {
+		@for $i from 1 through length($list) {
 
-		$el: nth($list, $i);
-		$string: $string + $el;
+			$el: nth($list, $i);
+			$string: $string + $el;
 
-		@if ($i &lt; length($list)) {
-			$string: $string + $separator;
+			@if ($i &lt; length($list)) {
+				$string: $string + $separator;
+			}
+
 		}
 
-	}
+		@return $string;
 
-	@return $string;
+	} @else {
+
+		@error #{$list} &quot; - $list was not validated as a list or a string&quot;;
+
+	}
 
  }"
     data-collapsed="@function webFontsImplode($list, $separator) { ... }"><code>@function webFontsImplode($list, $separator) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsImplode.scss#L17-L35" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsImplode.scss#L21-L46" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -20032,10 +20039,23 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   
     
     
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>$list was not validated as a list or a string</p>
+</li>
+    
+  </ul>
+
 
   
     
     
+
+
+  
+
 
 
 
