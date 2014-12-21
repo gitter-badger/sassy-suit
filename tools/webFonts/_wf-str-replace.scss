@@ -1,0 +1,52 @@
+/**
+*
+* Google Web Fonts URL encoder.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @todo
+	- Add argument validation
+	- Function/mixin existance check up
+	- Error/warn handling
+	- Chunk functions in seperate files
+*/
+
+/**
+*
+* Google Web Fonts string replacing function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @param {String} $string - string to replace
+* @param {String} $find - string to find
+* @param {String} $replace - string to replace
+*
+* @return {String}
+*
+*/
+
+@function wf-str-replace($string, $find, $replace, $all: true) {
+	$index: str-index($string, $find);
+
+	@if $index {
+		$before: str-slice($string, 1, $index - 1);
+		$after: str-slice($string, $index + str-length($find), str-length($string));
+		$string: $before + $replace + $after;
+
+		@if $all and not str-index($find, $replace) {
+			$string: wf-str-replace($string, $find, $replace);
+		}
+
+	}
+
+	@return $string;
+
+}

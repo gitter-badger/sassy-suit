@@ -1,2 +1,9 @@
-@import "_webFontsFunction.scss";
+// @import "_webFontsFunction.scss";
+@import "_wf-str-replace.scss";
+@import "_wf-url-encode.scss";
+@import "_wf-str-replace.scss";
+@import "_wf-implode.scss";
+@import "_wf-serialize.scss";
+@import "_webFontsProtocol.scss";
+
 @import "_webFontsMixin.scss";

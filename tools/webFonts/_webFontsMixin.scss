@@ -17,8 +17,8 @@
 */
 
 @mixin web-fonts($fonts...) {
-	$web-fonts-protocol: '' !default;
-	$protocol: $web-fonts-protocol;
+	$webFontsProtocol: '' !default;
+	$protocol: $webFontsProtocol;
 
 	@if str-length($protocol) > 0 {
 		$protocol: $protocol + ':';

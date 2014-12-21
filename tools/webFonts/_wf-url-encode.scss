@@ -1,0 +1,49 @@
+/**
+*
+* Google Web Fonts URL encoding function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @require wf-str-replace
+*
+* @param {String} $string - string to encode
+*
+* @return {String}
+*
+*/
+
+@function wf-url-encode($string) {
+
+	$replacements: (
+		"!": "%21",
+		"#": "%23",
+		"$": "%24",
+		"&": "%26",
+		"'": "%27",
+		"(": "%28",
+		")": "%29",
+		"*": "%2A",
+		"+": "%2B",
+		",": "%2C",
+		"/": "%2F",
+		":": "%3A",
+		";": "%3B",
+		"=": "%3D",
+		"?": "%3F",
+		"@": "%40",
+		"[": "%5B",
+		"]": "%5D",
+		" ": "%20"
+	);
+
+	@each $from, $to in $replacements {
+		$string: wf-str-replace($string, $from, $to);
+	}
+
+	@return $string;
+
+}

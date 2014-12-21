@@ -1,0 +1,59 @@
+/**
+*
+* Google Web Fonts string serialize function.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
+*
+* @param {List | String} $fonts - list or string of fonts
+*
+* @require wf-serialize
+* @require wf-implode
+* @require wf-str-replace
+* @require wf-url-encode
+*
+* @throw Unsupported font type
+*
+* @return {String}
+*
+*/
+
+@function wf-serialize($fonts) {
+
+	@if type-of($fonts) == 'list' or type-of($fonts) == 'arglist' {
+		$serialized: ();
+
+		@each $font in $fonts {
+			$serialized: append($serialized, wf-serialize($font));
+		}
+
+		@return wf-implode($serialized, '|');
+
+	}
+
+	@if type-of($fonts) == 'map' {
+
+		$serialized: ();
+
+		@each $family, $variants in $fonts {
+			$variants: wf-implode($variants, ',');
+			$variants: wf-str-replace($variants, ' ', '');
+			$serialized: append($serialized, "#{$family}:#{$variants}");
+		}
+
+		@return wf-serialize($serialized);
+
+	}
+
+	@if type-of($fonts) == 'string' {
+
+		@return wf-url-encode($fonts);
+
+	}
+
+	@warn "Unsupported font type: #{type-of($fonts)}";
+
+}
