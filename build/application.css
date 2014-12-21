@@ -1511,22 +1511,6 @@ body {
 */
 /**
 *
-* Google Web Fonts URL encoder.
-*
-* @group Type
-*
-* @author Vova Skok
-*
-* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-*
-* @todo
-	- Add argument validation
-	- Function/mixin existance check up
-	- Error/warn handling
-	- Chunk functions in seperate files
-*/
-/**
-*
 * Google Web Fonts string replacing function.
 *
 * @group Type
@@ -1539,6 +1523,8 @@ body {
 * @param {String} $find - string to find
 * @param {String} $replace - string to replace
 *
+* @require webFontsStringReplace
+*
 * @return {String}
 *
 */
@@ -1546,7 +1532,7 @@ body {
 *
 * Google Web Fonts URL encoding function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1561,22 +1547,6 @@ body {
 */
 /**
 *
-* Google Web Fonts URL encoder.
-*
-* @group Type
-*
-* @author Vova Skok
-*
-* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-*
-* @todo
-	- Add argument validation
-	- Function/mixin existance check up
-	- Error/warn handling
-	- Chunk functions in seperate files
-*/
-/**
-*
 * Google Web Fonts string replacing function.
 *
 * @group Type
@@ -1589,6 +1559,8 @@ body {
 * @param {String} $find - string to find
 * @param {String} $replace - string to replace
 *
+* @require webFontsStringReplace
+*
 * @return {String}
 *
 */
@@ -1596,13 +1568,11 @@ body {
 *
 * Google Web Fonts string implode function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
-*
-* @require wf-str-replace
 *
 * @param {List | String} $list - string to replace
 * @param {String} $separator - list seperator
@@ -1614,7 +1584,7 @@ body {
 *
 * Google Web Fonts string serialize function.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1636,7 +1606,7 @@ body {
 *
 * Google Web Fonts protocol variable.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1649,7 +1619,7 @@ body {
 *
 * Typography mixin, which outputs Google Web Fonts.
 *
-* @group Type
+* @group WebFonts
 *
 * @author Vova Skok
 *
@@ -1657,7 +1627,7 @@ body {
 *
 * @param {List | String} $fonts - font or list of fonts
 *
-* @require wf-serialize
+* @require webFontsSerialize
 *
 * @todo Add validation, check if wf-serialize funciton exists
 *
