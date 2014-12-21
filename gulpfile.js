@@ -28,15 +28,15 @@ gulp.task('default', function() {
 
 gulp.task('sassdoc', function () {
   return gulp
-    .src('tools/type')
+    .src('tools')
     .pipe(sassdoc({
       	'dest': 'sassdoc',
       	'verbose': true,
       	'groups': {
-      		undefined: "Ungrouped",
-      		typography: "Typography",
-      		variables: "Variables",
-      		configurations: "Map Configurations",
+      		undefined: "Vendors",
+      		type: "Typography",
+      		vars: "Variables",
+      		configs: "Map Configurations",
       		functions: "Functions",
       		mixins: "Mixins"
       	},
