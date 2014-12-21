@@ -1,3 +1,21 @@
+/**
+*
+* Typography mixin, which outputs Google Web Fonts.
+*
+* @group Type
+*
+* @author Vova Skok
+*
+* @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_webFontsMixin.scss
+*
+* @param {List | String} $fonts - font or list of fonts
+*
+* @require wf-serialize
+*
+* @todo Add validation, check if wf-serialize funciton exists
+*
+*/
+
 @mixin web-fonts($fonts...) {
 	$web-fonts-protocol: '' !default;
 	$protocol: $web-fonts-protocol;
