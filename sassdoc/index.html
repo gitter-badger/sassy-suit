@@ -16351,7 +16351,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -16360,7 +16360,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
   
 
 
@@ -20172,7 +20172,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     data-current-state="collapsed"
     data-expanded="@function webFontsSerialize($fonts) { 
 
-	@if type-of($fonts) == &#39;list&#39; or type-of($fonts) == &#39;arglist&#39; {
+	@if val($fonts, list) or type-of($fonts) == &#39;arglist&#39; {
 		$serialized: ();
 
 		@each $font in $fonts {
@@ -20189,7 +20189,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 	}
 
-	@if type-of($fonts) == &#39;map&#39; {
+	@if val($fonts, map) {
 
 		$serialized: ();
 
@@ -20209,7 +20209,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 	}
 
-	@if type-of($fonts) == &#39;string&#39; {
+	@if val($fonts, string) {
 
 		@return webFontsURLEncode($fonts);
 
@@ -20221,7 +20221,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     data-collapsed="@function webFontsSerialize($fonts) { ... }"><code>@function webFontsSerialize($fonts) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsSerialize.scss#L26-L74" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsSerialize.scss#L28-L76" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -20258,7 +20258,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$fonts</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>stores list of font values</p>
+</td>
           <td data-label="type">
           
             List, String
@@ -20429,6 +20430,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   
     
     
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Deal with type-of($fonts) == &#39;arglist&#39;, add funciton to SassyValidation</p>
+</li>
+    
+  </ul>
+
 
   
     
@@ -20725,7 +20735,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
+    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
   
 
 
@@ -20734,7 +20744,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
 

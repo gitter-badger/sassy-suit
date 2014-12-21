@@ -16,17 +16,19 @@
 *
 * @param {List | String} $fonts - stores list of font values
 *
+* @return {String}
+*
 * @throw Unsupported font type
 * @throw $fonts was not validated as a map with string data type keys and values
 * @throw $fonts was not validated as a list with string values
 *
-* @return {String}
+* @todo Deal with type-of($fonts) == 'arglist', add funciton to SassyValidation
 *
 */
 
 @function webFontsSerialize($fonts) {
 
-	@if type-of($fonts) == 'list' or type-of($fonts) == 'arglist' {
+	@if val($fonts, list) or type-of($fonts) == 'arglist' {
 		$serialized: ();
 
 		@each $font in $fonts {
@@ -43,7 +45,7 @@
 
 	}
 
-	@if type-of($fonts) == 'map' {
+	@if val($fonts, map) {
 
 		$serialized: ();
 
@@ -63,7 +65,7 @@
 
 	}
 
-	@if type-of($fonts) == 'string' {
+	@if val($fonts, string) {
 
 		@return webFontsURLEncode($fonts);
 
