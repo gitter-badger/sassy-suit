@@ -20504,19 +20504,17 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 			@error #{$replace} &quot; - `$replace` is not a string !&quot;;
 
-	} 	@else if not val($find, string) {
+	} 	@else {
 
 			@error #{$find} &quot; - `$find` is not a string !&quot;;
 
 	}
 
-		@return false;
-
  }"
     data-collapsed="@function webFontsStringReplace($string, $find, $replace) { ... }"><code>@function webFontsStringReplace($string, $find, $replace) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsStringReplace.scss#L25-L60" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsStringReplace.scss#L25-L58" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -20611,7 +20609,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
   <p class="sassdoc__item-description">
   
-    String, False
+    String
   
   </p>
 
@@ -20799,39 +20797,47 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     data-current-state="collapsed"
     data-expanded="@function webFontsURLEncode($string) { 
 
-	$replacements: (
-		&quot;!&quot;: &quot;%21&quot;,
-		&quot;#&quot;: &quot;%23&quot;,
-		&quot;$&quot;: &quot;%24&quot;,
-		&quot;&amp;&quot;: &quot;%26&quot;,
-		&quot;&#39;&quot;: &quot;%27&quot;,
-		&quot;(&quot;: &quot;%28&quot;,
-		&quot;)&quot;: &quot;%29&quot;,
-		&quot;*&quot;: &quot;%2A&quot;,
-		&quot;+&quot;: &quot;%2B&quot;,
-		&quot;,&quot;: &quot;%2C&quot;,
-		&quot;/&quot;: &quot;%2F&quot;,
-		&quot;:&quot;: &quot;%3A&quot;,
-		&quot;;&quot;: &quot;%3B&quot;,
-		&quot;=&quot;: &quot;%3D&quot;,
-		&quot;?&quot;: &quot;%3F&quot;,
-		&quot;@&quot;: &quot;%40&quot;,
-		&quot;[&quot;: &quot;%5B&quot;,
-		&quot;]&quot;: &quot;%5D&quot;,
-		&quot; &quot;: &quot;%20&quot;
-	);
+	@if val($string, string) {
 
-	@each $from, $to in $replacements {
-		$string: webFontsStringReplace($string, $from, $to);
+		$replacements: (
+			&quot;!&quot;: &quot;%21&quot;,
+			&quot;#&quot;: &quot;%23&quot;,
+			&quot;$&quot;: &quot;%24&quot;,
+			&quot;&amp;&quot;: &quot;%26&quot;,
+			&quot;&#39;&quot;: &quot;%27&quot;,
+			&quot;(&quot;: &quot;%28&quot;,
+			&quot;)&quot;: &quot;%29&quot;,
+			&quot;*&quot;: &quot;%2A&quot;,
+			&quot;+&quot;: &quot;%2B&quot;,
+			&quot;,&quot;: &quot;%2C&quot;,
+			&quot;/&quot;: &quot;%2F&quot;,
+			&quot;:&quot;: &quot;%3A&quot;,
+			&quot;;&quot;: &quot;%3B&quot;,
+			&quot;=&quot;: &quot;%3D&quot;,
+			&quot;?&quot;: &quot;%3F&quot;,
+			&quot;@&quot;: &quot;%40&quot;,
+			&quot;[&quot;: &quot;%5B&quot;,
+			&quot;]&quot;: &quot;%5D&quot;,
+			&quot; &quot;: &quot;%20&quot;
+		);
+
+		@each $from, $to in $replacements {
+			$string: webFontsStringReplace($string, $from, $to);
+		}
+
+		@return $string;
+
+	} @else {
+
+		@error #{$string} &quot; - `$string` is not a valid string&quot;;
+
 	}
-
-	@return $string;
 
  }"
     data-collapsed="@function webFontsURLEncode($string) { ... }"><code>@function webFontsURLEncode($string) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsURLEncode.scss#L18-L49" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/webFonts/_webFontsURLEncode.scss#L21-L60" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -20906,6 +20912,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   
     
     
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p><code>$string</code> - is not a valid string</p>
+</li>
+    
+  </ul>
+
 
   
     
@@ -20925,6 +20940,10 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
         
       </li>
     
+  
+
+
+
   
 
 

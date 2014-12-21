@@ -1526,7 +1526,7 @@ body {
 * @require webFontsStringReplace
 * @require val
 *
-* @return {String | false
+* @return {String}
 *
 * @throw `$string` - is not a string
 * @throw `$find` - is not a find
@@ -1544,10 +1544,13 @@ body {
 * @link https://github.com/SassySuit/sassySuit/blob/master/tools/type/_typeSetWebFontsFunction.scss
 *
 * @require webFontsStriongReplace
+* @require val
 *
 * @param {String} $string - string to encode
 *
 * @return {String}
+*
+* @throw `$string` - is not a valid string
 *
 */
 /**
@@ -1567,7 +1570,7 @@ body {
 * @require webFontsStringReplace
 * @require val
 *
-* @return {String | false
+* @return {String}
 *
 * @throw `$string` - is not a string
 * @throw `$find` - is not a find
