@@ -15,7 +15,7 @@
 * @require webFontsStringReplace
 * @require val
 *
-* @return {String | false}
+* @return {String}
 *
 * @throw `$string` - is not a string
 * @throw `$find` - is not a find
@@ -49,12 +49,10 @@
 
 			@error #{$replace} " - `$replace` is not a string !";
 
-	} 	@else if not val($find, string) {
+	} 	@else {
 
 			@error #{$find} " - `$find` is not a string !";
 
 	}
-
-		@return false;
 
 }
