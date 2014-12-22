@@ -1,40 +1,44 @@
 /**
  * Tests whether `$var` is float.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
+ *
+ * @group sassyValidation
+ *
  * @requires is-number
  * @requires is-integer
- * ---
+ *
  * @param {literal} $var  - check for float type
- * ---
+ *
  * @return {bool}
- * ---
+ *
  * @example
- *  is-float(-1.5) //returns true
- * @example
- *  is-float(1.5) //returns true
- * @example
- *  is-float(1)   //returns false
- * @example
- *  is-float(1em) //returns false
- * @example
- *  is-float(0) //returns false
+ * is-float(-1.5) //returns true
+ * is-float(1.5) //returns true
+ * is-float(1)   //returns false
+ * is-float(1em) //returns false
+ * is-float(0) //returns false
+ *
+ * @todo Literal or * for param
+ *
  */
+
 
 @function is-float($var) {
 	@if $var == 0 {
+
 		@return false;
+
 	}
 	@if not is-number($var) {
+
 		@return false;
+
 	}
 	@if not is-integer($var) {
+
 		@return true;
+
 	}
+
 	@return false;
+
 }

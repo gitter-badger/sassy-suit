@@ -21,6 +21,14 @@
 /* ==========  Color Palettes  ========== */
 /* ==========  Color definitions  ========== */
 /**
+* List of possible units
+*
+* @group sassyValidation
+*
+* @type List
+*
+*/
+/**
 * Tests whether `$var` is bool.
 *
 * @group sassyValidation
@@ -35,38 +43,37 @@
 * is_bool(test)    //returns false
 * is_bool(1)       //returns false
 * is_bool(null)    //returns false
+*
 */
 /**
- * Tests whether `$var` is color.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for color type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_color(#333)   //returns true
- *  is_color(black)  //returns true
- *  is_color(test)   //returns false
- */
+* Tests whether `$var` is color.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for color type
+*
+* @return {bool}
+*
+* @example
+* is_color(#333)   //returns true
+* is_color(black)  //returns true
+* is_color(test)   //returns false
+*
+*/
 /**
  * Tests whether `$var` is empty.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
+ *
+ * @group sassyValidation
+ *
  * @param {*} $var  - check for emptiness
- * ---
+ *
  * @return {bool}
- * ---
+ *
  * @example
- *  is_empty('')     //returns true
- *  is_empty(())     //returns true
- *  is_empty('test') //returns false
+ * is_empty('')     //returns true
+ * is_empty(())     //returns true
+ * is_empty('test') //returns false
+ *
  */
 /**
  * Tests whether `$var` is list.
@@ -218,30 +225,25 @@
  */
 /**
  * Tests whether `$var` is float.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
+ *
+ * @group sassyValidation
+ *
  * @requires is-number
  * @requires is-integer
- * ---
+ *
  * @param {literal} $var  - check for float type
- * ---
+ *
  * @return {bool}
- * ---
+ *
  * @example
- *  is-float(-1.5) //returns true
- * @example
- *  is-float(1.5) //returns true
- * @example
- *  is-float(1)   //returns false
- * @example
- *  is-float(1em) //returns false
- * @example
- *  is-float(0) //returns false
+ * is-float(-1.5) //returns true
+ * is-float(1.5) //returns true
+ * is-float(1)   //returns false
+ * is-float(1em) //returns false
+ * is-float(0) //returns false
+ *
+ * @todo Literal or * for param
+ *
  */
 /**
  * Tests whether `$var` is positive.

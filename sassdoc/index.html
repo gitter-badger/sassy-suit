@@ -54,15 +54,6 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="is-float" data-type="function">
-              <a href="#function-is-float">is-float
-              
-              
-              </a>
-            </li>
-            
-          
-            
             <li class="sidebar__item  sassdoc__item" data-name="is-integer" data-type="function">
               <a href="#function-is-integer">is-integer
               
@@ -121,6 +112,56 @@
             <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="is_bool" data-type="function">
               <a href="#function-is_bool">is_bool
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="is_color" data-type="function">
+              <a href="#function-is_color">is_color
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="is_empty" data-type="function">
+              <a href="#function-is_empty">is_empty
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="is-float" data-type="function">
+              <a href="#function-is-float">is-float
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="sassyvalidation-variable"><a href="#sassyvalidation-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="UNITS" data-type="variable">
+              <a href="#variable-UNITS">UNITS
               
               
               </a>
@@ -862,24 +903,6 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="is_color" data-type="function">
-              <a href="#function-is_color">is_color
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="is_empty" data-type="function">
-              <a href="#function-is_empty">is_empty
-              
-              
-              </a>
-            </li>
-            
-          
-            
             <li class="sidebar__item  sassdoc__item" data-name="is_list" data-type="function">
               <a href="#function-is_list">is_list
               
@@ -1143,230 +1166,6 @@
               <h2 class="main__heading--secondary">functions</h2>
 
               
-              
-                <section class="main__item  item" id="function-is-float">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-is-float">is-float</a>
-
-  
-
-  
-</h3>
-
-
-  <span class="item__since">Since 1.0.0 - undefined</span>
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function is-float($var) { 
-	@if $var == 0 {
-		@return false;
-	}
-	@if not is-number($var) {
-		@return false;
-	}
-	@if not is-integer($var) {
-		@return true;
-	}
-	@return false;
- }"
-    data-collapsed="@function is-float($var) { ... }"><code>@function is-float($var) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_float.scss#L28-L40" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Tests whether <code>$var</code> is float.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$var</code></th>
-          <td data-label="desc"><p>check for float type</p>
-</td>
-          <td data-label="type">
-          
-            Literal
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    Bool
-  
-  </p>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-float(-1.5) //returns true</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-float(1.5) //returns true</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-float(1)   //returns false</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-float(1em) //returns false</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-float(0) //returns false</code></pre>
-  </div>
-  
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#function-is-integer"><code>is-integer</code></a>
-        
-      </li>
-    
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
               
                 <section class="main__item  item" id="function-is-integer">
 
@@ -2292,7 +2091,7 @@
     data-collapsed="@function is_bool($var) { ... }"><code>@function is_bool($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_bool.scss#L17-L28" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_bool.scss#L18-L29" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2403,6 +2202,778 @@ is_bool(null)    //returns false</code></pre>
     
 
     <li><a href="#function-validate"><code>validate</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-is_color">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-is_color">is_color</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function is_color($var) { 
+	@if type-of($var) == color {
+
+		@return true;
+
+	} @else {
+
+		@return false;
+
+	}
+ }"
+    data-collapsed="@function is_color($var) { ... }"><code>@function is_color($var) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_color.scss#L16-L27" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Tests whether <code>$var</code> is color.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$var</code></th>
+          <td data-label="desc"><p>check for color type</p>
+</td>
+          <td data-label="type">
+          
+            Any
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">is_color(#333)   //returns true
+is_color(black)  //returns true
+is_color(test)   //returns false</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-validate"><code>validate</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-is_empty">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-is_empty">is_empty</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function is_empty($var) { 
+	@if type-of($var) == string {
+
+		@return str-length($var) == 0;
+
+	}
+	@if type-of($var) == number {
+
+		@return $var != 0;
+
+	}
+	@if type-of($var) == list {
+
+		@return length($var) == 0;
+
+	}
+	@if $var == false {
+
+		@return true;
+
+	}
+	@if $var == null {
+
+		@return true;
+
+	}
+ }"
+    data-collapsed="@function is_empty($var) { ... }"><code>@function is_empty($var) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L16-L43" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Tests whether <code>$var</code> is empty.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$var</code></th>
+          <td data-label="desc"><p>check for emptiness</p>
+</td>
+          <td data-label="type">
+          
+            Any
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">is_empty(&#39;&#39;)     //returns true
+is_empty(())     //returns true
+is_empty(&#39;test&#39;) //returns false</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-validate"><code>validate</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-is-float">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-is-float">is-float</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function is-float($var) { 
+	@if $var == 0 {
+
+		@return false;
+
+	}
+	@if not is-number($var) {
+
+		@return false;
+
+	}
+	@if not is-integer($var) {
+
+		@return true;
+
+	}
+
+	@return false;
+
+ }"
+    data-collapsed="@function is-float($var) { ... }"><code>@function is-float($var) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_float.scss#L23-L44" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Tests whether <code>$var</code> is float.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$var</code></th>
+          <td data-label="desc"><p>check for float type</p>
+</td>
+          <td data-label="type">
+          
+            Literal
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">is-float(-1.5) //returns true
+is-float(1.5) //returns true
+is-float(1)   //returns false
+is-float(1em) //returns false
+is-float(0) //returns false</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-is-integer"><code>is-integer</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Literal or * for param</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="sassyvalidation-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-UNITS">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-UNITS">UNITS</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$UNITS: &#39;px&#39; &#39;cm&#39; &#39;mm&#39; &#39;%&#39; &#39;ch&#39; &#39;pica&#39; &#39;in&#39; &#39;em&#39; &#39;rem&#39; &#39;pt&#39; &#39;pc&#39; &#39;ex&#39; &#39;vw&#39; &#39;vh&#39; &#39;vmin&#39; &#39;vmax&#39;;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_config.scss#L9-L10" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>List of possible units</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>List</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-is_measure"><code>is_measure</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-is_unit"><code>is_unit</code></a></li>
   
 
 
@@ -14717,7 +15288,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -14726,7 +15297,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -16626,7 +17197,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
+    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
   
 
 
@@ -16635,7 +17206,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
+    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
   
 
 
@@ -16671,7 +17242,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -16680,7 +17251,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -17185,402 +17756,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="function-is_color">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-is_color">is_color</a>
-
-  
-
-  
-</h3>
-
-
-  <span class="item__since">Since 1.0.0 - undefined</span>
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function is_color($var) { 
-	@if type-of($var) == color {
-		@return true;
-	} @else {
-		@return false;
-	}
- }"
-    data-collapsed="@function is_color($var) { ... }"><code>@function is_color($var) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_color.scss#L17-L24" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Tests whether <code>$var</code> is color.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$var</code></th>
-          <td data-label="desc"><p>check for color type</p>
-</td>
-          <td data-label="type">
-          
-            Any
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    Bool
-  
-  </p>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is_color(#333)   //returns true
- is_color(black)  //returns true
- is_color(test)   //returns false</code></pre>
-  </div>
-  
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-validate"><code>validate</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="function-is_empty">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-is_empty">is_empty</a>
-
-  
-
-  
-</h3>
-
-
-  <span class="item__since">Since 1.0.0 - undefined</span>
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function is_empty($var) { 
-	@if type-of($var) == string {
-		@return str-length($var) == 0;
-	}
-	@if type-of($var) == number {
-		@return $var != 0;
-	}
-	@if type-of($var) == list {
-		@return length($var) == 0;
-	}
-	@if $var == false {
-		@return true;
-	}
-	@if $var == null {
-		@return true;
-	}
- }"
-    data-collapsed="@function is_empty($var) { ... }"><code>@function is_empty($var) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L17-L34" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Tests whether <code>$var</code> is empty.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$var</code></th>
-          <td data-label="desc"><p>check for emptiness</p>
-</td>
-          <td data-label="type">
-          
-            Any
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    Bool
-  
-  </p>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is_empty(&#39;&#39;)     //returns true
- is_empty(())     //returns true
- is_empty(&#39;test&#39;) //returns false</code></pre>
-  </div>
-  
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-validate"><code>validate</code></a></li>
   
 
 
@@ -18160,6 +18335,25 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-UNITS"><code>UNITS</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -19139,9 +19333,28 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 
   
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-UNITS"><code>UNITS</code></a>
+        
+      </li>
+    
+  
 
 
 
+  
+
+
+
+
+</ul>
 
 
   
