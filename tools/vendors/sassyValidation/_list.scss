@@ -1,27 +1,29 @@
 /**
- * Tests whether `$var` is list.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for list type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_list(a b)          //returns true
- *  is_list(1 2 3)        //returns true
- *  is_list((test, test)) //returns true
- *  is_list(test)         //returns false
- *  is_list(1)            //returns false
- */
+*
+* Tests whether `$var` is list.
+*
+* @param {*} $var  - check for list type
+*
+* @return {bool}
+*
+* @example
+* is_list(a b)          //returns true
+* is_list(1 2 3)        //returns true
+* is_list((test, test)) //returns true
+* is_list(test)         //returns false
+* is_list(1)            //returns false
+*
+*/
 
 @function is_list($var) {
 	@if type-of($var) == list {
+
 		@return true;
+
 	}
 	@else {
+
 		@return false;
+
 	}
 }

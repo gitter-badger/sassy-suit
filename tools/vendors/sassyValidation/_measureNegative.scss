@@ -1,37 +1,38 @@
 /**
- * Tests whether `$var` is a measure and has a negative value.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
- * @requires is-number
- * @requires is-measure
- * @requires is-negative
- * ---
- * @param {literal} $var  - check whether $var is a positive measure
- * ---
- * @return {bool}
- * ---
- * @example
- *  is-measureNegative(-10em)   //returns true
- * @example
- *  is-measureNegative(0px)   //returns false
- * @example
- *  is-measureNegative(0)   //returns false
- * @example
- *  is-measureNegative(777rem)   //returns false
- */
+* Tests whether `$var` is a measure and has a negative value.
+*
+* @group sasyValidaiton
+*
+* @requires is-number
+* @requires is-measure
+* @requires is-negative
+*
+* @param {literal} $var  - check whether $var is a positive measure
+*
+* @return {bool}
+*
+* @example
+* is-measureNegative(-10em)   //returns true
+* is-measureNegative(0px)     //returns false
+* is-measureNegative(0)       //returns false
+* is-measureNegative(777rem) //returns false
+*
+*/
 
 @function is-measureNegative($var) {
 	@if is-measure($var) and $var < 0 {
+
 		@return true;
+
 	} @else if is-measure($var) and $var == 0 {
+
 		@warn "Using zero value with units is a lame idea";
+
 		@return false;
+
 	} @else {
+
 		@return false;
+
 	}
 }
