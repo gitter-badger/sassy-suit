@@ -54,15 +54,6 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="is-integer" data-type="function">
-              <a href="#function-is-integer">is-integer
-              
-              
-              </a>
-            </li>
-            
-          
-            
             <li class="sidebar__item  sassdoc__item" data-name="is-measureNegative" data-type="function">
               <a href="#function-is-measureNegative">is-measureNegative
               
@@ -139,6 +130,15 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="is-float" data-type="function">
               <a href="#function-is-float">is-float
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="is-integer" data-type="function">
+              <a href="#function-is-integer">is-integer
               
               
               </a>
@@ -1166,223 +1166,6 @@
               <h2 class="main__heading--secondary">functions</h2>
 
               
-              
-                <section class="main__item  item" id="function-is-integer">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-is-integer">is-integer</a>
-
-  
-
-  
-</h3>
-
-
-  <span class="item__since">Since 1.0.0 - undefined</span>
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function is-integer($var) { 
-    @if not is-number($var) {
-        @return false;
-    }
-    @if round($var) != $var {
-        @return false;
-    }
-    @return true;
- }"
-    data-collapsed="@function is-integer($var) { ... }"><code>@function is-integer($var) { ... }</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_integer.scss#L27-L36" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Tests whether <code>$var</code> is integer.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$var</code></th>
-          <td data-label="desc"><p>check for integer type</p>
-</td>
-          <td data-label="type">
-          
-            Literal
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description">
-  
-    Bool
-  
-  </p>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-integer(1)   //returns true</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-integer(0) //returns true</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-integer(-50) //returns true</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-integer(1.5) //returns false</code></pre>
-  </div>
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss"> is-integer(1em) //returns false</code></pre>
-  </div>
-  
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-is-float"><code>is-float</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
               
                 <section class="main__item  item" id="function-is-measureNegative">
 
@@ -2853,6 +2636,211 @@ is-float(0) //returns false</code></pre>
     
   </ul>
 
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-is-integer">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-is-integer">is-integer</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function is-integer($var) { 
+    @if not is-number($var) {
+
+        @return false;
+
+    }
+    @if round($var) != $var {
+
+        @return false;
+
+    }
+
+    @return true;
+
+ }"
+    data-collapsed="@function is-integer($var) { ... }"><code>@function is-integer($var) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_integer.scss#L19-L34" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Tests whether <code>$var</code> is integer.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$var</code></th>
+          <td data-label="desc"><p>check for integer type</p>
+</td>
+          <td data-label="type">
+          
+            Literal
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">is-integer(1)   //returns true
+is-integer(0) //returns true
+is-integer(-50) //returns true
+is-integer(1.5) //returns false
+is-integer(1em) //returns false</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-is-float"><code>is-float</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
 
   
     

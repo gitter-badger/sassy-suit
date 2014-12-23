@@ -1,18 +1,19 @@
 /**
- * Tests whether `$var` is empty.
- *
- * @group sassyValidation
- *
- * @param {*} $var  - check for emptiness
- *
- * @return {bool}
- *
- * @example
- * is_empty('')     //returns true
- * is_empty(())     //returns true
- * is_empty('test') //returns false
- *
- */
+*
+* Tests whether `$var` is empty.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for emptiness
+*
+* @return {bool}
+*
+* @example
+* is_empty('')     //returns true
+* is_empty(())     //returns true
+* is_empty('test') //returns false
+*
+*/
 
 @function is_empty($var) {
 	@if type-of($var) == string {

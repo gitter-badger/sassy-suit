@@ -21,6 +21,7 @@
 /* ==========  Color Palettes  ========== */
 /* ==========  Color definitions  ========== */
 /**
+*
 * List of possible units
 *
 * @group sassyValidation
@@ -29,6 +30,7 @@
 *
 */
 /**
+*
 * Tests whether `$var` is bool.
 *
 * @group sassyValidation
@@ -46,6 +48,7 @@
 *
 */
 /**
+*
 * Tests whether `$var` is color.
 *
 * @group sassyValidation
@@ -61,74 +64,69 @@
 *
 */
 /**
- * Tests whether `$var` is empty.
- *
- * @group sassyValidation
- *
- * @param {*} $var  - check for emptiness
- *
- * @return {bool}
- *
- * @example
- * is_empty('')     //returns true
- * is_empty(())     //returns true
- * is_empty('test') //returns false
- *
- */
+*
+* Tests whether `$var` is empty.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for emptiness
+*
+* @return {bool}
+*
+* @example
+* is_empty('')     //returns true
+* is_empty(())     //returns true
+* is_empty('test') //returns false
+*
+*/
 /**
- * Tests whether `$var` is list.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for list type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_list(a b)          //returns true
- *  is_list(1 2 3)        //returns true
- *  is_list((test, test)) //returns true
- *  is_list(test)         //returns false
- *  is_list(1)            //returns false
- */
+*
+* Tests whether `$var` is list.
+*
+* @param {*} $var  - check for list type
+*
+* @return {bool}
+*
+* @example
+* is_list(a b)          //returns true
+* is_list(1 2 3)        //returns true
+* is_list((test, test)) //returns true
+* is_list(test)         //returns false
+* is_list(1)            //returns false
+*
+*/
 /**
- * Tests whether `$var` is map.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for list type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_map(a: 1, b: 2)   //returns true
- *  is_map(1 2 3)        //returns false
- *  is_map((test, test)) //returns false
- *  is_map(test)         //returns false
- *  is_map(1)            //returns false
- */
+*
+* Tests whether `$var` is map.
+*
+* @param {*} $var  - check for list type
+*
+* @return {bool}
+*
+* @example
+* is_map(a: 1, b: 2)   //returns true
+* is_map(1 2 3)        //returns false
+* is_map((test, test)) //returns false
+* is_map(test)         //returns false
+* is_map(1)            //returns false
+*
+*/
 /**
- * Tests whether `$var` is measure.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for measure type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_measure(1px)   //returns true
- *  is_measure(5em)   //returns true
- *  is_measure(5)     //returns false
- *  is_measure(test)  //returns false
- *  is_measure(em)    //returns false
- */
+*
+* Tests whether `$var` is measure.
+*
+* @param {*} $var  - check for measure type
+*
+* @return {bool}
+*
+* @example
+* is_measure(1px)   //returns true
+* is_measure(5em)   //returns true
+* is_measure(5)     //returns false
+* is_measure(test)  //returns false
+* is_measure(em)    //returns false
+*
+*/
 /**
  * Tests whether `$var` is bool.
  * ---
@@ -198,53 +196,48 @@
  *  is_unit(777) //returns false
  */
 /**
- * Tests whether `$var` is integer.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
- * @requires is-number
- * ---
- * @param {literal} $var  - check for integer type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is-integer(1)   //returns true
- * @example
- *  is-integer(0) //returns true
- * @example
- *  is-integer(-50) //returns true
- * @example
- *  is-integer(1.5) //returns false
- * @example
- *  is-integer(1em) //returns false
- */
+*
+* Tests whether `$var` is integer.
+*
+* @group sassyValidation
+*
+* @requires is-number
+*
+* @param {literal} $var  - check for integer type
+*
+* @return {bool}
+*
+* @example
+* is-integer(1)   //returns true
+* is-integer(0)   //returns true
+* is-integer(-50) //returns true
+* is-integer(1.5) //returns false
+* is-integer(1em) //returns false
+*
+*/
 /**
- * Tests whether `$var` is float.
- *
- * @group sassyValidation
- *
- * @requires is-number
- * @requires is-integer
- *
- * @param {literal} $var  - check for float type
- *
- * @return {bool}
- *
- * @example
- * is-float(-1.5) //returns true
- * is-float(1.5) //returns true
- * is-float(1)   //returns false
- * is-float(1em) //returns false
- * is-float(0) //returns false
- *
- * @todo Literal or * for param
- *
- */
+*
+* Tests whether `$var` is float.
+*
+* @group sassyValidation
+*
+* @requires is-number
+* @requires is-integer
+*
+* @param {literal} $var  - check for float type
+*
+* @return {bool}
+*
+* @example
+* is-float(-1.5) //returns true
+* is-float(1.5)  //returns true
+* is-float(1)    //returns false
+* is-float(1em)  //returns false
+* is-float(0)    //returns false
+*
+* @todo Literal or * for param
+*
+*/
 /**
  * Tests whether `$var` is positive.
  * ---
@@ -268,77 +261,64 @@
  *  is-positive(-1)   //returns false
  */
 /**
- * Tests whether `$var` is negative.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @requires measure
- * ---
- * @param {*} $value  - check for negative values
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_negative(-5) //returns true
- *  is_negative(-10px) //returns false
- *  is_negative(300) //returns false
- *  is_negative('test') //returns false
- *  is_negative(0) //returns false
- */
+*
+* Tests whether `$var` is negative.
+*
+* @requires measure
+*
+* @param {*} $value  - check for negative values
+*
+* @return {bool}
+*
+* @example
+* is_negative(-5) //returns true
+* is_negative(-10px) //returns false
+* is_negative(300) //returns false
+* is_negative('test') //returns false
+* is_negative(0) //returns false
+*
+*/
 /**
- * Tests whether `$var` is a measure and has a negative value.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
- * @requires is-number
- * @requires is-measure
- * @requires is-negative
- * ---
- * @param {literal} $var  - check whether $var is a positive measure
- * ---
- * @return {bool}
- * ---
- * @example
- *  is-measureNegative(-10em)   //returns true
- * @example
- *  is-measureNegative(0px)   //returns false
- * @example
- *  is-measureNegative(0)   //returns false
- * @example
- *  is-measureNegative(777rem)   //returns false
- */
+* Tests whether `$var` is a measure and has a negative value.
+*
+* @group sasyValidaiton
+*
+* @requires is-number
+* @requires is-measure
+* @requires is-negative
+*
+* @param {literal} $var  - check whether $var is a positive measure
+*
+* @return {bool}
+*
+* @example
+* is-measureNegative(-10em)   //returns true
+* is-measureNegative(0px)     //returns false
+* is-measureNegative(0)       //returns false
+* is-measureNegative(777rem) //returns false
+*
+*/
 /**
- * Tests whether `$var` is a measure and has a positive value.
- * ---
- * @access public
- * ---
- * @group checks
- * ---
- * @since 1.0.0
- * ---
- * @requires is-number
- * @requires is-measure
- * @requires is-positive
- * ---
- * @param {literal} $var  - check whether $var is a positive measure
- * ---
- * @return {bool}
- * ---
- * @example
- *  is-measurePositive(10px)   //returns true
- * @example
- *  is-measurePositive(0px)   //returns false
- * @example
- *  is-measurePositive(0)   //returns false
- * @example
- *  is-measurePositive(-777px)   //returns false
- */
+*
+* Tests whether `$var` is a measure and has a positive value.
+*
+* @group sassyValidataion
+*
+* @requires is-number
+* @requires is-measure
+* @requires is-positive
+*
+* @param {literal} $var  - check whether $var is a positive measure
+*
+* @return {bool}
+*
+* @example
+* is-measurePositive(10px)   	//returns true
+* is-measurePositive(0px)   	//returns false
+* is-measurePositive(0)   		//returns false
+* is-measurePositive(-777px)   	//returns false
+*
+*/
 /**
  * validates input against various tests
  * ---
