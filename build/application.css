@@ -83,6 +83,8 @@
 *
 * Tests whether `$var` is list.
 *
+* @group sassyValidation
+*
 * @param {*} $var  - check for list type
 *
 * @return {bool}
@@ -99,6 +101,8 @@
 *
 * Tests whether `$var` is map.
 *
+* @group sassyValidation
+*
 * @param {*} $var  - check for list type
 *
 * @return {bool}
@@ -114,6 +118,8 @@
 /**
 *
 * Tests whether `$var` is measure.
+*
+* @group sassyValidation
 *
 * @param {*} $var  - check for measure type
 *
@@ -281,7 +287,7 @@
 /**
 * Tests whether `$var` is a measure and has a negative value.
 *
-* @group sasyValidaiton
+* @group sassyValidation
 *
 * @requires is-number
 * @requires is-measure
@@ -302,7 +308,7 @@
 *
 * Tests whether `$var` is a measure and has a positive value.
 *
-* @group sassyValidataion
+* @group sassyValidation
 *
 * @requires is-number
 * @requires is-measure
