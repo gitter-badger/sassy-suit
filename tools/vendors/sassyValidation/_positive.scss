@@ -19,11 +19,17 @@
 
 @function is-positive($var) {
     @if is-number($var) and $var > 0 == true {
+
         @return true;
+
     } @else if $var == 0 {
 		@warn "Number is not positive! Number equals zero";
+
 		@return false;
+
     } @else {
+
         @return false;
+
     }
 }
