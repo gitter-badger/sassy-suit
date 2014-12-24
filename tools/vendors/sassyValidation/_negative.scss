@@ -11,11 +11,11 @@
 * @return {bool}
 *
 * @example
-* is_negative(-5) //returns true
-* is_negative(-10px) //returns false
-* is_negative(300) //returns false
-* is_negative('test') //returns false
-* is_negative(0) //returns false
+* is_negative(-5)     	//returns true
+* is_negative(-10px)  	//returns false
+* is_negative(300)    	//returns false
+* is_negative('test') 	//returns false
+* is_negative(0)      	//returns false
 *
 */
 
@@ -24,14 +24,7 @@
 
 		@return true;
 
-	} @else if (type-of($var) == number) and $var == 0 {
-
-		@warn "Number is not negative! Number equals zero";
-
-		@return false;
-
-	}
-	@else {
+	} @else {
 
 		@return false;
 

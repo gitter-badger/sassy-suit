@@ -1,23 +1,27 @@
 /**
- * Tests whether `$var` is string.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for string type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_string(test) //returns true
- *  is_string(1)    //returns false
- */
+*
+* Tests whether `$var` is string.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for string type
+*
+* @return {bool}
+*
+* @example
+* is_string(test) 	//returns true
+* is_string(1)    	//returns false
+*
+*/
 
 @function is_string($var) {
 	@if type-of($var) != string {
+
 		@return false;
+
 	} @else {
+
 		@return true;
+
 	}
 }

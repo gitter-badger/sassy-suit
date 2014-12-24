@@ -9,11 +9,11 @@
 * @return {bool}
 *
 * @example
-* is_map(a: 1, b: 2)   //returns true
-* is_map(1 2 3)        //returns false
-* is_map((test, test)) //returns false
-* is_map(test)         //returns false
-* is_map(1)            //returns false
+* is_map(a: 1, b: 2)   		//returns true
+* is_map(1 2 3)        		//returns false
+* is_map((test, test))		//returns false
+* is_map(test)         		//returns false
+* is_map(1)            		//returns false
 *
 */
 

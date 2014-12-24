@@ -12,11 +12,11 @@
 * @return {bool}
 *
 * @example
-* is-float(-1.5) //returns true
-* is-float(1.5)  //returns true
-* is-float(1)    //returns false
-* is-float(1em)  //returns false
-* is-float(0)    //returns false
+* is-float(-1.5)	//returns true
+* is-float(1.5) 	//returns true
+* is-float(1)		//returns false
+* is-float(1em) 	//returns false
+* is-float(0) 	//returns false
 *
 * @todo Literal or * for param
 *
