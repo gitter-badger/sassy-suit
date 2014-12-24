@@ -205,7 +205,7 @@
 *
 * @group sassyValidation
 *
-* @requires is-number
+* @require is-number
 *
 * @param {literal} $var  - check for integer type
 *
@@ -225,8 +225,8 @@
 *
 * @group sassyValidation
 *
-* @requires is-number
-* @requires is-integer
+* @require is-number
+* @require is-integer
 *
 * @param {literal} $var  - check for float type
 *
@@ -248,7 +248,7 @@
 *
 * @group sassyValidation
 *
-* @requires is-number
+* @require is-number
 *
 * @param {literal} $var  - check whether $var is positive
 *
@@ -266,7 +266,7 @@
 *
 * @group sassyValidation
 *
-* @requires measure
+* @require measure
 *
 * @param {*} $value  - check for negative values
 *
@@ -281,15 +281,16 @@
 *
 */
 /**
+*
 * Tests whether `$var` is a measure and has a negative value.
 *
 * @group sassyValidation
 *
-* @requires is-number
-* @requires is-measure
-* @requires is-negative
+* @require is-number
+* @require is-measure
+* @require is-negative
 *
-* @param {literal} $var  - check whether $var is a positive measure
+* @param {*} $var  - check whether $var is a positive measure
 *
 * @return {bool}
 *
@@ -306,11 +307,11 @@
 *
 * @group sassyValidation
 *
-* @requires is-number
-* @requires is-measure
-* @requires is-positive
+* @require is-number
+* @require is-measure
+* @require is-positive
 *
-* @param {literal} $var  - check whether $var is a positive measure
+* @param {*} $var  - check whether $var is a positive measure
 *
 * @return {bool}
 *
@@ -327,23 +328,6 @@
 *
 * @group sassyValidation
 *
-* @require is_bool
-* @require is_color
-* @require is_empty
-* @require is_list
-* @require is_measure
-* @require is_null
-* @require is_number
-* @require is_string
-* @require is_unit
-* @require is_negative
-* @require is_positive
-* @require is_integer
-* @require is_map
-* @require is_measurePositive
-* @require is_measureNegative
-* @require is_float
-*
 * @param {value} $var - a variable to be tested
 * @param {list|string|any} $validations - the validations to test (e.g. measure, string, number,unit). "any" means it can be any type so there won't be any kind of test.
 *
@@ -357,6 +341,24 @@
 * validate(1, number string) 	//returns 1
 * validate(1, number)        	//returns 1
 * validate(1, string)        	//returns false
+*
+*/
+/**
+*
+* Validates input against various tests
+*
+* @group sassyValidation
+*
+* @alias validate
+*
+* @require validate
+*
+* @param {value} $var - a variable to be tested
+* @param {list|string|any} $validations - the validations to test (e.g. measure, string, number,unit). "any" means it can be any type so there won't be any kind of test.
+*
+* @return {bool}
+*
+* @throws '$var is not a known validation type.'
 *
 */
 /**

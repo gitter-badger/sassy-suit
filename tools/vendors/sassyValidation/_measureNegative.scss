@@ -1,4 +1,5 @@
 /**
+*
 * Tests whether `$var` is a measure and has a negative value.
 *
 * @group sassyValidation
@@ -7,7 +8,7 @@
 * @require is-measure
 * @require is-negative
 *
-* @param {literal} $var  - check whether $var is a positive measure
+* @param {*} $var  - check whether $var is a positive measure
 *
 * @return {bool}
 *

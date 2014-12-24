@@ -4,23 +4,6 @@
 *
 * @group sassyValidation
 *
-* @require is_bool
-* @require is_color
-* @require is_empty
-* @require is_list
-* @require is_measure
-* @require is_null
-* @require is_number
-* @require is_string
-* @require is_unit
-* @require is_negative
-* @require is_positive
-* @require is_integer
-* @require is_map
-* @require is_measurePositive
-* @require is_measureNegative
-* @require is_float
-*
 * @param {value} $var - a variable to be tested
 * @param {list|string|any} $validations - the validations to test (e.g. measure, string, number,unit). "any" means it can be any type so there won't be any kind of test.
 *
