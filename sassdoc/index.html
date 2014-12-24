@@ -189,6 +189,15 @@
             
           
             
+            <li class="sidebar__item  sassdoc__item" data-name="val" data-type="function">
+              <a href="#function-val">val
+              
+              <span class="sidebar__annotation  sidebar__annotation--alias">alias</span>
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="validate" data-type="function">
               <a href="#function-validate">validate
               
@@ -4203,6 +4212,77 @@ is_string(1)    	//returns false</code></pre>
 
 </section>
               
+                <section class="main__item  item  item--alias" id="function-val">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-val">val</a>
+
+  
+
+  
+    <span class="item__alias">(alias for <a href="#function-validate"><code>validate</code></a>)</span>
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function val($var, $validations) { 
+
+	@return validate($var, $validations);
+
+ }"
+    data-collapsed="@function val($var, $validations) { ... }"><code>@function val($var, $validations) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_valFunction.scss#L19-L24" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  <p>Refer to <a href="#function-validate">validate</a>.</p>
+
+
+
+</section>
+              
                 <section class="main__item  item" id="function-validate">
 
 <h3 class="item__heading">
@@ -4210,6 +4290,12 @@ is_string(1)    	//returns false</code></pre>
 
   <a class="item__name" href="#function-validate">validate</a>
 
+  
+    <span class="item__aliased">(aliased as
+    
+      <a href="#function-val"><code>val</code></a>
+    
+    )</span>
   
 
   
@@ -4251,7 +4337,8 @@ is_string(1)    	//returns false</code></pre>
     data-current-state="collapsed"
     data-expanded="@function validate($var, $validations) { 
 	//set a list of testable validation types
-	$allTypes: measure, list, bool, string, color, number, unit, negative, positive, integer, float, map, measurePositive, measureNegative;
+
+	$allTypes: bool, color, empty, float, integer, list, map, measure, measureNegative, measurePositive, negative, null, number, positive, string, unit;
 
 	//do not test anything if type equals &quot;any&quot;
 	@if $validations == any {
@@ -4386,7 +4473,7 @@ is_string(1)    	//returns false</code></pre>
     data-collapsed="@function validate($var, $validations) { ... }"><code>@function validate($var, $validations) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_validationFunction.scss#L39-L173" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_validationFunction.scss#L39-L174" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -4682,6 +4769,21 @@ validate(1, string)        	//returns false</code></pre>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-val"><code>val</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -5272,18 +5374,27 @@ validate(1, string)        	//returns false</code></pre>
 
 
   
-
-
-
-  
-
-
-
-  
     
       
       <h3 class="item__sub-heading">Requires</h3>
       <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
     
 
     
@@ -5621,6 +5732,15 @@ validate(1, string)        	//returns false</code></pre>
 
 
   
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
 
 
 
@@ -5912,9 +6032,24 @@ validate(1, string)        	//returns false</code></pre>
 
 
   
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
 
 
 
+
+</ul>
 
 
   
@@ -17133,7 +17268,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -17142,7 +17277,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -18970,7 +19105,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
+    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
   
 
 
@@ -18979,7 +19114,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
+    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
   
 
 
@@ -19060,7 +19195,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
   
 
 
@@ -19069,7 +19204,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -19087,15 +19222,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
@@ -19105,7 +19231,25 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+  
+
+
+
+  
+
+    
+
     <li><a href="#function-sl-tail"><code>sl-tail</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -19124,15 +19268,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-union"><code>sl-union</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -20260,9 +20395,24 @@ is_unit(777) 		//returns false</code></pre>
 
 
   
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
 
 
 
+
+</ul>
 
 
   
@@ -20526,14 +20676,23 @@ is_unit(777) 		//returns false</code></pre>
 
 
   
-
-
-
-  
     
       
       <h3 class="item__sub-heading">Requires</h3>
       <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
     
 
     
@@ -20919,6 +21078,15 @@ is_unit(777) 		//returns false</code></pre>
 
 
   
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
+  
 
 
 
@@ -21207,6 +21375,15 @@ is_unit(777) 		//returns false</code></pre>
 
 
 
+  
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+      </li>
+    
   
 
 

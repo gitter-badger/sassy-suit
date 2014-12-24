@@ -4,9 +4,9 @@
 *
 * @group sassyValidation
 *
-* @requires is-number
-* @requires is-measure
-* @requires is-positive
+* @require is-number
+* @require is-measure
+* @require is-positive
 *
 * @param {literal} $var  - check whether $var is a positive measure
 *

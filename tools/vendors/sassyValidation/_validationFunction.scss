@@ -39,7 +39,8 @@
 
 @function validate($var, $validations) {
 	//set a list of testable validation types
-	$allTypes: measure, list, bool, string, color, number, unit, negative, positive, integer, float, map, measurePositive, measureNegative;
+
+	$allTypes: bool, color, empty, float, integer, list, map, measure, measureNegative, measurePositive, negative, null, number, positive, string, unit;
 
 	//do not test anything if type equals "any"
 	@if $validations == any {
