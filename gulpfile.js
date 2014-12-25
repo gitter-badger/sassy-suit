@@ -40,7 +40,7 @@ gulp.task('sassdoc', function () {
       		functions: "Functions",
       		mixins: "Mixins",
       		webFonts: "Web Fonts",
-      		sassyValidation: "sassyValidation"
+      		sassyValidation: "SassyValidation"
       	},
 		'display': {
 			'access': ['public', 'private'],

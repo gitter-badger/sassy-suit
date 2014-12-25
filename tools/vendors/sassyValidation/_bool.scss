@@ -1,4 +1,5 @@
 /**
+*
 * Tests whether `$var` is bool.
 *
 * @group sassyValidation
@@ -8,11 +9,11 @@
 * @return {bool}
 *
 * @example
-* is_bool(true)    //returns true
-* is_bool(false)   //returns true
-* is_bool(test)    //returns false
-* is_bool(1)       //returns false
-* is_bool(null)    //returns false
+* is_bool(true)     	//returns true
+* is_bool(false) 		//returns true
+* is_bool(test)     	//returns false
+* is_bool(1)        	//returns false
+* is_bool(null)     	//returns false
 *
 */
 

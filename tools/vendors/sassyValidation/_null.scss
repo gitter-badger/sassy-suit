@@ -1,26 +1,30 @@
 /**
- * Tests whether `$var` is bool.
- * ---
- * @access public
- * ---
- * @since 1.0.0
- * ---
- * @param {*} $var  - check for bool type
- * ---
- * @return {bool}
- * ---
- * @example
- *  is_null(null)  //returns true
- *  is_null(false) //returns false
- *  is_null(0) //returns false
- *  is_null('hello') //returns false
- *  is_null(113) //returns false
- */
+*
+* Tests whether `$var` is bool.
+*
+* @group sassyValidation
+*
+* @param {*} $var  - check for bool type
+*
+* @return {bool}
+*
+* @example
+* is_null(null)    	//returns true
+* is_null(false)   	//returns false
+* is_null(0)       	//returns false
+* is_null('hello') 	//returns false
+* is_null(113)     	//returns false
+*
+*/
 
 @function is_null($var) {
 	@if $var == null {
+
 		@return true;
+
 	} @else {
+
 		@return false;
+
 	}
 }
