@@ -2,19 +2,7 @@
 
 
 
-## Containers
-
-1. `Grid-containerFluid`
-2. `Grid-containerXs`
-3. `Grid-containerSm`
-4. `Grid-containerMd`
-5. `Grid-containerLg`
-6. `Grid-containerXl`
-7. `Grid-containerXxl`
-
 ## Grids
-
-### SM breakpoint
 
 1. `Grid-sm-col--1of12`	
 2. `Grid-sm-col--2of12`	
@@ -28,148 +16,109 @@
 10. `Grid-sm-col--10of12`	
 11. `Grid-sm-col--11of12`	
 12. `Grid-sm-col--11of12`	
-
-### MD breakpoint
-
-1. `Grid-md-col--1of12`	
-2. `Grid-md-col--2of12`	
-3. `Grid-md-col--3of12`	
-4. `Grid-md-col--4of12`	
-5. `Grid-md-col--5of12`	
-6. `Grid-md-col--6of12`	
-7. `Grid-md-col--7of12`	
-8. `Grid-md-col--8of12`	
-9. `Grid-md-col--9of12`	
-10. `Grid-md-col--10of12`	
-11. `Grid-md-col--11of12`	
-12. `Grid-md-col--11of12`	
-
-### LG breakpoint
-
-1. `Grid-lg-col--1of12`	
-2. `Grid-lg-col--2of12`	
-3. `Grid-lg-col--3of12`	
-4. `Grid-lg-col--4of12`	
-5. `Grid-lg-col--5of12`	
-6. `Grid-lg-col--6of12`	
-7. `Grid-lg-col--7of12`	
-8. `Grid-lg-col--8of12`	
-9. `Grid-lg-col--9of12`	
-10. `Grid-lg-col--10of12`	
-11. `Grid-lg-col--11of12`	
-12. `Grid-lg-col--11of12`
-
-### XL breakpoint
-
-1. `Grid-xl-col--1of12`	
-2. `Grid-xl-col--2of12`	
-3. `Grid-xl-col--3of12`	
-4. `Grid-xl-col--4of12`	
-5. `Grid-xl-col--5of12`	
-6. `Grid-xl-col--6of12`	
-7. `Grid-xl-col--7of12`	
-8. `Grid-xl-col--8of12`	
-9. `Grid-xl-col--9of12`	
-10. `Grid-xl-col--10of12`	
-11. `Grid-xl-col--11of12`	
-12. `Grid-xl-col--11of12`
-
-### XXL breakpoint
-
-1. `Grid-xxl-col--1of12`	
-2. `Grid-xxl-col--2of12`	
-3. `Grid-xxl-col--3of12`	
-4. `Grid-xxl-col--4of12`	
-5. `Grid-xxl-col--5of12`	
-6. `Grid-xxl-col--6of12`	
-7. `Grid-xxl-col--7of12`	
-8. `Grid-xxl-col--8of12`	
-9. `Grid-xxl-col--9of12`	
-10. `Grid-xxl-col--10of12`	
-11. `Grid-xxl-col--11of12`	
-12. `Grid-xxl-col--11of12`
-
-
+13. `Grid-md-col--1of12`	
+14. `Grid-md-col--2of12`	
+15. `Grid-md-col--3of12`	
+16. `Grid-md-col--4of12`	
+17. `Grid-md-col--5of12`	
+18. `Grid-md-col--6of12`	
+19. `Grid-md-col--7of12`	
+20. `Grid-md-col--8of12`	
+21. `Grid-md-col--9of12`	
+22. `Grid-md-col--10of12`	
+23. `Grid-md-col--11of12`	
+24. `Grid-md-col--11of12`	
+25. `Grid-lg-col--1of12`	
+26. `Grid-lg-col--2of12`	
+27. `Grid-lg-col--3of12`	
+28. `Grid-lg-col--4of12`	
+29. `Grid-lg-col--5of12`	
+30. `Grid-lg-col--6of12`	
+31. `Grid-lg-col--7of12`	
+32. `Grid-lg-col--8of12`	
+33. `Grid-lg-col--9of12`	
+34. `Grid-lg-col--10of12`	
+35. `Grid-lg-col--11of12`	
+36. `Grid-lg-col--11of12`
+37. `Grid-xl-col--1of12`	
+38. `Grid-xl-col--2of12`	
+39. `Grid-xl-col--3of12`	
+40. `Grid-xl-col--4of12`	
+41. `Grid-xl-col--5of12`	
+42. `Grid-xl-col--6of12`	
+43. `Grid-xl-col--7of12`	
+44. `Grid-xl-col--8of12`	
+45. `Grid-xl-col--9of12`	
+46. `Grid-xl-col--10of12`	
+47. `Grid-xl-col--11of12`	
+48. `Grid-xl-col--11of12`
+49. `Grid-xxl-col--1of12`	
+50. `Grid-xxl-col--2of12`	
+51. `Grid-xxl-col--3of12`	
+52. `Grid-xxl-col--4of12`	
+53. `Grid-xxl-col--5of12`	
+54. `Grid-xxl-col--6of12`	
+55. `Grid-xxl-col--7of12`	
+56. `Grid-xxl-col--8of12`	
+57. `Grid-xxl-col--9of12`	
+58. `Grid-xxl-col--10of12`	
+59. `Grid-xxl-col--11of12`	
+60. `Grid-xxl-col--11of12`
 
 ## Gutters
 
-### Static
-
-1. `Grid-gutter--xs`
-2. `Grid-gutter--sm`
-3. `Grid-gutter--md`
-4. `Grid-gutter--lg`
-5. `Grid-gutter--xl`
-6. `Grid-gutter--xxl`
-
-### XS breakpoint
-
-1. `Grid-xs-gutter--xs`
-2. `Grid-xs-gutter--sm`
-3. `Grid-xs-gutter--md`
-4. `Grid-xs-gutter--lg`
-5. `Grid-xs-gutter--xl`
-6. `Grid-xs-gutter--xxl`
-
-### SM breakpoint
-
-1. `Grid-sm-gutter--xs`
-2. `Grid-sm-gutter--sm`
-3. `Grid-sm-gutter--md`
-4. `Grid-sm-gutter--lg`
-5. `Grid-sm-gutter--xl`
-6. `Grid-sm-gutter--xxl`
-
-### MD breakpoint
-
-1. `Grid-md-gutter--xs`
-2. `Grid-md-gutter--sm`
-3. `Grid-md-gutter--md`
-4. `Grid-md-gutter--lg`
-5. `Grid-md-gutter--xl`
-6. `Grid-md-gutter--xxl`
-
-### LG breakpoint
-
-1. `Grid-lg-gutter--xs`
-2. `Grid-lg-gutter--sm`
-3. `Grid-lg-gutter--md`
-4. `Grid-lg-gutter--lg`
-5. `Grid-lg-gutter--xl`
-6. `Grid-lg-gutter--xxl`
-
-### XL breakpoint
-
-1. `Grid-xl-gutter--xs`
-2. `Grid-xl-gutter--sm`
-3. `Grid-xl-gutter--md`
-4. `Grid-xl-gutter--lg`
-5. `Grid-xl-gutter--xl`
-6. `Grid-xl-gutter--xxl`
-
-### XXL breakpoint
-
-1. `Grid-xxl-gutter--xs`
-2. `Grid-xxl-gutter--sm`
-3. `Grid-xxl-gutter--md`
-4. `Grid-xxl-gutter--lg`
-5. `Grid-xxl-gutter--xl`
-6. `Grid-xxl-gutter--xxl`
-
-#### TODO
-
-1. `Grid-lg-gutter--sm`
-2. `Grid-lg-gutter--lgAfter`
-3. `Grid-md-gutter`
-4. `Grid-gutter` 
+1. `Grid-gutter`
+2. `Grid-gutter--xs`
+3. `Grid-gutter--sm`
+4. `Grid-gutter--md`
+5. `Grid-gutter--lg`
+6. `Grid-gutter--xl`
+7. `Grid-gutter--xxl`
+8. `Grid-gutter--before`
+9. `Grid-gutter--xsBefore`
+10. `Grid-gutter--smBefore`
+11. `Grid-gutter--mdBefore`
+12. `Grid-gutter--lgBefore`
+13. `Grid-gutter--xlBefore`
+14. `Grid-gutter--xxlBefore`
+15. `Grid-gutter--after`
+16. `Grid-gutter--xsAfter`
+17. `Grid-gutter--smAfter`
+18. `Grid-gutter--mdAfter`
+19. `Grid-gutter--lgAfter`
+20. `Grid-gutter--xlAfter`
+21. `Grid-gutter--xxlAfter`
 
 ## Rows
 
 1. `Grid-row`
-2. `Grid-row--lg`
-3. `Grid-md-row-xl`
-4. `Grid-md-row-xlBefore`
+2. `Grid-row--xs`
+3. `Grid-row--sm`
+4. `Grid-row--md`
+5. `Grid-row--lg`
+6. `Grid-row--xl`
+7. `Grid-row--xxl`
+8. `Grid-row--before`
+9. `Grid-row--xsBefore`
+10. `Grid-row--smBefore`
+11. `Grid-row--mdBefore`
+12. `Grid-row--lgBefore`
+13. `Grid-row--xlBefore`
+14. `Grid-row--xxlBefore`
+15. `Grid-row--after`
+16. `Grid-row--xsAfter`
+17. `Grid-row--smAfter`
+18. `Grid-row--mdAfter`
+19. `Grid-row--lgAfter`
+20. `Grid-row--xlAfter`
+21. `Grid-row--xxlAfter`
 
-## Notes 
+## Containers
 
-1. Use beforeClassName/afterClassName for left/right specification
+1. `Grid-container--fluid`
+2. `Grid-container--xs`
+3. `Grid-container--sm`
+4. `Grid-container--md`
+5. `Grid-container--lg`
+6. `Grid-container--xl`
+7. `Grid-container--xxl`
