@@ -1,5 +1,14 @@
 @function exists($name, $type) {
 
-    @return call($type + "-exists", $name);
+	@if not not index($existTypes, $type) {
+
+    	@return call($type + "-exists", $name);
+
+	} @else {
+
+		@error #{$type} " is incorrect type for exists function";
+
+	}
+
 
 }
