@@ -63,6 +63,13 @@ $paddingDirections: (
 
 /*-----  End of Paddings  ------*/
 
+
+
+
+/*==================================
+=            Typography            =
+==================================*/
+
 $type: (
 	indexBegin: 			-2,
 	indexEnd: 				6,
@@ -96,3 +103,36 @@ $type: (
 		textAlt:  				"Dosis, sans-serif"
 	)
 );
+
+/*-----  End of Typography  ------*/
+
+
+
+
+/*============================
+=            Grid            =
+============================*/
+
+$grid: (
+	bpXs: 						map-get($breakpoints, xs),
+	bpSm: 						map-get($breakpoints, sm),
+	bpMd: 						map-get($breakpoints, md),
+	bpLg: 						map-get($breakpoints, lg),
+	bpXl: 						map-get($breakpoints, xl),
+	bpXxl: 						map-get($breakpoints, xxl),
+	containerXs: 				300px,
+	containerSm: 				450px,
+	containerMd: 				600px,
+	containerLg: 				750px,
+	containerXl: 				900px,
+	containerXxl: 				1050px,
+	containerFluid: 			1200px,
+	columns: 					12,
+	base: 						5px,
+	ratio: 						map-get($type, sizeRatio),
+	round: 						true,
+	output: 					responsive
+);
+
+/*-----  End of Grid  ------*/
+
