@@ -25,3 +25,18 @@ Directives can be nested inside of functions and mixins. They __have__ to get an
 	}
 
 
+## File names 
+
+Breaking SASS into partials is a very powerfull feature, but
+it can become a mess without strict file name convetions.
+Use lower level camel case, starting with a file name and 
+appending one of these file type descriptors to the end of the
+filename. 
+
+`_fileNameFunction.scss`
+
+1. `Function` or `functions` - depends on the number of functions
+2. `Mixin` or `mixins` -  depends on the number of mixins
+3. `Variable` or `Variables` - depends on the number of variables
+4. `Include` - seperate file partial, with a single purpose - 
+include previously generated css 
