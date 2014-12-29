@@ -1585,22 +1585,14 @@ is_color(test)    	//returns false</code></pre>
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function is_empty($var) { 
-	@if type-of($var) == string {
+	@if type-of($var) == string and
+		str-length($var) == 0 {
 
-		@return str-length($var) == 0;
-
-	}
-	@if type-of($var) == number {
-
-		@return $var != 0;
+		@return true;
 
 	}
-	@if type-of($var) == list {
-
-		@return length($var) == 0;
-
-	}
-	@if $var == false {
+	@if type-of($var) == list and
+		length($var) == 0 {
 
 		@return true;
 
@@ -1609,12 +1601,17 @@ is_color(test)    	//returns false</code></pre>
 
 		@return true;
 
+	} @else {
+
+		@return false;
+
 	}
+
  }"
     data-collapsed="@function is_empty($var) { ... }"><code>@function is_empty($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L17-L44" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L20-L44" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1730,6 +1727,15 @@ is_empty(&#39;test&#39;)	//returns false</code></pre>
   
     
     
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Fix empty function</p>
+</li>
+    
+  </ul>
+
 
   
     
@@ -2839,12 +2845,6 @@ is_measure(em)    	//returns false</code></pre>
 
 		@return true;
 
-	} @else if is-measure($var) and $var == 0 {
-
-		@warn &quot;Using zero value with units is a lame idea&quot;;
-
-		@return false;
-
 	} @else {
 
 		@return false;
@@ -2854,7 +2854,7 @@ is_measure(em)    	//returns false</code></pre>
     data-collapsed="@function is-measureNegative($var) { ... }"><code>@function is-measureNegative($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_measureNegative.scss#L22-L39" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_measureNegative.scss#L22-L33" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3038,12 +3038,6 @@ is-measureNegative(777rem) 		//returns false</code></pre>
 
 		@return true;
 
-	} @else if is-measure($var) and $var == 0 {
-
-		@warn &quot;Using zero value with units is a lame idea&quot;;
-
-		@return false;
-
 	} @else {
 
 		@return false;
@@ -3053,7 +3047,7 @@ is-measureNegative(777rem) 		//returns false</code></pre>
     data-collapsed="@function is-measurePositive($var) { ... }"><code>@function is-measurePositive($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_measurePositive.scss#L22-L39" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_measurePositive.scss#L22-L33" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3248,7 +3242,7 @@ is-measurePositive(-777px)  //returns false</code></pre>
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function is_negative($value) { 
-	@if (type-of($var) == number) and $var &lt; 0 == true {
+	@if (type-of($var) == number) and $var &lt; 0 {
 
 		@return true;
 
@@ -3842,19 +3836,20 @@ is_number(1em) 	//returns false</code></pre>
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function is-positive($var) { 
-    @if is-number($var) and $var &gt; 0 == true {
+    @if is-number($var) and $var &gt; 0 {
+
         @return true;
-    } @else if $var == 0 {
-		@warn &quot;Number is not positive! Number equals zero&quot;;
-		@return false;
+
     } @else {
+
         @return false;
+
     }
  }"
     data-collapsed="@function is-positive($var) { ... }"><code>@function is-positive($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_positive.scss#L19-L29" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_positive.scss#L19-L30" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -4040,13 +4035,13 @@ is-positive(-1)  	//returns false</code></pre>
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function is_string($var) { 
-	@if type-of($var) != string {
+	@if type-of($var) == string {
 
-		@return false;
+		@return true;
 
 	} @else {
 
-		@return true;
+		@return false;
 
 	}
  }"
@@ -19057,7 +19052,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
+    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
   
 
 
@@ -19066,7 +19061,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
+    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
   
 
 
@@ -19084,7 +19079,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -19093,7 +19088,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
   
 
 
@@ -19210,15 +19205,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-union"><code>sl-union</code></a></li>
   
 
@@ -19229,6 +19215,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
