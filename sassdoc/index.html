@@ -1585,36 +1585,30 @@ is_color(test)    	//returns false</code></pre>
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function is_empty($var) { 
-	@if type-of($var) == string {
-
-		@return str-length($var) == 0;
-
-	}
-	@if type-of($var) == number {
-
-		@return $var != 0;
-
-	}
-	@if type-of($var) == list {
-
-		@return length($var) == 0;
-
-	}
-	@if $var == false {
+	@if type-of($var) == list and
+		length($var) == 0 {
 
 		@return true;
 
-	}
-	@if $var == null {
+	} @else if $var == null  {
 
 		@return true;
+
+	} @else if type-of($var) == string and
+		str-length($var) == 0 {
+
+		@return true;
+
+	} @else {
+
+		@return false;
 
 	}
  }"
     data-collapsed="@function is_empty($var) { ... }"><code>@function is_empty($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L17-L44" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L17-L38" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1714,6 +1708,21 @@ is_empty(&#39;test&#39;)	//returns false</code></pre>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-validate"><code>validate</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3843,18 +3852,24 @@ is_number(1em) 	//returns false</code></pre>
     data-current-state="collapsed"
     data-expanded="@function is-positive($var) { 
     @if is-number($var) and $var &gt; 0 == true {
+
         @return true;
+
     } @else if $var == 0 {
 		@warn &quot;Number is not positive! Number equals zero&quot;;
+
 		@return false;
+
     } @else {
+
         @return false;
+
     }
  }"
     data-collapsed="@function is-positive($var) { ... }"><code>@function is-positive($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_positive.scss#L19-L29" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_positive.scss#L19-L35" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -4432,6 +4447,11 @@ is_string(1)    	//returns false</code></pre>
 				$errors: append($errors, 1);
 			}
 		}
+		@else if $validation == empty {
+			@if not is_empty($var) {
+				$errors: append($errors, 1);
+			}
+		}
 
 		//as we checked earlier $validation must be one of our data types
 		//so this condition my never be encountered but just in case..return false
@@ -4458,7 +4478,7 @@ is_string(1)    	//returns false</code></pre>
     data-collapsed="@function validate($var, $validations) { ... }"><code>@function validate($var, $validations) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_validationFunction.scss#L22-L157" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_validationFunction.scss#L22-L162" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -4704,6 +4724,19 @@ validate(1, string)        	//returns false</code></pre>
     
       <li>
         <a href="#function-is_map"><code>is_map</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-is_empty"><code>is_empty</code></a>
         
       </li>
     
@@ -17211,7 +17244,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -17220,7 +17253,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -19165,7 +19198,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -19174,7 +19207,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -21069,7 +21102,7 @@ is_unit(777) 		//returns false</code></pre>
 
     
 
-    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
+    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
   
 
 
@@ -21078,7 +21111,7 @@ is_unit(777) 		//returns false</code></pre>
 
     
 
-    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
+    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
 
