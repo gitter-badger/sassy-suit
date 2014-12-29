@@ -1626,7 +1626,7 @@ body {
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto|Nunito|Roboto%3A%20700|Roboto%3A%20300|Roboto%3A%20400%2C%20italic|Open%20Sans|Dosis|Open%20Sans%3A%20700|Open%20Sans%3A%20300|Open%20Sans%3A%20400%2C%20italic");
 .wrapper {
-  max-width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1638,16 +1638,18 @@ body {
 
 main {
   background-color: #eee;
-  width: 66.10169491525424%;
+  width: 63.888888888888886%;
   float: left;
-  margin-right: 1.694915254237288%;
+  margin-left: 1.3888888888888888%;
+  margin-right: 1.3888888888888888%;
 }
 
 aside {
   background-color: #999;
-  width: 32.20338983050847%;
+  width: 30.555555555555557%;
   float: right;
-  margin-right: 0;
+  margin-left: 1.3888888888888888%;
+  margin-right: 1.3888888888888888%;
 }
 aside ul {
   background-color: lightblue;
