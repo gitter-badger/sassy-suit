@@ -22,11 +22,6 @@
 
         @return true;
 
-    } @else if $var == 0 {
-		@warn "Number is not positive! Number equals zero";
-
-		@return false;
-
     } @else {
 
         @return false;
