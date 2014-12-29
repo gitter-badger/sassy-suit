@@ -2,7 +2,7 @@
 @import "_grids.scss";
 @import "_containers.scss";
 
-// inside static
+//   gutter-position: inside static,
 
 $susy: (
   flow: ltr,
@@ -30,6 +30,12 @@ $susy: (
     rem: true,
   )
 );
+
+$susy2: (
+  gutters: 2.5
+);
+
+@include layout($susy2);
 
 .wrapper {
 	@include container();

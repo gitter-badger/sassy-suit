@@ -1638,18 +1638,18 @@ body {
 
 main {
   background-color: #eee;
-  width: 63.888888888888886%;
+  width: 60.714285714285715%;
   float: left;
-  margin-left: 1.3888888888888888%;
-  margin-right: 1.3888888888888888%;
+  margin-left: 2.976190476190476%;
+  margin-right: 2.976190476190476%;
 }
 
 aside {
   background-color: #999;
-  width: 30.555555555555557%;
+  width: 27.380952380952383%;
   float: right;
-  margin-left: 1.3888888888888888%;
-  margin-right: 1.3888888888888888%;
+  margin-left: 2.976190476190476%;
+  margin-right: 2.976190476190476%;
 }
 aside ul {
   background-color: lightblue;
