@@ -132,6 +132,11 @@
 				$errors: append($errors, 1);
 			}
 		}
+		@else if $validation == empty {
+			@if not is_empty($var) {
+				$errors: append($errors, 1);
+			}
+		}
 
 		//as we checked earlier $validation must be one of our data types
 		//so this condition my never be encountered but just in case..return false
