@@ -26,7 +26,7 @@
 
 	}
 	@if type-of($var) == list and
-		nth($var, 1) == false {
+		length($var) == 0 {
 
 		@return true;
 
