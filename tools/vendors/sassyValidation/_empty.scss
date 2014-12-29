@@ -13,25 +13,20 @@
 * is_empty(())      	//returns true
 * is_empty('test')	//returns false
 *
+* @todo
+* Fix empty function
+*
 */
 
 @function is_empty($var) {
-	@if type-of($var) == string {
+	@if type-of($var) == string and
+		str-length($var) == 0 {
 
-		@return str-length($var) == 0;
-
-	}
-	@if type-of($var) == number {
-
-		@return $var != 0;
+		@return true;
 
 	}
-	@if type-of($var) == list {
-
-		@return length($var) == 0;
-
-	}
-	@if $var == false {
+	@if type-of($var) == list and
+		nth($var, 1) == false {
 
 		@return true;
 
@@ -40,5 +35,10 @@
 
 		@return true;
 
+	} @else {
+
+		@return false;
+
 	}
+
 }
