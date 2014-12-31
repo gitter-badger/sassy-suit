@@ -1575,11 +1575,32 @@ is_color(test)    	//returns false</code></pre>
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function is_empty($var) {  }"
+    data-expanded="@function is_empty($var) { 
+	@if type-of($var) == list and
+		length($var) == 0 {
+
+		@return true;
+
+	} @else if $var == null  {
+
+		@return true;
+
+	} @else if type-of($var) == string and
+		str-length($var) == 0 {
+
+		@return true;
+
+	} @else {
+
+		@return false;
+
+	}
+
+ }"
     data-collapsed="@function is_empty($var) { ... }"><code>@function is_empty($var) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L20-L22" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/vendors/sassyValidation/_empty.scss#L17-L39" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1710,15 +1731,6 @@ is_empty(&#39;test&#39;)	//returns false</code></pre>
   
     
     
-  <h3 class="item__sub-heading">TODO's</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Fix empty function</p>
-</li>
-    
-  </ul>
-
 
   
     
@@ -12523,7 +12535,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -12532,7 +12544,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -17019,15 +17031,6 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
@@ -17037,7 +17040,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -17047,6 +17050,15 @@ null</code></pre>
     
 
     <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -18928,15 +18940,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-purge"><code>sl-purge</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-random-value"><code>sl-random-value</code></a></li>
   
 
@@ -18946,16 +18949,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
+    <li><a href="#function-sl-purge"><code>sl-purge</code></a></li>
   
 
 
@@ -18973,7 +18967,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
   
 
 
@@ -18991,7 +18985,16 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -19001,6 +19004,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -19495,7 +19507,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -19504,7 +19516,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20877,15 +20889,6 @@ is_unit(777) 		//returns false</code></pre>
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
@@ -20896,6 +20899,15 @@ is_unit(777) 		//returns false</code></pre>
     
 
     <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
   
 
 
