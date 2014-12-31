@@ -20,7 +20,7 @@
 */
 
 @function is_negative($var) {
-	@if (type-of($var) == number) and $var < 0 == true {
+	@if (type-of($var) == number) and $var < 0 {
 
 		@return true;
 

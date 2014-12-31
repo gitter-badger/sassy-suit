@@ -13,6 +13,9 @@
 * is_empty(())      	//returns true
 * is_empty('test')	//returns false
 *
+* @todo
+* Fix empty function
+*
 */
 
 @function is_empty($var) {
@@ -30,9 +33,10 @@
 
 		@return true;
 
-	} @else {
+	@else {
 
 		@return false;
 
 	}
+
 }
