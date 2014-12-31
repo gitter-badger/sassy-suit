@@ -1,11 +1,1 @@
-/**
-*
-* Output variant
-* warn, error, false/none
-*
-**/
-
-$config: (
-	output: warn,
-	message: "You can't check for this type of existance or name of the existance is incorrect"
-);
+$existTypes: variable global-variable mixin function feature;

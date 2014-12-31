@@ -370,12 +370,6 @@
 *
 */
 /**
-*
-* Output variant
-* warn, error, false/none
-*
-**/
-/**
  * Checks whether `$functions` exist in global scope.
  *
  * @access private
