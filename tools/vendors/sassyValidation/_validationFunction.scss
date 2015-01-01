@@ -2,7 +2,7 @@
 *
 * Validates input against various tests
 *
-* @group sassyValidation
+* @group SassyValidation
 *
 * @param {value} $var - a variable to be tested
 * @param {list|string|any} $validations - the validations to test (e.g. measure, string, number,unit). "any" means it can be any type so there won't be any kind of test.
