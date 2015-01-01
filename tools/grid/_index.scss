@@ -11,17 +11,17 @@ $susy: (
   flow: ltr,
   math: fluid,
   output: float,
-  gutter-position: split,
+  gutter-position: inside-static,
   container: 1200px,
   container-position: center,
   columns: 12,
-  gutters: .5,
-  column-width: false,
-  global-box-sizing: content-box,
+  gutters: 30px/50px,
+  column-width: 50px,
+  box-sizing: border-box,
   last-flow: to,
   debug: (
-    image: hide,
-    color: rgba(#66f, .25),
+    image: show,
+    color: rgba(orange, .25),
     output: background,
     toggle: top right,
   ),
@@ -34,11 +34,21 @@ $susy: (
   )
 );
 
-$susy2: (
-  gutters: 2.5
-);
+// $susy: (
+//   gutter-position: inside-static,
+//   container: 1200px,
+//   columns: 12,
+//   column-width: 100px,
+//   debug: (
+//     image: show,
+//   ),
+// );
 
-@include layout($susy2);
+// $susy2: (
+//   gutters: 2.5
+// );
+
+// @include layout($susy2);
 
 .wrapper {
 	@include container();
@@ -57,7 +67,7 @@ aside {
 		background-color: lightblue;
 	}
 
-	@include span(4 at 9);
+	@include span(4);
 }
 
 // if output style is responsive, than
