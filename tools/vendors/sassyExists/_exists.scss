@@ -1,13 +1,33 @@
 @function exists($name, $type) {
 
 	@if not not index($existTypes, $type) {
-
-    	@return call($type + "-exists", $name);
+    	@return call($type + -exists, $name);
 
 	} @else {
 
-		@error #{$type} is incorrect type for exists
-		function;
+      @if $type == var {
+        @return call(variable-exists, $name);
+      }
+
+      @if $type == globVar or
+          $type == glob-var {
+        @return call(global-variable-exists, $name);
+      }
+
+      @if $type == fun or
+          $type == func {
+        @return call(function-exists, $name);
+      }
+
+      @if $type == mix {
+        @return call(mixin-exists, $name);
+      }
+
+      @if $type == feat {
+        @return call(feature-exists, $name);
+      }
+
+		@error #{$type} is incorrect type for exists function;
 
 	}
 }
