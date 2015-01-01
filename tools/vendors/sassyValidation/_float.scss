@@ -7,7 +7,7 @@
 * @require is-number
 * @require is-integer
 *
-* @param {literal} $var  - check for float type
+* @param {*} $var  - check for float type
 *
 * @return {bool}
 *
@@ -18,7 +18,7 @@
 * is-float(1em) 	//returns false
 * is-float(0) 	//returns false
 *
-* @todo Literal or * for param
+* @author Vova Skok
 *
 */
 

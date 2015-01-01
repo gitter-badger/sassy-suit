@@ -18,6 +18,8 @@
 * is-measureNegative(0)       	//returns false
 * is-measureNegative(777rem) 		//returns false
 *
+* @author Vova Skok
+*
 */
 
 @function is-measureNegative($var) {

@@ -17,6 +17,8 @@
 * is-integer(1.5)		//returns false
 * is-integer(1em)		//returns false
 *
+* @author Vova Skok
+*
 */
 
 @function is-integer($var) {

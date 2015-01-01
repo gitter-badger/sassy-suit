@@ -18,6 +18,8 @@
 * validate(1, number)        	//returns 1
 * validate(1, string)        	//returns false
 *
+* @author Vova Skok
+*
 */
 
 @function validate($var, $validations) {

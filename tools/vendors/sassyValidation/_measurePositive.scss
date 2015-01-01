@@ -18,6 +18,8 @@
 * is-measurePositive(0)   	//returns false
 * is-measurePositive(-777px)  //returns false
 *
+* @author Vova Skok
+*
 */
 
 @function is-measurePositive($var) {

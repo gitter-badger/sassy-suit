@@ -36,6 +36,8 @@
 *
 * @type List
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -54,6 +56,8 @@
 * is_bool(1)        	//returns false
 * is_bool(null)     	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -70,6 +74,8 @@
 * is_color(black) 	//returns true
 * is_color(test)    	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -85,6 +91,8 @@
 * is_empty('')      	//returns true
 * is_empty(())      	//returns true
 * is_empty('test')	//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -104,6 +112,8 @@
 * is_list(test)         //returns false
 * is_list(1)            //returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -121,6 +131,8 @@
 * is_map((test, test))		//returns false
 * is_map(test)         		//returns false
 * is_map(1)            		//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -140,6 +152,8 @@
 * is_measure(test)  	//returns false
 * is_measure(em)    	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -158,6 +172,8 @@
 * is_null('hello') 	//returns false
 * is_null(113)     	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -174,6 +190,8 @@
 * is_number('1') 	//returns false
 * is_number(1em) 	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -188,6 +206,8 @@
 * @example
 * is_string(test) 	//returns true
 * is_string(1)    	//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -205,6 +225,8 @@
 * is_unit(-1000px) 	//returns true
 * is_unit('test') 	//returns false
 * is_unit(777) 		//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -226,6 +248,8 @@
 * is-integer(1.5)		//returns false
 * is-integer(1em)		//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -236,7 +260,7 @@
 * @require is-number
 * @require is-integer
 *
-* @param {literal} $var  - check for float type
+* @param {*} $var  - check for float type
 *
 * @return {bool}
 *
@@ -247,7 +271,7 @@
 * is-float(1em) 	//returns false
 * is-float(0) 	//returns false
 *
-* @todo Literal or * for param
+* @author Vova Skok
 *
 */
 /**
@@ -266,6 +290,8 @@
 * is-positive(1)   	//returns true
 * is-positive(0)   	//returns false
 * is-positive(-1)  	//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -286,6 +312,8 @@
 * is_negative(300)    	//returns false
 * is_negative('test') 	//returns false
 * is_negative(0)      	//returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -308,6 +336,8 @@
 * is-measureNegative(0)       	//returns false
 * is-measureNegative(777rem) 		//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -328,6 +358,8 @@
 * is-measurePositive(0px)   	//returns false
 * is-measurePositive(0)   	//returns false
 * is-measurePositive(-777px)  //returns false
+*
+* @author Vova Skok
 *
 */
 /**
@@ -350,6 +382,8 @@
 * validate(1, number)        	//returns 1
 * validate(1, string)        	//returns false
 *
+* @author Vova Skok
+*
 */
 /**
 *
@@ -367,6 +401,8 @@
 * @return {bool}
 *
 * @throws '$var is not a known validation type.'
+*
+* @author Vova Skok
 *
 */
 /**

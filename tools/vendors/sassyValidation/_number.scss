@@ -13,6 +13,8 @@
 * is_number('1') 	//returns false
 * is_number(1em) 	//returns false
 *
+* @author Vova Skok
+*
 */
 
 @function is_number($var) {
