@@ -38,6 +38,58 @@
 
     
     
+      <p class="sidebar__item  sidebar__item--heading" data-slug="sassyexists"><a href="#sassyexists">sassyexists</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="sassyexists-function"><a href="#sassyexists-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="exists" data-type="function">
+              <a href="#function-exists">exists
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="sassyexists-variable"><a href="#sassyexists-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="existTypes" data-type="variable">
+              <a href="#variable-existTypes">existTypes
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
       <p class="sidebar__item  sidebar__item--heading" data-slug="sassyvalidation"><a href="#sassyvalidation">SassyValidation</a></p>
 
       
@@ -1093,35 +1145,6 @@
       
 
     
-      <p class="sidebar__item  sidebar__item--heading" data-slug="sassyexists"><a href="#sassyexists">sassyexists</a></p>
-
-      
-      
-        <div>
-
-        
-        
-
-        
-        
-          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="sassyexists-variable"><a href="#sassyexists-variable">variables</a></p>
-
-          
-          
-            <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="existTypes" data-type="variable">
-              <a href="#variable-existTypes">existTypes
-              
-              
-              </a>
-            </li>
-            </ul>
-          
-        
-        </div>
-      
-
-    
   
 </div>
 
@@ -1159,6 +1182,437 @@
   
 
     
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="sassyexists">sassyexists</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="sassyexists-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-exists">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-exists">exists</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function exists($name, $type) { 
+
+	@if not not index($existTypes, $type) {
+
+    	@return call($type + -exists, $name);
+
+	} @else {
+
+      @if $type == var {
+
+        @return call(variable-exists, $name);
+
+      }
+
+      @if $type == globVar or
+          $type == glob-var {
+
+        @return call(global-variable-exists, $name);
+
+      }
+
+      @if $type == fun or
+          $type == func {
+
+        @return call(function-exists, $name);
+
+      }
+
+      @if $type == mix {
+
+        @return call(mixin-exists, $name);
+
+      }
+
+      @if $type == feat {
+
+        @return call(feature-exists, $name);
+
+      }
+
+		@error #{$type} is incorrect type for exists function;
+
+	}
+ }"
+    data-collapsed="@function exists($name, $type) { ... }"><code>@function exists($name, $type) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/SassyExists/_exists.scss#L21-L65" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Tests whether <code>$name</code> exists.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$name</code></th>
+          <td data-label="desc"><p>check if $name exists</p>
+</td>
+          <td data-label="type">
+          
+            Variable, Global-variable, Function, Mixin, Feature
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$type</code></th>
+          <td data-label="desc"><p>exist type</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">exists(variable, var)    	//returns true
+exists(noFunction, fun)    	//returns false</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-existTypes"><code>existTypes</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="sassyexists-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-existTypes">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-existTypes">existTypes</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$existTypes: variable global-variable mixin function feature;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/vendors/SassyExists/_config.scss#L12-L14" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>List of possible exist values</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>List</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-exists"><code>exists</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
     
       <section class="main__section">
         <h1 class="main__heading" id="sassyvalidation">SassyValidation</h1>
@@ -19283,7 +19737,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
+    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
   
 
 
@@ -19292,7 +19746,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-intersection"><code>sl-intersection</code></a></li>
+    <li><a href="#function-sl-insert-nth"><code>sl-insert-nth</code></a></li>
   
 
 
@@ -21805,142 +22259,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   
   </ul>
 
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Vova Skok</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-            </section>
-          
-        
-
-      </section>
-    
-      <section class="main__section">
-        <h1 class="main__heading" id="sassyexists">sassyexists</h1>
-
-        
-        
-
-          
-          
-
-          
-          
-            <section class="main__sub-section" id="sassyexists-variable">
-              <h2 class="main__heading--secondary">variables</h2>
-
-              
-              
-                <section class="main__item  item" id="variable-existTypes">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-existTypes">existTypes</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$existTypes: variable global-variable mixin function feature;</code></pre>
-
-  
-    <a href="https://github.com/SassySuit/SassySuit/vendors/SassyExists/_config.scss#L12-L14" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>List of possible exist values</p>
-</div>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>List</code>
-  
-  </p>
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
   
     
     

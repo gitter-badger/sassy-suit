@@ -417,6 +417,26 @@
 *
 */
 /**
+*
+* Tests whether `$name` exists.
+*
+* @group SassyExists
+*
+* @require $existTypes
+*
+* @param {variable | global-variable | function | mixin | feature} $name  - check if $name exists
+* @param {string} $type - exist type
+*
+* @return {bool}
+*
+* @example
+* exists(variable, var)    	//returns true
+* exists(noFunction, fun)    	//returns false
+*
+* @author Vova Skok
+*
+*/
+/**
  * Checks whether `$functions` exist in global scope.
  *
  * @access private
