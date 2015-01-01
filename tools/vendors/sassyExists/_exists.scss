@@ -6,9 +6,8 @@
 
 	} @else {
 
-		@error #{$type} " is incorrect type for exists function";
+		@error #{$type} is incorrect type for exists
+		function;
 
 	}
-
-
 }
