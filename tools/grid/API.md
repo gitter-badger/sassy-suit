@@ -4,290 +4,310 @@
 
 ## Grids
 
-`Grid-sm-col--1of12`	
-`Grid-sm-col--2of12`	
-`Grid-sm-col--3of12`	
-`Grid-sm-col--4of12`	
-`Grid-sm-col--5of12`	
-`Grid-sm-col--6of12`	
-`Grid-sm-col--7of12`	
-`Grid-sm-col--8of12`	
-`Grid-sm-col--9of12`	
-`Grid-sm-col--10of12`	
-`Grid-sm-col--11of12`	
-`Grid-md-col--1of12`	
-`Grid-md-col--2of12`	
-`Grid-md-col--3of12`	
-`Grid-md-col--4of12`	
-`Grid-md-col--5of12`	
-`Grid-md-col--6of12`	
-`Grid-md-col--7of12`	
-`Grid-md-col--8of12`	
-`Grid-md-col--9of12`	
-`Grid-md-col--10of12`	
-`Grid-md-col--11of12`	
-`Grid-lg-col--1of12`	
-`Grid-lg-col--2of12`	
-`Grid-lg-col--3of12`	
-`Grid-lg-col--4of12`	
-`Grid-lg-col--5of12`	
-`Grid-lg-col--6of12`	
-`Grid-lg-col--7of12`	
-`Grid-lg-col--8of12`	
-`Grid-lg-col--9of12`	
-`Grid-lg-col--10of12`	
-`Grid-lg-col--11of12`
-`Grid-xl-col--1of12`	
-`Grid-xl-col--2of12`	
-`Grid-xl-col--3of12`	
-`Grid-xl-col--4of12`	
-`Grid-xl-col--5of12`	
-`Grid-xl-col--6of12`	
-`Grid-xl-col--7of12`	
-`Grid-xl-col--8of12`	
-`Grid-xl-col--9of12`	
-`Grid-xl-col--10of12`	
-`Grid-xl-col--11of12`
-`Grid-xxl-col--1of12`	
-`Grid-xxl-col--2of12`	
-`Grid-xxl-col--3of12`	
-`Grid-xxl-col--4of12`	
-`Grid-xxl-col--5of12`	
-`Grid-xxl-col--6of12`	
-`Grid-xxl-col--7of12`	
-`Grid-xxl-col--8of12`	
-`Grid-xxl-col--9of12`	
-`Grid-xxl-col--10of12`	
-`Grid-xxl-col--11of12`
+1. `Grid-sm-col--1of12`	
+2. `Grid-sm-col--2of12`	
+3. `Grid-sm-col--3of12`	
+4. `Grid-sm-col--4of12`	
+5. `Grid-sm-col--5of12`	
+6. `Grid-sm-col--6of12`	
+7. `Grid-sm-col--7of12`	
+8. `Grid-sm-col--8of12`	
+9. `Grid-sm-col--9of12`	
+10. `Grid-sm-col--10of12`	
+11. `Grid-sm-col--11of12`	
+12. `Grid-sm-col--12of12`	
+13. `Grid-md-col--1of12`	
+14. `Grid-md-col--2of12`	
+15. `Grid-md-col--3of12`	
+16. `Grid-md-col--4of12`	
+17. `Grid-md-col--5of12`	
+18. `Grid-md-col--6of12`	
+19. `Grid-md-col--7of12`	
+20. `Grid-md-col--8of12`	
+21. `Grid-md-col--9of12`	
+22. `Grid-md-col--10of12`	
+23. `Grid-md-col--11of12`	
+24. `Grid-md-col--12of12`	
+25. `Grid-lg-col--1of12`	
+26. `Grid-lg-col--2of12`	
+27. `Grid-lg-col--3of12`	
+28. `Grid-lg-col--4of12`	
+29. `Grid-lg-col--5of12`	
+30. `Grid-lg-col--6of12`	
+31. `Grid-lg-col--7of12`	
+32. `Grid-lg-col--8of12`	
+33. `Grid-lg-col--9of12`	
+34. `Grid-lg-col--10of12`	
+35. `Grid-lg-col--11of12`	
+36. `Grid-lg-col--12of12`
+37. `Grid-xl-col--1of12`	
+38. `Grid-xl-col--2of12`	
+39. `Grid-xl-col--3of12`	
+40. `Grid-xl-col--4of12`	
+41. `Grid-xl-col--5of12`	
+42. `Grid-xl-col--6of12`	
+43. `Grid-xl-col--7of12`	
+44. `Grid-xl-col--8of12`	
+45. `Grid-xl-col--9of12`	
+46. `Grid-xl-col--10of12`	
+47. `Grid-xl-col--11of12`	
+48. `Grid-xl-col--12of12`
+49. `Grid-xxl-col--1of12`	
+50. `Grid-xxl-col--2of12`	
+51. `Grid-xxl-col--3of12`	
+52. `Grid-xxl-col--4of12`	
+53. `Grid-xxl-col--5of12`	
+54. `Grid-xxl-col--6of12`	
+55. `Grid-xxl-col--7of12`	
+56. `Grid-xxl-col--8of12`	
+57. `Grid-xxl-col--9of12`	
+58. `Grid-xxl-col--10of12`	
+59. `Grid-xxl-col--11of12`	
+60. `Grid-xxl-col--12of12`
 
 ## Gutters
 
-`Grid-gutter`
-`Grid-gutter--xs`
-`Grid-gutter--sm`
-`Grid-gutter--md`
-`Grid-gutter--lg`
-`Grid-gutter--xl`
-`Grid-gutter--xxl`
-`Grid-gutter--before`
-`Grid-gutter--xsBefore`
-`Grid-gutter--smBefore`
-`Grid-gutter--mdBefore`
-`Grid-gutter--lgBefore`
-`Grid-gutter--xlBefore`
-`Grid-gutter--xxlBefore`
-`Grid-gutter--after`
-`Grid-gutter--xsAfter`
-`Grid-gutter--smAfter`
-`Grid-gutter--mdAfter`
-`Grid-gutter--lgAfter`
-`Grid-gutter--xlAfter`
-`Grid-gutter--xxlAfter`
+1. `Grid-gutter`
+2. `Grid-gutter--xs`
+3. `Grid-gutter--sm`
+4. `Grid-gutter--md`
+5. `Grid-gutter--lg`
+6. `Grid-gutter--xl`
+7. `Grid-gutter--xxl`
+8. `Grid-gutter--before`
+9. `Grid-gutter--xsBefore`
+10. `Grid-gutter--smBefore`
+11. `Grid-gutter--mdBefore`
+12. `Grid-gutter--lgBefore`
+13. `Grid-gutter--xlBefore`
+14. `Grid-gutter--xxlBefore`
+15. `Grid-gutter--after`
+16. `Grid-gutter--xsAfter`
+17. `Grid-gutter--smAfter`
+18. `Grid-gutter--mdAfter`
+19. `Grid-gutter--lgAfter`
+20. `Grid-gutter--xlAfter`
+21. `Grid-gutter--xxlAfter`
 
 ## Rows
 
-`Grid-row`
-`Grid-row--xs`
-`Grid-row--sm`
-`Grid-row--md`
-`Grid-row--lg`
-`Grid-row--xl`
-`Grid-row--xxl`
-`Grid-row--before`
-`Grid-row--xsBefore`
-`Grid-row--smBefore`
-`Grid-row--mdBefore`
-`Grid-row--lgBefore`
-`Grid-row--xlBefore`
-`Grid-row--xxlBefore`
-`Grid-row--after`
-`Grid-row--xsAfter`
-`Grid-row--smAfter`
-`Grid-row--mdAfter`
-`Grid-row--lgAfter`
-`Grid-row--xlAfter`
-`Grid-row--xxlAfter`
+1. `Grid-row`
+2. `Grid-row--xs`
+3. `Grid-row--sm`
+4. `Grid-row--md`
+5. `Grid-row--lg`
+6. `Grid-row--xl`
+7. `Grid-row--xxl`
+8. `Grid-row--before`
+9. `Grid-row--xsBefore`
+10. `Grid-row--smBefore`
+11. `Grid-row--mdBefore`
+12. `Grid-row--lgBefore`
+13. `Grid-row--xlBefore`
+14. `Grid-row--xxlBefore`
+15. `Grid-row--after`
+16. `Grid-row--xsAfter`
+17. `Grid-row--smAfter`
+18. `Grid-row--mdAfter`
+19. `Grid-row--lgAfter`
+20. `Grid-row--xlAfter`
+21. `Grid-row--xxlAfter`
 
 ## Containers
 
-`Grid-container--fluid`
-`Grid-container--xs`
-`Grid-container--sm`
-`Grid-container--md`
-`Grid-container--lg`
-`Grid-container--xl`
-`Grid-container--xxl`
+1. `Grid-container--fluid`
+2. `Grid-container--xs`
+3. `Grid-container--sm`
+4. `Grid-container--md`
+5. `Grid-container--lg`
+6. `Grid-container--xl`
+7. `Grid-container--xxl`
 
 ## Offsets
 
-`Grid-sm-colOffset--1of12`	
-`Grid-sm-colOffset--2of12`	
-`Grid-sm-colOffset--3of12`	
-`Grid-sm-colOffset--4of12`	
-`Grid-sm-colOffset--5of12`	
-`Grid-sm-colOffset--6of12`	
-`Grid-sm-colOffset--7of12`	
-`Grid-sm-colOffset--8of12`	
-`Grid-sm-colOffset--9of12`	
-`Grid-sm-colOffset--10of12`	
-`Grid-sm-colOffset--11of12`	
-`Grid-md-colOffset--1of12`	
-`Grid-md-colOffset--2of12`	
-`Grid-md-colOffset--3of12`	
-`Grid-md-colOffset--4of12`	
-`Grid-md-colOffset--5of12`	
-`Grid-md-colOffset--6of12`	
-`Grid-md-colOffset--7of12`	
-`Grid-md-colOffset--8of12`	
-`Grid-md-colOffset--9of12`	
-`Grid-md-colOffset--10of12`	
-`Grid-md-colOffset--11of12`	
-`Grid-lg-colOffset--1of12`	
-`Grid-lg-colOffset--2of12`	
-`Grid-lg-colOffset--3of12`	
-`Grid-lg-colOffset--4of12`	
-`Grid-lg-colOffset--5of12`	
-`Grid-lg-colOffset--6of12`	
-`Grid-lg-colOffset--7of12`	
-`Grid-lg-colOffset--8of12`	
-`Grid-lg-colOffset--9of12`	
-`Grid-lg-colOffset--10of12`	
-`Grid-lg-colOffset--11of12`
-`Grid-xl-colOffset--1of12`	
-`Grid-xl-colOffset--2of12`	
-`Grid-xl-colOffset--3of12`	
-`Grid-xl-colOffset--4of12`	
-`Grid-xl-colOffset--5of12`	
-`Grid-xl-colOffset--6of12`	
-`Grid-xl-colOffset--7of12`	
-`Grid-xl-colOffset--8of12`	
-`Grid-xl-colOffset--9of12`	
-`Grid-xl-colOffset--10of12`	
-`Grid-xl-colOffset--11of12`	
-`Grid-xxl-colOffset--1of12`	
-`Grid-xxl-colOffset--2of12`	
-`Grid-xxl-colOffset--3of12`	
-`Grid-xxl-colOffset--4of12`	
-`Grid-xxl-colOffset--5of12`	
-`Grid-xxl-colOffset--6of12`	
-`Grid-xxl-colOffset--7of12`	
-`Grid-xxl-colOffset--8of12`	
-`Grid-xxl-colOffset--9of12`	
-`Grid-xxl-colOffset--10of12`	
-`Grid-xxl-colOffset--11of12`	
+1. `Grid-sm-colOffset--1of12`	
+2. `Grid-sm-colOffset--2of12`	
+3. `Grid-sm-colOffset--3of12`	
+4. `Grid-sm-colOffset--4of12`	
+5. `Grid-sm-colOffset--5of12`	
+6. `Grid-sm-colOffset--6of12`	
+7. `Grid-sm-colOffset--7of12`	
+8. `Grid-sm-colOffset--8of12`	
+9. `Grid-sm-colOffset--9of12`	
+10. `Grid-sm-colOffset--10of12`	
+11. `Grid-sm-colOffset--11of12`	
+12. `Grid-sm-colOffset--12of12`	
+13. `Grid-md-colOffset--1of12`	
+14. `Grid-md-colOffset--2of12`	
+15. `Grid-md-colOffset--3of12`	
+16. `Grid-md-colOffset--4of12`	
+17. `Grid-md-colOffset--5of12`	
+18. `Grid-md-colOffset--6of12`	
+19. `Grid-md-colOffset--7of12`	
+20. `Grid-md-colOffset--8of12`	
+21. `Grid-md-colOffset--9of12`	
+22. `Grid-md-colOffset--10of12`	
+23. `Grid-md-colOffset--11of12`	
+24. `Grid-md-colOffset--11of12`	
+25. `Grid-lg-colOffset--1of12`	
+26. `Grid-lg-colOffset--2of12`	
+27. `Grid-lg-colOffset--3of12`	
+28. `Grid-lg-colOffset--4of12`	
+29. `Grid-lg-colOffset--5of12`	
+30. `Grid-lg-colOffset--6of12`	
+31. `Grid-lg-colOffset--7of12`	
+32. `Grid-lg-colOffset--8of12`	
+33. `Grid-lg-colOffset--9of12`	
+34. `Grid-lg-colOffset--10of12`	
+35. `Grid-lg-colOffset--11of12`	
+36. `Grid-lg-colOffset--12of12`
+37. `Grid-xl-colOffset--1of12`	
+38. `Grid-xl-colOffset--2of12`	
+39. `Grid-xl-colOffset--3of12`	
+40. `Grid-xl-colOffset--4of12`	
+41. `Grid-xl-colOffset--5of12`	
+42. `Grid-xl-colOffset--6of12`	
+43. `Grid-xl-colOffset--7of12`	
+44. `Grid-xl-colOffset--8of12`	
+45. `Grid-xl-colOffset--9of12`	
+46. `Grid-xl-colOffset--10of12`	
+47. `Grid-xl-colOffset--11of12`	
+48. `Grid-xl-colOffset--12of12`
+49. `Grid-xxl-colOffset--1of12`	
+50. `Grid-xxl-colOffset--2of12`	
+51. `Grid-xxl-colOffset--3of12`	
+52. `Grid-xxl-colOffset--4of12`	
+53. `Grid-xxl-colOffset--5of12`	
+54. `Grid-xxl-colOffset--6of12`	
+55. `Grid-xxl-colOffset--7of12`	
+56. `Grid-xxl-colOffset--8of12`	
+57. `Grid-xxl-colOffset--9of12`	
+58. `Grid-xxl-colOffset--10of12`	
+59. `Grid-xxl-colOffset--11of12`	
+60. `Grid-xxl-colOffset--12of12`
 
 ## Pushes
 
-`Grid-sm-colPush--1of12`	
-`Grid-sm-colPush--2of12`	
-`Grid-sm-colPush--3of12`	
-`Grid-sm-colPush--4of12`	
-`Grid-sm-colPush--5of12`	
-`Grid-sm-colPush--6of12`	
-`Grid-sm-colPush--7of12`	
-`Grid-sm-colPush--8of12`	
-`Grid-sm-colPush--9of12`	
-`Grid-sm-colPush--10of12`	
-`Grid-sm-colPush--11of12`	
-`Grid-md-colPush--1of12`	
-`Grid-md-colPush--2of12`	
-`Grid-md-colPush--3of12`	
-`Grid-md-colPush--4of12`	
-`Grid-md-colPush--5of12`	
-`Grid-md-colPush--6of12`	
-`Grid-md-colPush--7of12`	
-`Grid-md-colPush--8of12`	
-`Grid-md-colPush--9of12`	
-`Grid-md-colPush--10of12`	
-`Grid-md-colPush--11of12`	
-`Grid-lg-colPush--1of12`	
-`Grid-lg-colPush--2of12`	
-`Grid-lg-colPush--3of12`	
-`Grid-lg-colPush--4of12`	
-`Grid-lg-colPush--5of12`	
-`Grid-lg-colPush--6of12`	
-`Grid-lg-colPush--7of12`	
-`Grid-lg-colPush--8of12`	
-`Grid-lg-colPush--9of12`	
-`Grid-lg-colPush--10of12`	
-`Grid-lg-colPush--11of12`
-`Grid-xl-colPush--1of12`	
-`Grid-xl-colPush--2of12`	
-`Grid-xl-colPush--3of12`	
-`Grid-xl-colPush--4of12`	
-`Grid-xl-colPush--5of12`	
-`Grid-xl-colPush--6of12`	
-`Grid-xl-colPush--7of12`	
-`Grid-xl-colPush--8of12`	
-`Grid-xl-colPush--9of12`	
-`Grid-xl-colPush--10of12`	
-`Grid-xl-colPush--11of12`
-`Grid-xxl-colPush--1of12`	
-`Grid-xxl-colPush--2of12`	
-`Grid-xxl-colPush--3of12`	
-`Grid-xxl-colPush--4of12`	
-`Grid-xxl-colPush--5of12`	
-`Grid-xxl-colPush--6of12`	
-`Grid-xxl-colPush--7of12`	
-`Grid-xxl-colPush--8of12`	
-`Grid-xxl-colPush--9of12`	
-`Grid-xxl-colPush--10of12`	
-`Grid-xxl-colPush--11of12`
+1. `Grid-sm-colPush--1of12`	
+2. `Grid-sm-colPush--2of12`	
+3. `Grid-sm-colPush--3of12`	
+4. `Grid-sm-colPush--4of12`	
+5. `Grid-sm-colPush--5of12`	
+6. `Grid-sm-colPush--6of12`	
+7. `Grid-sm-colPush--7of12`	
+8. `Grid-sm-colPush--8of12`	
+9. `Grid-sm-colPush--9of12`	
+10. `Grid-sm-colPush--10of12`	
+11. `Grid-sm-colPush--11of12`	
+12. `Grid-sm-colPush--12of12`	
+13. `Grid-md-colPush--1of12`	
+14. `Grid-md-colPush--2of12`	
+15. `Grid-md-colPush--3of12`	
+16. `Grid-md-colPush--4of12`	
+17. `Grid-md-colPush--5of12`	
+18. `Grid-md-colPush--6of12`	
+19. `Grid-md-colPush--7of12`	
+20. `Grid-md-colPush--8of12`	
+21. `Grid-md-colPush--9of12`	
+22. `Grid-md-colPush--10of12`	
+23. `Grid-md-colPush--11of12`	
+24. `Grid-md-colPush--12of12`	
+25. `Grid-lg-colPush--1of12`	
+26. `Grid-lg-colPush--2of12`	
+27. `Grid-lg-colPush--3of12`	
+28. `Grid-lg-colPush--4of12`	
+29. `Grid-lg-colPush--5of12`	
+30. `Grid-lg-colPush--6of12`	
+31. `Grid-lg-colPush--7of12`	
+32. `Grid-lg-colPush--8of12`	
+33. `Grid-lg-colPush--9of12`	
+34. `Grid-lg-colPush--10of12`	
+35. `Grid-lg-colPush--11of12`	
+36. `Grid-lg-colPush--12of12`
+37. `Grid-xl-colPush--1of12`	
+38. `Grid-xl-colPush--2of12`	
+39. `Grid-xl-colPush--3of12`	
+40. `Grid-xl-colPush--4of12`	
+41. `Grid-xl-colPush--5of12`	
+42. `Grid-xl-colPush--6of12`	
+43. `Grid-xl-colPush--7of12`	
+44. `Grid-xl-colPush--8of12`	
+45. `Grid-xl-colPush--9of12`	
+46. `Grid-xl-colPush--10of12`	
+47. `Grid-xl-colPush--11of12`	
+48. `Grid-xl-colPush--12of12`
+49. `Grid-xxl-colPush--1of12`	
+50. `Grid-xxl-colPush--2of12`	
+51. `Grid-xxl-colPush--3of12`	
+52. `Grid-xxl-colPush--4of12`	
+53. `Grid-xxl-colPush--5of12`	
+54. `Grid-xxl-colPush--6of12`	
+55. `Grid-xxl-colPush--7of12`	
+56. `Grid-xxl-colPush--8of12`	
+57. `Grid-xxl-colPush--9of12`	
+58. `Grid-xxl-colPush--10of12`	
+59. `Grid-xxl-colPush--11of12`	
+60. `Grid-xxl-colPush--12of12`
 
 ## Pulls
 
-`Grid-sm-colPull--1of12`	
-`Grid-sm-colPull--2of12`	
-`Grid-sm-colPull--3of12`	
-`Grid-sm-colPull--4of12`	
-`Grid-sm-colPull--5of12`	
-`Grid-sm-colPull--6of12`	
-`Grid-sm-colPull--7of12`	
-`Grid-sm-colPull--8of12`	
-`Grid-sm-colPull--9of12`	
-`Grid-sm-colPull--10of12`	
-`Grid-sm-colPull--11of12`	
-`Grid-md-colPull--1of12`	
-`Grid-md-colPull--2of12`	
-`Grid-md-colPull--3of12`	
-`Grid-md-colPull--4of12`	
-`Grid-md-colPull--5of12`	
-`Grid-md-colPull--6of12`	
-`Grid-md-colPull--7of12`	
-`Grid-md-colPull--8of12`	
-`Grid-md-colPull--9of12`	
-`Grid-md-colPull--10of12`	
-`Grid-md-colPull--11of12`	
-`Grid-lg-colPull--1of12`	
-`Grid-lg-colPull--2of12`	
-`Grid-lg-colPull--3of12`	
-`Grid-lg-colPull--4of12`	
-`Grid-lg-colPull--5of12`	
-`Grid-lg-colPull--6of12`	
-`Grid-lg-colPull--7of12`	
-`Grid-lg-colPull--8of12`	
-`Grid-lg-colPull--9of12`	
-`Grid-lg-colPull--10of12`	
-`Grid-lg-colPull--11of12`	
-`Grid-xl-colPull--1of12`	
-`Grid-xl-colPull--2of12`	
-`Grid-xl-colPull--3of12`	
-`Grid-xl-colPull--4of12`	
-`Grid-xl-colPull--5of12`	
-`Grid-xl-colPull--6of12`	
-`Grid-xl-colPull--7of12`	
-`Grid-xl-colPull--8of12`	
-`Grid-xl-colPull--9of12`	
-`Grid-xl-colPull--10of12`	
-`Grid-xl-colPull--11of12`	
-`Grid-xxl-colPull--1of12`	
-`Grid-xxl-colPull--2of12`	
-`Grid-xxl-colPull--3of12`	
-`Grid-xxl-colPull--4of12`	
-`Grid-xxl-colPull--5of12`	
-`Grid-xxl-colPull--6of12`	
-`Grid-xxl-colPull--7of12`	
-`Grid-xxl-colPull--8of12`	
-`Grid-xxl-colPull--9of12`	
-`Grid-xxl-colPull--10of12`	
-`Grid-xxl-colPull--11of12`
+1. `Grid-sm-colPull--1of12`	
+2. `Grid-sm-colPull--2of12`	
+3. `Grid-sm-colPull--3of12`	
+4. `Grid-sm-colPull--4of12`	
+5. `Grid-sm-colPull--5of12`	
+6. `Grid-sm-colPull--6of12`	
+7. `Grid-sm-colPull--7of12`	
+8. `Grid-sm-colPull--8of12`	
+9. `Grid-sm-colPull--9of12`	
+10. `Grid-sm-colPull--10of12`	
+11. `Grid-sm-colPull--11of12`	
+12. `Grid-sm-colPull--12of12`	
+13. `Grid-md-colPull--1of12`	
+14. `Grid-md-colPull--2of12`	
+15. `Grid-md-colPull--3of12`	
+16. `Grid-md-colPull--4of12`	
+17. `Grid-md-colPull--5of12`	
+18. `Grid-md-colPull--6of12`	
+19. `Grid-md-colPull--7of12`	
+20. `Grid-md-colPull--8of12`	
+21. `Grid-md-colPull--9of12`	
+22. `Grid-md-colPull--10of12`	
+23. `Grid-md-colPull--11of12`	
+24. `Grid-md-colPull--12of12`	
+25. `Grid-lg-colPull--1of12`	
+26. `Grid-lg-colPull--2of12`	
+27. `Grid-lg-colPull--3of12`	
+28. `Grid-lg-colPull--4of12`	
+29. `Grid-lg-colPull--5of12`	
+30. `Grid-lg-colPull--6of12`	
+31. `Grid-lg-colPull--7of12`	
+32. `Grid-lg-colPull--8of12`	
+33. `Grid-lg-colPull--9of12`	
+34. `Grid-lg-colPull--10of12`	
+35. `Grid-lg-colPull--11of12`	
+36. `Grid-lg-colPull--12of12`
+37. `Grid-xl-colPull--1of12`	
+38. `Grid-xl-colPull--2of12`	
+39. `Grid-xl-colPull--3of12`	
+40. `Grid-xl-colPull--4of12`	
+41. `Grid-xl-colPull--5of12`	
+42. `Grid-xl-colPull--6of12`	
+43. `Grid-xl-colPull--7of12`	
+44. `Grid-xl-colPull--8of12`	
+45. `Grid-xl-colPull--9of12`	
+46. `Grid-xl-colPull--10of12`	
+47. `Grid-xl-colPull--11of12`	
+48. `Grid-xl-colPull--12of12`
+49. `Grid-xxl-colPull--1of12`	
+50. `Grid-xxl-colPull--2of12`	
+51. `Grid-xxl-colPull--3of12`	
+52. `Grid-xxl-colPull--4of12`	
+53. `Grid-xxl-colPull--5of12`	
+54. `Grid-xxl-colPull--6of12`	
+55. `Grid-xxl-colPull--7of12`	
+56. `Grid-xxl-colPull--8of12`	
+57. `Grid-xxl-colPull--9of12`	
+58. `Grid-xxl-colPull--10of12`	
+59. `Grid-xxl-colPull--11of12`	
+60. `Grid-xxl-colPull--12of12`
