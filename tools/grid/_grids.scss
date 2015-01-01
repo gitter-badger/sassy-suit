@@ -1,5 +1,4 @@
 .Grid-sm-col--1of12 {
-
 	@include bp(sm) {
 		@include span(1);
 	}

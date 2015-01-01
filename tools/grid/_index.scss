@@ -7,32 +7,7 @@
 
 //   gutter-position: inside static,
 
-$susy: (
-  flow: ltr,
-  math: fluid,
-  output: float,
-  gutter-position: inside-static,
-  container: 1200px,
-  container-position: center,
-  columns: 12,
-  gutters: .6,
-  column-width: 50px,
-  box-sizing: border-box,
-  last-flow: to,
-  debug: (
-    image: show,
-    color: rgba(red, .25),
-    output: background,
-    toggle: top right,
-  ),
-  use-custom: (
-    background-image: true,
-    background-options: false,
-    box-sizing: true,
-    clearfix: false,
-    rem: true,
-  )
-);
+
 
 // $susy: (
 //   gutter-position: inside-static,
@@ -67,7 +42,7 @@ aside {
 		background-color: lightblue;
 	}
 
-	@include span(4);
+	@include span(12);
 }
 
 // if output style is responsive, than

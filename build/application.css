@@ -1688,105 +1688,135 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Roboto|Nunito|Roboto%3A%20700|Roboto%3A%20300|Roboto%3A%20400%2C%20italic|Open%20Sans|Dosis|Open%20Sans%3A%20700|Open%20Sans%3A%20300|Open%20Sans%3A%20400%2C%20italic");
 @media (min-width: 300px) {
   .Grid-sm-col--1of12 {
-    width: 21.052631578947366%;
+    box-sizing: border-box;
+    width: 8.333333333333334%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--2of12 {
-    width: 47.368421052631575%;
+    box-sizing: border-box;
+    width: 16.666666666666668%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--3of12 {
-    width: 73.68421052631578%;
+    box-sizing: border-box;
+    width: 25%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--4of12 {
-    width: 100%;
+    box-sizing: border-box;
+    width: 33.333333333333336%;
     float: left;
-    margin-left: 0;
-    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--5of12 {
-    width: 126.3157894736842%;
+    box-sizing: border-box;
+    width: 41.66666666666667%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--6of12 {
-    width: 152.63157894736844%;
+    box-sizing: border-box;
+    width: 50%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--7of12 {
-    width: 178.94736842105263%;
+    box-sizing: border-box;
+    width: 58.333333333333336%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--8of12 {
-    width: 205.26315789473685%;
+    box-sizing: border-box;
+    width: 66.66666666666667%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--9of12 {
-    width: 231.57894736842107%;
+    box-sizing: border-box;
+    width: 75%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--10of12 {
-    width: 257.89473684210526%;
+    box-sizing: border-box;
+    width: 83.33333333333334%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--11of12 {
-    width: 284.2105263157895%;
+    box-sizing: border-box;
+    width: 91.66666666666667%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 300px) {
   .Grid-sm-col--12of12 {
-    width: 310.5263157894737%;
+    box-sizing: border-box;
+    width: 100%;
     float: left;
-    margin-right: 5.263157894736842%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 .Grid-container--fluid {
-  max-width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.25), rgba(255, 77, 77, 0.25));
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.25), rgba(255, 77, 77, 0.25));
+  background-size: 8.333333333333334%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
 }
 .Grid-container--fluid:after {
   content: " ";
@@ -1824,7 +1854,7 @@ main {
 aside {
   background-color: #999;
   box-sizing: border-box;
-  width: 33.333333333333336%;
+  width: 100%;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
