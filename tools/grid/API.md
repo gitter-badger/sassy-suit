@@ -4,6 +4,19 @@
 
 ## Grids
 
+`Grid-col--1of12`
+`Grid-col--2of12`
+`Grid-col--3of12`
+`Grid-col--4of12`
+`Grid-col--5of12`
+`Grid-col--6of12`
+`Grid-col--7of12`
+`Grid-col--8of12`
+`Grid-col--9of12`
+`Grid-col--10of12`
+`Grid-col--11of12`
+`Grid-col--12of12`
+
 1. `Grid-sm-col--1of12`	
 2. `Grid-sm-col--2of12`	
 3. `Grid-sm-col--3of12`	
