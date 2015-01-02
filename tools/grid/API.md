@@ -88,6 +88,7 @@
 19. `Grid-gutter--lgAfter`
 20. `Grid-gutter--xlAfter`
 21. `Grid-gutter--xxlAfter`
+22. `Grid-gutter--reset`
 
 ## Rows
 
@@ -112,6 +113,8 @@
 19. `Grid-row--lgAfter`
 20. `Grid-row--xlAfter`
 21. `Grid-row--xxlAfter`
+22. `Grid-row--beforeReset`
+23. `Grid-row--afterReset`
 
 ## Containers
 
