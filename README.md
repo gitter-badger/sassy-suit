@@ -1,7 +1,7 @@
 SassySuit :star:
 =========
 
-SassySuit - is a handcrafted SASS framework, built with [modular numbers](https://github.com/at-import/modular-scale) in mind, [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and __sophisticated__ functions and mixins. 
+SassySuit - is a handcrafted SASS framework, built with [modular scale](https://github.com/at-import/modular-scale), [Suit CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and __sophisticated__ functions and mixins. 
 <hr>
 
 This is work in progress, we are still trying out new things and concepts.
