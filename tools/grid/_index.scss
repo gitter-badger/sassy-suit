@@ -25,14 +25,10 @@
 
 // @include layout($susy2);
 
-.wrapper {
-	@include container();
-}
-
 main {
 	background-color: #eee;
 
-	@include span(8);
+	// @include span(8);
 }
 
 aside {
@@ -42,7 +38,7 @@ aside {
 		background-color: lightblue;
 	}
 
-	@include span(12);
+	// @include span(12);
 }
 
 // if output style is responsive, than
