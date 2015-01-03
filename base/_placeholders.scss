@@ -8,19 +8,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(1);
-		@include typeSetResponsive(1);
-		@include typeSetResponsive(1);
-		@include typeSetResponsive(1);
-		@include typeSetResponsive(1);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetSm {
@@ -31,19 +19,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(2);
-		@include typeSetResponsive(2);
-		@include typeSetResponsive(2);
-		@include typeSetResponsive(2);
-		@include typeSetResponsive(2);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetMd {
@@ -54,19 +30,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(3);
-		@include typeSetResponsive(3);
-		@include typeSetResponsive(3);
-		@include typeSetResponsive(3);
-		@include typeSetResponsive(3);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetLg {
@@ -77,19 +41,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(4);
-		@include typeSetResponsive(4);
-		@include typeSetResponsive(4);
-		@include typeSetResponsive(4);
-		@include typeSetResponsive(4);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetXl {
@@ -100,19 +52,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(5);
-		@include typeSetResponsive(5);
-		@include typeSetResponsive(5);
-		@include typeSetResponsive(5);
-		@include typeSetResponsive(5);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetXxl {
@@ -123,19 +63,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(6);
-		@include typeSetResponsive(6);
-		@include typeSetResponsive(6);
-		@include typeSetResponsive(6);
-		@include typeSetResponsive(6);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetXxxl {
@@ -146,19 +74,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(7);
-		@include typeSetResponsive(7);
-		@include typeSetResponsive(7);
-		@include typeSetResponsive(7);
-		@include typeSetResponsive(7);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetLarger {
@@ -169,19 +85,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(8);
-		@include typeSetResponsive(8);
-		@include typeSetResponsive(8);
-		@include typeSetResponsive(8);
-		@include typeSetResponsive(8);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 %typeSetLargest {
@@ -192,19 +96,7 @@
 
 	@if $typeOutputStyle == responsive {
 		@include typeSetResponsive(9);
-		@include typeSetResponsive(9);
-		@include typeSetResponsive(9);
-		@include typeSetResponsive(9);
-		@include typeSetResponsive(9);
 	}
-
-	@if $typeOutputStyle == liquid {
-		font-size: x;
-		line-height: x;
-		letter-spacing: x;
-		padding: x;
-	}
-
 }
 
 
