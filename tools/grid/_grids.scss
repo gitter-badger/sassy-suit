@@ -133,3 +133,327 @@
 		width: span(12);
  	}
 }
+
+
+
+[class^='Grid-md-col--'],
+[class*='Grid-md-col--']  {
+	float: left;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+.Grid-md-col--1of12 {
+	@include bp(md) {
+		width: span(1);
+	}
+}
+
+.Grid-md-col--2of12 {
+	@include bp(md) {
+		width: span(2);
+	}
+}
+
+.Grid-md-col--3of12 {
+	@include bp(md) {
+		width: span(3);
+	}
+}
+
+.Grid-md-col--4of12 {
+	@include bp(md) {
+		width: span(4);
+	}
+}
+
+.Grid-md-col--5of12 {
+	@include bp(md) {
+		width: span(5);
+	}
+}
+
+.Grid-md-col--6of12 {
+	@include bp(md) {
+		width: span(6);
+	}
+}
+
+.Grid-md-col--7of12 {
+	@include bp(md) {
+		width: span(7);
+	}
+}
+
+.Grid-md-col--8of12 {
+	@include bp(md) {
+		width: span(8);
+	}
+}
+
+.Grid-md-col--9of12 {
+	@include bp(md) {
+		width: span(9);
+	}
+}
+
+.Grid-md-col--10of12 {
+	@include bp(md) {
+		width: span(10);
+	}
+}
+
+.Grid-md-col--11of12 {
+	@include bp(md) {
+		width: span(11);
+	}
+}
+
+.Grid-md-col--12of12 {
+	@include bp(md) {
+		width: span(12);
+ 	}
+}
+
+
+
+[class^='Grid-lg-col--'],
+[class*='Grid-lg-col--']  {
+	float: left;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+.Grid-lg-col--1of12 {
+	@include bp(lg) {
+		width: span(1);
+	}
+}
+
+.Grid-lg-col--2of12 {
+	@include bp(lg) {
+		width: span(2);
+	}
+}
+
+.Grid-lg-col--3of12 {
+	@include bp(lg) {
+		width: span(3);
+	}
+}
+
+.Grid-lg-col--4of12 {
+	@include bp(lg) {
+		width: span(4);
+	}
+}
+
+.Grid-lg-col--5of12 {
+	@include bp(lg) {
+		width: span(5);
+	}
+}
+
+.Grid-lg-col--6of12 {
+	@include bp(lg) {
+		width: span(6);
+	}
+}
+
+.Grid-lg-col--7of12 {
+	@include bp(lg) {
+		width: span(7);
+	}
+}
+
+.Grid-lg-col--8of12 {
+	@include bp(lg) {
+		width: span(8);
+	}
+}
+
+.Grid-lg-col--9of12 {
+	@include bp(lg) {
+		width: span(9);
+	}
+}
+
+.Grid-lg-col--10of12 {
+	@include bp(lg) {
+		width: span(10);
+	}
+}
+
+.Grid-lg-col--11of12 {
+	@include bp(lg) {
+		width: span(11);
+	}
+}
+
+.Grid-lg-col--12of12 {
+	@include bp(lg) {
+		width: span(12);
+ 	}
+}
+
+
+
+[class^='Grid-xl-col--'],
+[class*='Grid-xl-col--']  {
+	float: left;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+.Grid-xl-col--1of12 {
+	@include bp(xl) {
+		width: span(1);
+	}
+}
+
+.Grid-xl-col--2of12 {
+	@include bp(xl) {
+		width: span(2);
+	}
+}
+
+.Grid-xl-col--3of12 {
+	@include bp(xl) {
+		width: span(3);
+	}
+}
+
+.Grid-xl-col--4of12 {
+	@include bp(xl) {
+		width: span(4);
+	}
+}
+
+.Grid-xl-col--5of12 {
+	@include bp(xl) {
+		width: span(5);
+	}
+}
+
+.Grid-xl-col--6of12 {
+	@include bp(xl) {
+		width: span(6);
+	}
+}
+
+.Grid-xl-col--7of12 {
+	@include bp(xl) {
+		width: span(7);
+	}
+}
+
+.Grid-xl-col--8of12 {
+	@include bp(xl) {
+		width: span(8);
+	}
+}
+
+.Grid-xl-col--9of12 {
+	@include bp(xl) {
+		width: span(9);
+	}
+}
+
+.Grid-xl-col--10of12 {
+	@include bp(xl) {
+		width: span(10);
+	}
+}
+
+.Grid-xl-col--11of12 {
+	@include bp(xl) {
+		width: span(11);
+	}
+}
+
+.Grid-xl-col--12of12 {
+	@include bp(xl) {
+		width: span(12);
+ 	}
+}
+
+
+
+[class^='Grid-xxl-col--'],
+[class*='Grid-xxl-col--']  {
+	float: left;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+.Grid-xxl-col--1of12 {
+	@include bp(xxl) {
+		width: span(1);
+	}
+}
+
+.Grid-xxl-col--2of12 {
+	@include bp(xxl) {
+		width: span(2);
+	}
+}
+
+.Grid-xxl-col--3of12 {
+	@include bp(xxl) {
+		width: span(3);
+	}
+}
+
+.Grid-xxl-col--4of12 {
+	@include bp(xxl) {
+		width: span(4);
+	}
+}
+
+.Grid-xxl-col--5of12 {
+	@include bp(xxl) {
+		width: span(5);
+	}
+}
+
+.Grid-xxl-col--6of12 {
+	@include bp(xxl) {
+		width: span(6);
+	}
+}
+
+.Grid-xxl-col--7of12 {
+	@include bp(xxl) {
+		width: span(7);
+	}
+}
+
+.Grid-xxl-col--8of12 {
+	@include bp(xxl) {
+		width: span(8);
+	}
+}
+
+.Grid-xxl-col--9of12 {
+	@include bp(xxl) {
+		width: span(9);
+	}
+}
+
+.Grid-xxl-col--10of12 {
+	@include bp(xxl) {
+		width: span(10);
+	}
+}
+
+.Grid-xxl-col--11of12 {
+	@include bp(xxl) {
+		width: span(11);
+	}
+}
+
+.Grid-xxl-col--12of12 {
+	@include bp(xxl) {
+		width: span(12);
+ 	}
+}
