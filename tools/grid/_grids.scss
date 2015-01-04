@@ -57,9 +57,11 @@
 
 [class^='Grid-sm-col--'],
 [class*='Grid-sm-col--']  {
-	float: left;
-	padding-left: gutter();
-	padding-right: gutter();
+	@include bp(sm) {
+		float: left;
+		padding-left: round(ms(1, gutter(), 1.5));
+		padding-right: round(ms(1, gutter(), 1.5));
+	}
 }
 
 .Grid-sm-col--1of12 {
@@ -138,9 +140,11 @@
 
 [class^='Grid-md-col--'],
 [class*='Grid-md-col--']  {
-	float: left;
-	padding-left: gutter();
-	padding-right: gutter();
+	@include bp(md) {
+		float: left;
+		padding-left: round(ms(2, gutter(), 1.5));
+		padding-right: round(ms(2, gutter(), 1.5));
+	}
 }
 
 .Grid-md-col--1of12 {
@@ -219,9 +223,11 @@
 
 [class^='Grid-lg-col--'],
 [class*='Grid-lg-col--']  {
-	float: left;
-	padding-left: gutter();
-	padding-right: gutter();
+	@include bp(lg) {
+		float: left;
+		padding-left: round(ms(3, gutter(), 1.5));
+		padding-right: round(ms(3, gutter(), 1.5));
+	}
 }
 
 .Grid-lg-col--1of12 {
@@ -300,9 +306,11 @@
 
 [class^='Grid-xl-col--'],
 [class*='Grid-xl-col--']  {
-	float: left;
-	padding-left: gutter();
-	padding-right: gutter();
+	@include bp(xl) {
+		float: left;
+		padding-left: round(ms(4, gutter(), 1.5));
+		padding-right: round(ms(4, gutter(), 1.5));
+	}
 }
 
 .Grid-xl-col--1of12 {
@@ -381,9 +389,11 @@
 
 [class^='Grid-xxl-col--'],
 [class*='Grid-xxl-col--']  {
-	float: left;
-	padding-left: gutter();
-	padding-right: gutter();
+	@include bp(xxl) {
+		float: left;
+		padding-left: round(ms(5, gutter(), 1.5));
+		padding-right: round(ms(5, gutter(), 1.5));
+	}
 }
 
 .Grid-xxl-col--1of12 {
