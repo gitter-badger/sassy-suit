@@ -2226,7 +2226,6 @@ body {
 
 /* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/tools/grid/_containers.scss */
 .Grid-container--fluid {
-  box-sizing: border-box;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
