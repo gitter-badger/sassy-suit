@@ -1,0 +1,52 @@
+// breakpoint {auto | measure}
+// if breakpoint auto, than it takes value of BP
+
+// container {auto | measure}
+// if container auto, than it takes value of BP - gutters
+
+// output {responsive | static} use gutters or gutterBase * ratio
+
+$grid: (
+	breakpointXs: 			auto,
+	breakpointSm: 			auto,
+	breakpointMd: 			auto,
+	breakpointLg: 			auto,
+	breakpointXl: 			auto,
+	breakpointXxl: 			auto,
+	columns: 				12,
+	containerXs: 			auto,
+	containerSm: 			auto,
+	containerMd: 			auto,
+	containerLg: 			auto,
+	containerXl: 			auto,
+	containerXxl: 			auto,
+	containerFluid: 		1200px,
+	gutters: (
+		xs: 				5px,
+		sm: 				10px,
+		md: 				15px,
+		lg: 				20px,
+		xl:  				25px,
+		xxl: 				30px
+	),
+	gutterBase: 			5px,
+	ratio: 					1.5,
+	output: 				responsive,
+	debug: 					true
+);
+
+@mixin grids($grid: $grid) {
+
+	@if exists(grid, var) {
+
+
+
+	} @else {
+
+		@error $grid "map doesn't exist!";
+
+	}
+
+}
+
+@include grids;
