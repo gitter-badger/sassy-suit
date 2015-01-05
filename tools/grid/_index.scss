@@ -1,55 +1,7 @@
-@import "_gridEngine.scss";
-@import "_rows.scss";
+@import "_config.scss";
 @import "_grids.scss";
-@import "_containers.scss";
-@import "_offsets.scss";
-@import "_pushes.scss";
-@import "_pulls.scss";
-
-//   gutter-position: inside static,
-
-
-
-// $susy: (
-//   gutter-position: inside-static,
-//   container: 1200px,
-//   columns: 12,
-//   column-width: 100px,
-//   debug: (
-//     image: show,
-//   ),
-// );
-
-// $susy2: (
-//   gutters: 2.5
-// );
-
-// @include layout($susy2);
-
-main {
-	background-color: #eee;
-
-	// @include span(8);
-}
-
-aside {
-	background-color: #999;
-
-	ul {
-		background-color: lightblue;
-	}
-
-	// @include span(12);
-}
-
-// if output style is responsive, than
-// include different gutter sizes for different
-// breakpoints, pulling gutter value from
-// generated modular scale list of values
-
-// @include span(8 at 0 of 12 5px);
-// @include span(8 at 0 of 12 10px);
-// @include span(8 at 0 of 12 15px);
-// @include span(8 at 0 of 12 20px);
-// @include span(8 at 0 of 12 25px);
-// @include span(8 at 0 of 12 30px);
+// @import "_containers.scss";
+// @import "_rows.scss";
+// @import "_offsets.scss";
+// @import "_pulls.scss";
+// @import "_pushes.scss";

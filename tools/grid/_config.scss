@@ -34,19 +34,3 @@ $grid: (
 	output: 				responsive,
 	debug: 					true
 );
-
-@mixin grids($grid: $grid) {
-
-	@if exists(grid, var) {
-
-
-
-	} @else {
-
-		@error $grid "map doesn't exist!";
-
-	}
-
-}
-
-@include grids;
