@@ -128,6 +128,9 @@
 21. `Grid-row--xxlAfter`
 22. `Grid-row--beforeReset`
 23. `Grid-row--afterReset`
+24. `Grid-row--fluid`
+25. `Grid-row--fluidBefore`
+26. `Grid-row--fluidAfter`
 
 ## Containers
 
