@@ -3639,6 +3639,12 @@ p {
     padding-right: 38px;
   }
 }
+/* line 32, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--fluid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* line 8, ../../../../../../../Users/Vlad/Development/sassySuit/components/_index.scss */
 main {

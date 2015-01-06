@@ -1,3 +1,38 @@
 .Grid-container--fluid {
 	@include container();
+
+	padding-left: gutter();
+	padding-right: gutter();
+
+	@include bp(sm) {
+		padding-left: round(ms(1, gutter(), 1.5));
+		padding-right: round(ms(1, gutter(), 1.5));
+	}
+
+	@include bp(md) {
+		padding-left: round(ms(2, gutter(), 1.5));
+		padding-right: round(ms(2, gutter(), 1.5));
+	}
+
+	@include bp(lg) {
+		padding-left: round(ms(3, gutter(), 1.5));
+		padding-right: round(ms(3, gutter(), 1.5));
+	}
+
+	@include bp(xl) {
+		padding-left: round(ms(4, gutter(), 1.5));
+		padding-right: round(ms(4, gutter(), 1.5));
+	}
+
+	@include bp(xxl) {
+		padding-left: round(ms(5, gutter(), 1.5));
+		padding-right: round(ms(5, gutter(), 1.5));
+	}
+
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
 }
