@@ -3710,7 +3710,13 @@ p {
   }
 }
 
-/* line 3, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+/* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+[class^='Grid-container--'],
+[class*='Grid-container--'] {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 6, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
 [class^='Grid-container--']:after,
 [class*='Grid-container--']:after {
   content: "";
@@ -3718,7 +3724,7 @@ p {
   clear: both;
 }
 
-/* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
 .Grid-container--fluid {
   max-width: 1200px;
   margin-left: auto;
@@ -3739,39 +3745,81 @@ p {
   clear: both;
 }
 @media (min-width: 300px) {
-  /* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+  /* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
   .Grid-container--fluid {
     padding-left: 8px;
     padding-right: 8px;
   }
 }
 @media (min-width: 450px) {
-  /* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+  /* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
   .Grid-container--fluid {
     padding-left: 11px;
     padding-right: 11px;
   }
 }
 @media (min-width: 650px) {
-  /* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+  /* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
   .Grid-container--fluid {
     padding-left: 17px;
     padding-right: 17px;
   }
 }
 @media (min-width: 900px) {
-  /* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+  /* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
   .Grid-container--fluid {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 10, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+  /* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
   .Grid-container--fluid {
     padding-left: 38px;
     padding-right: 38px;
   }
+}
+
+/* line 46, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--xs {
+  width: 300px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 52, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--sm {
+  width: 450px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--md {
+  width: 600px;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+/* line 64, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--lg {
+  width: 750px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+/* line 70, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--xl {
+  width: 900px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* line 76, ../../../../../../../Users/Vlad/Development/sassySuit/components/_containers.scss */
+.Grid-container--xxl {
+  width: 1050px;
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 /* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/components/_gutters.scss */

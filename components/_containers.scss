@@ -1,5 +1,8 @@
 [class^='Grid-container--'],
 [class*='Grid-container--'] {
+	margin-left: auto;
+  	margin-right: auto;
+
 	&:after {
 	  content: "";
 	  display: table;
@@ -38,4 +41,40 @@
 		padding-right: round(ms(5, gutter(), 1.5));
 	}
 
+}
+
+.Grid-container--xs {
+	width: 300px;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+.Grid-container--sm {
+	width: 450px;
+	padding-left: round(ms(1, gutter(), 1.5));
+	padding-right: round(ms(1, gutter(), 1.5));
+}
+
+.Grid-container--md {
+	width: 600px;
+	padding-left: round(ms(2, gutter(), 1.5));
+	padding-right: round(ms(2, gutter(), 1.5));
+}
+
+.Grid-container--lg {
+	width: 750px;
+	padding-left: round(ms(3, gutter(), 1.5));
+	padding-right: round(ms(3, gutter(), 1.5));
+}
+
+.Grid-container--xl {
+	width: 900px;
+	padding-left: round(ms(4, gutter(), 1.5));
+	padding-right: round(ms(4, gutter(), 1.5));
+}
+
+.Grid-container--xxl {
+	width: 1050px;
+	padding-left: round(ms(5, gutter(), 1.5));
+	padding-right: round(ms(5, gutter(), 1.5));
 }
