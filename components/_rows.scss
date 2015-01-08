@@ -1,33 +1,11 @@
-// [class^='Grid-row--'],
-// [class*='Grid-row--'] {
-// 	&:after {
-// 	  content: "";
-// 	  display: table;
-// 	  clear: both;
-// 	}
-// }
-
-.Grid-row--xs {}
-.Grid-row--xsBefore {}
-.Grid-row--xsAfter {}
-.Grid-row--sm {}
-.Grid-row--smBefore {}
-.Grid-row--smAfter {}
-.Grid-row--md {}
-.Grid-row--mdBefore {}
-.Grid-row--mdAfter {}
-.Grid-row--lg {}
-.Grid-row--lgBefore {}
-.Grid-row--lgAfter {}
-.Grid-row--xl {}
-.Grid-row--xlBefore {}
-.Grid-row--xlAfter {}
-.Grid-row--xxl {}
-.Grid-row--xxlBefore {}
-.Grid-row--xxlAfter {}
-.Grid-row--reset {}
-.Grid-row--resetBefore {}
-.Grid-row--resetAfter {}
+[class^='Grid-row--'],
+[class*='Grid-row--'] {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
 
 .Grid-row--fluid {
 	margin-left: - gutter();
@@ -57,11 +35,104 @@
 		margin-left: - round(ms(5, gutter(), 1.5));
 		margin-right: - round(ms(5, gutter(), 1.5));
 	}
+}
 
-	&:after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
+.Grid-row--xs {
+	margin-left: - gutter();
+	margin-right: - gutter();
+}
 
+.Grid-row--xsBefore {
+	margin-left: - gutter();
+	margin-right: 0;
+}
+
+.Grid-row--xsAfter {
+	margin-left: 0;
+	margin-right: - gutter();
+}
+
+.Grid-row--sm {
+	margin-left: - round(ms(1, gutter(), 1.5));
+	margin-right: - round(ms(1, gutter(), 1.5));
+}
+
+.Grid-row--smBefore {
+	margin-left: - round(ms(1, gutter(), 1.5));
+	margin-right: 0;
+}
+
+.Grid-row--smAfter {
+	margin-left: 0;
+	margin-right: - round(ms(1, gutter(), 1.5));
+}
+
+.Grid-row--md {
+	margin-left: - round(ms(2, gutter(), 1.5));
+	margin-right: - round(ms(2, gutter(), 1.5));
+}
+.Grid-row--mdBefore {
+	margin-left: - round(ms(2, gutter(), 1.5));
+	margin-right: 0;
+}
+.Grid-row--mdAfter {
+	margin-left: 0;
+	margin-right: - round(ms(2, gutter(), 1.5));
+}
+
+.Grid-row--lg {
+	margin-left: - round(ms(3, gutter(), 1.5));
+	margin-right: - round(ms(3, gutter(), 1.5));
+}
+
+.Grid-row--lgBefore {
+	margin-left: - round(ms(3, gutter(), 1.5));
+	margin-right: 0;
+}
+
+.Grid-row--lgAfter {
+	margin-left: 0;
+	margin-right: - round(ms(3, gutter(), 1.5));
+}
+
+.Grid-row--xl {
+	margin-left: - round(ms(4, gutter(), 1.5));
+	margin-right: - round(ms(4, gutter(), 1.5));
+}
+
+.Grid-row--xlBefore {
+	margin-left: - round(ms(4, gutter(), 1.5));
+	margin-right: 0;
+}
+.Grid-row--xlAfter {
+	margin-left: 0;
+	margin-right: - round(ms(4, gutter(), 1.5));
+}
+
+.Grid-row--xxl {
+	margin-left: - round(ms(5, gutter(), 1.5));
+	margin-right: - round(ms(5, gutter(), 1.5));
+}
+
+.Grid-row--xxlBefore {
+	margin-left: - round(ms(5, gutter(), 1.5));
+	margin-right: 0;
+}
+
+.Grid-row--xxlAfter {
+	margin-left: 0;
+	margin-right: - round(ms(5, gutter(), 1.5));
+}
+
+.Grid-row--reset {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.Grid-row--resetBefore {
+	margin-left: 0;
+}
+
+.Grid-row--resetAfter {
+	margin-right: 0;
 }
