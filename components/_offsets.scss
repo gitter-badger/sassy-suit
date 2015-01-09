@@ -123,3 +123,299 @@
 		margin-right: span(12);
 	}
 }
+
+
+
+.Grid-md-colOffset--1of12 {
+	@include bp(md) {
+		margin-right: span(1);
+	}
+}
+
+.Grid-md-colOffset--2of12 {
+	@include bp(md) {
+		margin-right: span(2);
+	}
+}
+
+.Grid-md-colOffset--3of12 {
+	@include bp(md) {
+		margin-right: span(3);
+	}
+}
+
+.Grid-md-colOffset--4of12 {
+	@include bp(md) {
+		margin-right: span(4);
+	}
+}
+
+.Grid-md-colOffset--5of12 {
+	@include bp(md) {
+		margin-right: span(5);
+	}
+}
+
+.Grid-md-colOffset--6of12 {
+	@include bp(md) {
+		margin-right: span(6);
+	}
+}
+
+.Grid-md-colOffset--7of12 {
+	@include bp(md) {
+		margin-right: span(7);
+	}
+}
+
+.Grid-md-colOffset--8of12 {
+	@include bp(md) {
+		margin-right: span(8);
+	}
+}
+
+.Grid-md-colOffset--9of12 {
+	@include bp(md) {
+		margin-right: span(9);
+	}
+}
+
+.Grid-md-colOffset--10of12 {
+	@include bp(md) {
+		margin-right: span(10);
+	}
+}
+
+.Grid-md-colOffset--11of12 {
+	@include bp(md) {
+		margin-right: span(11);
+	}
+}
+
+.Grid-md-colOffset--12of12 {
+	@include bp(md) {
+		margin-right: span(12);
+	}
+}
+
+
+
+.Grid-lg-colOffset--1of12 {
+	@include bp(lg) {
+		margin-right: span(1);
+	}
+}
+
+.Grid-lg-colOffset--2of12 {
+	@include bp(lg) {
+		margin-right: span(2);
+	}
+}
+
+.Grid-lg-colOffset--3of12 {
+	@include bp(lg) {
+		margin-right: span(3);
+	}
+}
+
+.Grid-lg-colOffset--4of12 {
+	@include bp(lg) {
+		margin-right: span(4);
+	}
+}
+
+.Grid-lg-colOffset--5of12 {
+	@include bp(lg) {
+		margin-right: span(5);
+	}
+}
+
+.Grid-lg-colOffset--6of12 {
+	@include bp(lg) {
+		margin-right: span(6);
+	}
+}
+
+.Grid-lg-colOffset--7of12 {
+	@include bp(lg) {
+		margin-right: span(7);
+	}
+}
+
+.Grid-lg-colOffset--8of12 {
+	@include bp(lg) {
+		margin-right: span(8);
+	}
+}
+
+.Grid-lg-colOffset--9of12 {
+	@include bp(lg) {
+		margin-right: span(9);
+	}
+}
+
+.Grid-lg-colOffset--10of12 {
+	@include bp(lg) {
+		margin-right: span(10);
+	}
+}
+
+.Grid-lg-colOffset--11of12 {
+	@include bp(lg) {
+		margin-right: span(11);
+	}
+}
+
+.Grid-lg-colOffset--12of12 {
+	@include bp(lg) {
+		margin-right: span(12);
+	}
+}
+
+
+
+.Grid-xl-colOffset--1of12 {
+	@include bp(xl) {
+		margin-right: span(1);
+	}
+}
+
+.Grid-xl-colOffset--2of12 {
+	@include bp(xl) {
+		margin-right: span(2);
+	}
+}
+
+.Grid-xl-colOffset--3of12 {
+	@include bp(xl) {
+		margin-right: span(3);
+	}
+}
+
+.Grid-xl-colOffset--4of12 {
+	@include bp(xl) {
+		margin-right: span(4);
+	}
+}
+
+.Grid-xl-colOffset--5of12 {
+	@include bp(xl) {
+		margin-right: span(5);
+	}
+}
+
+.Grid-xl-colOffset--6of12 {
+	@include bp(xl) {
+		margin-right: span(6);
+	}
+}
+
+.Grid-xl-colOffset--7of12 {
+	@include bp(xl) {
+		margin-right: span(7);
+	}
+}
+
+.Grid-xl-colOffset--8of12 {
+	@include bp(xl) {
+		margin-right: span(8);
+	}
+}
+
+.Grid-xl-colOffset--9of12 {
+	@include bp(xl) {
+		margin-right: span(9);
+	}
+}
+
+.Grid-xl-colOffset--10of12 {
+	@include bp(xl) {
+		margin-right: span(10);
+	}
+}
+
+.Grid-xl-colOffset--11of12 {
+	@include bp(xl) {
+		margin-right: span(11);
+	}
+}
+
+.Grid-xl-colOffset--12of12 {
+	@include bp(xl) {
+		margin-right: span(12);
+	}
+}
+
+
+
+.Grid-xxl-colOffset--1of12 {
+	@include bp(xxl) {
+		margin-right: span(1);
+	}
+}
+
+.Grid-xxl-colOffset--2of12 {
+	@include bp(xxl) {
+		margin-right: span(2);
+	}
+}
+
+.Grid-xxl-colOffset--3of12 {
+	@include bp(xxl) {
+		margin-right: span(3);
+	}
+}
+
+.Grid-xxl-colOffset--4of12 {
+	@include bp(xxl) {
+		margin-right: span(4);
+	}
+}
+
+.Grid-xxl-colOffset--5of12 {
+	@include bp(xxl) {
+		margin-right: span(5);
+	}
+}
+
+.Grid-xxl-colOffset--6of12 {
+	@include bp(xxl) {
+		margin-right: span(6);
+	}
+}
+
+.Grid-xxl-colOffset--7of12 {
+	@include bp(xxl) {
+		margin-right: span(7);
+	}
+}
+
+.Grid-xxl-colOffset--8of12 {
+	@include bp(xxl) {
+		margin-right: span(8);
+	}
+}
+
+.Grid-xxl-colOffset--9of12 {
+	@include bp(xxl) {
+		margin-right: span(9);
+	}
+}
+
+.Grid-xxl-colOffset--10of12 {
+	@include bp(xxl) {
+		margin-right: span(10);
+	}
+}
+
+.Grid-xxl-colOffset--11of12 {
+	@include bp(xxl) {
+		margin-right: span(11);
+	}
+}
+
+.Grid-xxl-colOffset--12of12 {
+	@include bp(xxl) {
+		margin-right: span(12);
+	}
+}
