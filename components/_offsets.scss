@@ -1,1 +1,125 @@
-// position left
+// margin-right
+
+// Do I need 12of12 ?
+
+.Grid-colOffset--1of12 {
+	margin-right: span(1);
+}
+
+.Grid-colOffset--2of12 {
+	margin-right: span(2);
+}
+
+.Grid-colOffset--3of12 {
+	margin-right: span(3);
+}
+
+.Grid-colOffset--4of12 {
+	margin-right: span(4);
+}
+
+.Grid-colOffset--5of12 {
+	margin-right: span(5);
+}
+
+.Grid-colOffset--6of12 {
+	margin-right: span(6);
+}
+
+.Grid-colOffset--7of12 {
+	margin-right: span(7);
+}
+
+.Grid-colOffset--8of12 {
+	margin-right: span(8);
+}
+
+.Grid-colOffset--9of12 {
+	margin-right: span(9);
+}
+
+.Grid-colOffset--10of12 {
+	margin-right: span(10);
+}
+
+.Grid-colOffset--11of12 {
+	margin-right: span(11);
+}
+
+.Grid-colOffset--12of12 {
+	margin-right: span(12);
+}
+
+
+
+.Grid-sm-colOffset--1of12 {
+	@include bp(sm) {
+		margin-right: span(1);
+	}
+}
+
+.Grid-sm-colOffset--2of12 {
+	@include bp(sm) {
+		margin-right: span(2);
+	}
+}
+
+.Grid-sm-colOffset--3of12 {
+	@include bp(sm) {
+		margin-right: span(3);
+	}
+}
+
+.Grid-sm-colOffset--4of12 {
+	@include bp(sm) {
+		margin-right: span(4);
+	}
+}
+
+.Grid-sm-colOffset--5of12 {
+	@include bp(sm) {
+		margin-right: span(5);
+	}
+}
+
+.Grid-sm-colOffset--6of12 {
+	@include bp(sm) {
+		margin-right: span(6);
+	}
+}
+
+.Grid-sm-colOffset--7of12 {
+	@include bp(sm) {
+		margin-right: span(7);
+	}
+}
+
+.Grid-sm-colOffset--8of12 {
+	@include bp(sm) {
+		margin-right: span(8);
+	}
+}
+
+.Grid-sm-colOffset--9of12 {
+	@include bp(sm) {
+		margin-right: span(9);
+	}
+}
+
+.Grid-sm-colOffset--10of12 {
+	@include bp(sm) {
+		margin-right: span(10);
+	}
+}
+
+.Grid-sm-colOffset--11of12 {
+	@include bp(sm) {
+		margin-right: span(11);
+	}
+}
+
+.Grid-sm-colOffset--12of12 {
+	@include bp(sm) {
+		margin-right: span(12);
+	}
+}

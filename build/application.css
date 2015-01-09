@@ -3946,6 +3946,150 @@ p {
   padding-right: 0;
 }
 
+/* line 5, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--1of12 {
+  margin-right: 8.333333333333332%;
+}
+
+/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--2of12 {
+  margin-right: 16.666666666666664%;
+}
+
+/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--3of12 {
+  margin-right: 25%;
+}
+
+/* line 17, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--4of12 {
+  margin-right: 33.33333333333333%;
+}
+
+/* line 21, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--5of12 {
+  margin-right: 41.666666666666664%;
+}
+
+/* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--6of12 {
+  margin-right: 50%;
+}
+
+/* line 29, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--7of12 {
+  margin-right: 58.333333333333336%;
+}
+
+/* line 33, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--8of12 {
+  margin-right: 66.66666666666666%;
+}
+
+/* line 37, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--9of12 {
+  margin-right: 75%;
+}
+
+/* line 41, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--10of12 {
+  margin-right: 83.33333333333333%;
+}
+
+/* line 45, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--11of12 {
+  margin-right: 91.66666666666666%;
+}
+
+/* line 49, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+.Grid-colOffset--12of12 {
+  margin-right: 100%;
+}
+
+@media (min-width: 300px) {
+  /* line 55, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--1of12 {
+    margin-right: 8.333333333333332%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 61, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--2of12 {
+    margin-right: 16.666666666666664%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 67, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--3of12 {
+    margin-right: 25%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 73, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--4of12 {
+    margin-right: 33.33333333333333%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 79, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--5of12 {
+    margin-right: 41.666666666666664%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 85, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--6of12 {
+    margin-right: 50%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 91, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--7of12 {
+    margin-right: 58.333333333333336%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 97, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--8of12 {
+    margin-right: 66.66666666666666%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 103, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--9of12 {
+    margin-right: 75%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 109, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--10of12 {
+    margin-right: 83.33333333333333%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 115, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--11of12 {
+    margin-right: 91.66666666666666%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 121, ../../../../../../../Users/Vlad/Development/sassySuit/components/_offsets.scss */
+  .Grid-sm-colOffset--12of12 {
+    margin-right: 100%;
+  }
+}
+
 /* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/components/_index.scss */
 main {
   background-color: #eee;
