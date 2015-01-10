@@ -115,6 +115,8 @@ $type: (
 
 // Breakpoints {auto | custom}
 // Gutters {fluid | static}
+// baseGutter - gutter value for all the future math
+// defaultGutter - is used with gutters - static
 // Ratio {auto | custom} - `map-get($type, sizeRatio)`
 // Output {responsive | static} - gutters, rows, containers, etc
 
@@ -138,6 +140,7 @@ $grid: (
 	containerFluid: 			1200px,
 	gutters: 					fluid,
 	baseGutter: 				5px,
+	defaultGutter: 				15px,
 	ratio: 						auto,
 	round: 						true,
 	output: 					responsive,
