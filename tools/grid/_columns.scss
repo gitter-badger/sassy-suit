@@ -1,8 +1,76 @@
-@mixin grids($grid: $grid) {
+$grid: (
+	columns: 					12,
+	breakpoints: 				auto,
+	bpXs: 						320px,
+	bpSm: 						480px,
+	bpMd: 						620px,
+	bpLg: 						768px,
+	bpXl: 						960px,
+	bpXxl: 						1200px,
+	containerXs: 				300px,
+	containerSm: 				450px,
+	containerMd: 				600px,
+	containerLg: 				750px,
+	containerXl: 				900px,
+	containerXxl: 				1050px,
+	containerFluid: 			1200px,
+	gutters: 					fluid,
+	baseGutter: 				5px,
+	ratio: 						auto,
+	round: 						true,
+	output: 					responsive,
+	debug: 						true
+);
+
+@mixin columns($grid: $grid) {
 
 	@if exists(grid, var) {
 
+		// @if map-get-key(breakpoints) == auto {
+			// @if exists(bp, fun) {
 
+				// 	// do something
+
+			// }
+
+		// } @else if map-get-key(breakpoints) == static {
+
+		// 	// do something else
+
+		// } @else {
+
+		// 	@error "something";
+
+		// }
+
+		// @if map-get-key(ratio) == auto {
+
+				// 	// do something
+
+			// }
+
+		// } @else if val(ratio, num) {
+
+		// 	// do something else
+
+		// } @else {
+
+		// 	@error "something";
+
+		// }
+
+		// fix map-get-key construction
+		@if val(map-get-key(columns), num) and
+			val(map-get-key(baseGutter), num) and
+			val(map-get-key(defaultGutter), num) {
+
+				@warn "SUCCESS::::::::::::::::::::::::::::::::::::";
+
+		} @else {
+
+			@warn "Not valid map key values";
+
+		}
 
 	} @else {
 
@@ -12,4 +80,4 @@
 
 }
 
-@include grids;
+@include columns;
