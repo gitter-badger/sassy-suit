@@ -113,50 +113,36 @@ $type: (
 =            Grid            =
 ============================*/
 
-// $grid: (
-// 	bpXs: 						map-get($breakpoints, xs),
-// 	bpSm: 						map-get($breakpoints, sm),
-// 	bpMd: 						map-get($breakpoints, md),
-// 	bpLg: 						map-get($breakpoints, lg),
-// 	bpXl: 						map-get($breakpoints, xl),
-// 	bpXxl: 						map-get($breakpoints, xxl),
-// 	containerXs: 				300px,
-// 	containerSm: 				450px,
-// 	containerMd: 				600px,
-// 	containerLg: 				750px,
-// 	containerXl: 				900px,
-// 	containerXxl: 				1050px,
-// 	containerFluid: 			1200px,
-// 	base: 						5px,
-// 	ratio: 						map-get($type, sizeRatio),
-// 	round: 						true,
-// 	outputStyle: 				responsive,
+// Breakpoints {auto | custom}
+// Gutters {fluid | static}
+// Ratio {auto | custom} - `map-get($type, sizeRatio)`
+// Output {responsive | static} - gutters, rows, containers, etc
 
-// 	flow: ltr,
-// 	math: fluid,
-// 	output: float,
-// 	gutter-position: split,
-// 	container: 1200px,
-// 	container-position: center,
-// 	columns: 12,
-// 	gutters: .5,
-// 	column-width: false,
-// 	global-box-sizing: content-box,
-// 	last-flow: to,
-// 	debug: (
-// 	  image: hide,
-// 	  color: rgba(#66f, .25),
-// 	  output: background,
-// 	  toggle: top right
-// 	),
-// 	use-custom: (
-// 	  background-image: true,
-// 	  background-options: false,
-// 	  box-sizing: true,
-// 	  clearfix: false,
-// 	  rem: true
-// 	)
-// );
+// @todo how to generate valid gutter size for $susy map ?
+
+$grid: (
+	columns: 					12,
+	breakpoints: 				auto,
+	bpXs: 						320px,
+	bpSm: 						480px,
+	bpMd: 						620px,
+	bpLg: 						768px,
+	bpXl: 						960px,
+	bpXxl: 						1200px,
+	containerXs: 				300px,
+	containerSm: 				450px,
+	containerMd: 				600px,
+	containerLg: 				750px,
+	containerXl: 				900px,
+	containerXxl: 				1050px,
+	containerFluid: 			1200px,
+	gutters: 					fluid,
+	baseGutter: 				5px,
+	ratio: 						auto,
+	round: 						true,
+	output: 					responsive,
+	debug: 						true
+);
 
 /*-----  End of Grid  ------*/
 
