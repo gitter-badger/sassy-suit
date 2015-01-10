@@ -3172,7 +3172,7 @@ p {
   margin-right: 0;
 }
 
-/* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 [class^='Grid-col--'],
 [class*='Grid-col--'] {
   float: left;
@@ -3180,68 +3180,68 @@ p {
   padding-right: 5px;
 }
 
-/* line 8, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 8, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--1of12 {
   width: 8.333333333333332%;
 }
 
-/* line 12, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 12, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--2of12 {
   width: 16.666666666666664%;
 }
 
-/* line 16, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 16, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--3of12 {
   width: 25%;
 }
 
-/* line 20, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 20, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--4of12 {
   width: 33.33333333333333%;
 }
 
-/* line 24, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 24, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--5of12 {
   width: 41.666666666666664%;
 }
 
-/* line 28, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 28, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--6of12 {
   width: 50%;
 }
 
-/* line 32, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 32, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--7of12 {
   width: 58.333333333333336%;
 }
 
-/* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--8of12 {
   width: 66.66666666666666%;
 }
 
-/* line 40, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 40, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--9of12 {
   width: 75%;
 }
 
-/* line 44, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 44, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--10of12 {
   width: 83.33333333333333%;
 }
 
-/* line 48, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 48, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--11of12 {
   width: 91.66666666666666%;
 }
 
-/* line 52, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+/* line 52, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
 .Grid-col--12of12 {
   width: 100%;
 }
 
 @media (min-width: 300px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   [class^='Grid-sm-col--'],
   [class*='Grid-sm-col--'] {
     float: left;
@@ -3251,91 +3251,91 @@ p {
 }
 
 @media (min-width: 300px) {
-  /* line 67, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 67, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--1of12 {
     width: 8.333333333333332%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 73, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 73, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--2of12 {
     width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 79, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 79, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--3of12 {
     width: 25%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 85, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 85, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--4of12 {
     width: 33.33333333333333%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 91, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 91, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--5of12 {
     width: 41.666666666666664%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 97, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 97, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--6of12 {
     width: 50%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 103, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 103, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--7of12 {
     width: 58.333333333333336%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 109, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 109, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--8of12 {
     width: 66.66666666666666%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 115, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 115, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--9of12 {
     width: 75%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 121, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 121, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--10of12 {
     width: 83.33333333333333%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 127, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 127, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--11of12 {
     width: 91.66666666666666%;
   }
 }
 
 @media (min-width: 300px) {
-  /* line 133, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 133, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-sm-col--12of12 {
     width: 100%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 141, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 141, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   [class^='Grid-md-col--'],
   [class*='Grid-md-col--'] {
     float: left;
@@ -3345,91 +3345,91 @@ p {
 }
 
 @media (min-width: 450px) {
-  /* line 150, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 150, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--1of12 {
     width: 8.333333333333332%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 156, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 156, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--2of12 {
     width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 162, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 162, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--3of12 {
     width: 25%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 168, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 168, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--4of12 {
     width: 33.33333333333333%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 174, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 174, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--5of12 {
     width: 41.666666666666664%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 180, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 180, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--6of12 {
     width: 50%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 186, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 186, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--7of12 {
     width: 58.333333333333336%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 192, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 192, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--8of12 {
     width: 66.66666666666666%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 198, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 198, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--9of12 {
     width: 75%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 204, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 204, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--10of12 {
     width: 83.33333333333333%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 210, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 210, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--11of12 {
     width: 91.66666666666666%;
   }
 }
 
 @media (min-width: 450px) {
-  /* line 216, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 216, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-md-col--12of12 {
     width: 100%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 224, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 224, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   [class^='Grid-lg-col--'],
   [class*='Grid-lg-col--'] {
     float: left;
@@ -3439,91 +3439,91 @@ p {
 }
 
 @media (min-width: 650px) {
-  /* line 233, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 233, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--1of12 {
     width: 8.333333333333332%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 239, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 239, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--2of12 {
     width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 245, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 245, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--3of12 {
     width: 25%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 251, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 251, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--4of12 {
     width: 33.33333333333333%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 257, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 257, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--5of12 {
     width: 41.666666666666664%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 263, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 263, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--6of12 {
     width: 50%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 269, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 269, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--7of12 {
     width: 58.333333333333336%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 275, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 275, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--8of12 {
     width: 66.66666666666666%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 281, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 281, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--9of12 {
     width: 75%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 287, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 287, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--10of12 {
     width: 83.33333333333333%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 293, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 293, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--11of12 {
     width: 91.66666666666666%;
   }
 }
 
 @media (min-width: 650px) {
-  /* line 299, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 299, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-lg-col--12of12 {
     width: 100%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 307, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 307, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   [class^='Grid-xl-col--'],
   [class*='Grid-xl-col--'] {
     float: left;
@@ -3533,91 +3533,91 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 316, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 316, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--1of12 {
     width: 8.333333333333332%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 322, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 322, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--2of12 {
     width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 328, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 328, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--3of12 {
     width: 25%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 334, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 334, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--4of12 {
     width: 33.33333333333333%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 340, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 340, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--5of12 {
     width: 41.666666666666664%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 346, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 346, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--6of12 {
     width: 50%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 352, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 352, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--7of12 {
     width: 58.333333333333336%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 358, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 358, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--8of12 {
     width: 66.66666666666666%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 364, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 364, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--9of12 {
     width: 75%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 370, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 370, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--10of12 {
     width: 83.33333333333333%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 376, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 376, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--11of12 {
     width: 91.66666666666666%;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 382, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 382, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xl-col--12of12 {
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 390, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 390, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   [class^='Grid-xxl-col--'],
   [class*='Grid-xxl-col--'] {
     float: left;
@@ -3627,84 +3627,84 @@ p {
 }
 
 @media (min-width: 1200px) {
-  /* line 399, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 399, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--1of12 {
     width: 8.333333333333332%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 405, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 405, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--2of12 {
     width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 411, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 411, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--3of12 {
     width: 25%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 417, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 417, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--4of12 {
     width: 33.33333333333333%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 423, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 423, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--5of12 {
     width: 41.666666666666664%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 429, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 429, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--6of12 {
     width: 50%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 435, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 435, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--7of12 {
     width: 58.333333333333336%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 441, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 441, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--8of12 {
     width: 66.66666666666666%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 447, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 447, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--9of12 {
     width: 75%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 453, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 453, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--10of12 {
     width: 83.33333333333333%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 459, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 459, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--11of12 {
     width: 91.66666666666666%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 465, ../../../../../../../Users/Vlad/Development/sassySuit/components/_grids.scss */
+  /* line 465, ../../../../../../../Users/Vlad/Development/sassySuit/components/_columns.scss */
   .Grid-xxl-col--12of12 {
     width: 100%;
   }
