@@ -16,6 +16,7 @@ $grid: (
 	containerFluid: 			1200px,
 	gutters: 					fluid,
 	baseGutter: 				5px,
+	defaultGutter: 				15px,
 	ratio: 						auto,
 	round: 						true,
 	output: 					responsive,
@@ -23,15 +24,21 @@ $grid: (
 );
 
 @mixin columns($grid: $grid) {
-
+	// add map validation
 	@if exists(grid, var) {
 
-		// @if map-get-key(breakpoints) == auto {
-			// @if exists(bp, fun) {
+		@warn "$Grid exists::::::::::::::::::::::::::::::::::::";
 
-				// 	// do something
+		// add map validation
+		@if exists(breakpoints, var) {
 
-			// }
+			@warn "$breakpoints exists and is a valid map ::::::::::::::";
+
+		} @else {
+
+			@warn "$breakpoints doesn't exists or is not a valid map ::::::::::";
+
+		}
 
 		// } @else if map-get-key(breakpoints) == static {
 
@@ -59,16 +66,22 @@ $grid: (
 
 		// }
 
-		// fix map-get-key construction
-		@if val(map-get-key(columns), num) and
-			val(map-get-key(baseGutter), num) and
-			val(map-get-key(defaultGutter), num) {
+		@if val(map-get($grid, columns), number) and
+			val(map-get($grid, baseGutter), measure) and
+			val(map-get($grid, defaultGutter), measure) {
 
 				@warn "SUCCESS::::::::::::::::::::::::::::::::::::";
+				// @debug map-get($grid, columns);
+				// @debug map-get($grid, baseGutter);
+				// @debug map-get($grid, defaultGutter);
+
 
 		} @else {
 
 			@warn "Not valid map key values";
+			// @debug map-get($grid, columns);
+			// @debug map-get($grid, baseGutter);
+			// @debug map-get($grid, defaultGutter);
 
 		}
 
