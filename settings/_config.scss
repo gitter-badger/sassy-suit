@@ -137,7 +137,9 @@ $grid: (
 	gutterNames: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
 	gutterValues: 				5px 10px 15px 20px 25px 30px,
 	round: 						true,
-	output: 					responsive,
+	rows: 						auto,
+	rowNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
+	rowValues: 					-5px -10px -15px -20px -25px -30px,
 	debug: 						true
 );
 
