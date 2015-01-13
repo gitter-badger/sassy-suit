@@ -1,42 +1,42 @@
-$grid: (
-	columns: 					12,
-	breakpoints: 				auto,
-	bpXs: 						320px,
-	bpSm: 						480px,
-	bpMd: 						620px,
-	bpLg: 						768px,
-	bpXl: 						960px,
-	bpXxl: 						1200px,
-	containerXs: 				300px,
-	containerSm: 				450px,
-	containerMd: 				600px,
-	containerLg: 				750px,
-	containerXl: 				900px,
-	containerXxl: 				1050px,
-	containerFluid: 			1200px,
-	gutters: 					fluid,
-	baseGutter: 				5px,
-	defaultGutter: 				15px,
-	ratio: 						auto,
-	round: 						true,
-	output: 					responsive,
-	debug: 						true
-);
+// $grid: (
+// 	output: 					responsive,
+// 	columns: 					12,
+// 	breakpoints: 				auto,
+// 	bpNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	bpValues: 					320px 480px 620px 768px 960px 1120px 1200px,
+// 	containers: 				auto,
+// 	containerNames: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
+// 	gutters: 					auto,
+// 	gutterBase: 				5px,
+// 	gutterRatio: 				auto,
+// 	gutterDefault: 				15px,
+// 	gutterNames: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	gutterValues: 				5px 10px 15px 20px 25px 30px,
+// 	round: 						true,
+// 	debug: 						true
+// );
 
 @mixin columns($grid: $grid) {
+
+	@if gridConfigVal($grid) {
+		@warn "Pooook!";
+	}
+
 	// add map validation
-	@if exists(grid, var) {
+	@if exists(grid, var) and
+		val($grid, map) {
 
 		@warn "$Grid exists::::::::::::::::::::::::::::::::::::";
 
 		// add map validation
-		@if exists(breakpoints, var) {
+		@if exists(breakpoints, var) and
+			val($breakpoints, map) {
 
 			@warn "$breakpoints exists and is a valid map ::::::::::::::";
 
 		} @else {
 
-			@warn "$breakpoints doesn't exists or is not a valid map ::::::::::";
+			@warn "$breakpoints doesn't exists or is not a valid map ::::::::::!!";
 
 		}
 

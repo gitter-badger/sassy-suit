@@ -1,0 +1,27 @@
+@function gridConfigVal($value) {
+	@if val($value, map) and
+		map-get($value, output) {
+
+			@if $value == auto {
+
+				//
+
+			} @else if $value == responsive {
+
+				//
+
+			} @else if $value == static {
+
+				//
+
+			}
+
+			@return true;
+
+		} @else {
+
+			// error
+
+			@return false;
+		}
+}
