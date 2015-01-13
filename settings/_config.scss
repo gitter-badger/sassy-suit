@@ -113,6 +113,11 @@ $type: (
 =            Grid            =
 ============================*/
 
+// output {auto | responsive | static}
+// auto - auto calculation of modular values for each breakpoint
+// responsive - preset values and names for each breakpoint
+// static - one gutter value for all breakpoints
+
 // Breakpoints {auto | custom}
 //
 // Gutters {fluid | static | custom}
@@ -125,19 +130,17 @@ $type: (
 
 $grid: (
 	columns: 					12,
-	breakpoints: 				auto,
+	output: 					auto,
 	bpNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
 	bpValues: 					320px 480px 620px 768px 960px 1120px 1200px,
-	containers: 				auto,
 	containerNames: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
-	gutters: 					auto,
+	containerValues: 			300px 450px 600px 700px 900px 1100px 1250px,
 	gutterBase: 				5px,
-	gutterRatio: 				auto,
+	gutterRatio: 				1.5,
 	gutterDefault: 				15px,
 	gutterNames: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
 	gutterValues: 				5px 10px 15px 20px 25px 30px,
 	round: 						true,
-	output: 					responsive,
 	debug: 						true
 );
 
