@@ -129,8 +129,8 @@ $type: (
 // @todo how to generate valid gutter size for $susy map ?
 
 $grid: (
-	columns: 					12,
 	output: 					auto,
+	columns: 					12,
 	bpNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
 	bpValues: 					320px 480px 620px 768px 960px 1120px 1200px,
 	containerNames: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
