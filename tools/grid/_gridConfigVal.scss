@@ -4,7 +4,7 @@
 
 			@if $value == auto {
 
-				//
+				@return true;
 
 			} @else if $value == responsive {
 
