@@ -22,17 +22,13 @@
 		@warn "Pooook!";
 	}
 
-	// add map validation
-	@if exists(grid, var) and
-		val($grid, map) {
+	@if val($grid, map) {
 
-		@warn "$Grid exists::::::::::::::::::::::::::::::::::::";
+		@warn "$Grid is a valid map";
 
-		// add map validation
-		@if exists(breakpoints, var) and
-			val($breakpoints, map) {
+		@if val($breakpoints, map) {
 
-			@warn "$breakpoints exists and is a valid map ::::::::::::::";
+			@warn "$breakpoints is a valid map";
 
 		} @else {
 

@@ -1,27 +1,46 @@
+// $grid: (
+// 	output: 					auto,
+// 	columns: 					12,
+// 	bpNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	bpValues: 					320px 480px 620px 768px 960px 1120px,
+// 	containerNames: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
+// 	containerValues: 			300px 450px 600px 700px 900px 1100px 1200px,
+// 	gutterBase: 				5px,
+// 	gutterRatio: 				1.5,
+// 	gutterDefault: 				15px,
+// 	gutterNames: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	gutterValues: 				5px 10px 15px 20px 25px 30px,
+// 	round: 						true,
+// 	rowNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	rowValues: 					-5px -10px -15px -20px -25px -30px,
+// 	debug: 						true
+// );
+
 @function gridConfigVal($value) {
-	@if val($value, map) and
-		map-get($value, output) {
+	@if val($value, map) {
+		@warn" gridConfigVal +";
 
-			@if $value == auto {
-
-				@return true;
-
-			} @else if $value == responsive {
-
-				//
-
-			} @else if $value == static {
-
-				//
-
+		// output key validation
+		@if val(map-get($value, output), string) and
+			not not index("auto" "responsive" "static", map-get($value, output)) {
+				@debug map-get($value, output);
+				@warn "!!!";
+			} @else {
+				// @return false;
 			}
 
-			@return true;
-
-		} @else {
-
-			// error
-
-			@return false;
+		@if val(map-get($value, columns), positive) {
+			@debug map-get($value, columns);
+			@warn "Fuck Yeah!!!";
 		}
+
+		@if val(map-get($value, bpNames), list) and
+			sl-walk(map-get($value, bpNames), val, string) {
+			@warn "YYY";
+		}
+
+		@return true;
+	} @else {
+		@return false;
+	}
 }
