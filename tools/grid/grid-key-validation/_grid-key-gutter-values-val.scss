@@ -1,0 +1,17 @@
+@function grid-key-gutter-values-val($var) {
+	@if val($var, map) and
+		val(map-get($var, gutterValues), list) and
+		sl-walk(map-get($var, gutterValues), val, positiveMeasure) {
+
+		@return true;
+
+	} @else if not val($var, map) {
+
+		@error "$grid is not a valid map";
+
+	} @else {
+
+		@error "Grid gutter-values key is invalid!";
+
+	}
+}

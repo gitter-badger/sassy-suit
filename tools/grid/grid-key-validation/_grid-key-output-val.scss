@@ -1,5 +1,5 @@
 @function grid-key-output-val($var) {
-	@if val($value, map) and
+	@if val($var, map) and
 		val(map-get($var, output), string) and
 		not not index("auto" "responsive" "static", map-get($var, output)) {
 

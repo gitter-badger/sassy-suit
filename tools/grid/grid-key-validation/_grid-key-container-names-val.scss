@@ -1,7 +1,7 @@
 @function grid-key-container-names-val($var) {
 	@if val($var, map) and
-		val(map-get($value, containerNames), list) and
-		sl-walk(map-get($value, containerNames), val, string) {
+		val(map-get($var, containerNames), list) and
+		sl-walk(map-get($var, containerNames), val, string) {
 
 		@return true;
 

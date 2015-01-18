@@ -1,7 +1,7 @@
 @function grid-key-gutter-names-val($var) {
 	@if val($var, map) and
-		val(map-get($value, gutterNames), list) and
-		sl-walk(map-get($value, gutterNames), val, string) {
+		val(map-get($var, gutterNames), list) and
+		sl-walk(map-get($var, gutterNames), val, string) {
 
 		@return true;
 
