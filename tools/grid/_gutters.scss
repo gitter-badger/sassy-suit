@@ -28,6 +28,12 @@
 		@error "Gutter keys are invalid!";
 
 	}
+
+	@if map-get($var, output) == auto {}
+
+	@else if map-get($var, output) == responsive {}
+
+	@else if map-get($var, output) == static {}
 }
 
 @include gutters;
