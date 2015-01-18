@@ -22,7 +22,7 @@
 		val(map-get($var, columns), positive) and
 		grid-key-bp-names-val($var) and
 		grid-key-bp-values-val($var) and
-		length(map-get($var, bpNames)) == length(map-get($var, bpValues)) {
+		length(map-get($var, bp-names)) == length(map-get($var, bp-values)) {
 
 		@warn " 'Output, columns, bp-names, bp-values' keys are validated ";
 
