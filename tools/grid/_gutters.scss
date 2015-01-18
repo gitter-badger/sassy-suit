@@ -17,17 +17,10 @@
 // );
 
 @mixin gutters($var: $grid) {
-	@if grid-key-output-val($var) and
-		val(map-get($var, gutter-base), measurePositive) and
-		val(map-get($var, gutter-ratio), float) and
-		val(map-get($var, gutter-ratio), positive) and
-		val(map-get($var, gutter-default), measurePositive) and
-		grid-key-gutter-names-val($var) and
-		grid-key-gutter-values-val($var) and
-		length(map-get($var, gutter-names)) == length(map-get($var, gutter-values)) {
+	@if grid-gutter-val($var) {
 
-			@warn "GUTTERS WORK _-_-_-_-_-_-_-_-_";
-			@warn " 'gutter-base, gutter-ratio, gutter-default' keys are validated ";
+		@warn "GUTTERS WORK _-_-_-_-_-_-_-_-_";
+		@warn " 'gutter-base, gutter-ratio, gutter-default' keys are validated ";
 
 	} @else {
 
