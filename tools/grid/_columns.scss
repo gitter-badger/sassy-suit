@@ -3,7 +3,7 @@
 // 	columns: 					12,
 // 	breakpoints: 				auto,
 // 	bpNames: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-// 	bpValues: 					320px 480px 620px 768px 960px 1120px 1200px,
+// 	bpValues: 					320px 480px 620px 768px 960px 1120px,
 // 	containers: 				auto,
 // 	containerNames: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
 // 	gutters: 					auto,
@@ -21,9 +21,10 @@
 	@if grid-key-output-val($var) and
 		val(map-get($var, columns), positive) and
 		grid-key-bp-names-val($var) and
-		grid-key-bp-values-val($var) {
+		grid-key-bp-values-val($var) and
+		length(map-get($var, bpNames)) == length(map-get($var, bpValues)) {
 
-		@warn " 'Output, columns, bp-names, bp-values' keys are validated";
+		@warn " 'Output, columns, bp-names, bp-values' keys are validated ";
 
 	} @else {
 
