@@ -1,0 +1,17 @@
+@function grid-key-container-values-val($var) {
+	@if val($var, map) and
+		val(map-get($value, containerValues), list) and
+		sl-walk(map-get($value, containerValues), val, positiveMeasure) {
+
+		@return true;
+
+	} @else if not val($var, map) {
+
+		@error "$grid is not a valid map";
+
+	} @else {
+
+		@error "Grid container-values key is invalid!";
+
+	}
+}
