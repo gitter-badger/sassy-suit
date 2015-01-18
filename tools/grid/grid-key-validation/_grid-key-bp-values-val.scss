@@ -1,7 +1,7 @@
 @function grid-key-bp-values-val($var) {
 	@if val($var, map) and
-		val(map-get($var, bpValues), list) and
-		sl-walk(map-get($var, bpValues), val, positiveMeasure) {
+		val(map-get($var, bp-values), list) and
+		sl-walk(map-get($var, bp-values), val, positiveMeasure) {
 
 		@return true;
 

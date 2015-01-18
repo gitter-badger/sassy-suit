@@ -1,7 +1,7 @@
 @function grid-key-row-values-val($var) {
 	@if val($var, map) and
-		val(map-get($var, rowValues), list) and
-		sl-walk(map-get($var, rowValues), val, positiveMeasure) {
+		val(map-get($var, row-values), list) and
+		sl-walk(map-get($var, row-values), val, positiveMeasure) {
 
 		@return true;
 
