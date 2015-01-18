@@ -1,0 +1,13 @@
+@function grid-key-bp-names-val($var) {
+	@if val($var, map) and
+		val(map-get($value, bpNames), list) and
+		sl-walk(map-get($value, bpNames), val, string) {
+
+		@return true;
+
+	} @else {
+
+		@error "Grid bp-names key is invalid";
+
+	}
+}
