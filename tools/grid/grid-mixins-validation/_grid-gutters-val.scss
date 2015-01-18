@@ -1,4 +1,4 @@
-@function grid-gutter-val($var: $grid) {
+@function grid-gutters-val($var: $grid) {
 	@if grid-key-output-val($var) and
 		val(map-get($var, gutter-base), measurePositive) and
 		val(map-get($var, gutter-ratio), float) and

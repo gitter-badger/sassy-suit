@@ -17,7 +17,8 @@
 // );
 
 @mixin gutters($var: $grid) {
-	@if grid-gutter-val($var) {
+	@if grid-gutters-val($var) and
+		grid-bps-val($var) {
 
 		@warn "GUTTERS WORK _-_-_-_-_-_-_-_-_";
 		@warn " 'gutter-base, gutter-ratio, gutter-default' keys are validated ";
