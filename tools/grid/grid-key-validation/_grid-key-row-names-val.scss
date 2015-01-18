@@ -1,0 +1,17 @@
+@function grid-key-row-names-val($var) {
+	@if val($var, map) and
+		val(map-get($value, rowNames), list) and
+		sl-walk(map-get($value, rowNames), val, string) {
+
+		@return true;
+
+	} @else if not val($var, map) {
+
+		@error "$grid is not a valid map";
+
+	} @else {
+
+		@error "Grid row-names key is invalid!";
+
+	}
+}
