@@ -5,6 +5,10 @@
 
 			@return true;
 
+		} @else if not val($var, map) {
+
+			@error "$grid is not a valid map";
+
 		} @else {
 
 			@error "Grid output key is invalid!";
