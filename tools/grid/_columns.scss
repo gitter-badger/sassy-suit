@@ -16,77 +16,20 @@
 // 	debug: 						true
 // );
 
-@mixin columns($grid: $grid) {
+@mixin columns($var: $grid) {
 
-	@if gridConfigVal($grid) {
-		@warn "Pooook!";
-	}
+	@if grid-key-output-val($var) and
+		val(map-get($var, columns), positive) and
+		grid-key-bp-names-val($var) and
+		grid-key-bp-values-val($var) {
 
-	@if val($grid, map) {
-
-		@warn "$Grid is a valid map";
-
-		@if val($breakpoints, map) {
-
-			@warn "$breakpoints is a valid map";
-
-		} @else {
-
-			@warn "$breakpoints doesn't exists or is not a valid map ::::::::::!!";
-
-		}
-
-		// } @else if map-get-key(breakpoints) == static {
-
-		// 	// do something else
-
-		// } @else {
-
-		// 	@error "something";
-
-		// }
-
-		// @if map-get-key(ratio) == auto {
-
-				// 	// do something
-
-			// }
-
-		// } @else if val(ratio, num) {
-
-		// 	// do something else
-
-		// } @else {
-
-		// 	@error "something";
-
-		// }
-
-		@if val(map-get($grid, columns), number) and
-			val(map-get($grid, baseGutter), measure) and
-			val(map-get($grid, defaultGutter), measure) {
-
-				@warn "SUCCESS::::::::::::::::::::::::::::::::::::";
-				// @debug map-get($grid, columns);
-				// @debug map-get($grid, baseGutter);
-				// @debug map-get($grid, defaultGutter);
-
-
-		} @else {
-
-			@warn "Not valid map key values";
-			// @debug map-get($grid, columns);
-			// @debug map-get($grid, baseGutter);
-			// @debug map-get($grid, defaultGutter);
-
-		}
+		@warn " 'Output, columns, bp-names, bp-values' keys are validated";
 
 	} @else {
 
-		@error $grid "map doesn't exist!";
+		@error "Shit!!!";
 
 	}
-
 }
 
 @include columns;
