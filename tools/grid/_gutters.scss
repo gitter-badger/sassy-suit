@@ -26,14 +26,13 @@
 		grid-key-gutter-values-val($var) and
 		length(map-get($var, gutter-names)) == length(map-get($var, gutter-values)) {
 
-			@debug map-get($var, gutter-base);
-
 			@warn "GUTTERS WORK _-_-_-_-_-_-_-_-_";
 			@warn " 'gutter-base, gutter-ratio, gutter-default' keys are validated ";
 
 	} @else {
 
 		@debug "GUTTERS dont's work!";
+		@error "Gutter keys are invalid!";
 
 	}
 }
