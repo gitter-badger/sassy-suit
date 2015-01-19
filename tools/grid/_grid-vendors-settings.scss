@@ -24,20 +24,18 @@
 //   )
 // );
 
-@function grid-vendors-settings($vendor: $susy) {
-	@if exists(map-set, function) {
-		$vendors: ();
-		$vendor: map-set($vendor, flow, 'ltr');
-		$vendor: map-set($vendor, math, 'fluid');
-		$vendor: map-set($vendor, output, 'float');
-		$vendor: map-set($vendor, gutter-position, 'inside-static');
-		$vendor: map-set($vendor, container-position, 'center');
+/**
+*
+* @todo add map-set function for `$susy` map
+*
+*/
 
-		@return $vendor;
+$susy: () !global;
 
-	} @else {
+$susy: map-set($susy, flow, 'ltr');
+$susy: map-set($susy, math, 'fluid');
+$susy: map-set($susy, output, 'float');
+$susy: map-set($susy, gutter-position, 'inside-static');
+$susy: map-set($susy, container-position, 'center');
 
-		@error "map-set function doesn't exist!";
-
-	}
-}
+@debug $susy "grid vendors settings";
