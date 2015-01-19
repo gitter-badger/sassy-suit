@@ -43,7 +43,11 @@
 // );
 
 
-@function grid-gutters-auto-output($var) {
+@function grid-gutters-auto-output($var, $vendor: $susy) {
+
+	@if grid-vendors-settings($vendor) {
+		@debug $vendor;
+	}
 
 	$susy-column-width: map-get($var, gutter-base) * 10;
 	$susy-gutters: strip-units(map-get($var, gutter-base)) * .04 ;
@@ -52,8 +56,13 @@
 		$susy-gutters: $susy-gutters / 10;
 	}
 
+	$vendor: map-set($vendor, column-width, $susy-column-width);
+	$vendor: map-set($vendor, gutters, $susy-gutters);
+
 	@debug $susy-gutters;
 	@debug $susy-column-width;
+
+	@debug $vendor;
 
 	@return true;
 
