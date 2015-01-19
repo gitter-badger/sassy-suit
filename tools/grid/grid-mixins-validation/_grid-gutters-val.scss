@@ -6,7 +6,8 @@
 		val(map-get($var, gutter-default), measurePositive) and
 		grid-key-gutter-names-val($var) and
 		grid-key-gutter-values-val($var) and
-		length(map-get($var, gutter-names)) == length(map-get($var, gutter-values)) {
+		length(map-get($var, gutter-names)) == length(map-get($var, gutter-values)) and
+		exists(ms-list, function) {
 
 			@return true;
 
