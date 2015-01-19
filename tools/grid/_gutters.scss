@@ -30,7 +30,13 @@
 
 	}
 
-	@if map-get($var, output) == auto {}
+	@if map-get($var, output) == auto {
+		@if grid-gutters-auto-output($var) {
+
+		} @else {
+
+		}
+	}
 
 	@else if map-get($var, output) == responsive {}
 
