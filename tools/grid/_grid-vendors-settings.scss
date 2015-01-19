@@ -1,0 +1,43 @@
+// $susy: (
+//   flow: ltr,
+//   math: fluid,
+//   output: float,
+//   gutter-position: inside-static,
+//   container: 1200px,
+//   container-position: center,
+//   columns: 12,
+//   gutters: .1 * 2,
+//   column-width: 50px,
+//   last-flow: to,
+//   debug: (
+//     image: show,
+//     color: rgba(red, .25),
+//     output: background,
+//     toggle: top right,
+//   ),
+//   use-custom: (
+//     background-image: true,
+//     background-options: false,
+//     box-sizing: true,
+//     clearfix: false,
+//     rem: true,
+//   )
+// );
+
+@function grid-vendors-settings($vendor: $susy) {
+	@if exists(map-set, function) {
+		$vendors: ();
+		$vendor: map-set($vendor, flow, 'ltr');
+		$vendor: map-set($vendor, math, 'fluid');
+		$vendor: map-set($vendor, output, 'float');
+		$vendor: map-set($vendor, gutter-position, 'inside-static');
+		$vendor: map-set($vendor, container-position, 'center');
+
+		@return $vendor;
+
+	} @else {
+
+		@error "map-set function doesn't exist!";
+
+	}
+}
