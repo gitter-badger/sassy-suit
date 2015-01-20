@@ -7,6 +7,7 @@
 		grid-key-gutter-names-val($var) and
 		grid-key-gutter-values-val($var) and
 		length(map-get($var, gutter-names)) == length(map-get($var, gutter-values)) and
+		val(map-get($var, vendors), bool) and
 		exists(ms-list, function) and
 		exists(map-set, function) {
 
