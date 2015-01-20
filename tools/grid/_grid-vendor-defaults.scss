@@ -1,35 +1,3 @@
-// $susy: (
-//   flow: ltr,
-//   math: fluid,
-//   output: float,
-//   gutter-position: inside-static,
-//   container: 1200px,
-//   container-position: center,
-//   columns: 12,
-//   gutters: .1 * 2,
-//   column-width: 50px,
-//   last-flow: to,
-//   debug: (
-//     image: show,
-//     color: rgba(red, .25),
-//     output: background,
-//     toggle: top right,
-//   ),
-//   use-custom: (
-//     background-image: true,
-//     background-options: false,
-//     box-sizing: true,
-//     clearfix: false,
-//     rem: true,
-//   )
-// );
-
-/**
-*
-* @todo add map-set function for `$susy` map
-*
-*/
-
 $susy: ();
 
 $grid-vendors-settings: (
@@ -39,5 +7,3 @@ $grid-vendors-settings: (
 	gutter-position: inside-static,
 	container-position: center
 );
-
-$susy: map-merge($susy, $grid-vendors-settings);
