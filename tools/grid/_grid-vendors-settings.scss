@@ -30,12 +30,14 @@
 *
 */
 
-$susy: () !global;
+$susy: ();
 
-$susy: map-set($susy, flow, 'ltr');
-$susy: map-set($susy, math, 'fluid');
-$susy: map-set($susy, output, 'float');
-$susy: map-set($susy, gutter-position, 'inside-static');
-$susy: map-set($susy, container-position, 'center');
+$grid-vendors-settings: (
+	flow: ltr,
+	math: fluid,
+	output: float,
+	gutter-position: inside-static,
+	container-position: center
+);
 
-@debug $susy "grid vendors settings";
+$susy: map-merge($susy, $grid-vendors-settings);
