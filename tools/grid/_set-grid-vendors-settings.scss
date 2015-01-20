@@ -1,3 +1,5 @@
 @if map-get($grid, vendors) {
-	$susy: map-merge($susy, $grid-vendors-settings);
+	@if $susy == () {
+		$susy: map-merge($susy, $grid-vendors-settings);
+	}
 }
