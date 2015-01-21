@@ -1,1 +1,3 @@
 $susy-column-width: map-get($grid, gutter-base) * 10;
+
+@include set-grid-vendor-key-settings(column-width, $susy-column-width);
