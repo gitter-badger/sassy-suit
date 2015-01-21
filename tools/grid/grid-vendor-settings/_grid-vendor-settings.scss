@@ -1,9 +1,23 @@
 $susy: ();
 
-$grid-vendors-settings: (
+@debug "$susy before::::::" $susy;
+
+$grid-vendor-settings: (
 	flow: ltr,
 	math: fluid,
 	output: float,
 	gutter-position: inside-static,
-	container-position: center
+	container-position: center,
 );
+
+
+@mixin set-grid-vendor-settings($args, $is-child:true) {
+	@if $is-child {
+		$susy: () !global;
+	}
+	$susy: map-merge($susy, $args) !global;
+}
+
+@include set-grid-vendor-settings($grid-vendor-settings);
+
+@debug "$susy after set-grid-vendor-settings()::::::" $susy;
