@@ -1,1 +1,3 @@
 $susy-gutters: strip-units(map-get($grid, gutter-base)) * .04;
+
+@include set-grid-vendor-key-settings(gutters, $susy-gutters);
