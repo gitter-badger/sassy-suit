@@ -1,0 +1,7 @@
+$susy-columns: map-get($grid, columns);
+
+@mixin set-grid-vendor-columns($var: $susy-columns) {
+	@include set-grid-vendor-key-settings(columns, $susy-columns);
+}
+
+@include set-grid-vendor-columns;
