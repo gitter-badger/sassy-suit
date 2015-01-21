@@ -1,16 +1,15 @@
-// @if map-get($grid, vendors) {
-// 	@if $susy == () {
-// 		$susy: map-merge($susy, $grid-vendors-settings);
-// 	}
-// }
+$susy: ();
 
-@debug "@@@@@@@@" $susy;
+@debug "$susy before::::::" $susy;
 
-@mixin set-grid-vendor-settings($settings: $grid-vendors-settings, $vendor: $susy) {
-	$vendor: map-merge($vendor, $settings) !global;
-	@debug $vendor;
+
+@mixin set-grid-vendor-settings($args, $is-child:true) {
+	@if $is-child {
+		$susy: () !global;
+	}
+	$susy: map-merge($susy, $args) !global;
 }
 
-@include set-grid-vendor-settings($grid-vendors-settings, $susy);
+@include set-grid-vendor-settings($grid-vendor-settings);
 
-@debug "@@@@@@@@" $susy;
+@debug "$susy after::::::" $susy;

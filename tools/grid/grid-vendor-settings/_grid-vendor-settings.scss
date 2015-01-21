@@ -1,5 +1,3 @@
-@debug "$susy before::::::" $susy;
-
 $grid-vendor-settings: (
 	flow: ltr,
 	math: fluid,
@@ -12,14 +10,3 @@ $grid-vendor-settings: (
 	gutters: .2,
 	column-width: 50px
 );
-
-@mixin set-grid-vendor-settings($args, $is-child:true) {
-	@if $is-child {
-		$susy: () !global;
-	}
-	$susy: map-merge($susy, $args) !global;
-}
-
-@include set-grid-vendor-settings($grid-vendor-settings);
-
-@debug "$susy after set-grid-vendor-settings()::::::" $susy;
