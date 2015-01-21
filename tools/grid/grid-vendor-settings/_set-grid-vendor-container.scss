@@ -1,0 +1,7 @@
+$susy-container: nth(map-get($grid, container-values), length(map-get($grid, container-values)));
+
+@mixin set-grid-vendor-container($var: $susy-container) {
+	@include set-grid-vendor-key-settings(container, $susy-container);
+}
+
+@include set-grid-vendor-container;
