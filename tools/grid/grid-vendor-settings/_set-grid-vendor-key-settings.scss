@@ -5,6 +5,3 @@
 		$susy: map-set($susy, $key, $value) !global;
 	}
 }
-
-@include set-grid-vendor-key-settings(hello, world this is just a test);
-
