@@ -161,7 +161,6 @@ $grid: (
 	ms-base: 					5px,
 	ms-ratio: 					1.5,
 	ms-round: 					true,
-	bps: 						auto,
 	space-units: 				auto,
 	containers: 				auto,
 	containers-fluid: 			auto,
@@ -169,10 +168,6 @@ $grid: (
 );
 
 $grid-extras: (
-	bps: (
-		values: 				320px 480px 620px 768px 960px 1120px,
-		names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-	),
 	space-units: (
 		static: 				15px,
 		values: 				5px 10px 15px 20px 25px 30px,
