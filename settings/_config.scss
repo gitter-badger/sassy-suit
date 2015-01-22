@@ -161,6 +161,22 @@ $grid: (
 	round: 						true,
 );
 
+$grid-bp-settings: (
+	values: 					320px 480px 620px 768px 960px 1120px,
+	names: 						'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+);
+
+$grid-space-units: (
+	static: 					15px,
+	values: 					5px 10px 15px 20px 25px 30px,
+	names: 						'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+);
+
+$containers: (
+	names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
+	values: 				300px 450px 600px 700px 900px 1100px 1200px,
+);
+
 /*-----  End of Grid  ------*/
 
 // $susy: (
