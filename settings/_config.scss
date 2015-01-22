@@ -151,14 +151,20 @@ $type: (
 // 	debug: 						true
 // );
 
+// bp key {auto | custom}
+
 $grid: (
-	bp: 						true,
 	columns: 					12,
 	bp-value-flow: 				true,
 	ms: 						true,
 	ms-base: 					5px,
 	ms-ratio: 					1.5,
-	round: 						true,
+	ms-round: 					true,
+	bp: 						auto,
+	space-units: 				auto,
+	containers: 				auto,
+	containers-fluid: 			auto,
+	debug: 						false
 );
 
 $grid-bp-settings: (
@@ -172,10 +178,18 @@ $grid-space-units: (
 	names: 						'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
 );
 
-$containers: (
-	names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
-	values: 				300px 450px 600px 700px 900px 1100px 1200px,
+$grid-containers: (
+	names: 						'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+	values: 					300px 450px 600px 700px 900px 1100px,
 );
+
+
+$grid-containers: (
+	title: 						'fluid',
+	names: 						'lg' 'xl' 'xxl',
+	values: 					730px 960px 1200px,
+);
+
 
 /*-----  End of Grid  ------*/
 
