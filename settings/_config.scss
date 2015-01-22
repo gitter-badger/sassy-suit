@@ -126,25 +126,39 @@ $type: (
 // Ratio {auto | custom} - `map-get($type, sizeRatio)`
 // Output {responsive | static} - gutters, rows, containers, etc
 
-// @todo how to generate valid gutter size for $susy map ?
+// @todo Document with full set of options
+
+// $grid: (
+
+// 	bp-names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	bp-values: 					320px 480px 620px 768px 960px 1120px,
+
+// 	columns: 					12,
+// 	bp-value-flow: 				true,
+// 	ms: 						true,
+// 	ms-base: 					5px,
+// 	ms-ratio: 					1.5,
+// 	round: 						true,
+
+// 	space-unit: 				15px,
+// 	space-units: 				5px 10px 15px 20px 25px 30px,
+// 	class-names: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+
+
+// 	container-names: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
+// 	container-values: 			300px 450px 600px 700px 900px 1100px 1200px,
+
+// 	debug: 						true
+// );
 
 $grid: (
-	output: 					auto,
+	bp: 						true,
 	columns: 					12,
-	bp-names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-	bp-values: 					320px 480px 620px 768px 960px 1120px,
-	gutter-base: 				5px,
-	gutter-ratio: 				1.5,
-	gutter-default: 			15px,
-	gutter-names: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-	gutter-values: 				5px 10px 15px 20px 25px 30px,
-	container-names: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
-	container-values: 			300px 450px 600px 700px 900px 1100px 1200px,
+	bp-value-flow: 				true,
+	ms: 						true,
+	ms-base: 					5px,
+	ms-ratio: 					1.5,
 	round: 						true,
-	row-names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-	row-values: 				-5px -10px -15px -20px -25px -30px,
-	vendors: 					true,
-	debug: 						true
 );
 
 /*-----  End of Grid  ------*/
