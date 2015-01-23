@@ -1692,7 +1692,7 @@ body {
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto|Nunito|Roboto%3A%20700|Roboto%3A%20300|Roboto%3A%20400%2C%20italic|Open%20Sans|Dosis|Open%20Sans%3A%20700|Open%20Sans%3A%20300|Open%20Sans%3A%20400%2C%20italic");
-/* line 11, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 11, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 article,
 aside,
 details,
@@ -1711,7 +1711,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 30, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 30, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 audio,
 canvas,
 video {
@@ -1724,7 +1724,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 43, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 43, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -1734,7 +1734,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-/* line 53, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 53, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -1748,7 +1748,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 68, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 68, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -1762,7 +1762,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 79, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 79, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 html,
 button,
 input,
@@ -1774,7 +1774,7 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 91, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 91, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 body {
   margin: 0;
 }
@@ -1785,7 +1785,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 103, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 103, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -1793,7 +1793,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 111, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 111, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -1807,37 +1807,37 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-/* line 126, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 126, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 131, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 131, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-/* line 136, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 136, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 141, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 141, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 146, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 146, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 151, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 151, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -1846,7 +1846,7 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 160, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 160, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -1854,13 +1854,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 168, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 168, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 173, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 173, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -1868,7 +1868,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 181, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 181, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -1877,7 +1877,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 190, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 190, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -1886,7 +1886,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 200, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 200, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -1895,7 +1895,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 209, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 209, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -1904,7 +1904,7 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 218, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 218, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 code,
 kbd,
 pre,
@@ -1917,7 +1917,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 231, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 231, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -1927,7 +1927,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 241, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 241, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 q {
   quotes: none;
 }
@@ -1935,7 +1935,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 249, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 249, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -1945,7 +1945,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 259, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 259, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -1953,7 +1953,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 267, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 267, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -1962,12 +1962,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 275, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 275, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 279, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 279, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -1978,7 +1978,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 291, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 291, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 dl,
 menu,
 ol,
@@ -1986,7 +1986,7 @@ ul {
   margin: 1em 0;
 }
 
-/* line 298, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 298, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -1994,7 +1994,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 306, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 306, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 menu,
 ol,
 ul {
@@ -2004,7 +2004,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 316, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 316, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -2018,7 +2018,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 331, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 331, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -2029,7 +2029,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 340, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 340, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -2040,7 +2040,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 352, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 352, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -2051,7 +2051,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 364, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 364, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 form {
   margin: 0;
 }
@@ -2059,7 +2059,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 372, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 372, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -2071,7 +2071,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 384, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 384, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -2088,7 +2088,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 398, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 398, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button,
 input,
 select,
@@ -2107,7 +2107,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 413, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 413, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -2119,7 +2119,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 425, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 425, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -2134,7 +2134,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 440, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 440, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -2150,7 +2150,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 453, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 453, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -2162,7 +2162,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 465, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 465, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -2180,7 +2180,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 479, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 479, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -2192,7 +2192,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 491, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 491, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -2201,7 +2201,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 500, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 500, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -2212,7 +2212,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 511, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 511, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -2226,7 +2226,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_normalize.scss */
+/* line 524, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -2241,7 +2241,7 @@ table {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 html,
 button,
 input,
@@ -2250,7 +2250,7 @@ textarea {
   color: #222;
 }
 
-/* line 21, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 21, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 html {
   font-size: 1em;
   line-height: 1.4;
@@ -2261,13 +2261,13 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 32, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 32, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 37, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 37, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -2280,7 +2280,7 @@ html {
 /*
  * A better looking default horizontal rule
  */
-/* line 46, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 46, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 hr {
   display: block;
   height: 1px;
@@ -2294,7 +2294,7 @@ hr {
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-/* line 60, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 60, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 audio,
 canvas,
 img,
@@ -2305,7 +2305,7 @@ video {
 /*
  * Remove default fieldset styles.
  */
-/* line 71, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 71, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -2315,7 +2315,7 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 81, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 81, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 textarea {
   resize: vertical;
 }
@@ -2323,7 +2323,7 @@ textarea {
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
-/* line 89, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 89, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -2340,7 +2340,7 @@ textarea {
 /*
  * Image replacement
  */
-/* line 124, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 124, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -2349,7 +2349,7 @@ textarea {
   *text-indent: -9999px;
 }
 
-/* line 132, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 132, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .ir:before {
   content: "";
   display: block;
@@ -2360,7 +2360,7 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 143, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 143, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -2369,7 +2369,7 @@ textarea {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 152, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 152, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2385,7 +2385,7 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 168, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 168, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -2399,7 +2399,7 @@ textarea {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 182, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 182, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .invisible {
   visibility: hidden;
 }
@@ -2415,7 +2415,7 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 198, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 198, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -2424,7 +2424,7 @@ textarea {
   /* 2 */
 }
 
-/* line 204, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 204, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .clearfix:after {
   clear: both;
 }
@@ -2433,7 +2433,7 @@ textarea {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 213, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+/* line 213, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -2454,7 +2454,7 @@ textarea {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 240, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 240, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -2463,18 +2463,18 @@ textarea {
     text-shadow: none !important;
   }
 
-  /* line 247, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 247, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 252, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 252, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 256, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 256, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -2482,33 +2482,33 @@ textarea {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 264, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 264, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 270, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 270, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 276, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 276, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 280, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 280, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 285, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 285, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   img {
     max-width: 100% !important;
   }
@@ -2516,7 +2516,7 @@ textarea {
   @page {
     margin: 0.5cm;
   }
-  /* line 293, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 293, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   p,
   h2,
   h3 {
@@ -2524,26 +2524,26 @@ textarea {
     widows: 3;
   }
 
-  /* line 300, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_h5bp.scss */
+  /* line 300, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_h5bp.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
 /* apply a natural box layout model to all elements, but allowing components to change */
-/* line 3, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 3, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 7, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 7, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 ::-moz-selection {
   color: #fff;
   background: #c2185b;
@@ -2553,7 +2553,7 @@ html {
   background: #c2185b;
 }
 
-/* line 18, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 18, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 html,
 body,
 button {
@@ -2562,7 +2562,7 @@ button {
   font-smoothing: antialiased;
 }
 
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -2571,17 +2571,17 @@ body {
   color: #212121;
 }
 
-/* line 35, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 35, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 a {
   color: #c51162;
 }
-/* line 38, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 38, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 a:hover, a:focus, a:active {
   color: #f50057;
   text-decoration: none;
 }
 
-/* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 blockquote,
 dl,
 dd,
@@ -2597,7 +2597,7 @@ pre {
   margin: 0;
 }
 
-/* line 62, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 62, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 button {
   background: transparent;
   border: 0;
@@ -2608,20 +2608,20 @@ button {
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
-/* line 73, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 73, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-/* line 78, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 78, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 84, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 84, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 iframe {
   border: 0;
 }
@@ -2631,12 +2631,12 @@ iframe {
  * This prevents an unwanted focus outline from appearing around elements that
  * might still respond to pointer events.
  */
-/* line 94, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 94, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 [tabindex="-1"]:focus {
   outline: none !important;
 }
 
-/* line 98, ../../../../../../../Users/Vlad/Development/sassySuit/generic/_base.scss */
+/* line 98, ../../../../../../../Users/Vlad/Development/sassy-suit/generic/_base.scss */
 img,
 video {
   max-width: 100%;
@@ -2644,7 +2644,7 @@ video {
 }
 
 /*==========  Base Sets Placeholders  ==========*/
-/* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h6 {
   font-size: 11px;
   line-height: 17px;
@@ -2652,7 +2652,7 @@ h6 {
   padding: 8px 0;
 }
 @media (min-width: 320px) {
-  /* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h6 {
     font-size: 12px;
     line-height: 18px;
@@ -2661,7 +2661,7 @@ h6 {
   }
 }
 @media (min-width: 480px) {
-  /* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h6 {
     font-size: 13px;
     line-height: 20px;
@@ -2670,7 +2670,7 @@ h6 {
   }
 }
 @media (min-width: 768px) {
-  /* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h6 {
     font-size: 14px;
     line-height: 21px;
@@ -2679,7 +2679,7 @@ h6 {
   }
 }
 @media (min-width: 960px) {
-  /* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h6 {
     font-size: 16px;
     line-height: 24px;
@@ -2688,7 +2688,7 @@ h6 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 14, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 14, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h6 {
     font-size: 17px;
     line-height: 26px;
@@ -2697,7 +2697,7 @@ h6 {
   }
 }
 
-/* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 p, h5 {
   font-size: 16px;
   line-height: 24px;
@@ -2705,7 +2705,7 @@ p, h5 {
   padding: 12px 0;
 }
 @media (min-width: 320px) {
-  /* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   p, h5 {
     font-size: 18px;
     line-height: 27px;
@@ -2714,7 +2714,7 @@ p, h5 {
   }
 }
 @media (min-width: 480px) {
-  /* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   p, h5 {
     font-size: 19px;
     line-height: 29px;
@@ -2723,7 +2723,7 @@ p, h5 {
   }
 }
 @media (min-width: 768px) {
-  /* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   p, h5 {
     font-size: 21px;
     line-height: 32px;
@@ -2732,7 +2732,7 @@ p, h5 {
   }
 }
 @media (min-width: 960px) {
-  /* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   p, h5 {
     font-size: 23px;
     line-height: 35px;
@@ -2741,7 +2741,7 @@ p, h5 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   p, h5 {
     font-size: 26px;
     line-height: 39px;
@@ -2750,7 +2750,7 @@ p, h5 {
   }
 }
 
-/* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h4 {
   font-size: 24px;
   line-height: 36px;
@@ -2758,7 +2758,7 @@ h4 {
   padding: 18px 0;
 }
 @media (min-width: 320px) {
-  /* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h4 {
     font-size: 26px;
     line-height: 39px;
@@ -2767,7 +2767,7 @@ h4 {
   }
 }
 @media (min-width: 480px) {
-  /* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h4 {
     font-size: 29px;
     line-height: 44px;
@@ -2776,7 +2776,7 @@ h4 {
   }
 }
 @media (min-width: 768px) {
-  /* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h4 {
     font-size: 32px;
     line-height: 48px;
@@ -2785,7 +2785,7 @@ h4 {
   }
 }
 @media (min-width: 960px) {
-  /* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h4 {
     font-size: 35px;
     line-height: 53px;
@@ -2794,7 +2794,7 @@ h4 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 36, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 36, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h4 {
     font-size: 39px;
     line-height: 59px;
@@ -2803,7 +2803,7 @@ h4 {
   }
 }
 
-/* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h3 {
   font-size: 36px;
   line-height: 54px;
@@ -2811,7 +2811,7 @@ h3 {
   padding: 27px 0;
 }
 @media (min-width: 320px) {
-  /* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h3 {
     font-size: 40px;
     line-height: 60px;
@@ -2820,7 +2820,7 @@ h3 {
   }
 }
 @media (min-width: 480px) {
-  /* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h3 {
     font-size: 44px;
     line-height: 66px;
@@ -2829,7 +2829,7 @@ h3 {
   }
 }
 @media (min-width: 768px) {
-  /* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h3 {
     font-size: 48px;
     line-height: 72px;
@@ -2838,7 +2838,7 @@ h3 {
   }
 }
 @media (min-width: 960px) {
-  /* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h3 {
     font-size: 53px;
     line-height: 80px;
@@ -2847,7 +2847,7 @@ h3 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 47, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 47, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h3 {
     font-size: 58px;
     line-height: 87px;
@@ -2856,7 +2856,7 @@ h3 {
   }
 }
 
-/* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h2 {
   font-size: 54px;
   line-height: 81px;
@@ -2864,7 +2864,7 @@ h2 {
   padding: 41px 0;
 }
 @media (min-width: 320px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h2 {
     font-size: 59px;
     line-height: 89px;
@@ -2873,7 +2873,7 @@ h2 {
   }
 }
 @media (min-width: 480px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h2 {
     font-size: 65px;
     line-height: 98px;
@@ -2882,7 +2882,7 @@ h2 {
   }
 }
 @media (min-width: 768px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h2 {
     font-size: 72px;
     line-height: 108px;
@@ -2891,7 +2891,7 @@ h2 {
   }
 }
 @media (min-width: 960px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h2 {
     font-size: 79px;
     line-height: 119px;
@@ -2900,7 +2900,7 @@ h2 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 58, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 58, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h2 {
     font-size: 87px;
     line-height: 131px;
@@ -2909,7 +2909,7 @@ h2 {
   }
 }
 
-/* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h1 {
   font-size: 81px;
   line-height: 122px;
@@ -2917,7 +2917,7 @@ h1 {
   padding: 61px 0;
 }
 @media (min-width: 320px) {
-  /* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h1 {
     font-size: 89px;
     line-height: 134px;
@@ -2926,7 +2926,7 @@ h1 {
   }
 }
 @media (min-width: 480px) {
-  /* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h1 {
     font-size: 98px;
     line-height: 147px;
@@ -2935,7 +2935,7 @@ h1 {
   }
 }
 @media (min-width: 768px) {
-  /* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h1 {
     font-size: 108px;
     line-height: 162px;
@@ -2944,7 +2944,7 @@ h1 {
   }
 }
 @media (min-width: 960px) {
-  /* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h1 {
     font-size: 119px;
     line-height: 179px;
@@ -2953,7 +2953,7 @@ h1 {
   }
 }
 @media (min-width: 1140px) {
-  /* line 69, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+  /* line 69, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
   h1 {
     font-size: 130px;
     line-height: 195px;
@@ -2963,7 +2963,7 @@ h1 {
 }
 
 /*==========  Style Sets Placeholders  ==========*/
-/* line 105, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 105, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h1,
 h2,
 h3,
@@ -2973,7 +2973,7 @@ h6 {
   font-family: Roboto, serif;
 }
 
-/* line 113, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 113, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 h1,
 h2,
 h3,
@@ -2983,36 +2983,36 @@ h6 {
   color: #333;
 }
 
-/* line 118, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 118, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 p {
   font-family: Open Sans, sans-serif;
 }
 
-/* line 126, ../../../../../../../Users/Vlad/Development/sassySuit/base/_placeholders.scss */
+/* line 126, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_placeholders.scss */
 p {
   color: #111;
 }
 
-/* line 1, ../../../../../../../Users/Vlad/Development/sassySuit/base/_paragraphs.scss */
+/* line 1, ../../../../../../../Users/Vlad/Development/sassy-suit/base/_paragraphs.scss */
 p {
   letter-spacing: 0;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/components/_index.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/components/_index.scss */
 main {
   background-color: #eee;
 }
 
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/components/_index.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/components/_index.scss */
 aside {
   background-color: #999;
 }
-/* line 16, ../../../../../../../Users/Vlad/Development/sassySuit/components/_index.scss */
+/* line 16, ../../../../../../../Users/Vlad/Development/sassy-suit/components/_index.scss */
 aside ul {
   background-color: lightblue;
 }
 
-/* line 191, ../../../../../../../Users/Vlad/Development/sassySuit/tools/vendors/_logger.scss */
+/* line 191, ../../../../../../../Users/Vlad/Development/sassy-suit/tools/vendors/_logger.scss */
 logger-help {
   OFF: "Disable the logger.";
   FATAL: "Severe errors that cause premature termination.";
@@ -3022,7 +3022,7 @@ logger-help {
   DEBUG: "Detailed information on the flow through the system.";
 }
 
-/* line 3, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/clearfix/_clearfix-mixin.scss */
+/* line 3, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/clearfix/_clearfix-mixin.scss */
 .u-cf:after,
 .u-clearfix:after {
   content: "";
@@ -3030,312 +3030,312 @@ logger-help {
   clear: both;
 }
 
-/* line 3, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 3, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textLeft {
   text-align: left;
 }
 
-/* line 7, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 7, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textRight {
   text-align: right;
 }
 
-/* line 11, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 11, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textCenter {
   text-align: center;
 }
 
-/* line 15, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 15, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textJustify {
   text-align: justify;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textNowrap {
   white-space: nowrap;
 }
 
-/* line 25, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 25, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textLowercase {
   text-transform: lowercase;
 }
 
-/* line 29, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 29, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textUppercase {
   text-transform: uppercase;
 }
 
-/* line 33, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/_typography-include.scss */
+/* line 33, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/_typography-include.scss */
 .u-textCapitalize {
   text-transform: capitalize;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXs {
   margin: 5px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsNeg {
   margin: -5px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsTop {
   margin-top: 5px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsTopNeg {
   margin-top: -5px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsRight {
   margin-right: 5px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsRightNeg {
   margin-right: -5px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsBottom {
   margin-bottom: 5px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsBottomNeg {
   margin-bottom: -5px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsLeft {
   margin-left: 5px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXsLeftNeg {
   margin-left: -5px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSm {
   margin: 10px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmNeg {
   margin: -10px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmTop {
   margin-top: 10px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmTopNeg {
   margin-top: -10px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmRight {
   margin-right: 10px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmRightNeg {
   margin-right: -10px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmBottom {
   margin-bottom: 10px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmBottomNeg {
   margin-bottom: -10px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmLeft {
   margin-left: 10px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginSmLeftNeg {
   margin-left: -10px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMd {
   margin: 15px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdNeg {
   margin: -15px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdTop {
   margin-top: 15px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdTopNeg {
   margin-top: -15px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdRight {
   margin-right: 15px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdRightNeg {
   margin-right: -15px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdBottom {
   margin-bottom: 15px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdBottomNeg {
   margin-bottom: -15px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdLeft {
   margin-left: 15px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginMdLeftNeg {
   margin-left: -15px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLg {
   margin: 20px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgNeg {
   margin: -20px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgTop {
   margin-top: 20px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgTopNeg {
   margin-top: -20px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgRight {
   margin-right: 20px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgRightNeg {
   margin-right: -20px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgBottom {
   margin-bottom: 20px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgBottomNeg {
   margin-bottom: -20px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgLeft {
   margin-left: 20px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginLgLeftNeg {
   margin-left: -20px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXl {
   margin: 25px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlNeg {
   margin: -25px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlTop {
   margin-top: 25px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlTopNeg {
   margin-top: -25px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlRight {
   margin-right: 25px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlRightNeg {
   margin-right: -25px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlBottom {
   margin-bottom: 25px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlBottomNeg {
   margin-bottom: -25px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlLeft {
   margin-left: 25px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXlLeftNeg {
   margin-left: -25px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxl {
   margin: 30px;
 }
-/* line 13, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 13, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlNeg {
   margin: -30px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlTop {
   margin-top: 30px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlTopNeg {
   margin-top: -30px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlRight {
   margin-right: 30px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlRightNeg {
   margin-right: -30px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlBottom {
   margin-bottom: 30px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlBottomNeg {
   margin-bottom: -30px;
 }
 
-/* line 23, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 23, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlLeft {
   margin-left: 30px;
 }
-/* line 27, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/margins/_margins-generation.scss */
+/* line 27, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/margins/_margins-generation.scss */
 .u-marginXxlLeftNeg {
   margin-left: -30px;
 }
@@ -3344,152 +3344,152 @@ logger-help {
 =            Margins            =
 ===============================*/
 /*-----  End of Margins  ------*/
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXs {
   padding: 5px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXsTop {
   padding-top: 5px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXsRight {
   padding-right: 5px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXsBottom {
   padding-bottom: 5px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXsLeft {
   padding-left: 5px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingSm {
   padding: 10px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingSmTop {
   padding-top: 10px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingSmRight {
   padding-right: 10px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingSmBottom {
   padding-bottom: 10px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingSmLeft {
   padding-left: 10px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingMd {
   padding: 15px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingMdTop {
   padding-top: 15px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingMdRight {
   padding-right: 15px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingMdBottom {
   padding-bottom: 15px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingMdLeft {
   padding-left: 15px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingLg {
   padding: 20px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingLgTop {
   padding-top: 20px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingLgRight {
   padding-right: 20px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingLgBottom {
   padding-bottom: 20px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingLgLeft {
   padding-left: 20px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXl {
   padding: 25px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXlTop {
   padding-top: 25px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXlRight {
   padding-right: 25px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXlBottom {
   padding-bottom: 25px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXlLeft {
   padding-left: 25px;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 9, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXxl {
   padding: 30px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXxlTop {
   padding-top: 30px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXxlRight {
   padding-right: 30px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXxlBottom {
   padding-bottom: 30px;
 }
 
-/* line 19, ../../../../../../../Users/Vlad/Development/sassySuit/utilities/utils/paddings/_paddings-generation.scss */
+/* line 19, ../../../../../../../Users/Vlad/Development/sassy-suit/utilities/utils/paddings/_paddings-generation.scss */
 .u-paddingXxlLeft {
   padding-left: 30px;
 }

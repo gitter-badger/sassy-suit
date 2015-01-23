@@ -42,3 +42,5 @@ bower_components
 
 ### Dist folder ###
 dist
+./build
+./node_modules
