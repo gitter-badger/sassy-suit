@@ -113,47 +113,6 @@ $type: (
 =            Grid            =
 ============================*/
 
-// output {auto | responsive | static}
-// auto - auto calculation of modular values for each breakpoint
-// responsive - preset values and names for each breakpoint
-// static - one gutter value for all breakpoints
-
-// Breakpoints {auto | custom}
-//
-// Gutters {fluid | static | custom}
-// baseGutter - gutter value for all the future math
-// defaultGutter - is used with gutters - static
-// Ratio {auto | custom} - `map-get($type, sizeRatio)`
-// Output {responsive | static} - gutters, rows, containers, etc
-
-// @todo Document with full set of options
-
-// $grid: (
-
-// 	bp-names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-// 	bp-values: 					320px 480px 620px 768px 960px 1120px,
-
-// 	columns: 					12,
-// 	bp-value-flow: 				true,
-// 	ms: 						true,
-// 	ms-base: 					5px,
-// 	ms-ratio: 					1.5,
-// 	round: 						true,
-
-// 	space-unit: 				15px,
-// 	space-units: 				5px 10px 15px 20px 25px 30px,
-// 	class-names: 				'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-
-
-// 	container-names: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl' 'fluid',
-// 	container-values: 			300px 450px 600px 700px 900px 1100px 1200px,
-
-// 	debug: 						true
-// );
-
-// key {auto | custom}
-// if custom
-
 $grid: (
 	columns: 					12,
 	bp-value-flow: 				true,
@@ -161,50 +120,16 @@ $grid: (
 	ms-base: 					5px,
 	ms-ratio: 					1.5,
 	ms-round: 					true,
-	space-units: 				auto,
-	containers: 				auto,
-	containers-fluid: 			auto,
+	space-units: 				5px 10px 15px 20px 25px 30px,
+	space-unit-fallback: 		15px,
+	containers: 				300px 450px 600px 700px 900px 1100px,
+	containers-fluid: 			400px 550px 700px 800px 1000px 1200px,
+	bp-class-names: 			'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+	space-unit-class-names: 	'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+	direction-class-names: 		'before' 'after',
+	gutter-class-name: 			'gutters',
+	row-class-name: 			'row',
+	container-class-name: 		'container',
+	container-fluid-class-name: 'container-fluid',
 	debug: 						false
 );
-
-$grid-extras: (
-	space-units: (
-		static: 				15px,
-		values: 				5px 10px 15px 20px 25px 30px,
-		names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-	),
-	containers: (
-		names: 					'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-		values: 				300px 450px 600px 700px 900px 1100px,
-	),
-	containers-fluid: (
-		names: 					'lg' 'xl' 'xxl',
-		values: 				730px 960px 1200px,
-	),
-);
-
-/*-----  End of Grid  ------*/
-
-// $susy: (
-//   flow: ltr,
-//   math: fluid,
-//   output: float,
-//   gutter-position: inside-static,
-//   container: 1200px,
-//   container-position: center,
-//   columns: 12,
-//   last-flow: to,
-//   debug: (
-//     image: show,
-//     color: rgba(red, .25),
-//     output: background,
-//     toggle: top right,
-//   ),
-//   use-custom: (
-//     background-image: true,
-//     background-options: false,
-//     box-sizing: true,
-//     clearfix: false,
-//     rem: true,
-//   )
-// );
