@@ -11,7 +11,7 @@ or tweet me [@Skoks](https://twitter.com/VladimirSkoks).
 
 ## Documentation
 
-[sassysuit.github.io](http://sassysuit.github.io/)
+[sassysuit.github.io/sassy-suit](http://sassysuit.github.io/sassy-suit)
 
 ## To Do :construction:
 
@@ -22,7 +22,6 @@ Check out our To Do list on [Trello board](https://trello.com/b/auSCHtYg/develop
 1. [SassyValidation](https://github.com/Skoks/sassyValidation)
 2. [SassyLists](https://github.com/at-import/SassyLists)
 3. [Modular Scale](https://github.com/at-import/modular-scale)
-4. [Susy](https://github.com/ericam/susy/)
 
 ## Contributing :octocat:
 
