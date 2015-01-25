@@ -1,20 +1,32 @@
 /**
 *
-* Global sassy-suit configurations for all tools
+* Global sassy-suit breakpoints configurations
 *
 * @group configs
 *
 */
 
-
 $breakpoints: (
-	xs:   					250px,
-	sm:   					300px,
-	md:   					450px,
-	lg:   					650px,
-	xl:   					900px,
-	xxl: 					1200px
+	'xs':   					250px,
+	'sm':   					300px,
+	'md':   					450px,
+	'lg':   					650px,
+	'xl':   					900px,
+	'xxl': 						1200px
 );
+
+
+/**
+*
+* Global sassy-suit configurations for all tools
+*
+* @group configs
+*
+* @prop {Map} margins.xs (xs) - the smallest margin
+*
+* @todo finish documenting all existing keys
+*
+*/
 
 $margins: (
 	Xs:   					5px,
@@ -85,6 +97,16 @@ $type: (
 	)
 );
 
+
+/**
+*
+* Global sassy-suit grid configurations
+*
+* @group configs
+*
+* @prop {Map} grid.columns (integer) - number of columns
+*
+*/
 
 $grid: (
 	'columns': 12,
