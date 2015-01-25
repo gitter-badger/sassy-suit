@@ -7,7 +7,9 @@ var gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	concat 			= require('gulp-concat'),
-	sassdoc			= require('gulp-sassdoc');
+	sassdoc			= require('gulp-sassdoc'),
+	deploy 		= require('gulp-gh-pages');
+
 
 gulp.task('default', function() {
 	return gulp.src('assets/sass/style.scss')
@@ -49,6 +51,12 @@ gulp.task('sassdoc', function () {
 			},
 	      	'basePath': 'https://github.com/SassySuit/SassySuit'
     }));
+});
+
+
+gulp.task('deploy', function () {
+    return gulp.src('./build/sassdoc/**/*')
+        .pipe(deploy(options));
 });
 
 gulp.task('watch', function() {
