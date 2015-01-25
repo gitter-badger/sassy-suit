@@ -8,7 +8,7 @@ var gulp 			= require('gulp'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	concat 			= require('gulp-concat'),
 	sassdoc			= require('gulp-sassdoc'),
-	deploy 		= require('gulp-gh-pages');
+	deploy 		    = require('gulp-gh-pages');
 
 
 gulp.task('default', function() {
