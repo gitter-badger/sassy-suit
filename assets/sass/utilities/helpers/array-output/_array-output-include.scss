@@ -1,3 +1,0 @@
-@include array-output(html, (map-get($typographyResponsiveBase, padding)), padding);
-@include array-output(body, $newSeq, new ratios - multipliers);
-@include array-output-after(html, $fontPaddingSequence, fontPaddingSequence which is used in original typography);

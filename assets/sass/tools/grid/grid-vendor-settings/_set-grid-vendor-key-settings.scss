@@ -1,7 +1,0 @@
-@mixin set-grid-vendor-key-settings($key, $value) {
-	@if map-get($susy, $key) {
-	}
-	@else {
-		$susy: map-set($susy, $key, $value) !global;
-	}
-}

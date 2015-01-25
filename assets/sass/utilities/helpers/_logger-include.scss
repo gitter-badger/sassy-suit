@@ -1,9 +1,0 @@
-// This one is not printed in the console but still tracked in logs.
-@include DEBUG("Debug and stuff.");
-
-// Output definition for each log level
-@include logger-help;
-
-// Output history (optional),
-// especially useful for debugging.
-@include logger-print-logs;

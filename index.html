@@ -22642,7 +22642,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 );</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L119-L141" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L136-L158" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -22658,6 +22658,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
   <h3 class="item__sub-heading">Description</h3>
 
   <div class="item__description"><p>Global sassy-suit grid configurations</p>
+<p>By deafult it uses values <code>@include bp($val)</code> mixin</p>
+<p>with <code>$breakpoints</code> values</p>
 </div>
 
 
@@ -22687,7 +22689,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
         <td data-label="desc"><p>number of columns</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22701,7 +22703,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
         <td data-label="desc"><p>switcher for automatic pairing of breakpoint and matching value for <code>gutter</code>, <code>row</code> and <code>container</code> classes</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22711,11 +22713,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>sizing-output</code></th>
+        <th scope="row" data-label="name"><code>grid.sizing-output</code></th>
         <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22725,11 +22727,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>bp-sizing-output</code></th>
+        <th scope="row" data-label="name"><code>grid.bp-sizing-output</code></th>
         <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes for all breakpoints</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22739,11 +22741,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>ms</code></th>
+        <th scope="row" data-label="name"><code>grid.ms</code></th>
         <td data-label="desc"><p>switcher for using modular-scale plugin for calculating <code>gutter</code> and &#39;row&#39; values</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22753,11 +22755,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>ms-base</code></th>
+        <th scope="row" data-label="name"><code>grid.ms-base</code></th>
         <td data-label="desc"><p>base value argument for <code>ms-list</code> function</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22767,11 +22769,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>ms-ratio</code></th>
+        <th scope="row" data-label="name"><code>grid.ms-ratio</code></th>
         <td data-label="desc"><p>ratio argument for <code>ms-list</code> function</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22781,11 +22783,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>ms-round</code></th>
+        <th scope="row" data-label="name"><code>grid.ms-round</code></th>
         <td data-label="desc"><p>switcher for rounding each value of <code>ms-list</code> function output</p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22795,11 +22797,11 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>space-units</code></th>
-        <td data-label="desc"><p>units for manual setting of <code>row</code> and <code>gutter</code> values, this key gets validated and used while <code>ms: false</code></p>
+        <th scope="row" data-label="name"><code>grid.space-units</code></th>
+        <td data-label="desc"><p>units for manual setting of <code>row</code> and <code>gutter</code> values, this key gets validated and used when <code>ms: false</code></p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
@@ -22809,15 +22811,145 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>ms-ratio</code></th>
-        <td data-label="desc"><p>ratio argument for <code>ms-list</code> function</p>
+        <th scope="row" data-label="name"><code>grid.space-unit-fallback</code></th>
+        <td data-label="desc"><p>fallback value for space-units, this key gets validated and used when <code>&#39;bp-value-flow&#39;: false</code>, <code>&#39;sizing-output&#39;: false</code>, <code>&#39;bp-sizing-output&#39;: false</code></p>
 </td>
         <td data-label="type">
-        Map key
+        Key map
         </td>
         <td data-label="default">
         
           <code>positive measure</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.containers</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.containers-fluid</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.bp-class-names</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.space-unit-class-names</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.direction-class-names</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.gutter-class-name</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.row-class-name</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.container-class-name</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.container-fluid-class-name</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.debug</code></th>
+        <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+        <td data-label="type">
+        Key map
+        </td>
+        <td data-label="default">
+        
+          &mdash;<span class="visually-hidden"> none</span>
         
         </td>
       </tr>
