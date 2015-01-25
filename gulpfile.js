@@ -10,7 +10,7 @@ var gulp 			= require('gulp'),
 	sassdoc			= require('gulp-sassdoc');
 
 gulp.task('default', function() {
-	return gulp.src('application.scss')
+	return gulp.src('assets/sass/style.scss')
     	.pipe(sass({
     		style: 'expanded',
     		precision: 100,
@@ -29,7 +29,7 @@ gulp.task('default', function() {
 **/
 
 gulp.task('sassdoc', function () {
-  	return gulp.src(s)
+  	return gulp.src('assets/sass/**/*.scss')
 	    .pipe(sassdoc({
 	      	'dest': 'build/sassdoc',
 	      	'verbose': true,
@@ -48,7 +48,7 @@ gulp.task('sassdoc', function () {
 				'alias': true
 			},
 	      	'basePath': 'https://github.com/SassySuit/SassySuit'
-    })));
+    }));
 });
 
 gulp.task('watch', function() {
