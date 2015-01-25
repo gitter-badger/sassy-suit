@@ -19838,7 +19838,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-random-value"><code>sl-random-value</code></a></li>
+    <li><a href="#function-sl-purge"><code>sl-purge</code></a></li>
   
 
 
@@ -19847,7 +19847,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-purge"><code>sl-purge</code></a></li>
+    <li><a href="#function-sl-random-value"><code>sl-random-value</code></a></li>
   
 
 
@@ -22638,11 +22638,10 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 	&#39;row-class-name&#39;: &#39;row&#39;,
 	&#39;container-class-name&#39;: &#39;container&#39;,
 	&#39;container-fluid-class-name&#39;: &#39;container-fluid&#39;,
-	&#39;debug&#39;: false,
 );</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L136-L158" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L132-L153" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -22826,140 +22825,126 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.containers</code></th>
-        <td data-label="desc"><p>(list of positive measures)</p>
+        <td data-label="desc"><p>container width values</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of positive measures</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.containers-fluid</code></th>
-        <td data-label="desc"><p>(list of positive measures)</p>
+        <td data-label="desc"><p>container max-width values</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of positive measures</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.bp-class-names</code></th>
-        <td data-label="desc"><p>(list of strings)</p>
+        <td data-label="desc"><p>breakpoints class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of strings</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.space-unit-class-names</code></th>
-        <td data-label="desc"><p>(list of strings)</p>
+        <td data-label="desc"><p>space-units are used for generating <code>gutter</code> and <code>row</code> classes</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of strings</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.direction-class-names</code></th>
-        <td data-label="desc"><p>(list of strings)</p>
+        <td data-label="desc"><p>direction class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of strings</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.gutter-class-name</code></th>
-        <td data-label="desc"><p>(list of strings)</p>
+        <td data-label="desc"><p>gutter class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>list of strings</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.row-class-name</code></th>
-        <td data-label="desc"><p>(string)</p>
+        <td data-label="desc"><p>row class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>string</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.container-class-name</code></th>
-        <td data-label="desc"><p>(string)</p>
+        <td data-label="desc"><p>container class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>string</code>
         
         </td>
       </tr>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.container-fluid-class-name</code></th>
-        <td data-label="desc"><p>(string)</p>
+        <td data-label="desc"><p>container fluid class names</p>
 </td>
         <td data-label="type">
         Key map
         </td>
         <td data-label="default">
         
-          &mdash;<span class="visually-hidden"> none</span>
-        
-        </td>
-      </tr>
-    
-      <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.debug</code></th>
-        <td data-label="desc"><p>(bool)</p>
-</td>
-        <td data-label="type">
-        Key map
-        </td>
-        <td data-label="default">
-        
-          &mdash;<span class="visually-hidden"> none</span>
+          <code>string</code>
         
         </td>
       </tr>
