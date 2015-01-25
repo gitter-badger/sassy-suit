@@ -118,16 +118,16 @@ $type: (
 * @prop {Key map} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
 * @prop {Key map} grid.space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used when `ms: false`
 * @prop {Key map} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-sizing-output': false`
-* @prop {Key map} grid.containers -
-* @prop {Key map} grid.containers-fluid -
-* @prop {Key map} grid.bp-class-names -
-* @prop {Key map} grid.space-unit-class-names -
-* @prop {Key map} grid.direction-class-names -
-* @prop {Key map} grid.gutter-class-name -
-* @prop {Key map} grid.row-class-name -
-* @prop {Key map} grid.container-class-name -
-* @prop {Key map} grid.container-fluid-class-name -
-* @prop {Key map} grid.debug - TEST!
+* @prop {Key map} grid.containers - (list of positive measures)
+* @prop {Key map} grid.containers-fluid - (list of positive measures)
+* @prop {Key map} grid.bp-class-names - (list of strings)
+* @prop {Key map} grid.space-unit-class-names - (list of strings)
+* @prop {Key map} grid.direction-class-names - (list of strings)
+* @prop {Key map} grid.gutter-class-name - (list of strings)
+* @prop {Key map} grid.row-class-name - (string)
+* @prop {Key map} grid.container-class-name - (string)
+* @prop {Key map} grid.container-fluid-class-name - (string)
+* @prop {Key map} grid.debug - (bool)
 *
 *
 *
