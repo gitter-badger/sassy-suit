@@ -29,19 +29,19 @@ gulp.task('default', function() {
 
 gulp.task('sassdoc', function () {
   return gulp
-    .src('tools')
+    .src(['tools/**/*.scss', 'settings/**/*.scss'])
     .pipe(sassdoc({
-      	'dest': 'sassdoc',
+      	'dest': 'build/sassdoc',
       	'verbose': true,
       	'groups': {
-      		undefined: "Vendors",
+      		undefined: "Undefined",
       		type: "Typography",
       		vars: "Variables",
-      		configs: "Map Configurations",
+      		configs: "Global configurations",
       		functions: "Functions",
       		mixins: "Mixins",
       		webFonts: "Web Fonts",
-      		sassyValidation: "SassyValidation"
+      		sassyValidation: "sassy-validation",
       	},
 		'display': {
 			'access': ['public', 'private'],
@@ -50,31 +50,6 @@ gulp.task('sassdoc', function () {
       	'basePath': 'https://github.com/SassySuit/SassySuit'
     }));
 });
-
-// gulp.task('sassdoc', function () {
-//   var options = {
-//       'dest': 'sassdoc',
-//       'verbose': true,
-//       'display': {
-//         'access': ['public', 'private'],
-//         'alias': true,
-//         'watermark': true
-//       },
-//       'groups': {
-//         'undefined': 'Ungrouped',
-//         'foo': 'Foo group',
-//         'bar': 'Bar group'
-//       },
-//       'package': './package.json',
-//       'theme': 'default',
-//       'basePath': 'https://github.com/SassySuit/SassySuit'
-//     };
-
-//     return gulp
-//       .src('./tools/type')
-//       .pipe(sassdoc(options));
-// });
-
 
 gulp.task('watch', function() {
 	gulp.watch('**/*.scss', ['default']);
