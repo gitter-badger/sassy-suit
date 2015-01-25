@@ -104,7 +104,16 @@ $type: (
 *
 * @group configs
 *
-* @prop {Map} grid.columns (integer) - number of columns
+* @prop {Map key} grid.columns (integer) - number of columns
+* @prop {Map key} grid.bp-value-flow (bool) - switcher for automatic pairing of breakpoint and matching value for `gutter`, `row` and `container` classes
+* @prop {Map key} sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
+* @prop {Map key} bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
+* @prop {Map key} ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and 'row' values
+* @prop {Map key} ms-base (measure) - base value argument for `ms-list` function
+* @prop {Map key} ms-ratio (integer) - ratio argument for `ms-list` function
+* @prop {Map key} ms-round (bool) - switcher for rounding each value of `ms-list` function output
+* @prop {Map key} space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used while `ms: false`
+* @prop {Map key} ms-ratio (positive measure) - ratio argument for `ms-list` function
 *
 */
 
@@ -112,6 +121,7 @@ $grid: (
 	'columns': 12,
 	'bp-value-flow': true,
 	'sizing-output': true,
+	'bp-sizing-output': true,
 	'ms': true,
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
