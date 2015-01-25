@@ -1,6 +1,11 @@
-/*====================================
-=            Break points            =
-====================================*/
+/**
+*
+* Global sassy-suit configurations for all tools
+*
+* @group configs
+*
+*/
+
 
 $breakpoints: (
 	xs:   					250px,
@@ -10,14 +15,6 @@ $breakpoints: (
 	xl:   					900px,
 	xxl: 					1200px
 );
-
-/*-----  End of Break points  ------*/
-
-
-
-/*===============================
-=            Margins            =
-===============================*/
 
 $margins: (
 	Xs:   					5px,
@@ -36,14 +33,6 @@ $marginDirections: (
 	left: 					"Left"
 );
 
-/*-----  End of Margins  ------*/
-
-
-
-/*================================
-=            Paddings            =
-================================*/
-
 $paddings: (
 	Xs:   					5px,
 	Sm:   					10px,
@@ -61,14 +50,6 @@ $paddingDirections: (
 	left: 					"Left"
 );
 
-/*-----  End of Paddings  ------*/
-
-
-
-
-/*==================================
-=            Typography            =
-==================================*/
 
 $type: (
 	indexBegin: 			-2,
@@ -104,14 +85,6 @@ $type: (
 	)
 );
 
-/*-----  End of Typography  ------*/
-
-
-
-
-/*============================
-=            Grid            =
-============================*/
 
 $grid: (
 	'columns': 12,
