@@ -118,19 +118,15 @@ $type: (
 * @prop {Key map} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
 * @prop {Key map} grid.space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used when `ms: false`
 * @prop {Key map} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-sizing-output': false`
-* @prop {Key map} grid.containers - (list of positive measures)
-* @prop {Key map} grid.containers-fluid - (list of positive measures)
-* @prop {Key map} grid.bp-class-names - (list of strings)
-* @prop {Key map} grid.space-unit-class-names - (list of strings)
-* @prop {Key map} grid.direction-class-names - (list of strings)
-* @prop {Key map} grid.gutter-class-name - (list of strings)
-* @prop {Key map} grid.row-class-name - (string)
-* @prop {Key map} grid.container-class-name - (string)
-* @prop {Key map} grid.container-fluid-class-name - (string)
-* @prop {Key map} grid.debug - (bool)
-*
-*
-*
+* @prop {Key map} grid.containers (list of positive measures) - container width values
+* @prop {Key map} grid.containers-fluid (list of positive measures) - container max-width values
+* @prop {Key map} grid.bp-class-names (list of strings) - breakpoints class names
+* @prop {Key map} grid.space-unit-class-names (list of strings) - space-units are used for generating `gutter` and `row` classes
+* @prop {Key map} grid.direction-class-names (list of strings) - direction class names
+* @prop {Key map} grid.gutter-class-name (list of strings) - gutter class names
+* @prop {Key map} grid.row-class-name (string) - row class names
+* @prop {Key map} grid.container-class-name (string) - container class names
+* @prop {Key map} grid.container-fluid-class-name (string) - container fluid class names
 *
 */
 
@@ -154,5 +150,4 @@ $grid: (
 	'row-class-name': 'row',
 	'container-class-name': 'container',
 	'container-fluid-class-name': 'container-fluid',
-	'debug': false,
 );
