@@ -56,7 +56,7 @@ gulp.task('sassdoc', function () {
 
 gulp.task('deploy', function () {
     return gulp.src('./build/sassdoc/**/*')
-        .pipe(deploy(options));
+        .pipe(deploy());
 });
 
 gulp.task('watch', function() {
