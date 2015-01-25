@@ -6,6 +6,7 @@
 var gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
 	autoprefixer 	= require('gulp-autoprefixer'),
+	concat 			= require('gulp-concat'),
 	sassdoc			= require('gulp-sassdoc');
 
 gulp.task('default', function() {
@@ -28,27 +29,26 @@ gulp.task('default', function() {
 **/
 
 gulp.task('sassdoc', function () {
-  return gulp
-    .src(['tools/**/*.scss', 'settings/**/*.scss'])
-    .pipe(sassdoc({
-      	'dest': 'build/sassdoc',
-      	'verbose': true,
-      	'groups': {
-      		undefined: "Undefined",
-      		type: "Typography",
-      		vars: "Variables",
-      		configs: "Global configurations",
-      		functions: "Functions",
-      		mixins: "Mixins",
-      		webFonts: "Web Fonts",
-      		sassyValidation: "sassy-validation",
-      	},
-		'display': {
-			'access': ['public', 'private'],
-			'alias': true
-		},
-      	'basePath': 'https://github.com/SassySuit/SassySuit'
-    }));
+  	return gulp.src(s)
+	    .pipe(sassdoc({
+	      	'dest': 'build/sassdoc',
+	      	'verbose': true,
+	      	'groups': {
+	      		undefined: "Undefined",
+	      		type: "Typography",
+	      		vars: "Variables",
+	      		configs: "Global configurations",
+	      		functions: "Functions",
+	      		mixins: "Mixins",
+	      		webFonts: "Web Fonts",
+	      		sassyValidation: "sassy-validation",
+	      	},
+			'display': {
+				'access': ['public', 'private'],
+				'alias': true
+			},
+	      	'basePath': 'https://github.com/SassySuit/SassySuit'
+    })));
 });
 
 gulp.task('watch', function() {
