@@ -1,0 +1,43 @@
+// $grid: (
+// 	'columns': 12,
+// 	'bp-value-flow': true,
+// 	'sizing-output': true,
+// 	'bp-sizing-output': true,
+// 	'ms': true,
+// 	'ms-base': 5px,
+// 	'ms-ratio': 1.5,
+// 	'ms-round': true,
+// 	'space-units': 5px 10px 15px 20px 25px 30px,
+// 	'space-unit-fallback': 15px,
+// 	'containers': 300px 450px 600px 700px 900px 1100px,
+// 	'containers-fluid': 400px 550px 700px 800px 1000px 1200px,
+// 	'bp-class-names': 'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	'space-unit-class-names': 'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
+// 	'direction-class-names': 'before' 'after',
+// 	'gutter-class-name': 'gutters',
+// 	'row-class-name': 'row',
+// 	'container-class-name': 'container',
+// 	'container-fluid-class-name': 'container-fluid',
+// );
+
+@mixin grid-validation($map: $grid) {
+	$columns: map-get($map, columns);
+	$bp-value-flow: map-get($map, bp-value-flow);
+	$sizing-output: map-get($map, sizing-output);
+	$bp-sizing-output: map-get($map, bp-sizing-output);
+	$ms: map-get($map, ms);
+	$ms-base: map-get($map, ms-base);
+	$ms-ratio: map-get($map, ms-ratio);
+	$ms-round: map-get($map, ms-round);
+	$space-units: map-get($map, space-units);
+	$space-unit-fallback: map-get($map, space-unit-fallback);
+	$containers: map-get($map, containers);
+	$containers-fluid: map-get($map, containers-fluid);
+	$bp-class-names: map-get($map, bp-class-names);
+	$space-unit-class-names: map-get($map, space-unit-class-names);
+	$direction-class-names: map-get($map, direction-class-names);
+	$gutter-class-name: map-get($map, gutter-class-name);
+	$row-class-name: map-get($map, row-class-name);
+	$container-class-name: map-get($map, container-class-name);
+	$container-fluid-class-name: map-get($map, container-fluid-class-name);
+}
