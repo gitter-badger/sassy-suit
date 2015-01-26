@@ -22623,6 +22623,10 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 	&#39;bp-value-flow&#39;: true,
 	&#39;sizing-output&#39;: true,
 	&#39;bp-sizing-output&#39;: true,
+	&#39;direction-output&#39;: true,
+	&#39;pull-output&#39;: true,
+	&#39;push-output&#39;: true,
+	&#39;offset-output&#39;: true,
 	&#39;ms&#39;: true,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
@@ -22641,7 +22645,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 );</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L132-L153" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L136-L161" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -22726,6 +22730,20 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.direction-output</code></th>
+        <td data-label="desc"><p>switcher for outputing directional grid <code>gutter</code> and <code>row</code> classes</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>bool</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.bp-sizing-output</code></th>
         <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes for all breakpoints</p>
 </td>
@@ -22740,8 +22758,50 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.pull-output</code></th>
+        <td data-label="desc"><p>switcher for outputing grid <code>pull</code> classes</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>bool</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.push-output</code></th>
+        <td data-label="desc"><p>switcher for outputing grid <code>push</code> classes</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>bool</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.offset-output</code></th>
+        <td data-label="desc"><p>switcher for outputing grid <code>offset</code> classes</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>bool</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.ms</code></th>
-        <td data-label="desc"><p>switcher for using modular-scale plugin for calculating <code>gutter</code> and &#39;row&#39; values</p>
+        <td data-label="desc"><p>switcher for using modular-scale plugin for calculating <code>gutter</code> and <code>row</code> values</p>
 </td>
         <td data-label="type">
         Map key
