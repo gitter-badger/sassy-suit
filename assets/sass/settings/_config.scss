@@ -102,31 +102,31 @@ $type: (
 *
 * Global sassy-suit grid configurations
 *
-* By deafult it uses values `@include bp($val)` mixin
+* By deafult it uses values `bp` mixin
 *
-* with `$breakpoints` values
+* with `$breakpoints`'s values for each breakpoint.
 *
 * @group configs
 *
-* @prop {Key map} grid.columns (integer) - number of columns
-* @prop {Key map} grid.bp-value-flow (bool) - switcher for automatic pairing of breakpoint and matching value for `gutter`, `row` and `container` classes
-* @prop {Key map} grid.sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
-* @prop {Key map} grid.bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
-* @prop {Key map} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and 'row' values
-* @prop {Key map} grid.ms-base (measure) - base value argument for `ms-list` function
-* @prop {Key map} grid.ms-ratio (integer) - ratio argument for `ms-list` function
-* @prop {Key map} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
-* @prop {Key map} grid.space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used when `ms: false`
-* @prop {Key map} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-sizing-output': false`
-* @prop {Key map} grid.containers (list of positive measures) - container width values
-* @prop {Key map} grid.containers-fluid (list of positive measures) - container max-width values
-* @prop {Key map} grid.bp-class-names (list of strings) - breakpoints class names
-* @prop {Key map} grid.space-unit-class-names (list of strings) - space-units are used for generating `gutter` and `row` classes
-* @prop {Key map} grid.direction-class-names (list of strings) - direction class names
-* @prop {Key map} grid.gutter-class-name (list of strings) - gutter class names
-* @prop {Key map} grid.row-class-name (string) - row class names
-* @prop {Key map} grid.container-class-name (string) - container class names
-* @prop {Key map} grid.container-fluid-class-name (string) - container fluid class names
+* @prop {Map key} grid.columns (integer) - number of columns
+* @prop {Map key} grid.bp-value-flow (bool) - switcher for automatic pairing of breakpoint and matching value for `gutter`, `row` and `container` classes
+* @prop {Map key} grid.sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
+* @prop {Map key} grid.bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
+* @prop {Map key} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and 'row' values
+* @prop {Map key} grid.ms-base (measure) - base value argument for `ms-list` function
+* @prop {Map key} grid.ms-ratio (integer) - ratio argument for `ms-list` function
+* @prop {Map key} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
+* @prop {Map key} grid.space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used when `ms: false`
+* @prop {Map key} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-sizing-output': false`
+* @prop {Map key} grid.containers (list of positive measures) - container width values
+* @prop {Map key} grid.containers-fluid (list of positive measures) - container max-width values
+* @prop {Map key} grid.bp-class-names (list of strings) - breakpoints class names
+* @prop {Map key} grid.space-unit-class-names (list of strings) - space-units are used for generating `gutter` and `row` classes
+* @prop {Map key} grid.direction-class-names (list of strings) - direction class names
+* @prop {Map key} grid.gutter-class-name (list of strings) - gutter class names
+* @prop {Map key} grid.row-class-name (string) - row class names
+* @prop {Map key} grid.container-class-name (string) - container class names
+* @prop {Map key} grid.container-fluid-class-name (string) - container fluid class names
 *
 */
 
