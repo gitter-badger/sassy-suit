@@ -21,16 +21,19 @@
 // 	'container-fluid-class-name': 'container-fluid',
 // );
 
-@mixin grid-validation($map: $grid) {
+@function grid-validation($map: $grid) {
 	$columns: map-get($map, columns);
-	$bp-value-flow: map-get($map, bp-value-flow);
 	$ms: map-get($map, ms);
 	$ms-base: map-get($map, ms-base);
 	$ms-ratio: map-get($map, ms-ratio);
 	$ms-round: map-get($map, ms-round);
+	$bp-value-flow: map-get($map, bp-value-flow);
 	$sizing-output: map-get($map, sizing-output);
 	$bp-sizing-output: map-get($map, bp-sizing-output);
 	$direction-output: map-get($map, direction-output);
+	$pull-output: map-get($map, pull-output);
+	$push-output: map-get($map, push-output);
+	$offset-output: map-get($map, offset-output);
 	$space-units: map-get($map, space-units);
 	$space-unit-fallback: map-get($map, space-unit-fallback);
 	$containers: map-get($map, containers);
@@ -44,82 +47,101 @@
 	// $container-fluid-class-name: map-get($map, container-fluid-class-name);
 
 	// columns
-	@if val($columns, integer) and
-		$columns > 1 {
+	@if val($columns, integer) and val($columns, positive) {
 	} @else {
-
 		@error #{$columns} "is invalid value of `grid.columns`";
-
 	}
 
-	// bp-value-flow
-	// output row/gutter with bp-value pairs
-	@if val($bp-value-flow, bool) {
-
-		// bp mixin
-
-		@if val($ms, bool) {
-
-			// @if  $ms, $ms-base, $ms-ratio, $ms-round are VALID {
-			// 		@return true;
-			// }
-
-			// output classes with <sm>, <xl> ... prefixes
-			// with different values
-
-			// @if sizing-output is VALID {
-			//  	// output classes with <sm>, <xl> ... prefixes
-			// 		//
-			// 		@if bp-sizing-output is VALID {
-			// 			@return true;
-			// 		} @else {
-			// 		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`"
-			// 		}
-			// } @else {}
-
-
-			// @if NOT sizing-output and bp-sizing-output {
-			// } @else {
-			//
-			// 		// Single value for gutters/rows
-			// 		// @if space-unit-fallback is VALID
-			//
-			// }
-
-
+	// ms
+	@if val($ms, bool) {
+		@if val($ms-base, measurePositive) {
 		} @else {
-
+			@error #{$ms-base} "is invalid value of `grid.ms-base`";
 		}
 
-		@if val($sizing-output, bool) {
-
-
-
+		@if val($ms-ratio, number) and val($ms-ratio, positive) {
 		} @else {
-
-
-
-		}
-		@if val($bp-sizing-output, bool) {
-
-
-
-		} @else {
-
-
-
+			@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
 		}
 
-		// $ms
-		// $ms-base
-		// $ms-ratio
-		// $ms-round
-
+		@if val($ms-round, bool) {
+		} @else {
+			@error #{$ms-round} "is invalid value of `grid.ms-round`";
+		}
 	} @else {
 
+		// bp-value-flow
+		@if val($bp-value-flow, bool) {
+		} @else {
+			@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
+		}
 
+		// sizing-output
+		@if val($sizing-output, bool) {
+		} @else {
+			@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
+		}
 
+		// bp-sizing-output
+		@if val($bp-sizing-output, bool) {
+		} @else {
+			@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
+		}
+
+		// direction-output
+		@if val($direction-output, bool) {
+		} @else {
+			@error #{$direction-output} "is invalid value of `grid.direction-output`";
+		}
+
+		// pull-output
+		@if val($pull-output, bool) {
+		} @else {
+			@error #{$pull-output} "is invalid value of `grid.pull-output`";
+		}
+
+		// push-output
+		@if val($push-output, bool) {
+		} @else {
+			@error #{$push-output} "is invalid value of `grid.push-output`";
+		}
+
+		// offset-output
+		@if val($offset-output, bool) {
+		} @else {
+			@error #{$offset-output} "is invalid value of `grid.offset-output`";
+		}
+
+		// space-units
+		@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
+		} @else {
+			@error #{$space-units} "is invalid value of `grid.space-units`";
+		}
+
+		@if val($space-unit-fallback, measurePositive) {
+		} @else {
+			@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
+		}
+
+		@if val($containers, list) {
+		} @else {
+			@error #{$containers} "is invalid value of `grid.containers`";
+		}
+
+		@if val($containers-fluid, list) {
+		} @else {
+			@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
+		}
 	}
+
+	@warn "validated!";
+	@return true;
 }
 
-@include grid-validation;
+@mixin test($grid) {
+	$g-v: grid-validation($grid);
+
+	@debug $g-v;
+}
+
+@include test($grid);
