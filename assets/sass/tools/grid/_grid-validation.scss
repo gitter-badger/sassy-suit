@@ -22,126 +22,158 @@
 // );
 
 @function grid-validation($map: $grid) {
-	$columns: map-get($map, columns);
-	$ms: map-get($map, ms);
-	$ms-base: map-get($map, ms-base);
-	$ms-ratio: map-get($map, ms-ratio);
-	$ms-round: map-get($map, ms-round);
-	$bp-value-flow: map-get($map, bp-value-flow);
-	$sizing-output: map-get($map, sizing-output);
-	$bp-sizing-output: map-get($map, bp-sizing-output);
-	$direction-output: map-get($map, direction-output);
-	$pull-output: map-get($map, pull-output);
-	$push-output: map-get($map, push-output);
-	$offset-output: map-get($map, offset-output);
-	$space-units: map-get($map, space-units);
-	$space-unit-fallback: map-get($map, space-unit-fallback);
-	$containers: map-get($map, containers);
-	$containers-fluid: map-get($map, containers-fluid);
-	// $bp-class-names: map-get($map, bp-class-names);
-	// $space-unit-class-names: map-get($map, space-unit-class-names);
-	// $direction-class-names: map-get($map, direction-class-names);
-	// $gutter-class-name: map-get($map, gutter-class-name);
-	// $row-class-name: map-get($map, row-class-name);
-	// $container-class-name: map-get($map, container-class-name);
-	// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+	@debug $map;
 
-	// columns
-	@if val($columns, integer) and val($columns, positive) {
+	@if val($map, map) {
+		$columns: map-get($map, columns);
+		$ms: map-get($map, ms);
+		$ms-base: map-get($map, ms-base);
+		$ms-ratio: map-get($map, ms-ratio);
+		$ms-round: map-get($map, ms-round);
+		$bp-value-flow: map-get($map, bp-value-flow);
+		$sizing-output: map-get($map, sizing-output);
+		$bp-sizing-output: map-get($map, bp-sizing-output);
+		$direction-output: map-get($map, direction-output);
+		$pull-output: map-get($map, pull-output);
+		$push-output: map-get($map, push-output);
+		$offset-output: map-get($map, offset-output);
+		$space-units: map-get($map, space-units);
+		$space-unit-fallback: map-get($map, space-unit-fallback);
+		$containers: map-get($map, containers);
+		$containers-fluid: map-get($map, containers-fluid);
+		// $bp-class-names: map-get($map, bp-class-names);
+		// $space-unit-class-names: map-get($map, space-unit-class-names);
+		// $direction-class-names: map-get($map, direction-class-names);
+		// $gutter-class-name: map-get($map, gutter-class-name);
+		// $row-class-name: map-get($map, row-class-name);
+		// $container-class-name: map-get($map, container-class-name);
+		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+
+	@debug 'DEBUG:::' $columns $ms $ms-base $ms-ratio $ms-round $bp-value-flow $sizing-output $bp-sizing-output $direction-output $pull-output $push-output $offset-output $space-units $space-unit-fallback $containers $containers-fluid;
+
+	@if val($columns, integer) and val($columns, positive) and
+		val($ms-base, measurePositive) and
+		val($ms-ratio, number) and val($ms-ratio, positive)
+    	val($ms-round, bool) and
+    	val($bp-value-flow, bool) and
+    	val($sizing-output, bool) and
+    	val($bp-sizing-output, bool) and
+    	val($direction-output, bool) and
+    	val($pull-output, bool) and
+    	val($push-output, bool) and
+    	val($offset-output, bool) and
+    	val($space-units, list) and
+    	val($space-unit-fallback, measurePositive) and
+    	val($containers, list) and
+    	val($containers-fluid, list) {
+
+			@return true;
+
+    	}
+
 	} @else {
-		@error #{$columns} "is invalid value of `grid.columns`";
-	}
 
-	// ms
-	@if val($ms, bool) {
-		@if val($ms-base, measurePositive) {
-		} @else {
-			@error #{$ms-base} "is invalid value of `grid.ms-base`";
-		}
+		@return false;
 
-		@if val($ms-ratio, number) and val($ms-ratio, positive) {
-		} @else {
-			@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
-		}
+    }
 
-		@if val($ms-round, bool) {
-		} @else {
-			@error #{$ms-round} "is invalid value of `grid.ms-round`";
-		}
-	} @else {
+	// // columns
+	// @if val($columns, integer) and val($columns, positive) {
+	// } @else {
+	// 	@error #{$columns} "is invalid value of `grid.columns`";
+	// }
 
-		// bp-value-flow
-		@if val($bp-value-flow, bool) {
-		} @else {
-			@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
-		}
+	// // ms
+	// @if val($ms, bool) {
+	// 	@if val($ms-base, measurePositive) {
+	// 	} @else {
+	// 		@error #{$ms-base} "is invalid value of `grid.ms-base`";
+	// 	}
 
-		// sizing-output
-		@if val($sizing-output, bool) {
-		} @else {
-			@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
-		}
+	// 	@if val($ms-ratio, number) and val($ms-ratio, positive) {
+	// 	} @else {
+	// 		@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
+	// 	}
 
-		// bp-sizing-output
-		@if val($bp-sizing-output, bool) {
-		} @else {
-			@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
-		}
+	// 	@if val($ms-round, bool) {
+	// 	} @else {
+	// 		@error #{$ms-round} "is invalid value of `grid.ms-round`";
+	// 	}
+	// } @else {
 
-		// direction-output
-		@if val($direction-output, bool) {
-		} @else {
-			@error #{$direction-output} "is invalid value of `grid.direction-output`";
-		}
+	// 	// bp-value-flow
+	// 	@if val($bp-value-flow, bool) {
+	// 	} @else {
+	// 		@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
+	// 	}
 
-		// pull-output
-		@if val($pull-output, bool) {
-		} @else {
-			@error #{$pull-output} "is invalid value of `grid.pull-output`";
-		}
+	// 	// sizing-output
+	// 	@if val($sizing-output, bool) {
+	// 	} @else {
+	// 		@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
+	// 	}
 
-		// push-output
-		@if val($push-output, bool) {
-		} @else {
-			@error #{$push-output} "is invalid value of `grid.push-output`";
-		}
+	// 	// bp-sizing-output
+	// 	@if val($bp-sizing-output, bool) {
+	// 	} @else {
+	// 		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
+	// 	}
 
-		// offset-output
-		@if val($offset-output, bool) {
-		} @else {
-			@error #{$offset-output} "is invalid value of `grid.offset-output`";
-		}
+	// 	// direction-output
+	// 	@if val($direction-output, bool) {
+	// 	} @else {
+	// 		@error #{$direction-output} "is invalid value of `grid.direction-output`";
+	// 	}
 
-		// space-units
-		@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
-		} @else {
-			@error #{$space-units} "is invalid value of `grid.space-units`";
-		}
+	// 	// pull-output
+	// 	@if val($pull-output, bool) {
+	// 	} @else {
+	// 		@error #{$pull-output} "is invalid value of `grid.pull-output`";
+	// 	}
 
-		@if val($space-unit-fallback, measurePositive) {
-		} @else {
-			@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
-		}
+	// 	// push-output
+	// 	@if val($push-output, bool) {
+	// 	} @else {
+	// 		@error #{$push-output} "is invalid value of `grid.push-output`";
+	// 	}
 
-		@if val($containers, list) {
-		} @else {
-			@error #{$containers} "is invalid value of `grid.containers`";
-		}
+	// 	// offset-output
+	// 	@if val($offset-output, bool) {
+	// 	} @else {
+	// 		@error #{$offset-output} "is invalid value of `grid.offset-output`";
+	// 	}
 
-		@if val($containers-fluid, list) {
-		} @else {
-			@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
-		}
-	}
+	// 	// space-units
+	// 	@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
+	// 	} @else {
+	// 		@error #{$space-units} "is invalid value of `grid.space-units`";
+	// 	}
 
-	@warn "validated!";
-	@return true;
+	// 	@if val($space-unit-fallback, measurePositive) {
+	// 	} @else {
+	// 		@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
+	// 	}
+
+	// 	@if val($containers, list) {
+	// 	} @else {
+	// 		@error #{$containers} "is invalid value of `grid.containers`";
+	// 	}
+
+	// 	@if val($containers-fluid, list) {
+	// 	} @else {
+	// 		@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
+	// 	}
+	// }
+
+	// @warn "validated!";
+	// @return true;
 }
 
-@mixin test($grid) {
-	$g-v: grid-validation($grid);
-
-	@debug $g-v;
+.test {
+	content: grid-validation($grid);
+	@if grid-validation($grid) {
+		@warn "Hooooray!";
+	} @else {
+		@warn "Daaamn!";
+	}
 }
-
-@include test($grid);
