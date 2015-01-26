@@ -113,7 +113,10 @@ $type: (
 * @prop {Map key} grid.sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
 * @prop {Map key} grid.direction-output (bool) - switcher for outputing directional grid `gutter` and `row` classes
 * @prop {Map key} grid.bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
-* @prop {Map key} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and 'row' values
+* @prop {Map key} grid.pull-output (bool) - switcher for outputing grid `pull` classes
+* @prop {Map key} grid.push-output (bool) - switcher for outputing grid `push` classes
+* @prop {Map key} grid.offset-output (bool) - switcher for outputing grid `offset` classes
+* @prop {Map key} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and `row` values
 * @prop {Map key} grid.ms-base (measure) - base value argument for `ms-list` function
 * @prop {Map key} grid.ms-ratio (integer) - ratio argument for `ms-list` function
 * @prop {Map key} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
@@ -137,6 +140,9 @@ $grid: (
 	'sizing-output': true,
 	'bp-sizing-output': true,
 	'direction-output': true,
+	'pull-output': true,
+	'push-output': true,
+	'offset-output': true,
 	'ms': true,
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
