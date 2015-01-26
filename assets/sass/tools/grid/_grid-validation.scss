@@ -3,6 +3,7 @@
 // 	'bp-value-flow': true,
 // 	'sizing-output': true,
 // 	'bp-sizing-output': true,
+//  'direction-output': true,
 // 	'ms': true,
 // 	'ms-base': 5px,
 // 	'ms-ratio': 1.5,
@@ -23,21 +24,102 @@
 @mixin grid-validation($map: $grid) {
 	$columns: map-get($map, columns);
 	$bp-value-flow: map-get($map, bp-value-flow);
-	$sizing-output: map-get($map, sizing-output);
-	$bp-sizing-output: map-get($map, bp-sizing-output);
 	$ms: map-get($map, ms);
 	$ms-base: map-get($map, ms-base);
 	$ms-ratio: map-get($map, ms-ratio);
 	$ms-round: map-get($map, ms-round);
+	$sizing-output: map-get($map, sizing-output);
+	$bp-sizing-output: map-get($map, bp-sizing-output);
+	$direction-output: map-get($map, direction-output);
 	$space-units: map-get($map, space-units);
 	$space-unit-fallback: map-get($map, space-unit-fallback);
 	$containers: map-get($map, containers);
 	$containers-fluid: map-get($map, containers-fluid);
-	$bp-class-names: map-get($map, bp-class-names);
-	$space-unit-class-names: map-get($map, space-unit-class-names);
-	$direction-class-names: map-get($map, direction-class-names);
-	$gutter-class-name: map-get($map, gutter-class-name);
-	$row-class-name: map-get($map, row-class-name);
-	$container-class-name: map-get($map, container-class-name);
-	$container-fluid-class-name: map-get($map, container-fluid-class-name);
+	// $bp-class-names: map-get($map, bp-class-names);
+	// $space-unit-class-names: map-get($map, space-unit-class-names);
+	// $direction-class-names: map-get($map, direction-class-names);
+	// $gutter-class-name: map-get($map, gutter-class-name);
+	// $row-class-name: map-get($map, row-class-name);
+	// $container-class-name: map-get($map, container-class-name);
+	// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+
+	// columns
+	@if val($columns, integer) and
+		$columns > 1 {
+	} @else {
+
+		@error #{$columns} "is invalid value of `grid.columns`";
+
+	}
+
+	// bp-value-flow
+	// output row/gutter with bp-value pairs
+	@if val($bp-value-flow, bool) {
+
+		// bp mixin
+
+		@if val($ms, bool) {
+
+			// @if  $ms, $ms-base, $ms-ratio, $ms-round are VALID {
+			// 		@return true;
+			// }
+
+			// output classes with <sm>, <xl> ... prefixes
+			// with different values
+
+			// @if sizing-output is VALID {
+			//  	// output classes with <sm>, <xl> ... prefixes
+			// 		//
+			// 		@if bp-sizing-output is VALID {
+			// 			@return true;
+			// 		} @else {
+			// 		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`"
+			// 		}
+			// } @else {}
+
+
+			// @if NOT sizing-output and bp-sizing-output {
+			// } @else {
+			//
+			// 		// Single value for gutters/rows
+			// 		// @if space-unit-fallback is VALID
+			//
+			// }
+
+
+		} @else {
+
+		}
+
+		@if val($sizing-output, bool) {
+
+
+
+		} @else {
+
+
+
+		}
+		@if val($bp-sizing-output, bool) {
+
+
+
+		} @else {
+
+
+
+		}
+
+		// $ms
+		// $ms-base
+		// $ms-ratio
+		// $ms-round
+
+	} @else {
+
+
+
+	}
 }
+
+@include grid-validation;

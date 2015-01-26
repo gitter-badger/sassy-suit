@@ -111,6 +111,7 @@ $type: (
 * @prop {Map key} grid.columns (integer) - number of columns
 * @prop {Map key} grid.bp-value-flow (bool) - switcher for automatic pairing of breakpoint and matching value for `gutter`, `row` and `container` classes
 * @prop {Map key} grid.sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
+* @prop {Map key} grid.direction-output (bool) - switcher for outputing directional grid `gutter` and `row` classes
 * @prop {Map key} grid.bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
 * @prop {Map key} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and 'row' values
 * @prop {Map key} grid.ms-base (measure) - base value argument for `ms-list` function
@@ -135,6 +136,7 @@ $grid: (
 	'bp-value-flow': true,
 	'sizing-output': true,
 	'bp-sizing-output': true,
+	'direction-output': true,
 	'ms': true,
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
