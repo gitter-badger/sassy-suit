@@ -81,10 +81,20 @@
 
 		@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
 
+	} @else if not val($ms-round, bool) {
+
+		@error #{$ms-round} "is invalid value of `grid.ms-round`";
+
+	} @else if not val($bp-value-flow, bool) {
+
+		@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
+
 	} @else if val($columns, integer) and val($columns, positive) and
 		val($ms, bool) and
 		val($ms-base, measurePositive) and
-		val($ms-ratio, number) and val($ms-ratio, positive) {
+		val($ms-ratio, number) and val($ms-ratio, positive) and
+		val($ms-round, bool) and
+		val($bp-value-flow, bool) {
 
 			@return true;
 
