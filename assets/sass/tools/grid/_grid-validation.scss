@@ -24,7 +24,9 @@
 @function grid-validation($map: $grid) {
 	@debug $map;
 
-	@if val($map, map) {
+	@if val($map, map) and
+		exists(bp, mixin) and
+		exists(breakpoints, var) {
 		$columns: map-get($map, columns);
 		$ms: map-get($map, ms);
 		$ms-base: map-get($map, ms-base);
