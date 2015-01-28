@@ -89,12 +89,42 @@
 
 		@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
 
+	} @else if not val($sizing-output, bool) {
+
+		@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
+
+	} @else if not val($bp-sizing-output, bool) {
+
+		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
+
+	} @else if not val($direction-output, bool) {
+
+		@error #{$direction-output} "is invalid value of `grid.direction-output`";
+
+	} @else if not val($pull-output, bool) {
+
+		@error #{$pull-output} "is invalid value of `grid.pull-output`";
+
+	} @else if not val($push-output, bool) {
+
+		@error #{$push-output} "is invalid value of `grid.push-output`";
+
+	} @else if not val($offset-output, bool) {
+
+		@error #{$offset-output} "is invalid value of `grid.offset-output`";
+
 	} @else if val($columns, integer) and val($columns, positive) and
 		val($ms, bool) and
 		val($ms-base, measurePositive) and
 		val($ms-ratio, number) and val($ms-ratio, positive) and
 		val($ms-round, bool) and
-		val($bp-value-flow, bool) {
+		val($bp-value-flow, bool) and
+		val($sizing-output, bool) and
+		val($bp-sizing-output, bool) and
+		val($direction-output, bool) and
+		val($pull-output, bool) and
+		val($push-output, bool) and
+		val($offset-output, bool) {
 
 			@return true;
 
