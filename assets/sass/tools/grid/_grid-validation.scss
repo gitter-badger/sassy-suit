@@ -53,20 +53,6 @@
 
 	@debug 'DEBUG:::' $columns $ms $ms-base $ms-ratio $ms-round $bp-value-flow $sizing-output $bp-sizing-output $direction-output $pull-output $push-output $offset-output $space-units $space-unit-fallback $containers $containers-fluid;
 
-// 		val($ms-ratio, number) and val($ms-ratio, positive)
-//   	val($ms-round, bool) and
-//   	val($bp-value-flow, bool) and
-//   	val($sizing-output, bool) and
-//   	val($bp-sizing-output, bool) and
-//   	val($direction-output, bool) and
-//   	val($pull-output, bool) and
-//   	val($push-output, bool) and
-//   	val($offset-output, bool) and
-//   	val($space-units, list) and
-//   	val($space-unit-fallback, measurePositive) and
-//   	val($containers, list) and
-//   	val($containers-fluid, list)
-
 	@if not val($columns, integer) and val($columns, positive) {
 
 		@error #{$columns} "is invalid value of `grid.columns`";
@@ -115,6 +101,10 @@
 
 		@error #{$offset-output} "is invalid value of `grid.offset-output`";
 
+	} @else if not val($space-units, list) and not sl-walk($space-units, val, measurePositive) {
+
+		@error #{$space-units} "is invalid value of `grid.space-units`";
+
 	} @else if val($columns, integer) and val($columns, positive) and
 		val($ms, bool) and
 		val($ms-base, measurePositive) and
@@ -126,8 +116,10 @@
 		val($direction-output, bool) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
-		val($offset-output, bool) {
+		val($offset-output, bool) and
+		val($space-units, list) and sl-walk($space-units, val, measurePositive) {
 
+			@debug (sl-walk($space-units, val, measurePositive));
 			@return true;
 
     	}
