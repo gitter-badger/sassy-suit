@@ -51,6 +51,8 @@
 		// $container-class-name: map-get($map, container-class-name);
 		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
 
+		$list-size: length(map-keys($breakpoints));
+
 	@debug 'DEBUG:::' $columns $ms $ms-base $ms-ratio $ms-round $bp-value-flow $sizing-output $bp-sizing-output $direction-output $pull-output $push-output $offset-output $space-units $space-unit-fallback $containers $containers-fluid;
 
 	@if not val($columns, integer) and val($columns, positive) {
@@ -101,9 +103,13 @@
 
 		@error #{$offset-output} "is invalid value of `grid.offset-output`";
 
-	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false)) {
+	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size) {
 
 		@error #{$space-units} "is invalid value of `grid.space-units`";
+
+	} @else if not val($space-unit-fallback, measurePositive) {
+
+		@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
 
 	} @else if val($columns, integer) and val($columns, positive) and
 		val($ms, bool) and
@@ -117,7 +123,8 @@
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
-		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) {
+		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size and
+		val($space-unit-fallback, measurePositive) {
 
 			@debug (sl-walk($space-units, val, measurePositive));
 			@return true;
