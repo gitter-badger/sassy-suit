@@ -38,6 +38,35 @@
 
     
     
+      <p class="sidebar__item  sidebar__item--heading" data-slug="grid"><a href="#grid">grid</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="grid-function"><a href="#grid-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="grid-validation" data-type="function">
+              <a href="#function-grid-validation">grid-validation
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
       <p class="sidebar__item  sidebar__item--heading" data-slug="sassyexists"><a href="#sassyexists">sassyexists</a></p>
 
       
@@ -1145,6 +1174,35 @@
       
 
     
+      <p class="sidebar__item  sidebar__item--heading" data-slug="breakpoints"><a href="#breakpoints">breakpoints</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="breakpoints-mixin"><a href="#breakpoints-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="bp" data-type="mixin">
+              <a href="#mixin-bp">bp
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
       <p class="sidebar__item  sidebar__item--heading" data-slug="configs"><a href="#configs">Global configurations</a></p>
 
       
@@ -1229,6 +1287,496 @@
   
 
     
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="grid">grid</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="grid-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-grid-validation">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-grid-validation">grid-validation</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function grid-validation($grid: $grid) { 
+	@debug $map;
+
+	@if val($map, map) and
+		exists(bp, mixin) and
+		exists(breakpoints, var) {
+		$columns: map-get($map, columns);
+		$pull-output: map-get($map, pull-output);
+		$push-output: map-get($map, push-output);
+		$offset-output: map-get($map, offset-output);
+		$ms: map-get($map, ms);
+		$ms-base: map-get($map, ms-base);
+		$ms-ratio: map-get($map, ms-ratio);
+		$ms-round: map-get($map, ms-round);
+		$bp-value-flow: map-get($map, bp-value-flow);
+		$sizing-output: map-get($map, sizing-output);
+		$bp-sizing-output: map-get($map, bp-sizing-output);
+		$direction-output: map-get($map, direction-output);
+		$pull-output: map-get($map, pull-output);
+		$push-output: map-get($map, push-output);
+		$offset-output: map-get($map, offset-output);
+		$space-units: map-get($map, space-units);
+		$space-unit-fallback: map-get($map, space-unit-fallback);
+		$containers: map-get($map, containers);
+		$containers-fluid: map-get($map, containers-fluid);
+		// $bp-class-names: map-get($map, bp-class-names);
+		// $space-unit-class-names: map-get($map, space-unit-class-names);
+		// $direction-class-names: map-get($map, direction-class-names);
+		// $gutter-class-name: map-get($map, gutter-class-name);
+		// $row-class-name: map-get($map, row-class-name);
+		// $container-class-name: map-get($map, container-class-name);
+		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+
+		$list-size: length(map-keys($breakpoints));
+
+	@if not val($columns, integer) and val($columns, positive) {
+
+		@error #{$columns} &quot;is invalid value of `grid.columns`&quot;;
+
+	} @else if not val($pull-output, bool) {
+
+		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
+
+	} @else if not val($push-output, bool) {
+
+		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
+
+	} @else if not val($offset-output, bool) {
+
+		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
+
+	} @else if not val($ms, bool) {
+
+		@error #{$ms} &quot;is invalid value of `grid.ms`&quot;;
+
+	} @else if not val($ms-base, measurePositive) {
+
+		@error #{$ms-base} &quot;is invalid value of `grid.ms-base`&quot;;
+
+	} @else if not (val($ms-ratio, number) and val($ms-ratio, positive) ) {
+
+		@error #{$ms-ratio} &quot;is invalid value of `grid.ms-ratio`&quot;;
+
+	} @else if not val($ms-round, bool) {
+
+		@error #{$ms-round} &quot;is invalid value of `grid.ms-round`&quot;;
+
+	} @else if not val($bp-value-flow, bool) {
+
+		@error #{$bp-value-flow} &quot;is invalid value of `grid.bp-value-flow`&quot;;
+
+	} @else if not val($sizing-output, bool) {
+
+		@error #{$sizing-output} &quot;is invalid value of `grid.sizing-output`&quot;;
+
+	} @else if not val($bp-sizing-output, bool) {
+
+		@error #{$bp-sizing-output} &quot;is invalid value of `grid.bp-sizing-output`&quot;;
+
+	} @else if not val($direction-output, bool) {
+
+		@error #{$direction-output} &quot;is invalid value of `grid.direction-output`&quot;;
+
+	} @else if not val($pull-output, bool) {
+
+		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
+
+	} @else if not val($push-output, bool) {
+
+		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
+
+	} @else if not val($offset-output, bool) {
+
+		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
+
+	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size) {
+
+		@error #{$space-units} &quot;is invalid value of `grid.space-units`&quot;;
+
+	} @else if not val($space-unit-fallback, measurePositive) {
+
+		@error #{$space-unit-fallback} &quot;is invalid value of `grid.space-unit-fallback`&quot;;
+
+	} @else if not (val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size) {
+
+		@error #{$containers} &quot;is invalid value of `grid.containers`&quot;;
+
+	} @else if not (val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size) {
+
+		@error #{$containers-fluid} &quot;is invalid value of `grid.containers-fluid`&quot;;
+
+	}  @else if val($columns, integer) and val($columns, positive) and
+		val($pull-output, bool) and
+		val($push-output, bool) and
+		val($offset-output, bool) and
+		val($ms, bool) and
+		val($ms-base, measurePositive) and
+		val($ms-ratio, number) and val($ms-ratio, positive) and
+		val($ms-round, bool) and
+		val($bp-value-flow, bool) and
+		val($sizing-output, bool) and
+		val($bp-sizing-output, bool) and
+		val($direction-output, bool) and
+		val($pull-output, bool) and
+		val($push-output, bool) and
+		val($offset-output, bool) and
+		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size and
+		val($space-unit-fallback, measurePositive) and
+		val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size and
+		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size {
+
+			@return true;
+
+    	}
+
+	} @else {
+
+		@return false;
+
+    }
+
+	// // columns
+	// @if val($columns, integer) and val($columns, positive) {
+	// } @else {
+	// 	@error #{$columns} &quot;is invalid value of `grid.columns`&quot;;
+	// }
+
+	// // ms
+	// @if val($ms, bool) {
+	// 	@if val($ms-base, measurePositive) {
+	// 	} @else {
+	// 		@error #{$ms-base} &quot;is invalid value of `grid.ms-base`&quot;;
+	// 	}
+
+	// 	@if val($ms-ratio, number) and val($ms-ratio, positive) {
+	// 	} @else {
+	// 		@error #{$ms-ratio} &quot;is invalid value of `grid.ms-ratio`&quot;;
+	// 	}
+
+	// 	@if val($ms-round, bool) {
+	// 	} @else {
+	// 		@error #{$ms-round} &quot;is invalid value of `grid.ms-round`&quot;;
+	// 	}
+	// } @else {
+
+	// 	// bp-value-flow
+	// 	@if val($bp-value-flow, bool) {
+	// 	} @else {
+	// 		@error #{$bp-value-flow} &quot;is invalid value of `grid.bp-value-flow`&quot;;
+	// 	}
+
+	// 	// sizing-output
+	// 	@if val($sizing-output, bool) {
+	// 	} @else {
+	// 		@error #{$sizing-output} &quot;is invalid value of `grid.sizing-output`&quot;;
+	// 	}
+
+	// 	// bp-sizing-output
+	// 	@if val($bp-sizing-output, bool) {
+	// 	} @else {
+	// 		@error #{$bp-sizing-output} &quot;is invalid value of `grid.bp-sizing-output`&quot;;
+	// 	}
+
+	// 	// direction-output
+	// 	@if val($direction-output, bool) {
+	// 	} @else {
+	// 		@error #{$direction-output} &quot;is invalid value of `grid.direction-output`&quot;;
+	// 	}
+
+	// 	// pull-output
+	// 	@if val($pull-output, bool) {
+	// 	} @else {
+	// 		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
+	// 	}
+
+	// 	// push-output
+	// 	@if val($push-output, bool) {
+	// 	} @else {
+	// 		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
+	// 	}
+
+	// 	// offset-output
+	// 	@if val($offset-output, bool) {
+	// 	} @else {
+	// 		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
+	// 	}
+
+	// 	// space-units
+	// 	@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
+	// 	} @else {
+	// 		@error #{$space-units} &quot;is invalid value of `grid.space-units`&quot;;
+	// 	}
+
+	// 	@if val($space-unit-fallback, measurePositive) {
+	// 	} @else {
+	// 		@error #{$space-unit-fallback} &quot;is invalid value of `grid.space-unit-fallback`&quot;;
+	// 	}
+
+	// 	@if val($containers, list) {
+	// 	} @else {
+	// 		@error #{$containers} &quot;is invalid value of `grid.containers`&quot;;
+	// 	}
+
+	// 	@if val($containers-fluid, list) {
+	// 	} @else {
+	// 		@error #{$containers-fluid} &quot;is invalid value of `grid.containers-fluid`&quot;;
+	// 	}
+	// }
+
+	// @warn &quot;validated!&quot;;
+	// @return true;
+ }"
+    data-collapsed="@function grid-validation($grid: $grid) { ... }"><code>@function grid-validation($grid: $grid) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-validation.scss#L22-L254" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Function for validating every <code>$grid</code>&#39;s key value</p>
+<p>By deafult it references to <code>$breakpoints</code> map for calculating</p>
+<p>a required number of classes and values for validating</p>
+<p><code>space-units</code>, <code>containers</code>, <code>containers-fluid</code> keys</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>Map for storing grid configurations</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$grid</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-val"><code>val</code></a>
+        
+          <div class="item__requires-description">data type validation function</div>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-exists"><code>exists</code></a>
+        
+          <div class="item__requires-description">function for existance check up</div>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-bp"><code>bp</code></a>
+        
+          <div class="item__requires-description">mixin for responsive breakpoints handling</div>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-breakpoints"><code>breakpoints</code></a>
+        
+          <div class="item__requires-description">values for `bp` mixin</div>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-sl-walk"><code>sl-walk</code></a>
+        
+          <div class="item__requires-description">function for passing every item value from a list with parameters</div>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
     
       <section class="main__section">
         <h1 class="main__heading" id="sassyexists">sassyexists</h1>
@@ -1473,6 +2021,21 @@ exists(noFunction, fun)    	//returns false</code></pre>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -7346,7 +7909,7 @@ validate(1, string)        	//returns false</code></pre>
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-typeSetResponsive"><code>typeSetResponsive</code></a></li>
+    <li><a href="#mixin-typeSetResponsive"><code>typeSetResponsive</code></a></li>
   
 
 
@@ -7355,7 +7918,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#mixin-typeSetResponsive"><code>typeSetResponsive</code></a></li>
+    <li><a href="#function-typeSetResponsive"><code>typeSetResponsive</code></a></li>
   
 
 
@@ -9234,7 +9797,7 @@ validate(1, string)        	//returns false</code></pre>
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-sl-debug"><code>sl-debug</code></a></li>
+    <li><a href="#mixin-sl-debug"><code>sl-debug</code></a></li>
   
 
 
@@ -9243,7 +9806,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#mixin-sl-debug"><code>sl-debug</code></a></li>
+    <li><a href="#function-sl-debug"><code>sl-debug</code></a></li>
   
 
 
@@ -13433,7 +13996,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -13442,7 +14005,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -17929,7 +18492,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -17938,7 +18501,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -19382,6 +19945,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 
 
+  
+
+    
+
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+  
+
+
+
 
 </ul>
 
@@ -19811,7 +20383,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
   
 
 
@@ -19820,7 +20392,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -19883,7 +20455,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -19892,7 +20464,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20405,7 +20977,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20414,7 +20986,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -21222,7 +21794,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
+    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
   
 
 
@@ -21231,7 +21803,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#mixin-webFonts"><code>webFonts</code></a></li>
+    <li><a href="#function-webFontsSerialize"><code>webFontsSerialize</code></a></li>
   
 
 
@@ -21577,7 +22149,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
+    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
   
 
 
@@ -21586,7 +22158,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
+    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
 
@@ -22332,6 +22904,246 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </section>
     
       <section class="main__section">
+        <h1 class="main__heading" id="breakpoints">breakpoints</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="breakpoints-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-bp">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-bp">bp</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin bp() { 
+
+	@if get-breakpoint(sm) {
+
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if get-breakpoint(md) {
+
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if get-breakpoint(lg) {
+
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if get-breakpoint(xl) {
+
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if get-breakpoint(xxl) {
+
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+
+			@content;
+
+		}
+
+	}
+
+	@else {
+
+		@if get-breakpoint(xs) {
+
+
+			@content;
+
+
+		}
+
+		@else {
+
+			@warn &quot;Unfortunately, no value could be retrieved from `#{$breakpoint}`. &quot;
+				&quot;Please make sure it is defined in `$breakpoints` map in `core/_core-config.scss`.&quot;;
+
+		}
+
+	}
+
+ }"
+    data-collapsed="@mixin bp() { ... }"><code>@mixin bp() { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/breakpoints/_breakpoints-mixin.scss#L8-L80" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Mixin for handling responsive breakpoints</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-breakpoints"><code>breakpoints</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
         <h1 class="main__heading" id="configs">Global configurations</h1>
 
         
@@ -22421,6 +23233,30 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-bp"><code>bp</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -22629,7 +23465,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 	&#39;offset-output&#39;: true,
 	&#39;ms&#39;: true,
 	&#39;ms-base&#39;: 5px,
-	&#39;ms-ratio&#39;: -1.5,
+	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
 	&#39;space-units&#39;: 5px 10px 15px 20px 25px 30px,
 	&#39;space-unit-fallback&#39;: 15px,
