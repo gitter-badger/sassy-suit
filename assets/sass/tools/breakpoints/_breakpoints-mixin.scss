@@ -1,3 +1,11 @@
+/**
+*
+* Mixin for handling responsive breakpoints
+*
+* @group breakpoints
+*
+*/
+
 @mixin bp($breakpoint) {
 
 	@if get-breakpoint(sm) {

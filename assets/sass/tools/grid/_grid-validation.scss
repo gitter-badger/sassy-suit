@@ -1,25 +1,24 @@
-// $grid: (
-// 	'columns': 12,
-// 	'bp-value-flow': true,
-// 	'sizing-output': true,
-// 	'bp-sizing-output': true,
-//  'direction-output': true,
-// 	'ms': true,
-// 	'ms-base': 5px,
-// 	'ms-ratio': 1.5,
-// 	'ms-round': true,
-// 	'space-units': 5px 10px 15px 20px 25px 30px,
-// 	'space-unit-fallback': 15px,
-// 	'containers': 300px 450px 600px 700px 900px 1100px,
-// 	'containers-fluid': 400px 550px 700px 800px 1000px 1200px,
-// 	'bp-class-names': 'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-// 	'space-unit-class-names': 'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
-// 	'direction-class-names': 'before' 'after',
-// 	'gutter-class-name': 'gutters',
-// 	'row-class-name': 'row',
-// 	'container-class-name': 'container',
-// 	'container-fluid-class-name': 'container-fluid',
-// );
+/**
+*
+* Function for validating every `$grid`'s key value
+*
+* By deafult it references to `$breakpoints` map for calculating
+*
+* a required number of classes and values for validating
+*
+* `space-units`, `containers`, `containers-fluid` keys
+*
+* @require {function} val data type validation function
+* @require {function} exists function for existance check up
+* @require {mixin} bp mixin for responsive breakpoints handling
+* @require {map} $breakpoints values for `bp` mixin
+* @require {function} sl-walk function for passing every item value from a list with parameters
+*
+* @param {map} grid ($grid) Map for storing grid configurations
+*
+* @group grid
+*
+*/
 
 @function grid-validation($map: $grid) {
 	@debug $map;
@@ -28,6 +27,9 @@
 		exists(bp, mixin) and
 		exists(breakpoints, var) {
 		$columns: map-get($map, columns);
+		$pull-output: map-get($map, pull-output);
+		$push-output: map-get($map, push-output);
+		$offset-output: map-get($map, offset-output);
 		$ms: map-get($map, ms);
 		$ms-base: map-get($map, ms-base);
 		$ms-ratio: map-get($map, ms-ratio);
@@ -53,11 +55,21 @@
 
 		$list-size: length(map-keys($breakpoints));
 
-	@debug 'DEBUG:::' $columns $ms $ms-base $ms-ratio $ms-round $bp-value-flow $sizing-output $bp-sizing-output $direction-output $pull-output $push-output $offset-output $space-units $space-unit-fallback $containers $containers-fluid;
-
 	@if not val($columns, integer) and val($columns, positive) {
 
 		@error #{$columns} "is invalid value of `grid.columns`";
+
+	} @else if not val($pull-output, bool) {
+
+		@error #{$pull-output} "is invalid value of `grid.pull-output`";
+
+	} @else if not val($push-output, bool) {
+
+		@error #{$push-output} "is invalid value of `grid.push-output`";
+
+	} @else if not val($offset-output, bool) {
+
+		@error #{$offset-output} "is invalid value of `grid.offset-output`";
 
 	} @else if not val($ms, bool) {
 
@@ -111,7 +123,18 @@
 
 		@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
 
-	} @else if val($columns, integer) and val($columns, positive) and
+	} @else if not (val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size) {
+
+		@error #{$containers} "is invalid value of `grid.containers`";
+
+	} @else if not (val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size) {
+
+		@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
+
+	}  @else if val($columns, integer) and val($columns, positive) and
+		val($pull-output, bool) and
+		val($push-output, bool) and
+		val($offset-output, bool) and
 		val($ms, bool) and
 		val($ms-base, measurePositive) and
 		val($ms-ratio, number) and val($ms-ratio, positive) and
@@ -124,9 +147,10 @@
 		val($push-output, bool) and
 		val($offset-output, bool) and
 		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size and
-		val($space-unit-fallback, measurePositive) {
+		val($space-unit-fallback, measurePositive) and
+		val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size and
+		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size {
 
-			@debug (sl-walk($space-units, val, measurePositive));
 			@return true;
 
     	}
