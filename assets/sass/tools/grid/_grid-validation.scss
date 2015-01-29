@@ -101,7 +101,7 @@
 
 		@error #{$offset-output} "is invalid value of `grid.offset-output`";
 
-	} @else if not val($space-units, list) and not sl-walk($space-units, val, measurePositive) {
+	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false)) {
 
 		@error #{$space-units} "is invalid value of `grid.space-units`";
 
@@ -117,7 +117,7 @@
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
-		val($space-units, list) and sl-walk($space-units, val, measurePositive) {
+		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) {
 
 			@debug (sl-walk($space-units, val, measurePositive));
 			@return true;
