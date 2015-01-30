@@ -6,32 +6,32 @@
 *
 * @group grid
 *
+* @param {num} $columns - number of columns
+* @param {bool} $positive (true) - switcher for negative width output
+* @param {map} $layout ($grid) - global number of columns in a layout
+*
 */
 
 @function span($columns, $positive: true, $layout: $grid) {
-	@if exists(grid-validation, function) {
-		@if grid-validation($layout) {
-			$layout: map-get($layout, columns);
-			$width: ($columns / $layout) * 100%;
-			@if not $positive {
-				$width: $width * -1;
-			}
-
-			@if $columns > $layout {
-
-				@warn ':::::::::: `span`\'s value is greater than global `$layout`\'s value. It might cause layout bugs!';
-
-			}
-
-			@debug $width;
-
-			@return $width;
-
-		} @else {
-			@error "Bad layout!";
+	@if exists(grid-validation, function) and grid-validation($layout) {
+		$layout: map-get($layout, columns);
+		$width: ($columns / $layout) * 100%;
+		@if not $positive {
+			$width: $width * -1;
 		}
+
+		@if $columns > $layout {
+
+			@warn ':+1:`span`\'s value is greater than global `$layout`\'s value. It might cause layout bugs!';
+
+		}
+
+		@debug $width;
+
+		@return $width;
+
 	} @else {
-		@error "Damn!";
+		@error '`grid-validation` function doesn't exist;
 	}
 }
 
