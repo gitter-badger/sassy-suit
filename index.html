@@ -54,6 +54,15 @@
           
           
             <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="span" data-type="function">
+              <a href="#function-span">span
+              
+              
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="grid-validation" data-type="function">
               <a href="#function-grid-validation">grid-validation
               
@@ -1304,6 +1313,189 @@
 
               
               
+                <section class="main__item  item" id="function-span">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-span">span</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function span() { 
+	@if exists(grid-validation, function) {
+		@if grid-validation($layout) {
+			$layout: map-get($layout, columns);
+			$width: ($columns / $layout) * 100%;
+			@if not $positive {
+				$width: $width * -1;
+			}
+
+			@if $columns &gt; $layout {
+
+				@warn &#39;:::::::::: `span`\&#39;s value is greater than global `$layout`\&#39;s value. It might cause layout bugs!&#39;;
+
+			}
+
+			@debug $width;
+
+			@return $width;
+
+		} @else {
+			@error &quot;Bad layout!&quot;;
+		}
+	} @else {
+		@error &quot;Damn!&quot;;
+	}
+ }"
+    data-collapsed="@function span() { ... }"><code>@function span() { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-span.scss#L10-L36" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Function for calculating element&#39;s span width value,</p>
+<p>proportional to the global layout value</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Bad layout!</p>
+</li>
+    
+      <li><p>Damn!</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-exists"><code>exists</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-grid-validation"><code>grid-validation</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
                 <section class="main__item  item" id="function-grid-validation">
 
 <h3 class="item__heading">
@@ -1742,6 +1934,21 @@
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-span"><code>span</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -2027,6 +2234,15 @@ exists(noFunction, fun)    	//returns false</code></pre>
       
       <h3 class="item__sub-heading">Used by</h3>
       <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-span"><code>span</code></a></li>
+  
+
+
+
+  
+
     
 
     <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
@@ -13996,7 +14212,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -14005,7 +14221,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -18492,7 +18708,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -18501,7 +18717,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20455,7 +20671,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20464,7 +20680,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20977,7 +21193,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20986,7 +21202,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22149,7 +22365,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
+    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
   
 
 
@@ -22158,7 +22374,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-webFontsStringReplace"><code>webFontsStringReplace</code></a></li>
+    <li><a href="#function-webFontsURLEncode"><code>webFontsURLEncode</code></a></li>
   
 
 
