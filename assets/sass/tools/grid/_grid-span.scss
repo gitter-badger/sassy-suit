@@ -22,7 +22,7 @@
 
 		@if $columns > $layout {
 
-			@warn ':+1:`span`\'s value is greater than global `$layout`\'s value. It might cause layout bugs!';
+			@warn '`span`\'s value is greater than global `$layout`\'s value. It might cause layout bugs!';
 
 		}
 
@@ -31,7 +31,7 @@
 		@return $width;
 
 	} @else {
-		@error '`grid-validation` function doesn't exist;
+		@error '`grid-validation` function doesn't exist or invalid';
 	}
 }
 
