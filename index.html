@@ -1335,40 +1335,70 @@
 
 
 
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function span() { 
-	@if exists(grid-validation, function) {
-		@if grid-validation($layout) {
-			$layout: map-get($layout, columns);
-			$width: ($columns / $layout) * 100%;
-			@if not $positive {
-				$width: $width * -1;
-			}
-
-			@if $columns &gt; $layout {
-
-				@warn &#39;:::::::::: `span`\&#39;s value is greater than global `$layout`\&#39;s value. It might cause layout bugs!&#39;;
-
-			}
-
-			@debug $width;
-
-			@return $width;
-
-		} @else {
-			@error &quot;Bad layout!&quot;;
+    data-expanded="@function span($columns, $positive: true, $layout: $grid) { 
+	@if exists(grid-validation, function) and grid-validation($layout) {
+		$layout: map-get($layout, columns);
+		$width: ($columns / $layout) * 100%;
+		@if not $positive {
+			$width: $width * -1;
 		}
+
+		@if $columns &gt; $layout {
+
+			@warn &#39;:+1:`span`\&#39;s value is greater than global `$layout`\&#39;s value. It might cause layout bugs!&#39;;
+
+		}
+
+		@debug $width;
+
+		@return $width;
+
 	} @else {
-		@error &quot;Damn!&quot;;
+		@error &#39;`grid-validation` function doesn&#39;t exist;
 	}
  }"
-    data-collapsed="@function span() { ... }"><code>@function span() { ... }</code></pre>
+    data-collapsed="@function span($columns, $positive: true, $layout: $grid) { ... }"><code>@function span($columns, $positive: true, $layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-span.scss#L10-L36" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-span.scss#L14-L36" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1393,7 +1423,67 @@
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$columns</code></th>
+          <td data-label="desc"><p>number of columns</p>
+</td>
+          <td data-label="type">
+          
+            Num
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$positive</code></th>
+          <td data-label="desc"><p>switcher for negative width output</p>
+</td>
+          <td data-label="type">
+          
+            Bool
+          
+          </td>
+          <td data-label="default">
+          
+            <code>true</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$layout</code></th>
+          <td data-label="desc"><p>global number of columns in a layout</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$grid</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -1412,10 +1502,7 @@
 
   <ul class="list-unstyled">
     
-      <li><p>Bad layout!</p>
-</li>
-    
-      <li><p>Damn!</p>
+      <li><p><code>grid-validation</code> function doesn</p>
 </li>
     
   </ul>
