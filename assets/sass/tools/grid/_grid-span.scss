@@ -31,7 +31,7 @@
 		@return $width;
 
 	} @else {
-		@error '`grid-validation` function doesn't exist or invalid';
+		@error '`grid-validation` function doesn\'t exist or invalid';
 	}
 }
 
