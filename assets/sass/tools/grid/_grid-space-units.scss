@@ -2,6 +2,11 @@
 	@if grid-validation($layout) {
 		@warn 'good!';
 	}
+
+	$bp-sizing-output: map-get($layout, bp-sizing-output);
+	$space-units: map-get($layout, space-units);
+	$space-unit-fallback: map-get($layout, space-unit-fallback);
+
 	$ms: map-get($layout, ms);
 	$ms-base: map-get($layout, ms-base);
 	$ms-ratio: map-get($layout, ms-ratio);
@@ -11,9 +16,17 @@
 
 	@warn $ms $ms-base $ms-ratio $ms-round $list-size;
 
-	$grid-gutter-list: ms-list(0, length(map-keys($breakpoints)), $ms-base, $ms-ratio);
+	@if $bp-sizing-output and $ms-base {
 
-	@debug $grid-gutter-list;
+		@debug "$bp-sizing-output and $ms-base";
+
+		$grid-gutter-values: ms-list(0, length(map-keys($breakpoints)), $ms-base, $ms-ratio);
+
+		@debug $grid-gutter-values '||||||||||';
+
+	} @else if $bp-sizing-output and not $ms-base and $space-units {
+
+	} @else if not $bp-sizing-out and $space-unit-fallback {}
 
 }
 
