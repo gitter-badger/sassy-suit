@@ -1,4 +1,4 @@
-@mixin grid-gutters($layout: $grid) {
+@mixin grid-space-units($layout: $grid) {
 	@if grid-validation($layout) {
 		@warn 'good!';
 	}
@@ -18,5 +18,5 @@
 }
 
 TEST {
-	@include grid-gutters();
+	@include grid-space-units();
 }
