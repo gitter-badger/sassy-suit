@@ -1,0 +1,22 @@
+@mixin grid-gutters($layout: $grid) {
+	@if grid-validation($layout) {
+		@warn 'good!';
+	}
+	$ms: map-get($layout, ms);
+	$ms-base: map-get($layout, ms-base);
+	$ms-ratio: map-get($layout, ms-ratio);
+	$ms-round: map-get($layout, ms-round);
+
+	$list-size: length(map-keys($breakpoints));
+
+	@warn $ms $ms-base $ms-ratio $ms-round $list-size;
+
+	$grid-gutter-list: ms-list(0, length(map-keys($breakpoints)), $ms-base, $ms-ratio);
+
+	@debug $grid-gutter-list;
+
+}
+
+TEST {
+	@include grid-gutters();
+}
