@@ -20,29 +20,31 @@
 
 			$grid-space-units: ms-list(0, length(map-keys($breakpoints)) - 1, $ms-base, $ms-ratio) !global;
 
-			@debug $grid-space-units '||||||||||';
+			// @debug $grid-space-units '||||||||||';
 
 		} @else if $bp-sizing-output and (not $ms) and $space-units {
 
 			$grid-space-units: $space-units !global;
 
-			@debug $grid-space-units '|||||||||| - static';
+			// @debug $grid-space-units '|||||||||| - static';
 
 
 		} @else if not $bp-sizing-output and $space-unit-fallback {
 
 			$grid-space-units: $space-unit-fallback !global;
 
-			@debug $grid-space-units '|||||||||| - fallback';
+			// @debug $grid-space-units '|||||||||| - fallback';
 
 		}
 	} @else {
 
-		@error '`$grid` map is invalid';
+		@error '#{$layout} is invalid argument for `grid-space-units` function';
 
 	}
 }
 
-TEST {
+TEST-grid-space-units {
 	@include grid-space-units();
+
+	content: $grid-space-units;
 }
