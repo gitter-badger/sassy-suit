@@ -1,7 +1,7 @@
 ///
 /// Mixin for generating gutters
 ///
-/// Gutter output depends on global configuration
+/// Output of gutter classes depends on global configuration
 ///
 /// @group grid
 ///
@@ -9,34 +9,130 @@
 ///
 /// @throw "#{$layout} is invalid argument for `grid-space-units` function"
 ///
-/// @todo clean comments, '@debug' statements, call. add ms-round option!
-//////
-///
 
 @mixin gutters($layout: $grid) {
 	@if exists(grid-space-units, mixin) {
 		@include grid-space-units($layout);
 		// $grid-space-units
-
 		$direction-output: map-get($layout, direction-output);
 		$values: map-get($layout, values);
+		$bp-value-flow: map-get($layout, bp-value-flow);
+		$direction-output: map-get($layout, direction-output);
+		$sizing-output: map-get($layout, sizing-output);
+		$bp-output: map-get($layout, bp-output);
 
-		.g__gutters {
-			padding-left: $grid-space-units;
-			padding-right: $grid-space-units;
-		}
-
-		// values: fallback
-		@if $direction-output and ($values == 'space-unit-fallback') {
-
-			.g__gutter--before {
+		@if $values == 'space-unit-fallback' {
+			.g__gutters {
 				padding-left: $grid-space-units;
-			}
-
-			.g__gutter--after {
 				padding-right: $grid-space-units;
 			}
 
+			@if $direction-output {
+
+				.g__gutter--before {
+					padding-left: $grid-space-units;
+				}
+
+				.g__gutter--after {
+					padding-right: $grid-space-units;
+				}
+			}
+		}
+
+		@if $values == 'space-units' {
+
+			@if $bp-output {
+				@if $sizing-output and not $direction-output {
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-sm__gutter-xs {
+						// @include bp(sm) {
+							// padding-left: nth($grid-space-units, 1);
+							// padding-right: nth($grid-space-units, 1);
+						// }
+					}
+					// ...
+					.g-xs__gutter-xxl {
+						// padding-left: nth($grid-space-units, last($grid-space-units));
+						// padding-right: nth($grid-space-units, last($grid-space-units));
+					}
+					.g-sm__gutter-xxl {
+						// @include bp(sm) {
+							// padding-left: nth($grid-space-units, last($grid-space-units));
+							// padding-right: nth($grid-space-units, last($grid-space-units));
+						// }
+					}
+					// Other breakpoints
+					// ...
+				}
+
+				@if $direction-output and not $sizing-output {
+					.g-xs__gutter-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-sm__gutter-before {
+						// padding-left: nth($grid-space-units, 2);
+					}
+					.g-sm__gutter-after {
+						// padding-right: nth($grid-space-units, 2);
+					}
+				}
+
+				@if $direction-output and $sizing-output {
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					// Other breakpoints
+					// .g-<sm>.....
+					// ...
+				}
+			}
+
+			@if not $bp-output {
+				@if $sizing-output and not $direction-output {
+					.g__gutters-xs {}
+					.g__gutters-sm {}
+					.g__gutters-md {}
+				}
+
+				@if $sizing-output and $direction-output {
+					.g__gutters-xs-after {}
+					.g__gutters-xs-before {}
+					.g__gutters-sm-after {}
+					.g__gutters-sm-before {}
+				}
+				@if not $sizing-output {
+
+					@error ' `bp-output == false` and `sizing-output == false` are invalid settings of grid configuration. Consider using `$values == 'space-unit-fallback'` ';
+
+				}
+			}
+		}
+
+		@if $values == 'ms' {
+			// all options which play with ms
 		}
 
 	} @else {
