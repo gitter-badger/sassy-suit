@@ -112,7 +112,7 @@ $type: (
 * @prop {Map key} grid.bp-value-flow (bool) - switcher for automatic pairing of breakpoint and matching value for `gutter`, `row` and `container` classes
 * @prop {Map key} grid.sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes
 * @prop {Map key} grid.direction-output (bool) - switcher for outputing directional grid `gutter` and `row` classes
-* @prop {Map key} grid.bp-sizing-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
+* @prop {Map key} grid.bp-output (bool) - switcher for outputing manual grid `gutter` and `row` classes for all breakpoints
 * @prop {Map key} grid.pull-output (bool) - switcher for outputing grid `pull` classes
 * @prop {Map key} grid.push-output (bool) - switcher for outputing grid `push` classes
 * @prop {Map key} grid.offset-output (bool) - switcher for outputing grid `offset` classes
@@ -121,7 +121,7 @@ $type: (
 * @prop {Map key} grid.ms-ratio (integer) - ratio argument for `ms-list` function
 * @prop {Map key} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
 * @prop {Map key} grid.space-units (list of positive measures) - units for manual setting of `row` and `gutter` values, this key gets validated and used when `ms: false`
-* @prop {Map key} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-sizing-output': false`
+* @prop {Map key} grid.space-unit-fallback (positive measure) - fallback value for space-units, this key gets validated and used when `'bp-value-flow': false`, `'sizing-output': false`, `'bp-output': false`
 * @prop {Map key} grid.containers (list of positive measures) - container width values
 * @prop {Map key} grid.containers-fluid (list of positive measures) - container max-width values
 * @prop {Map key} grid.bp-class-names (list of strings) - breakpoints class names
@@ -136,7 +136,7 @@ $type: (
 
 $grid: (
 	'columns': 12,
-	'values': 'space-unit-fallback',
+	'values': 'space-units',
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
 	'ms-round': true,
@@ -147,7 +147,7 @@ $grid: (
 	'pull-output': true,
 	'push-output': true,
 	'offset-output': true,
-	'bp-sizing-output': true,
+	'bp-output': true,
 	'bp-value-flow': true,
 	'containers': 300px 450px 600px 700px 900px 1100px,
 	'containers-fluid': 400px 550px 700px 800px 1000px 1200px,

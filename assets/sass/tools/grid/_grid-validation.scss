@@ -26,7 +26,7 @@
 /// @param {map key} grid.ms-round
 /// @param {map key} grid.bp-value-flow
 /// @param {map key} grid.sizing-output
-/// @param {map key} grid.bp-sizing-output
+/// @param {map key} grid.bp-output
 /// @param {map key} grid.direction-output
 /// @param {map key} grid.pull-output
 /// @param {map key} grid.push-output
@@ -46,7 +46,7 @@
 /// @throw #{$ms-round} 'is invalid value of `grid.ms-round`'
 /// @throw #{$bp-value-flow} 'is invalid value of `grid.bp-value-flow`'
 /// @throw #{$sizing-output} 'is invalid value of `grid.sizing-output`'
-/// @throw #{$bp-sizing-output} 'is invalid value of `grid.bp-sizing-output`'
+/// @throw #{$bp-output} 'is invalid value of `grid.bp-output`'
 /// @throw #{$direction-output} 'is invalid value of `grid.direction-output`'
 /// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
 /// @throw #{$push-output} 'is invalid value of `grid.push-output`'
@@ -75,7 +75,7 @@
 		$ms-round: map-get($map, ms-round);
 		$bp-value-flow: map-get($map, bp-value-flow);
 		$sizing-output: map-get($map, sizing-output);
-		$bp-sizing-output: map-get($map, bp-sizing-output);
+		$bp-output: map-get($map, bp-output);
 		$direction-output: map-get($map, direction-output);
 		$pull-output: map-get($map, pull-output);
 		$push-output: map-get($map, push-output);
@@ -138,9 +138,9 @@
 
 		@error #{$sizing-output} 'is invalid value of `grid.sizing-output`';
 
-	} @else if not val($bp-sizing-output, bool) {
+	} @else if not val($bp-output, bool) {
 
-		@error #{$bp-sizing-output} 'is invalid value of `grid.bp-sizing-output`';
+		@error #{$bp-output} 'is invalid value of `grid.bp-output`';
 
 	} @else if not val($direction-output, bool) {
 
@@ -184,7 +184,7 @@
 		val($ms-round, bool) and
 		val($bp-value-flow, bool) and
 		val($sizing-output, bool) and
-		val($bp-sizing-output, bool) and
+		val($bp-output, bool) and
 		val($direction-output, bool) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
