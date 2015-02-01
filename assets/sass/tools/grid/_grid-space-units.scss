@@ -22,6 +22,8 @@
 /// @todo clean comments, '@debug' statements, call. add ms-round option!
 ///
 
+$grid-space-units: ()!global;
+
 @mixin grid-space-units($layout: $grid) {
 	@if grid-validation($layout) {
 
@@ -36,11 +38,9 @@
 
 		$list-size: length(map-keys($breakpoints));
 
-		@warn $ms $ms-base $ms-ratio $ms-round $list-size;
+		@warn $values $ms-base $ms-ratio $ms-round $list-size;
 
 		@if $values == 'ms' {
-
-			@debug "$bp-sizing-output and $ms-base";
 
 			$grid-space-units: ms-list(0, length(map-keys($breakpoints)) - 1, $ms-base, $ms-ratio) !global;
 
@@ -53,7 +53,7 @@
 			// @debug $grid-space-units '|||||||||| - static';
 
 
-		} @else if $values == 'space-units-fallback' and $space-unit-fallback {
+		} @else if $values == 'space-unit-fallback' and $space-unit-fallback {
 
 			$grid-space-units: $space-unit-fallback !global;
 
@@ -68,7 +68,7 @@
 }
 
 TEST-grid-space-units {
-	@include grid-space-units();
+	@include grid-space-units($grid);
 
 	content: $grid-space-units;
 }
