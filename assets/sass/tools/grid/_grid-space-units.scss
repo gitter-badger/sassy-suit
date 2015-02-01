@@ -1,3 +1,27 @@
+///
+/// Function for validating every `$grid`'s key value
+///
+/// By deafult it references to `$breakpoints` map for calculating
+///
+/// a required number of classes and values for validating
+///
+/// `space-units`, `containers`, `containers-fluid` keys
+///
+/// @group grid
+///
+/// @require {function} grid-validation ($grid) grid configuration validator function
+///
+/// @param {map} grid ($grid) Map for storing grid configurations
+///
+/// @example
+///  @include grid-space-units($grid)
+///  // $grid-space-units
+///
+/// @throw "#{$layout} is invalid argument for `grid-space-units` function"
+///
+/// @todo clean comments, '@debug' statements, call
+///
+
 @mixin grid-space-units($layout: $grid) {
 	@if grid-validation($layout) {
 
