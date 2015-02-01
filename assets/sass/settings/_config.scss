@@ -116,7 +116,7 @@ $type: (
 * @prop {Map key} grid.pull-output (bool) - switcher for outputing grid `pull` classes
 * @prop {Map key} grid.push-output (bool) - switcher for outputing grid `push` classes
 * @prop {Map key} grid.offset-output (bool) - switcher for outputing grid `offset` classes
-* @prop {Map key} grid.ms (bool) - switcher for using modular-scale plugin for calculating `gutter` and `row` values
+* @prop {Map key} grid.values ('ms' | 'space-units' | 'space-units-fallback') - switcher for using modular-scale, space-units or space-units-fallback
 * @prop {Map key} grid.ms-base (measure) - base value argument for `ms-list` function
 * @prop {Map key} grid.ms-ratio (integer) - ratio argument for `ms-list` function
 * @prop {Map key} grid.ms-round (bool) - switcher for rounding each value of `ms-list` function output
@@ -136,19 +136,19 @@ $type: (
 
 $grid: (
 	'columns': 12,
-	'bp-value-flow': true,
-	'sizing-output': true,
-	'bp-sizing-output': true,
-	'direction-output': true,
-	'pull-output': true,
-	'push-output': true,
-	'offset-output': true,
-	'ms': true,
+	'values': 'ms',
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
 	'ms-round': true,
 	'space-units': 5px 10px 15px 20px 25px 30px,
 	'space-unit-fallback': 15px,
+	'sizing-output': true,
+	'direction-output': true,
+	'pull-output': true,
+	'push-output': true,
+	'offset-output': true,
+	'bp-sizing-output': true,
+	'bp-value-flow': true,
 	'containers': 300px 450px 600px 700px 900px 1100px,
 	'containers-fluid': 400px 550px 700px 800px 1000px 1200px,
 	'bp-class-names': 'xs' 'sm' 'md' 'lg' 'xl' 'xxl',
