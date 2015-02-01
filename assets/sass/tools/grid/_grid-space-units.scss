@@ -11,7 +11,7 @@
 ///
 /// @require {function} grid-validation ($grid) grid configuration validator function
 ///
-/// @param {map} grid ($grid) Map for storing grid configurations
+/// @param {map} layout ($grid) Map for storing grid configurations
 ///
 /// @example
 ///  @include grid-space-units($grid)
@@ -19,7 +19,7 @@
 ///
 /// @throw "#{$layout} is invalid argument for `grid-space-units` function"
 ///
-/// @todo clean comments, '@debug' statements, call
+/// @todo clean comments, '@debug' statements, call. add ms-round option!
 ///
 
 @mixin grid-space-units($layout: $grid) {
@@ -29,7 +29,7 @@
 		$space-units: map-get($layout, space-units);
 		$space-unit-fallback: map-get($layout, space-unit-fallback);
 
-		$ms: map-get($layout, ms);
+		$values: map-get($layout, values);
 		$ms-base: map-get($layout, ms-base);
 		$ms-ratio: map-get($layout, ms-ratio);
 		$ms-round: map-get($layout, ms-round);
@@ -38,7 +38,7 @@
 
 		@warn $ms $ms-base $ms-ratio $ms-round $list-size;
 
-		@if $bp-sizing-output and $ms {
+		@if $values == 'ms' {
 
 			@debug "$bp-sizing-output and $ms-base";
 
@@ -46,14 +46,14 @@
 
 			// @debug $grid-space-units '||||||||||';
 
-		} @else if $bp-sizing-output and (not $ms) and $space-units {
+		} @else if $values == 'space-units' and $space-units {
 
 			$grid-space-units: $space-units !global;
 
 			// @debug $grid-space-units '|||||||||| - static';
 
 
-		} @else if not $bp-sizing-output and $space-unit-fallback {
+		} @else if $values == 'space-units-fallback' and $space-unit-fallback {
 
 			$grid-space-units: $space-unit-fallback !global;
 
