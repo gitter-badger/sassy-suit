@@ -72,6 +72,52 @@
             </ul>
           
         
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="grid-mixin"><a href="#grid-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="gutters" data-type="mixin">
+              <a href="#mixin-gutters">gutters
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="grid-variable"><a href="#grid-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="grid-space-units" data-type="variable">
+              <a href="#variable-grid-space-units">grid-space-units
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
         </div>
       
 
@@ -1383,7 +1429,7 @@
 
 		@if $columns &gt; $layout {
 
-			@warn &#39;:+1:`span`\&#39;s value is greater than global `$layout`\&#39;s value. It might cause layout bugs!&#39;;
+			@warn &#39;`span`\&#39;s value is greater than global `$layout`\&#39;s value. It might cause layout bugs!&#39;;
 
 		}
 
@@ -1392,13 +1438,13 @@
 		@return $width;
 
 	} @else {
-		@error &#39;`grid-validation` function doesn&#39;t exist;
+		@error &#39;`grid-validation` function doesn\&#39;t exist or invalid&#39;;
 	}
  }"
     data-collapsed="@function span($columns, $positive: true, $layout: $grid) { ... }"><code>@function span($columns, $positive: true, $layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-span.scss#L14-L36" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-span.scss#L13-L34" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1502,7 +1548,7 @@
 
   <ul class="list-unstyled">
     
-      <li><p><code>grid-validation</code> function doesn</p>
+      <li><p><code>grid-validation</code> function doesn\</p>
 </li>
     
   </ul>
@@ -1617,11 +1663,201 @@
     
   
 
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function grid-validation($grid: $grid) { 
+    data-expanded="@function grid-validation($grid: $grid, $grid.columns, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.values, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.bp-value-flow, $grid.sizing-output, $grid.bp-output, $grid.direction-output, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.space-units, $grid.space-unit-fallback, $grid.containers, $grid.containers-fluid) { 
 	@debug $map;
 
 	@if val($map, map) and
@@ -1631,13 +1867,13 @@
 		$pull-output: map-get($map, pull-output);
 		$push-output: map-get($map, push-output);
 		$offset-output: map-get($map, offset-output);
-		$ms: map-get($map, ms);
+		$values: map-get($map, values);
 		$ms-base: map-get($map, ms-base);
 		$ms-ratio: map-get($map, ms-ratio);
 		$ms-round: map-get($map, ms-round);
 		$bp-value-flow: map-get($map, bp-value-flow);
 		$sizing-output: map-get($map, sizing-output);
-		$bp-sizing-output: map-get($map, bp-sizing-output);
+		$bp-output: map-get($map, bp-output);
 		$direction-output: map-get($map, direction-output);
 		$pull-output: map-get($map, pull-output);
 		$push-output: map-get($map, push-output);
@@ -1658,91 +1894,95 @@
 
 	@if not val($columns, integer) and val($columns, positive) {
 
-		@error #{$columns} &quot;is invalid value of `grid.columns`&quot;;
+		@error #{$columns} &#39;is invalid value of `grid.columns`&#39;;
+
+	} @else if (not val($values, string)) and not index(&#39;ms&#39; &#39;space-units&#39; &#39;space-unit-fallback&#39;, $values) {
+
+		@error #{$pull-output} &#39;is invalid value of `grid.pull-output`&#39;;
 
 	} @else if not val($pull-output, bool) {
 
-		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
+		@error #{$pull-output} &#39;is invalid value of `grid.pull-output`&#39;;
 
 	} @else if not val($push-output, bool) {
 
-		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
+		@error #{$push-output} &#39;is invalid value of `grid.push-output`&#39;;
 
 	} @else if not val($offset-output, bool) {
 
-		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
+		@error #{$offset-output} &#39;is invalid value of `grid.offset-output`&#39;;
 
-	} @else if not val($ms, bool) {
+	} @else if not val($values, string) and (not index(&#39;ms&#39; &#39;space-units&#39; &#39;space-units-fallback&#39;, $values)) {
 
-		@error #{$ms} &quot;is invalid value of `grid.ms`&quot;;
+		@error #{$values} &#39;is invalid value of `grid.values`&#39;;
 
 	} @else if not val($ms-base, measurePositive) {
 
-		@error #{$ms-base} &quot;is invalid value of `grid.ms-base`&quot;;
+		@error #{$ms-base} &#39;is invalid value of `grid.ms-base`&#39;;
 
 	} @else if not (val($ms-ratio, number) and val($ms-ratio, positive) ) {
 
-		@error #{$ms-ratio} &quot;is invalid value of `grid.ms-ratio`&quot;;
+		@error #{$ms-ratio} &#39;is invalid value of `grid.ms-ratio`&#39;;
 
 	} @else if not val($ms-round, bool) {
 
-		@error #{$ms-round} &quot;is invalid value of `grid.ms-round`&quot;;
+		@error #{$ms-round} &#39;is invalid value of `grid.ms-round`&#39;;
 
 	} @else if not val($bp-value-flow, bool) {
 
-		@error #{$bp-value-flow} &quot;is invalid value of `grid.bp-value-flow`&quot;;
+		@error #{$bp-value-flow} &#39;is invalid value of `grid.bp-value-flow`&#39;;
 
 	} @else if not val($sizing-output, bool) {
 
-		@error #{$sizing-output} &quot;is invalid value of `grid.sizing-output`&quot;;
+		@error #{$sizing-output} &#39;is invalid value of `grid.sizing-output`&#39;;
 
-	} @else if not val($bp-sizing-output, bool) {
+	} @else if not val($bp-output, bool) {
 
-		@error #{$bp-sizing-output} &quot;is invalid value of `grid.bp-sizing-output`&quot;;
+		@error #{$bp-output} &#39;is invalid value of `grid.bp-output`&#39;;
 
 	} @else if not val($direction-output, bool) {
 
-		@error #{$direction-output} &quot;is invalid value of `grid.direction-output`&quot;;
+		@error #{$direction-output} &#39;is invalid value of `grid.direction-output`&#39;;
 
 	} @else if not val($pull-output, bool) {
 
-		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
+		@error #{$pull-output} &#39;is invalid value of `grid.pull-output`&#39;;
 
 	} @else if not val($push-output, bool) {
 
-		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
+		@error #{$push-output} &#39;is invalid value of `grid.push-output`&#39;;
 
 	} @else if not val($offset-output, bool) {
 
-		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
+		@error #{$offset-output} &#39;is invalid value of `grid.offset-output`&#39;;
 
 	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size) {
 
-		@error #{$space-units} &quot;is invalid value of `grid.space-units`&quot;;
+		@error #{$space-units} &#39;is invalid value of `grid.space-units`&#39;;
 
 	} @else if not val($space-unit-fallback, measurePositive) {
 
-		@error #{$space-unit-fallback} &quot;is invalid value of `grid.space-unit-fallback`&quot;;
+		@error #{$space-unit-fallback} &#39;is invalid value of `grid.space-unit-fallback`&#39;;
 
 	} @else if not (val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size) {
 
-		@error #{$containers} &quot;is invalid value of `grid.containers`&quot;;
+		@error #{$containers} &#39;is invalid value of `grid.containers`&#39;;
 
 	} @else if not (val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size) {
 
-		@error #{$containers-fluid} &quot;is invalid value of `grid.containers-fluid`&quot;;
+		@error #{$containers-fluid} &#39;is invalid value of `grid.containers-fluid`&#39;;
 
 	}  @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
-		val($ms, bool) and
+	    val($values, string) and index(&#39;ms&#39; &#39;space-units&#39; &#39;space-unit-fallback&#39;, $values) and
 		val($ms-base, measurePositive) and
 		val($ms-ratio, number) and val($ms-ratio, positive) and
 		val($ms-round, bool) and
 		val($bp-value-flow, bool) and
 		val($sizing-output, bool) and
-		val($bp-sizing-output, bool) and
+		val($bp-output, bool) and
 		val($direction-output, bool) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
@@ -1761,102 +2001,11 @@
 		@return false;
 
     }
-
-	// // columns
-	// @if val($columns, integer) and val($columns, positive) {
-	// } @else {
-	// 	@error #{$columns} &quot;is invalid value of `grid.columns`&quot;;
-	// }
-
-	// // ms
-	// @if val($ms, bool) {
-	// 	@if val($ms-base, measurePositive) {
-	// 	} @else {
-	// 		@error #{$ms-base} &quot;is invalid value of `grid.ms-base`&quot;;
-	// 	}
-
-	// 	@if val($ms-ratio, number) and val($ms-ratio, positive) {
-	// 	} @else {
-	// 		@error #{$ms-ratio} &quot;is invalid value of `grid.ms-ratio`&quot;;
-	// 	}
-
-	// 	@if val($ms-round, bool) {
-	// 	} @else {
-	// 		@error #{$ms-round} &quot;is invalid value of `grid.ms-round`&quot;;
-	// 	}
-	// } @else {
-
-	// 	// bp-value-flow
-	// 	@if val($bp-value-flow, bool) {
-	// 	} @else {
-	// 		@error #{$bp-value-flow} &quot;is invalid value of `grid.bp-value-flow`&quot;;
-	// 	}
-
-	// 	// sizing-output
-	// 	@if val($sizing-output, bool) {
-	// 	} @else {
-	// 		@error #{$sizing-output} &quot;is invalid value of `grid.sizing-output`&quot;;
-	// 	}
-
-	// 	// bp-sizing-output
-	// 	@if val($bp-sizing-output, bool) {
-	// 	} @else {
-	// 		@error #{$bp-sizing-output} &quot;is invalid value of `grid.bp-sizing-output`&quot;;
-	// 	}
-
-	// 	// direction-output
-	// 	@if val($direction-output, bool) {
-	// 	} @else {
-	// 		@error #{$direction-output} &quot;is invalid value of `grid.direction-output`&quot;;
-	// 	}
-
-	// 	// pull-output
-	// 	@if val($pull-output, bool) {
-	// 	} @else {
-	// 		@error #{$pull-output} &quot;is invalid value of `grid.pull-output`&quot;;
-	// 	}
-
-	// 	// push-output
-	// 	@if val($push-output, bool) {
-	// 	} @else {
-	// 		@error #{$push-output} &quot;is invalid value of `grid.push-output`&quot;;
-	// 	}
-
-	// 	// offset-output
-	// 	@if val($offset-output, bool) {
-	// 	} @else {
-	// 		@error #{$offset-output} &quot;is invalid value of `grid.offset-output`&quot;;
-	// 	}
-
-	// 	// space-units
-	// 	@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
-	// 	} @else {
-	// 		@error #{$space-units} &quot;is invalid value of `grid.space-units`&quot;;
-	// 	}
-
-	// 	@if val($space-unit-fallback, measurePositive) {
-	// 	} @else {
-	// 		@error #{$space-unit-fallback} &quot;is invalid value of `grid.space-unit-fallback`&quot;;
-	// 	}
-
-	// 	@if val($containers, list) {
-	// 	} @else {
-	// 		@error #{$containers} &quot;is invalid value of `grid.containers`&quot;;
-	// 	}
-
-	// 	@if val($containers-fluid, list) {
-	// 	} @else {
-	// 		@error #{$containers-fluid} &quot;is invalid value of `grid.containers-fluid`&quot;;
-	// 	}
-	// }
-
-	// @warn &quot;validated!&quot;;
-	// @return true;
  }"
-    data-collapsed="@function grid-validation($grid: $grid) { ... }"><code>@function grid-validation($grid: $grid) { ... }</code></pre>
+    data-collapsed="@function grid-validation($grid: $grid, $grid.columns, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.values, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.bp-value-flow, $grid.sizing-output, $grid.bp-output, $grid.direction-output, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.space-units, $grid.space-unit-fallback, $grid.containers, $grid.containers-fluid) { ... }"><code>@function grid-validation($grid: $grid, $grid.columns, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.values, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.bp-value-flow, $grid.sizing-output, $grid.bp-output, $grid.direction-output, $grid.pull-output, $grid.push-output, $grid.offset-output, $grid.space-units, $grid.space-unit-fallback, $grid.containers, $grid.containers-fluid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-validation.scss#L22-L254" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-validation.scss#L62-L206" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1910,6 +2059,291 @@
           </td>
         </tr>
       
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.columns</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.pull-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.push-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.offset-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.values</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.ms-base</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.ms-ratio</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.ms-round</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.bp-value-flow</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.sizing-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.bp-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.direction-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.pull-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.push-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.offset-output</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.space-units</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.space-unit-fallback</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.containers</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.containers-fluid</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
     </tbody>
   </table>
 
@@ -1926,6 +2360,69 @@
   
     
     
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><h1 id="-columns-is-invalid-value-of-grid-columns-">{$columns} &#39;is invalid value of <code>grid.columns</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-pull-output-is-invalid-value-of-grid-pull-output-">{$pull-output} &#39;is invalid value of <code>grid.pull-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-push-output-is-invalid-value-of-grid-push-output-">{$push-output} &#39;is invalid value of <code>grid.push-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-offset-output-is-invalid-value-of-grid-offset-output-">{$offset-output} &#39;is invalid value of <code>grid.offset-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-values-is-invalid-value-of-grid-values-">{$values} &#39;is invalid value of <code>grid.values</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-ms-base-is-invalid-value-of-grid-ms-base-">{$ms-base} &#39;is invalid value of <code>grid.ms-base</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-ms-ratio-is-invalid-value-of-grid-ms-ratio-">{$ms-ratio} &#39;is invalid value of <code>grid.ms-ratio</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-ms-round-is-invalid-value-of-grid-ms-round-">{$ms-round} &#39;is invalid value of <code>grid.ms-round</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-bp-value-flow-is-invalid-value-of-grid-bp-value-flow-">{$bp-value-flow} &#39;is invalid value of <code>grid.bp-value-flow</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-sizing-output-is-invalid-value-of-grid-sizing-output-">{$sizing-output} &#39;is invalid value of <code>grid.sizing-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-bp-output-is-invalid-value-of-grid-bp-output-">{$bp-output} &#39;is invalid value of <code>grid.bp-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-direction-output-is-invalid-value-of-grid-direction-output-">{$direction-output} &#39;is invalid value of <code>grid.direction-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-pull-output-is-invalid-value-of-grid-pull-output-">{$pull-output} &#39;is invalid value of <code>grid.pull-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-push-output-is-invalid-value-of-grid-push-output-">{$push-output} &#39;is invalid value of <code>grid.push-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-offset-output-is-invalid-value-of-grid-offset-output-">{$offset-output} &#39;is invalid value of <code>grid.offset-output</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-space-units-is-invalid-value-of-grid-space-units-">{$space-units} &#39;is invalid value of <code>grid.space-units</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-space-unit-fallback-is-invalid-value-of-grid-space-unit-fallback-">{$space-unit-fallback} &#39;is invalid value of <code>grid.space-unit-fallback</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-containers-is-invalid-value-of-grid-containers-">{$containers} &#39;is invalid value of <code>grid.containers</code>&#39;</h1>
+</li>
+    
+      <li><h1 id="-containers-fluid-is-invalid-value-of-grid-containers-fluid-">{$containers-fluid} &#39;is invalid value of <code>grid.containers-fluid</code>&#39;</h1>
+</li>
+    
+  </ul>
+
 
   
     
@@ -2029,6 +2526,15 @@
       <ul class="list-unstyled  list-inline">
     
 
+    <li><a href="#variable-grid-space-units"><code>grid-space-units</code></a></li>
+  
+
+
+
+  
+
+    
+
     <li><a href="#function-span"><code>span</code></a></li>
   
 
@@ -2052,6 +2558,514 @@
   
     
     
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>clean comments, &#39;@debug&#39; statements, call</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="grid-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-gutters">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-gutters">gutters</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin gutters($layout: $grid) { 
+	@if exists(grid-space-units, mixin) {
+		@include grid-space-units($layout);
+		// $grid-space-units
+		$direction-output: map-get($layout, direction-output);
+		$values: map-get($layout, values);
+		$bp-value-flow: map-get($layout, bp-value-flow);
+		$direction-output: map-get($layout, direction-output);
+		$sizing-output: map-get($layout, sizing-output);
+		$bp-output: map-get($layout, bp-output);
+
+		@if $values == &#39;space-unit-fallback&#39; {
+			.g__gutters {
+				padding-left: $grid-space-units;
+				padding-right: $grid-space-units;
+			}
+
+			@if $direction-output {
+
+				.g__gutter--before {
+					padding-left: $grid-space-units;
+				}
+
+				.g__gutter--after {
+					padding-right: $grid-space-units;
+				}
+			}
+		}
+
+		@if $values == &#39;space-units&#39; {
+
+			@if $bp-output {
+				@if $sizing-output and not $direction-output {
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-sm__gutter-xs {
+						// @include bp(sm) {
+							// padding-left: nth($grid-space-units, 1);
+							// padding-right: nth($grid-space-units, 1);
+						// }
+					}
+					// ...
+					.g-xs__gutter-xxl {
+						// padding-left: nth($grid-space-units, last($grid-space-units));
+						// padding-right: nth($grid-space-units, last($grid-space-units));
+					}
+					.g-sm__gutter-xxl {
+						// @include bp(sm) {
+							// padding-left: nth($grid-space-units, last($grid-space-units));
+							// padding-right: nth($grid-space-units, last($grid-space-units));
+						// }
+					}
+					// Other breakpoints
+					// ...
+				}
+
+				@if $direction-output and not $sizing-output {
+					.g-xs__gutter-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-sm__gutter-before {
+						// padding-left: nth($grid-space-units, 2);
+					}
+					.g-sm__gutter-after {
+						// padding-right: nth($grid-space-units, 2);
+					}
+				}
+
+				@if $direction-output and $sizing-output {
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs {
+						// padding-left: nth($grid-space-units, 1);
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-before {
+						// padding-left: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					.g-xs__gutter-xs-after {
+						// padding-right: nth($grid-space-units, 1);
+					}
+					// Other breakpoints
+					// .g-&lt;sm&gt;.....
+					// ...
+				}
+			}
+
+			@if not $bp-output {
+				@if $sizing-output and not $direction-output {
+					.g__gutters-xs {}
+					.g__gutters-sm {}
+					.g__gutters-md {}
+				}
+
+				@if $sizing-output and $direction-output {
+					.g__gutters-xs-after {}
+					.g__gutters-xs-before {}
+					.g__gutters-sm-after {}
+					.g__gutters-sm-before {}
+				}
+				@if not $sizing-output {
+
+					@error &#39; `bp-output == false` and `sizing-output == false` are invalid settings of grid configuration. Consider using `$values == &#39;space-unit-fallback&#39;` &#39;;
+
+				}
+			}
+		}
+
+		@if $values == &#39;ms&#39; {
+			// all options which play with ms
+		}
+
+	} @else {
+
+		@error &#39;`grid-space-units` function is not existing&#39;;
+
+	}
+ }"
+    data-collapsed="@mixin gutters($layout: $grid) { ... }"><code>@mixin gutters($layout: $grid) { ... }</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L13-L143" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Mixin for generating gutters</p>
+<p>Output of gutter classes depends on global configuration</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$layout</code></th>
+          <td data-label="desc"><p>Map for storing grid configurations</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$grid</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>&quot;#{$layout} is invalid argument for <code>grid-space-units</code> function&quot;</p>
+</li>
+    
+      <li><p> <code>bp-output == false</code> and <code>sizing-output == false</code> are invalid settings of grid configuration. Consider using `$values == </p>
+</li>
+    
+      <li><p><code>grid-space-units</code> function is not existing</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-bp"><code>bp</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-exists"><code>exists</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="grid-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-grid-space-units">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-grid-space-units">grid-space-units</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$grid-space-units: ()!global;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-space-units.scss#L25-L25" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Function for validating every <code>$grid</code>&#39;s key value</p>
+<p>By deafult it references to <code>$breakpoints</code> map for calculating</p>
+<p>a required number of classes and values for validating</p>
+<p><code>space-units</code>, <code>containers</code>, <code>containers-fluid</code> keys</p>
+</div>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-grid-validation"><code>grid-validation</code></a>
+        
+          <div class="item__requires-description">grid configuration validator function</div>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss"> @include grid-space-units($grid)
+ // $grid-space-units</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>clean comments, &#39;@debug&#39; statements, call. add ms-round option!</p>
+</li>
+    
+  </ul>
+
 
   
     
@@ -2321,6 +3335,15 @@ exists(noFunction, fun)    	//returns false</code></pre>
       
       <h3 class="item__sub-heading">Used by</h3>
       <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-gutters"><code>gutters</code></a></li>
+  
+
+
+
+  
+
     
 
     <li><a href="#function-span"><code>span</code></a></li>
@@ -20821,7 +21844,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
+    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
   
 
 
@@ -20830,7 +21853,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
+    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
   
 
 
@@ -23403,6 +24426,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       <ul class="list-unstyled  list-inline">
     
 
+    <li><a href="#mixin-gutters"><code>gutters</code></a></li>
+  
+
+
+
+  
+
+    
+
     <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
   
 
@@ -23759,19 +24791,19 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;bp-value-flow&#39;: true,
-	&#39;sizing-output&#39;: true,
-	&#39;bp-sizing-output&#39;: true,
-	&#39;direction-output&#39;: true,
-	&#39;pull-output&#39;: true,
-	&#39;push-output&#39;: true,
-	&#39;offset-output&#39;: true,
-	&#39;ms&#39;: true,
+	&#39;values&#39;: &#39;space-units&#39;,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
 	&#39;space-units&#39;: 5px 10px 15px 20px 25px 30px,
 	&#39;space-unit-fallback&#39;: 15px,
+	&#39;sizing-output&#39;: true,
+	&#39;direction-output&#39;: true,
+	&#39;pull-output&#39;: true,
+	&#39;push-output&#39;: true,
+	&#39;offset-output&#39;: true,
+	&#39;bp-output&#39;: true,
+	&#39;bp-value-flow&#39;: true,
 	&#39;containers&#39;: 300px 450px 600px 700px 900px 1100px,
 	&#39;containers-fluid&#39;: 400px 550px 700px 800px 1000px 1200px,
 	&#39;bp-class-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
@@ -23883,7 +24915,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.bp-sizing-output</code></th>
+        <th scope="row" data-label="name"><code>grid.bp-output</code></th>
         <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes for all breakpoints</p>
 </td>
         <td data-label="type">
@@ -23939,15 +24971,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.ms</code></th>
-        <td data-label="desc"><p>switcher for using modular-scale plugin for calculating <code>gutter</code> and <code>row</code> values</p>
+        <th scope="row" data-label="name"><code>grid.values</code></th>
+        <td data-label="desc"><p>switcher for using modular-scale, space-units or space-units-fallback</p>
 </td>
         <td data-label="type">
         Map key
         </td>
         <td data-label="default">
         
-          <code>bool</code>
+          <code>&#39;ms&#39; | &#39;space-units&#39; | &#39;space-units-fallback&#39;</code>
         
         </td>
       </tr>
@@ -24010,7 +25042,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>grid.space-unit-fallback</code></th>
-        <td data-label="desc"><p>fallback value for space-units, this key gets validated and used when <code>&#39;bp-value-flow&#39;: false</code>, <code>&#39;sizing-output&#39;: false</code>, <code>&#39;bp-sizing-output&#39;: false</code></p>
+        <td data-label="desc"><p>fallback value for space-units, this key gets validated and used when <code>&#39;bp-value-flow&#39;: false</code>, <code>&#39;sizing-output&#39;: false</code>, <code>&#39;bp-output&#39;: false</code></p>
 </td>
         <td data-label="type">
         Map key
