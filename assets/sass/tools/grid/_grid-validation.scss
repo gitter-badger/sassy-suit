@@ -1,24 +1,44 @@
-/**
-*
-* Function for validating every `$grid`'s key value
-*
-* By deafult it references to `$breakpoints` map for calculating
-*
-* a required number of classes and values for validating
-*
-* `space-units`, `containers`, `containers-fluid` keys
-*
-* @require {function} val data type validation function
-* @require {function} exists function for existance check up
-* @require {mixin} bp mixin for responsive breakpoints handling
-* @require {map} $breakpoints values for `bp` mixin
-* @require {function} sl-walk function for passing every item value from a list with parameters
-*
-* @param {map} grid ($grid) Map for storing grid configurations
-*
-* @group grid
-*
-*/
+///
+/// Function for validating every `$grid`'s key value
+///
+/// By deafult it references to `$breakpoints` map for calculating
+///
+/// a required number of classes and values for validating
+///
+/// `space-units`, `containers`, `containers-fluid` keys
+///
+/// @group grid
+///
+/// @require {function} val data type validation function
+/// @require {function} exists function for existance check up
+/// @require {mixin} bp mixin for responsive breakpoints handling
+/// @require {map} $breakpoints values for `bp` mixin
+/// @require {function} sl-walk function for passing every item value from a list with parameters
+///
+/// @param {map} grid ($grid) Map for storing grid configurations
+///
+/// @throw #{$columns} 'is invalid value of `grid.columns`'
+/// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
+/// @throw #{$push-output} 'is invalid value of `grid.push-output`'
+/// @throw #{$offset-output} 'is invalid value of `grid.offset-output`'
+/// @throw #{$ms} 'is invalid value of `grid.ms`'
+/// @throw #{$ms-base} 'is invalid value of `grid.ms-base`'
+/// @throw #{$ms-ratio} 'is invalid value of `grid.ms-ratio`'
+/// @throw #{$ms-round} 'is invalid value of `grid.ms-round`'
+/// @throw #{$bp-value-flow} 'is invalid value of `grid.bp-value-flow`'
+/// @throw #{$sizing-output} 'is invalid value of `grid.sizing-output`'
+/// @throw #{$bp-sizing-output} 'is invalid value of `grid.bp-sizing-output`'
+/// @throw #{$direction-output} 'is invalid value of `grid.direction-output`'
+/// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
+/// @throw #{$push-output} 'is invalid value of `grid.push-output`'
+/// @throw #{$offset-output} 'is invalid value of `grid.offset-output`'
+/// @throw #{$space-units} 'is invalid value of `grid.space-units`'
+/// @throw #{$space-unit-fallback} 'is invalid value of `grid.space-unit-fallback`'
+/// @throw #{$containers} 'is invalid value of `grid.containers`'
+/// @throw #{$containers-fluid} 'is invalid value of `grid.containers-fluid`'
+///
+/// @todo clean comments, '@debug' statements, call
+///
 
 @function grid-validation($map: $grid) {
 	@debug $map;
@@ -57,79 +77,79 @@
 
 	@if not val($columns, integer) and val($columns, positive) {
 
-		@error #{$columns} "is invalid value of `grid.columns`";
+		@error #{$columns} 'is invalid value of `grid.columns`';
 
 	} @else if not val($pull-output, bool) {
 
-		@error #{$pull-output} "is invalid value of `grid.pull-output`";
+		@error #{$pull-output} 'is invalid value of `grid.pull-output`';
 
 	} @else if not val($push-output, bool) {
 
-		@error #{$push-output} "is invalid value of `grid.push-output`";
+		@error #{$push-output} 'is invalid value of `grid.push-output`';
 
 	} @else if not val($offset-output, bool) {
 
-		@error #{$offset-output} "is invalid value of `grid.offset-output`";
+		@error #{$offset-output} 'is invalid value of `grid.offset-output`';
 
 	} @else if not val($ms, bool) {
 
-		@error #{$ms} "is invalid value of `grid.ms`";
+		@error #{$ms} 'is invalid value of `grid.ms`';
 
 	} @else if not val($ms-base, measurePositive) {
 
-		@error #{$ms-base} "is invalid value of `grid.ms-base`";
+		@error #{$ms-base} 'is invalid value of `grid.ms-base`';
 
 	} @else if not (val($ms-ratio, number) and val($ms-ratio, positive) ) {
 
-		@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
+		@error #{$ms-ratio} 'is invalid value of `grid.ms-ratio`';
 
 	} @else if not val($ms-round, bool) {
 
-		@error #{$ms-round} "is invalid value of `grid.ms-round`";
+		@error #{$ms-round} 'is invalid value of `grid.ms-round`';
 
 	} @else if not val($bp-value-flow, bool) {
 
-		@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
+		@error #{$bp-value-flow} 'is invalid value of `grid.bp-value-flow`';
 
 	} @else if not val($sizing-output, bool) {
 
-		@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
+		@error #{$sizing-output} 'is invalid value of `grid.sizing-output`';
 
 	} @else if not val($bp-sizing-output, bool) {
 
-		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
+		@error #{$bp-sizing-output} 'is invalid value of `grid.bp-sizing-output`';
 
 	} @else if not val($direction-output, bool) {
 
-		@error #{$direction-output} "is invalid value of `grid.direction-output`";
+		@error #{$direction-output} 'is invalid value of `grid.direction-output`';
 
 	} @else if not val($pull-output, bool) {
 
-		@error #{$pull-output} "is invalid value of `grid.pull-output`";
+		@error #{$pull-output} 'is invalid value of `grid.pull-output`';
 
 	} @else if not val($push-output, bool) {
 
-		@error #{$push-output} "is invalid value of `grid.push-output`";
+		@error #{$push-output} 'is invalid value of `grid.push-output`';
 
 	} @else if not val($offset-output, bool) {
 
-		@error #{$offset-output} "is invalid value of `grid.offset-output`";
+		@error #{$offset-output} 'is invalid value of `grid.offset-output`';
 
 	} @else if not (val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size) {
 
-		@error #{$space-units} "is invalid value of `grid.space-units`";
+		@error #{$space-units} 'is invalid value of `grid.space-units`';
 
 	} @else if not val($space-unit-fallback, measurePositive) {
 
-		@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
+		@error #{$space-unit-fallback} 'is invalid value of `grid.space-unit-fallback`';
 
 	} @else if not (val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size) {
 
-		@error #{$containers} "is invalid value of `grid.containers`";
+		@error #{$containers} 'is invalid value of `grid.containers`';
 
 	} @else if not (val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size) {
 
-		@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
+		@error #{$containers-fluid} 'is invalid value of `grid.containers-fluid`';
 
 	}  @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
@@ -160,97 +180,6 @@
 		@return false;
 
     }
-
-	// // columns
-	// @if val($columns, integer) and val($columns, positive) {
-	// } @else {
-	// 	@error #{$columns} "is invalid value of `grid.columns`";
-	// }
-
-	// // ms
-	// @if val($ms, bool) {
-	// 	@if val($ms-base, measurePositive) {
-	// 	} @else {
-	// 		@error #{$ms-base} "is invalid value of `grid.ms-base`";
-	// 	}
-
-	// 	@if val($ms-ratio, number) and val($ms-ratio, positive) {
-	// 	} @else {
-	// 		@error #{$ms-ratio} "is invalid value of `grid.ms-ratio`";
-	// 	}
-
-	// 	@if val($ms-round, bool) {
-	// 	} @else {
-	// 		@error #{$ms-round} "is invalid value of `grid.ms-round`";
-	// 	}
-	// } @else {
-
-	// 	// bp-value-flow
-	// 	@if val($bp-value-flow, bool) {
-	// 	} @else {
-	// 		@error #{$bp-value-flow} "is invalid value of `grid.bp-value-flow`";
-	// 	}
-
-	// 	// sizing-output
-	// 	@if val($sizing-output, bool) {
-	// 	} @else {
-	// 		@error #{$sizing-output} "is invalid value of `grid.sizing-output`";
-	// 	}
-
-	// 	// bp-sizing-output
-	// 	@if val($bp-sizing-output, bool) {
-	// 	} @else {
-	// 		@error #{$bp-sizing-output} "is invalid value of `grid.bp-sizing-output`";
-	// 	}
-
-	// 	// direction-output
-	// 	@if val($direction-output, bool) {
-	// 	} @else {
-	// 		@error #{$direction-output} "is invalid value of `grid.direction-output`";
-	// 	}
-
-	// 	// pull-output
-	// 	@if val($pull-output, bool) {
-	// 	} @else {
-	// 		@error #{$pull-output} "is invalid value of `grid.pull-output`";
-	// 	}
-
-	// 	// push-output
-	// 	@if val($push-output, bool) {
-	// 	} @else {
-	// 		@error #{$push-output} "is invalid value of `grid.push-output`";
-	// 	}
-
-	// 	// offset-output
-	// 	@if val($offset-output, bool) {
-	// 	} @else {
-	// 		@error #{$offset-output} "is invalid value of `grid.offset-output`";
-	// 	}
-
-	// 	// space-units
-	// 	@if val($space-units, list) and sl-walk($space-units, val, positiveMeasure) {
-	// 	} @else {
-	// 		@error #{$space-units} "is invalid value of `grid.space-units`";
-	// 	}
-
-	// 	@if val($space-unit-fallback, measurePositive) {
-	// 	} @else {
-	// 		@error #{$space-unit-fallback} "is invalid value of `grid.space-unit-fallback`";
-	// 	}
-
-	// 	@if val($containers, list) {
-	// 	} @else {
-	// 		@error #{$containers} "is invalid value of `grid.containers`";
-	// 	}
-
-	// 	@if val($containers-fluid, list) {
-	// 	} @else {
-	// 		@error #{$containers-fluid} "is invalid value of `grid.containers-fluid`";
-	// 	}
-	// }
-
-	// @warn "validated!";
-	// @return true;
 }
 
 .test {
