@@ -16,12 +16,31 @@
 /// @require {function} sl-walk function for passing every item value from a list with parameters
 ///
 /// @param {map} grid ($grid) Map for storing grid configurations
+/// @param {map key} grid.columns
+/// @param {map key} grid.pull-output
+/// @param {map key} grid.push-output
+/// @param {map key} grid.offset-output
+/// @param {map key} grid.values
+/// @param {map key} grid.ms-base
+/// @param {map key} grid.ms-ratio
+/// @param {map key} grid.ms-round
+/// @param {map key} grid.bp-value-flow
+/// @param {map key} grid.sizing-output
+/// @param {map key} grid.bp-sizing-output
+/// @param {map key} grid.direction-output
+/// @param {map key} grid.pull-output
+/// @param {map key} grid.push-output
+/// @param {map key} grid.offset-output
+/// @param {map key} grid.space-units
+/// @param {map key} grid.space-unit-fallback
+/// @param {map key} grid.containers
+/// @param {map key} grid.containers-fluid
 ///
 /// @throw #{$columns} 'is invalid value of `grid.columns`'
 /// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
 /// @throw #{$push-output} 'is invalid value of `grid.push-output`'
 /// @throw #{$offset-output} 'is invalid value of `grid.offset-output`'
-/// @throw #{$ms} 'is invalid value of `grid.ms`'
+/// @throw #{$values} 'is invalid value of `grid.values`'
 /// @throw #{$ms-base} 'is invalid value of `grid.ms-base`'
 /// @throw #{$ms-ratio} 'is invalid value of `grid.ms-ratio`'
 /// @throw #{$ms-round} 'is invalid value of `grid.ms-round`'
@@ -50,7 +69,7 @@
 		$pull-output: map-get($map, pull-output);
 		$push-output: map-get($map, push-output);
 		$offset-output: map-get($map, offset-output);
-		$ms: map-get($map, ms);
+		$values: map-get($map, values);
 		$ms-base: map-get($map, ms-base);
 		$ms-ratio: map-get($map, ms-ratio);
 		$ms-round: map-get($map, ms-round);
@@ -79,6 +98,10 @@
 
 		@error #{$columns} 'is invalid value of `grid.columns`';
 
+	} @else if (not val($values, string)) and not index('ms' 'space-units' 'space-unit-fallback', $values) {
+
+		@error #{$pull-output} 'is invalid value of `grid.pull-output`';
+
 	} @else if not val($pull-output, bool) {
 
 		@error #{$pull-output} 'is invalid value of `grid.pull-output`';
@@ -91,9 +114,9 @@
 
 		@error #{$offset-output} 'is invalid value of `grid.offset-output`';
 
-	} @else if not val($ms, bool) {
+	} @else if not val($values, string) and (not index('ms' 'space-units' 'space-units-fallback', $values)) {
 
-		@error #{$ms} 'is invalid value of `grid.ms`';
+		@error #{$values} 'is invalid value of `grid.values`';
 
 	} @else if not val($ms-base, measurePositive) {
 
@@ -155,7 +178,7 @@
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
-		val($ms, bool) and
+	    val($values, string) and index('ms' 'space-units' 'space-unit-fallback', $values) and
 		val($ms-base, measurePositive) and
 		val($ms-ratio, number) and val($ms-ratio, positive) and
 		val($ms-round, bool) and
