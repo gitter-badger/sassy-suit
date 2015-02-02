@@ -103,8 +103,8 @@
 		$direction-class-names: map-get($map, direction-class-names);
 		$gutter-class-name: map-get($map, gutter-class-name);
 		$row-class-name: map-get($map, row-class-name);
-		// $container-class-name: map-get($map, container-class-name);
-		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+		$container-class-name: map-get($map, container-class-name);
+		$container-fluid-class-name: map-get($map, container-fluid-class-name);
 
 		@debug $space-unit-class-names + "\\\\\\\\\\\\\\\\\/";
 
@@ -210,6 +210,14 @@
 
 		@error #{$row-class-name} 'is invalid value of `grid.row-class-name`';
 
+	}  @else if not val($container-class-name, string) {
+
+		@error #{$container-class-name} 'is invalid value of `grid.container-class-name`';
+
+	}  @else if not val($container-fluid-class-name, string) {
+
+		@error #{$container-fluid-class-name} 'is invalid value of `grid.container-fluid-class-name`';
+
 	} @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
@@ -233,7 +241,9 @@
 		val($space-unit-class-names, list) and not index(sl-walk($space-unit-class-names, val, string), false) and length($space-unit-class-names) == $list-size and
 		val($direction-class-names, list) and not index(sl-walk($direction-class-names, val, string), false) and length($direction-class-names) == 2 and
 		val($gutter-class-name, string) and
-		val($row-class-name, string) {
+		val($row-class-name, string) and
+		val($container-class-name, string) and
+		val($container-fluid-class-name, string) {
 
 			@return true;
 
