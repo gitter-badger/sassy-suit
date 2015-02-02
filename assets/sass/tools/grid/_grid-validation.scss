@@ -101,7 +101,7 @@
 		$bp-class-names: map-get($map, bp-class-names);
 		$space-unit-class-names: map-get($map, space-unit-class-names);
 		$direction-class-names: map-get($map, direction-class-names);
-		// $gutter-class-name: map-get($map, gutter-class-name);
+		$gutter-class-name: map-get($map, gutter-class-name);
 		// $row-class-name: map-get($map, row-class-name);
 		// $container-class-name: map-get($map, container-class-name);
 		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
@@ -202,7 +202,11 @@
 
 		@error #{$direction-class-names} 'is invalid value of `grid.direction-class-names`';
 
-	}  @else if val($columns, integer) and val($columns, positive) and
+	} @else if not val($gutter-class-name, string) {
+
+		@error #{$gutter-class-name} 'is invalid value of `grid.gutter-class-name`';
+
+	} @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
