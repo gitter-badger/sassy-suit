@@ -84,13 +84,15 @@
 		$space-unit-fallback: map-get($map, space-unit-fallback);
 		$containers: map-get($map, containers);
 		$containers-fluid: map-get($map, containers-fluid);
-		// $bp-class-names: map-get($map, bp-class-names);
+		$bp-class-names: map-get($map, bp-class-names);
 		// $space-unit-class-names: map-get($map, space-unit-class-names);
 		// $direction-class-names: map-get($map, direction-class-names);
 		// $gutter-class-name: map-get($map, gutter-class-name);
 		// $row-class-name: map-get($map, row-class-name);
 		// $container-class-name: map-get($map, container-class-name);
 		// $container-fluid-class-name: map-get($map, container-fluid-class-name);
+
+		@debug $bp-class-names + "\\\\\\\\\\\\\\\\\/";
 
 		$list-size: length(map-keys($breakpoints));
 
@@ -174,7 +176,11 @@
 
 		@error #{$containers-fluid} 'is invalid value of `grid.containers-fluid`';
 
-	}  @else if val($columns, integer) and val($columns, positive) and
+	} @else if not (val($bp-class-names, list) and not index(sl-walk($bp-class-names, val, string), false) and length($bp-class-names) == $list-size) {
+
+		@error #{$bp-class-names} 'is invalid value of `grid.bp-class-names`';
+
+	} @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
@@ -192,7 +198,8 @@
 		val($space-units, list) and not index(sl-walk($space-units, val, measurePositive), false) and length($space-units) == $list-size and
 		val($space-unit-fallback, measurePositive) and
 		val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size and
-		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size {
+		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and (length($containers-fluid) == $list-size) and
+		val($bp-class-names, list) and not index(sl-walk($bp-class-names, val, string), false) and length($bp-class-names) == $list-size {
 
 			@return true;
 
