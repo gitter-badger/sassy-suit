@@ -20,6 +20,23 @@
 		$direction-output: map-get($layout, direction-output);
 		$sizing-output: map-get($layout, sizing-output);
 		$bp-output: map-get($layout, bp-output);
+		$bp-class-names: map-get($layout, bp-class-names);
+		$space-unit-class-names: map-get($layout, space-unit-class-names);
+		$direction-class-names: map-get($layout, direction-class-names);
+		$gutter-class-name: map-get($layout, gutter-class-name);
+		$block-class-name: map-get($layout, block-class-name);
+
+		@debug $direction-output 		'direction-output';
+		@debug $values 					'value';
+		@debug $bp-value-flow 			'bp-value-flow';
+		@debug $direction-output 		'direction-output';
+		@debug $sizing-output 			'sizing-output';
+		@debug $bp-output 				'bp-output';
+		@debug $bp-class-names 			'bp-class-names';
+		@debug $space-unit-class-names 	'space-unit-class-names';
+		@debug $direction-class-names 	'direction-class-names';
+		@debug $gutter-class-name 		'gutter-class-name';
+		@debug $block-class-name 		'block-class-name';
 
 		@if $values == 'space-unit-fallback' {
 			.g__gutters {
