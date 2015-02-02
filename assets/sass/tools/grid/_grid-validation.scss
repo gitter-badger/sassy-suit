@@ -35,6 +35,13 @@
 /// @param {map key} grid.space-unit-fallback
 /// @param {map key} grid.containers
 /// @param {map key} grid.containers-fluid
+/// @param {map key} grid.bp-class-names
+/// @param {map key} grid.space-unit-class-names
+/// @param {map key} grid.direction-class-names
+/// @param {map key} grid.gutter-class-name
+/// @param {map key} grid.row-class-name
+/// @param {map key} grid.container-class-name
+/// @param {map key} grid.container-fluid-class-name
 ///
 /// @throw #{$columns} 'is invalid value of `grid.columns`'
 /// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
@@ -55,6 +62,13 @@
 /// @throw #{$space-unit-fallback} 'is invalid value of `grid.space-unit-fallback`'
 /// @throw #{$containers} 'is invalid value of `grid.containers`'
 /// @throw #{$containers-fluid} 'is invalid value of `grid.containers-fluid`'
+/// @throw #{$bp-class-names} 'is invalid value of `grid.bp-class-names`'
+/// @throw #{$space-unit-class-names} 'is invalid value of `grid.space-unit-class-names`'
+/// @throw #{$direction-class-names} 'is invalid value of `grid.direction-class-names`'
+/// @throw #{$gutter-class-name} 'is invalid value of `grid.gutter-class-name`'
+/// @throw #{$row-class-name} 'is invalid value of `grid.row-class-name`'
+/// @throw #{$container-class-name} 'is invalid value of `grid.container-class-name`'
+/// @throw #{$container-fluid-class-name} 'is invalid value of `grid.container-fluid-class-name`'
 ///
 /// @todo clean comments, '@debug' statements, call
 ///
@@ -86,7 +100,7 @@
 		$containers-fluid: map-get($map, containers-fluid);
 		$bp-class-names: map-get($map, bp-class-names);
 		$space-unit-class-names: map-get($map, space-unit-class-names);
-		// $direction-class-names: map-get($map, direction-class-names);
+		$direction-class-names: map-get($map, direction-class-names);
 		// $gutter-class-name: map-get($map, gutter-class-name);
 		// $row-class-name: map-get($map, row-class-name);
 		// $container-class-name: map-get($map, container-class-name);
@@ -184,6 +198,10 @@
 
 		@error #{$space-unit-class-names} 'is invalid value of `grid.space-unit-class-names`';
 
+	} @else if not (val($direction-class-names, list) and not index(sl-walk($direction-class-names, val, string), false) and length($direction-class-names) == 2) {
+
+		@error #{$direction-class-names} 'is invalid value of `grid.direction-class-names`';
+
 	}  @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
@@ -204,7 +222,8 @@
 		val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size and
 		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and (length($containers-fluid) == $list-size) and
 		val($bp-class-names, list) and not index(sl-walk($bp-class-names, val, string), false) and length($bp-class-names) == $list-size and
-		val($space-unit-class-names, list) and not index(sl-walk($space-unit-class-names, val, string), false) and length($space-unit-class-names) == $list-size{
+		val($space-unit-class-names, list) and not index(sl-walk($space-unit-class-names, val, string), false) and length($space-unit-class-names) == $list-size and
+		val($direction-class-names, list) and not index(sl-walk($direction-class-names, val, string), false) and length($direction-class-names) == 2 {
 
 			@return true;
 
