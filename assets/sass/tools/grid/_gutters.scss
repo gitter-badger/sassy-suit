@@ -38,8 +38,7 @@
 				}
 			}
 		}
-
-		@if $values == 'space-units' {
+		@if $values == not not index('space-units' 'ms', $values) {
 
 			@if $bp-output {
 				@if $sizing-output and not $direction-output {
@@ -133,6 +132,8 @@
 
 		@if $values == 'ms' {
 			// all options which play with ms
+			// same as $values == 'space-units'
+			// but instead of `space-units`
 		}
 
 	} @else {
