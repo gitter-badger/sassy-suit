@@ -2910,20 +2910,38 @@
 		$direction-output: map-get($layout, direction-output);
 		$sizing-output: map-get($layout, sizing-output);
 		$bp-output: map-get($layout, bp-output);
+		$bp-class-names: map-get($layout, bp-class-names);
+		$space-unit-class-names: map-get($layout, space-unit-class-names);
+		$direction-class-names: map-get($layout, direction-class-names);
+		$gutter-class-name: map-get($layout, gutter-class-name);
+		$block-class-name: map-get($layout, block-class-name);
+
+		@debug $direction-output 		&#39;direction-output&#39;;
+		@debug $values 					&#39;value&#39;;
+		@debug $bp-value-flow 			&#39;bp-value-flow&#39;;
+		@debug $direction-output 		&#39;direction-output&#39;;
+		@debug $sizing-output 			&#39;sizing-output&#39;;
+		@debug $bp-output 				&#39;bp-output&#39;;
+		@debug $bp-class-names 			&#39;bp-class-names&#39;;
+		@debug $space-unit-class-names 	&#39;space-unit-class-names&#39;;
+		@debug $direction-class-names 	&#39;direction-class-names&#39;;
+		@debug $gutter-class-name 		&#39;gutter-class-name&#39;;
+		@debug $block-class-name 		&#39;block-class-name&#39;;
 
 		@if $values == &#39;space-unit-fallback&#39; {
-			.g__gutters {
+
+			.#{$block-class-name}__#{$gutter-class-name} {
 				padding-left: $grid-space-units;
 				padding-right: $grid-space-units;
 			}
 
 			@if $direction-output {
 
-				.g__gutter--before {
+				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 1)} {
 					padding-left: $grid-space-units;
 				}
 
-				.g__gutter--after {
+				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 2)} {
 					padding-right: $grid-space-units;
 				}
 			}
@@ -3035,7 +3053,7 @@
     data-collapsed="@mixin gutters($layout: $grid) { ... }"><code>@mixin gutters($layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L13-L144" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L13-L162" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -20104,7 +20122,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -20113,7 +20131,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -22040,7 +22058,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22049,7 +22067,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-remove"><code>sl-remove</code></a></li>
   
 
 
@@ -22067,7 +22085,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22076,7 +22094,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -25059,7 +25077,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;values&#39;: &#39;space-units&#39;,
+	&#39;values&#39;: &#39;space-unit-fallback&#39;,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
@@ -25081,7 +25099,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 	&#39;row-class-name&#39;: &#39;row&#39;,
 	&#39;container-class-name&#39;: &#39;container&#39;,
 	&#39;container-fluid-class-name&#39;: &#39;container-fluid&#39;,
-	&#39;block-class-name&#39;: &#39;g&#39; &quot;cc&quot;,
+	&#39;block-class-name&#39;: &#39;g&#39;,
 );</code></pre>
 
   
