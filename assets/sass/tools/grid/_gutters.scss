@@ -9,6 +9,12 @@
 ///
 /// @throw "#{$layout} is invalid argument for `grid-space-units` function"
 ///
+/// @todo use SASS 3.4 selector function
+///
+/// [Selector Functions](sass-lang.com/documentation/Sass/Script/Functions.html)
+///
+/// [Blog post on Selector Functions](http://www.phase2technology.com/blog/everything-you-need-to-know-about-sass-3-4/)
+///
 
 @mixin gutters($layout: $grid) {
 	@if exists(grid-space-units, mixin) {
