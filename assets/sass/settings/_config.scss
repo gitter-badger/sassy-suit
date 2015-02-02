@@ -136,7 +136,7 @@ $type: (
 
 $grid: (
 	'columns': 12,
-	'values': 'space-units',
+	'values': 'space-unit-fallback',
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
 	'ms-round': true,

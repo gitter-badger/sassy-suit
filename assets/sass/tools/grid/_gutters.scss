@@ -39,18 +39,19 @@
 		@debug $block-class-name 		'block-class-name';
 
 		@if $values == 'space-unit-fallback' {
-			.g__gutters {
+
+			.#{$block-class-name}__#{$gutter-class-name} {
 				padding-left: $grid-space-units;
 				padding-right: $grid-space-units;
 			}
 
 			@if $direction-output {
 
-				.g__gutter--before {
+				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 1)} {
 					padding-left: $grid-space-units;
 				}
 
-				.g__gutter--after {
+				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 2)} {
 					padding-right: $grid-space-units;
 				}
 			}
