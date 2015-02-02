@@ -42,6 +42,7 @@
 /// @param {map key} grid.row-class-name
 /// @param {map key} grid.container-class-name
 /// @param {map key} grid.container-fluid-class-name
+/// @param {map key} grid.block-class-name
 ///
 /// @throw #{$columns} 'is invalid value of `grid.columns`'
 /// @throw #{$pull-output} 'is invalid value of `grid.pull-output`'
@@ -69,6 +70,7 @@
 /// @throw #{$row-class-name} 'is invalid value of `grid.row-class-name`'
 /// @throw #{$container-class-name} 'is invalid value of `grid.container-class-name`'
 /// @throw #{$container-fluid-class-name} 'is invalid value of `grid.container-fluid-class-name`'
+/// @throw #{$block-class-name} 'is invalid value of `grid.block-class-name`'
 ///
 /// @todo clean comments, '@debug' statements, call
 ///
@@ -105,6 +107,7 @@
 		$row-class-name: map-get($map, row-class-name);
 		$container-class-name: map-get($map, container-class-name);
 		$container-fluid-class-name: map-get($map, container-fluid-class-name);
+		$block-class-name: map-get($map, block-class-name);
 
 		@debug $space-unit-class-names + "\\\\\\\\\\\\\\\\\/";
 
@@ -218,7 +221,11 @@
 
 		@error #{$container-fluid-class-name} 'is invalid value of `grid.container-fluid-class-name`';
 
-	} @else if val($columns, integer) and val($columns, positive) and
+	}  @else if not val($block-class-name, string) {
+
+		@error #{$block-class-name} 'is invalid value of `grid.block-class-name`';
+
+	}  @else if val($columns, integer) and val($columns, positive) and
 		val($pull-output, bool) and
 		val($push-output, bool) and
 		val($offset-output, bool) and
@@ -243,7 +250,8 @@
 		val($gutter-class-name, string) and
 		val($row-class-name, string) and
 		val($container-class-name, string) and
-		val($container-fluid-class-name, string) {
+		val($container-fluid-class-name, string) and
+		val($block-class-name, string) {
 
 			@return true;
 

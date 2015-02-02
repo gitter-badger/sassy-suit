@@ -13,7 +13,7 @@
 @mixin gutters($layout: $grid) {
 	@if exists(grid-space-units, mixin) {
 		@include grid-space-units($layout);
-		// $grid-space-units
+		// outputs generated $grid-space-units - global variable
 		$direction-output: map-get($layout, direction-output);
 		$values: map-get($layout, values);
 		$bp-value-flow: map-get($layout, bp-value-flow);
