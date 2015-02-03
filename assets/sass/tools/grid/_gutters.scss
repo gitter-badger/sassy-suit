@@ -32,6 +32,8 @@
 		$gutter-class-name: map-get($layout, gutter-class-name);
 		$block-class-name: map-get($layout, block-class-name);
 
+		$length: length(map-keys($breakpoints));
+
 		@debug $direction-output 		'direction-output';
 		@debug $values 					'value';
 		@debug $bp-value-flow 			'bp-value-flow';
@@ -43,6 +45,7 @@
 		@debug $direction-class-names 	'direction-class-names';
 		@debug $gutter-class-name 		'gutter-class-name';
 		@debug $block-class-name 		'block-class-name';
+		@debug $length					'length';
 
 		@if $values == 'space-unit-fallback' {
 			@include b($block-class-name) {
@@ -61,7 +64,7 @@
 				}
 			}
 		}
-		@if $values == not not index('space-units' 'ms', $values) {
+		@if index('space-units' 'ms', $values) {
 
 			@if $bp-output {
 				@if $sizing-output and not $direction-output {
@@ -132,18 +135,36 @@
 				}
 			}
 
+			//
+			// !! `$bp-output: false`
+			//
+
 			@if not $bp-output {
-				@if $sizing-output and not $direction-output {
-					.g__gutters-xs {}
-					.g__gutters-sm {}
-					.g__gutters-md {}
+
+				@if (not $direction-output) and $sizing-output {
+
+					@include b($block-class-name) {
+						@include e($gutter-class-name) {
+							@for $i from 1 through $length {
+								@include m(nth($space-unit-class-names, $i)) {
+									padding-left: nth($grid-space-units, $i);
+									padding-right: nth($grid-space-units, $i);
+								}
+							}
+						}
+					}
+
+					// .g__gutters--xs {}
+					// .g__gutters--sm {}
+					// .g__gutters--md {}
+
 				}
 
 				@if $sizing-output and $direction-output {
-					.g__gutters-xs-after {}
-					.g__gutters-xs-before {}
-					.g__gutters-sm-after {}
-					.g__gutters-sm-before {}
+					.g__gutters--xs-after {}
+					.g__gutters--xs-before {}
+					.g__gutters--sm-after {}
+					.g__gutters--sm-before {}
 				}
 				@if not $sizing-output {
 
