@@ -1258,6 +1258,35 @@
       
 
     
+      <p class="sidebar__item  sidebar__item--heading" data-slug="bem"><a href="#bem">bem</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="bem-variable"><a href="#bem-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="elementSeparator" data-type="variable">
+              <a href="#variable-elementSeparator">elementSeparator
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
       <p class="sidebar__item  sidebar__item--heading" data-slug="configs"><a href="#configs">Global configurations</a></p>
 
       
@@ -2902,8 +2931,8 @@
     data-current-state="collapsed"
     data-expanded="@mixin gutters($layout: $grid) { 
 	@if exists(grid-space-units, mixin) {
-		@include grid-space-units($layout);
 		// outputs generated $grid-space-units - global variable
+		@include grid-space-units($layout);
 		$direction-output: map-get($layout, direction-output);
 		$values: map-get($layout, values);
 		$bp-value-flow: map-get($layout, bp-value-flow);
@@ -2916,6 +2945,8 @@
 		$gutter-class-name: map-get($layout, gutter-class-name);
 		$block-class-name: map-get($layout, block-class-name);
 
+		$length: length(map-keys($breakpoints));
+
 		@debug $direction-output 		&#39;direction-output&#39;;
 		@debug $values 					&#39;value&#39;;
 		@debug $bp-value-flow 			&#39;bp-value-flow&#39;;
@@ -2927,26 +2958,26 @@
 		@debug $direction-class-names 	&#39;direction-class-names&#39;;
 		@debug $gutter-class-name 		&#39;gutter-class-name&#39;;
 		@debug $block-class-name 		&#39;block-class-name&#39;;
+		@debug $length					&#39;length&#39;;
 
 		@if $values == &#39;space-unit-fallback&#39; {
-
-			.#{$block-class-name}__#{$gutter-class-name} {
-				padding-left: $grid-space-units;
-				padding-right: $grid-space-units;
-			}
-
-			@if $direction-output {
-
-				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 1)} {
+			@include b($block-class-name) {
+				@include e($gutter-class-name) {
 					padding-left: $grid-space-units;
-				}
-
-				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 2)} {
 					padding-right: $grid-space-units;
+
+					@if $direction-output {
+						@include m(nth($direction-class-names, 1)) {
+							padding-left: $grid-space-units;
+						}
+						@include m(nth($direction-class-names, 2)) {
+							padding-right: $grid-space-units;
+						}
+					}
 				}
 			}
 		}
-		@if $values == not not index(&#39;space-units&#39; &#39;ms&#39;, $values) {
+		@if index(&#39;space-units&#39; &#39;ms&#39;, $values) {
 
 			@if $bp-output {
 				@if $sizing-output and not $direction-output {
@@ -3017,18 +3048,36 @@
 				}
 			}
 
+			//
+			// !! `$bp-output: false`
+			//
+
 			@if not $bp-output {
-				@if $sizing-output and not $direction-output {
-					.g__gutters-xs {}
-					.g__gutters-sm {}
-					.g__gutters-md {}
+
+				@if (not $direction-output) and $sizing-output {
+
+					@include b($block-class-name) {
+						@include e($gutter-class-name) {
+							@for $i from 1 through $length {
+								@include m(nth($space-unit-class-names, $i)) {
+									padding-left: nth($grid-space-units, $i);
+									padding-right: nth($grid-space-units, $i);
+								}
+							}
+						}
+					}
+
+					// .g__gutters--xs {}
+					// .g__gutters--sm {}
+					// .g__gutters--md {}
+
 				}
 
 				@if $sizing-output and $direction-output {
-					.g__gutters-xs-after {}
-					.g__gutters-xs-before {}
-					.g__gutters-sm-after {}
-					.g__gutters-sm-before {}
+					.g__gutters--xs-after {}
+					.g__gutters--xs-before {}
+					.g__gutters--sm-after {}
+					.g__gutters--sm-before {}
 				}
 				@if not $sizing-output {
 
@@ -3053,7 +3102,7 @@
     data-collapsed="@mixin gutters($layout: $grid) { ... }"><code>@mixin gutters($layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L19-L168" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L19-L188" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3172,6 +3221,19 @@
 
 
 
+  
+    
+
+    
+      <li>
+        <a href="#variable-breakpoints"><code>breakpoints</code></a>
+        
+      </li>
+    
+  
+
+
+
 
 </ul>
 
@@ -3202,8 +3264,8 @@
 
   <ul class="list-unstyled">
     
-      <li><p>use SASS 3.4 selector function</p>
-<p><a href="sass-lang.com/documentation/Sass/Script/Functions.html">Selector Functions</a></p>
+      <li><p>use BEM tool and SASS 3.4 selector function</p>
+<p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Selector Functions</a></p>
 <p><a href="http://www.phase2technology.com/blog/everything-you-need-to-know-about-sass-3-4/">Blog post on Selector Functions</a></p>
 </li>
     
@@ -15619,7 +15681,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -15628,7 +15690,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20115,7 +20177,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20124,7 +20186,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22051,7 +22113,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
+    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
   
 
 
@@ -22060,7 +22122,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
+    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
   
 
 
@@ -22078,7 +22140,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22087,7 +22149,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22123,15 +22185,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
@@ -22141,7 +22194,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
+    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
   
 
 
@@ -22151,6 +22204,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-union"><code>sl-union</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
   
 
 
@@ -22600,7 +22662,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22609,7 +22671,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -24776,6 +24838,120 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </section>
     
       <section class="main__section">
+        <h1 class="main__heading" id="bem">bem</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="bem-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-elementSeparator">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-elementSeparator">elementSeparator</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$elementSeparator: &#39;__&#39;;</code></pre>
+
+  
+    <a href="https://github.com/SassySuit/SassySuit/tools/bem/_bem.scss#L10-L10" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
         <h1 class="main__heading" id="configs">Global configurations</h1>
 
         
@@ -24874,6 +25050,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#mixin-bp"><code>bp</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-gutters"><code>gutters</code></a></li>
   
 
 
@@ -25088,19 +25273,19 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;values&#39;: &#39;space-unit-fallback&#39;,
+	&#39;values&#39;: &#39;space-units&#39;,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
 	&#39;space-units&#39;: 5px 10px 15px 20px 25px 30px,
 	&#39;space-unit-fallback&#39;: 15px,
 	&#39;sizing-output&#39;: true,
-	&#39;direction-output&#39;: true,
+	&#39;direction-output&#39;: false,
+	&#39;bp-output&#39;: false,
+	&#39;bp-value-flow&#39;: true,
 	&#39;pull-output&#39;: true,
 	&#39;push-output&#39;: true,
 	&#39;offset-output&#39;: true,
-	&#39;bp-output&#39;: true,
-	&#39;bp-value-flow&#39;: true,
 	&#39;containers&#39;: 300px 450px 600px 700px 900px 1100px,
 	&#39;containers-fluid&#39;: 400px 550px 700px 800px 1000px 1200px,
 	&#39;bp-class-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
