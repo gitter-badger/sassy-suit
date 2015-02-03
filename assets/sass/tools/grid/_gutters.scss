@@ -9,7 +9,7 @@
 ///
 /// @throw "#{$layout} is invalid argument for `grid-space-units` function"
 ///
-/// @todo use SASS 3.4 selector function
+/// @todo use BEM tool and SASS 3.4 selector function
 ///
 /// [Selector Functions](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 ///
@@ -18,8 +18,8 @@
 
 @mixin gutters($layout: $grid) {
 	@if exists(grid-space-units, mixin) {
-		@include grid-space-units($layout);
 		// outputs generated $grid-space-units - global variable
+		@include grid-space-units($layout);
 		$direction-output: map-get($layout, direction-output);
 		$values: map-get($layout, values);
 		$bp-value-flow: map-get($layout, bp-value-flow);
@@ -45,20 +45,19 @@
 		@debug $block-class-name 		'block-class-name';
 
 		@if $values == 'space-unit-fallback' {
-
-			.#{$block-class-name}__#{$gutter-class-name} {
-				padding-left: $grid-space-units;
-				padding-right: $grid-space-units;
-			}
-
-			@if $direction-output {
-
-				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 1)} {
+			@include b($block-class-name) {
+				@include e($gutter-class-name) {
 					padding-left: $grid-space-units;
-				}
-
-				.#{$block-class-name}__#{$gutter-class-name}--#{nth($direction-class-names, 2)} {
 					padding-right: $grid-space-units;
+
+					@if $direction-output {
+						@include m(nth($direction-class-names, 1)) {
+							padding-left: $grid-space-units;
+						}
+						@include m(nth($direction-class-names, 2)) {
+							padding-right: $grid-space-units;
+						}
+					}
 				}
 			}
 		}
