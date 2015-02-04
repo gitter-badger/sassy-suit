@@ -19,7 +19,7 @@
 ///
 /// @throw "#{$layout} is invalid argument for `grid-space-units` function"
 ///
-/// @todo clean comments, '@debug' statements, call. add ms-round option!
+/// @todo clean comments, '@debug' statements
 ///
 
 $grid-space-units: ()!global;
@@ -43,6 +43,10 @@ $grid-space-units: ()!global;
 		@if $values == 'ms' {
 
 			$grid-space-units: ms-list(0, length(map-keys($breakpoints)) - 1, $ms-base, $ms-ratio) !global;
+
+			@if $ms-round {
+				$grid-space-units: sl-walk($grid-space-units, round) !global;
+			}
 
 			// @debug $grid-space-units '||||||||||';
 
