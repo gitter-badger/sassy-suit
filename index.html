@@ -3066,18 +3066,44 @@
 							}
 						}
 					}
-
-					// .g__gutters--xs {}
-					// .g__gutters--sm {}
-					// .g__gutters--md {}
-
 				}
 
 				@if $sizing-output and $direction-output {
-					.g__gutters--xs-after {}
-					.g__gutters--xs-before {}
-					.g__gutters--sm-after {}
-					.g__gutters--sm-before {}
+
+					// .g__gutter-xs, .g__gutter-sm, .g__gutter-md ...
+					@include b($block-class-name) {
+						@include e($gutter-class-name) {
+							@for $i from 1 through $length {
+								@include m(nth($space-unit-class-names, $i)) {
+									padding-left: nth($grid-space-units, $i);
+									padding-right: nth($grid-space-units, $i);
+								}
+							}
+						}
+					}
+
+					// .g__gutter-xs-before,  .g__gutter-sm-before,  .g__gutter-md-before, ...
+					@include b($block-class-name) {
+						@include e($gutter-class-name) {
+							@for $i from 1 through $length {
+								@include m(nth($space-unit-class-names, $i) + &#39;-&#39; + nth($direction-class-names, 1)) {
+									padding-left: nth($grid-space-units, $i);
+									// padding-right: nth($grid-space-units, $i);
+								}
+							}
+						}
+					}
+
+					// .g__gutter-xs-after,  .g__gutter-sm-after,  .g__gutter-md-after, ...
+					@include b($block-class-name) {
+						@include e($gutter-class-name) {
+							@for $i from 1 through $length {
+								@include m(nth($space-unit-class-names, $i) + &#39;-&#39; + nth($direction-class-names, 2)) {
+									padding-right: nth($grid-space-units, $i);
+								}
+							}
+						}
+					}
 				}
 				@if not $sizing-output {
 
@@ -3085,12 +3111,6 @@
 
 				}
 			}
-		}
-
-		@if $values == &#39;ms&#39; {
-			// all options which play with ms
-			// same as $values == &#39;space-units&#39;
-			// but instead of `space-units`
 		}
 
 	} @else {
@@ -3102,7 +3122,7 @@
     data-collapsed="@mixin gutters($layout: $grid) { ... }"><code>@mixin gutters($layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L19-L188" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L19-L208" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3420,7 +3440,7 @@
 
   <ul class="list-unstyled">
     
-      <li><p>clean comments, &#39;@debug&#39; statements, call. add ms-round option!</p>
+      <li><p>clean comments, &#39;@debug&#39; statements</p>
 </li>
     
   </ul>
@@ -15681,7 +15701,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -15690,7 +15710,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20177,7 +20197,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20186,7 +20206,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22113,7 +22133,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
+    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
   
 
 
@@ -22122,7 +22142,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-remove-duplicates"><code>sl-remove-duplicates</code></a></li>
+    <li><a href="#function-sl-remove-nth"><code>sl-remove-nth</code></a></li>
   
 
 
@@ -22140,7 +22160,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22149,7 +22169,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22185,7 +22205,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
+    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
   
 
 
@@ -22194,7 +22214,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -22662,7 +22682,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22671,7 +22691,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -25273,14 +25293,14 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;values&#39;: &#39;space-units&#39;,
+	&#39;values&#39;: &#39;ms&#39;,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
 	&#39;space-units&#39;: 5px 10px 15px 20px 25px 30px,
 	&#39;space-unit-fallback&#39;: 15px,
 	&#39;sizing-output&#39;: true,
-	&#39;direction-output&#39;: false,
+	&#39;direction-output&#39;: true,
 	&#39;bp-output&#39;: false,
 	&#39;bp-value-flow&#39;: true,
 	&#39;pull-output&#39;: true,
