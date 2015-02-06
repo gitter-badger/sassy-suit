@@ -132,6 +132,22 @@
 					// Other breakpoints
 					// .g-<sm>.....
 					// ...
+
+
+					@for $i from 1 through $length {
+						@include b($block-class-name + '-' + nth($bp-class-names, $i)) {
+							@include e($gutter-class-name) {
+								@for $n from 1 through $length {
+									@include m(nth($space-unit-class-names, $n) + '-' + nth($direction-class-names, 1)) {
+										@include bp(nth($bp-class-names, $i)) {
+											padding-left: nth($grid-space-units, $n);
+										}
+									}
+								}
+							}
+						}
+					}
+
 				}
 			}
 

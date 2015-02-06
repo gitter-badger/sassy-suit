@@ -139,7 +139,7 @@ $type: (
 
 $grid: (
 	'columns': 12,
-	'values': 'ms',
+	'values': 'space-units',
 	'ms-base': 5px,
 	'ms-ratio': 1.5,
 	'ms-round': true,
@@ -147,7 +147,7 @@ $grid: (
 	'space-unit-fallback': 15px,
 	'sizing-output': true,
 	'direction-output': true,
-	'bp-output': false,
+	'bp-output': true,
 	'bp-value-flow': true,
 	'pull-output': true,
 	'push-output': true,
