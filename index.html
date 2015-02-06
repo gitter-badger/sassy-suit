@@ -3045,6 +3045,22 @@
 					// Other breakpoints
 					// .g-&lt;sm&gt;.....
 					// ...
+
+
+					@for $i from 1 through $length {
+						@include b($block-class-name + &#39;-&#39; + nth($bp-class-names, $i)) {
+							@include e($gutter-class-name) {
+								@for $n from 1 through $length {
+									@include m(nth($space-unit-class-names, $n) + &#39;-&#39; + nth($direction-class-names, 1)) {
+										@include bp(nth($bp-class-names, $i)) {
+											padding-left: nth($grid-space-units, $n);
+										}
+									}
+								}
+							}
+						}
+					}
+
 				}
 			}
 
@@ -3122,7 +3138,7 @@
     data-collapsed="@mixin gutters($layout: $grid) { ... }"><code>@mixin gutters($layout: $grid) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L19-L208" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_gutters.scss#L20-L225" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3284,7 +3300,8 @@
 
   <ul class="list-unstyled">
     
-      <li><p>use BEM tool and SASS 3.4 selector function</p>
+      <li><p>use BEM tool and SASS 3.4 selector function
+add RESET gutter classes</p>
 <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Selector Functions</a></p>
 <p><a href="http://www.phase2technology.com/blog/everything-you-need-to-know-about-sass-3-4/">Blog post on Selector Functions</a></p>
 </li>
@@ -3725,7 +3742,7 @@ exists(noFunction, fun)    	//returns false</code></pre>
 
     
 
-    <li><a href="#function-span"><code>span</code></a></li>
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
   
 
 
@@ -3734,7 +3751,7 @@ exists(noFunction, fun)    	//returns false</code></pre>
 
     
 
-    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+    <li><a href="#function-span"><code>span</code></a></li>
   
 
 
@@ -15701,7 +15718,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -15710,7 +15727,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20197,7 +20214,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -20215,7 +20232,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22097,7 +22114,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
   
 
 
@@ -22106,7 +22123,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -22160,7 +22177,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22178,7 +22195,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22196,15 +22213,6 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-tail"><code>sl-tail</code></a></li>
-  
-
-
-
-  
-
-    
-
     <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
   
 
@@ -22214,7 +22222,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
+    <li><a href="#function-sl-tail"><code>sl-tail</code></a></li>
   
 
 
@@ -22224,6 +22232,15 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
     
 
     <li><a href="#function-sl-union"><code>sl-union</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -22682,7 +22699,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -22691,7 +22708,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -25293,7 +25310,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;values&#39;: &#39;ms&#39;,
+	&#39;values&#39;: &#39;space-units&#39;,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
@@ -25301,7 +25318,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 	&#39;space-unit-fallback&#39;: 15px,
 	&#39;sizing-output&#39;: true,
 	&#39;direction-output&#39;: true,
-	&#39;bp-output&#39;: false,
+	&#39;bp-output&#39;: true,
 	&#39;bp-value-flow&#39;: true,
 	&#39;pull-output&#39;: true,
 	&#39;push-output&#39;: true,
