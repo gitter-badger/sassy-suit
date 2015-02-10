@@ -56,9 +56,6 @@
 /// @throw #{$ms-ratio} 'is invalid value of `grid.ms-ratio`'
 /// @throw #{$ms-round} 'is invalid value of `grid.ms-round`'
 /// @throw #{$bp-sizing-flow} 'is invalid value of `grid.bp-sizing-flow`'
-/// @throw #{$pull-classes} 'is invalid value of `grid.pull-classes`'
-/// @throw #{$push-classes} 'is invalid value of `grid.push-classes`'
-/// @throw #{$offset-classes} 'is invalid value of `grid.offset-classes`'
 /// @throw #{$custom} 'is invalid value of `grid.custom`'
 /// @throw #{$static} 'is invalid value of `grid.static`'
 /// @throw #{$containers} 'is invalid value of `grid.containers`'
@@ -120,47 +117,7 @@
 
 	} @else if (not val($style, string)) and not index('ms' 'custom' 'static', $style) {
 
-		@error #{$pull-classes} 'is invalid value of `grid.pull-classes`';
-
-	} @else if not val($pull-classes, bool) {
-
-		@error #{$pull-classes} 'is invalid value of `grid.pull-classes`';
-
-	} @else if not val($push-classes, bool) {
-
-		@error #{$push-classes} 'is invalid value of `grid.push-classes`';
-
-	} @else if not val($offset-classes, bool) {
-
-		@error #{$offset-classes} 'is invalid value of `grid.offset-classes`';
-
-	} @else if not val($container-classes, bool) {
-
-		@error #{$container-classes} 'is invalid value of `grid.container-classes`';
-
-	} @else if not val($container-fluid-classes, bool) {
-
-		@error #{$container-fluid-classes} 'is invalid value of `grid.container-fluid-classes`';
-
-	} @else if not val($style, string) and (not index('ms' 'custom' 'custom-fallback', $style)) {
-
 		@error #{$style} 'is invalid value of `grid.style`';
-
-	} @else if not val($ms-base, measurePositive) {
-
-		@error #{$ms-base} 'is invalid value of `grid.ms-base`';
-
-	} @else if not (val($ms-ratio, number) and val($ms-ratio, positive) ) {
-
-		@error #{$ms-ratio} 'is invalid value of `grid.ms-ratio`';
-
-	} @else if not val($ms-round, bool) {
-
-		@error #{$ms-round} 'is invalid value of `grid.ms-round`';
-
-	} @else if not val($bp-sizing-flow, bool) {
-
-		@error #{$bp-sizing-flow} 'is invalid value of `grid.bp-sizing-flow`';
 
 	} @else if not val($sizing, bool) {
 
@@ -186,6 +143,30 @@
 
 		@error #{$offset-classes} 'is invalid value of `grid.offset-classes`';
 
+	} @else if not val($container-classes, bool) {
+
+		@error #{$container-classes} 'is invalid value of `grid.container-classes`';
+
+	} @else if not val($container-fluid-classes, bool) {
+
+		@error #{$container-fluid-classes} 'is invalid value of `grid.container-fluid-classes`';
+
+	} @else if not val($ms-base, measurePositive) {
+
+		@error #{$ms-base} 'is invalid value of `grid.ms-base`';
+
+	} @else if not (val($ms-ratio, number) and val($ms-ratio, positive) ) {
+
+		@error #{$ms-ratio} 'is invalid value of `grid.ms-ratio`';
+
+	} @else if not val($ms-round, bool) {
+
+		@error #{$ms-round} 'is invalid value of `grid.ms-round`';
+
+	} @else if not val($bp-sizing-flow, bool) {
+
+		@error #{$bp-sizing-flow} 'is invalid value of `grid.bp-sizing-flow`';
+
 	} @else if not (val($custom, list) and not index(sl-walk($custom, val, measurePositive), false) and length($custom) == $list-size) {
 
 		@error #{$custom} 'is invalid value of `grid.custom`';
@@ -201,10 +182,6 @@
 	} @else if not (val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and length($containers-fluid) == $list-size) {
 
 		@error #{$containers-fluid} 'is invalid value of `grid.containers-fluid`';
-
-	} @else if not (val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size) {
-
-		@error #{$block-bp-names} 'is invalid value of `grid.block-bp-names`';
 
 	} @else if not (val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size) {
 
@@ -243,9 +220,6 @@
 		@error #{$block-grid-name} 'is invalid value of `grid.block-grid-name`';
 
 	}  @else if val($columns, integer) and val($columns, positive) and
-		val($pull-classes, bool) and
-		val($push-classes, bool) and
-		val($offset-classes, bool) and
 	    val($style, string) and index('ms' 'custom' 'static', $style) and
 		val($ms-base, measurePositive) and
 		val($ms-ratio, number) and val($ms-ratio, positive) and
