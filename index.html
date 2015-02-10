@@ -3742,7 +3742,7 @@ exists(noFunction, fun)    	//returns false</code></pre>
 
     
 
-    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
+    <li><a href="#function-span"><code>span</code></a></li>
   
 
 
@@ -3751,7 +3751,7 @@ exists(noFunction, fun)    	//returns false</code></pre>
 
     
 
-    <li><a href="#function-span"><code>span</code></a></li>
+    <li><a href="#function-grid-validation"><code>grid-validation</code></a></li>
   
 
 
@@ -15718,7 +15718,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -15727,7 +15727,7 @@ validate(1, string)        	//returns false</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -20214,7 +20214,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -20232,7 +20232,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22114,7 +22114,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
+    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
   
 
 
@@ -22123,7 +22123,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-loop"><code>sl-loop</code></a></li>
+    <li><a href="#function-sl-prepend"><code>sl-prepend</code></a></li>
   
 
 
@@ -22177,7 +22177,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22195,7 +22195,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22213,7 +22213,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
+    <li><a href="#function-sl-tail"><code>sl-tail</code></a></li>
   
 
 
@@ -22222,7 +22222,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-tail"><code>sl-tail</code></a></li>
+    <li><a href="#function-sl-to-map"><code>sl-to-map</code></a></li>
   
 
 
@@ -22240,7 +22240,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
+    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
   
 
 
@@ -22249,7 +22249,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-walk"><code>sl-walk</code></a></li>
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
@@ -22699,7 +22699,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
+    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
   
 
 
@@ -22708,7 +22708,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-replace-nth"><code>sl-replace-nth</code></a></li>
+    <li><a href="#function-sl-replace"><code>sl-replace</code></a></li>
   
 
 
@@ -25310,33 +25310,36 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$grid: (
 	&#39;columns&#39;: 12,
-	&#39;values&#39;: &#39;space-units&#39;,
+	&#39;style&#39;: &#39;ms&#39;,
+	&#39;sizing&#39;: true,
+	&#39;direction&#39;: true,
+	&#39;bp&#39;: true,
+	&#39;pull-classes&#39;: true,
+	&#39;push-classes&#39;: true,
+	&#39;offset-classes&#39;: true,
+	&#39;container-classes&#39;: true,
+	&#39;container-fluid-classes&#39;: true,
+	&#39;bp-sizing-flow&#39;: true,
 	&#39;ms-base&#39;: 5px,
 	&#39;ms-ratio&#39;: 1.5,
 	&#39;ms-round&#39;: true,
-	&#39;space-units&#39;: 5px 10px 15px 20px 25px 30px,
-	&#39;space-unit-fallback&#39;: 15px,
-	&#39;sizing-output&#39;: true,
-	&#39;direction-output&#39;: true,
-	&#39;bp-output&#39;: true,
-	&#39;bp-value-flow&#39;: true,
-	&#39;pull-output&#39;: true,
-	&#39;push-output&#39;: true,
-	&#39;offset-output&#39;: true,
+	&#39;custom&#39;: 5px 10px 15px 20px 25px 30px,
+	&#39;static&#39;: 15px,
 	&#39;containers&#39;: 300px 450px 600px 700px 900px 1100px,
 	&#39;containers-fluid&#39;: 400px 550px 700px 800px 1000px 1200px,
-	&#39;bp-class-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
-	&#39;space-unit-class-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
-	&#39;direction-class-names&#39;: &#39;before&#39; &#39;after&#39;,
-	&#39;gutter-class-name&#39;: &#39;gutters&#39;,
-	&#39;row-class-name&#39;: &#39;row&#39;,
-	&#39;container-class-name&#39;: &#39;container&#39;,
-	&#39;container-fluid-class-name&#39;: &#39;container-fluid&#39;,
-	&#39;block-class-name&#39;: &#39;g&#39;,
+	&#39;block-grid-name&#39;: &#39;g&#39;,
+	&#39;block-bp-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
+	&#39;element-gutter-names&#39;: &#39;gutters&#39; &#39;gutter&#39;,
+	&#39;element-row-name&#39;: &#39;row&#39;,
+	&#39;element-container-name&#39;: &#39;container&#39;,
+	&#39;element-container-fluid-name&#39;: &#39;container-fluid&#39;,
+	&#39;modifier-sizing-names&#39;: &#39;xs&#39; &#39;sm&#39; &#39;md&#39; &#39;lg&#39; &#39;xl&#39; &#39;xxl&#39;,
+	&#39;modifier-direction-names&#39;: &#39;before&#39; &#39;after&#39;,
+	&#39;modifier-reset-name&#39;: &#39;reset&#39;,
 );</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L139-L165" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/settings/_config.scss#L142-L171" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -25393,8 +25396,22 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.bp-value-flow</code></th>
-        <td data-label="desc"><p>switcher for automatic pairing of breakpoint and matching value for <code>gutter</code>, <code>row</code> and <code>container</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.style</code></th>
+        <td data-label="desc"><p>switcher for using modular-scale, custom or static values for grid calculations</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>&#39;ms&#39; | &#39;custom&#39; | &#39;static&#39;</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.sizing</code></th>
+        <td data-label="desc"><p><code>sizing</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25407,8 +25424,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.sizing-output</code></th>
-        <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.direction</code></th>
+        <td data-label="desc"><p><code>direction</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25421,8 +25438,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.direction-output</code></th>
-        <td data-label="desc"><p>switcher for outputing directional grid <code>gutter</code> and <code>row</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.bp</code></th>
+        <td data-label="desc"><p><code>breakpoint</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25435,8 +25452,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.bp-output</code></th>
-        <td data-label="desc"><p>switcher for outputing manual grid <code>gutter</code> and <code>row</code> classes for all breakpoints</p>
+        <th scope="row" data-label="name"><code>grid.pull-classes</code></th>
+        <td data-label="desc"><p><code>pull</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25449,8 +25466,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.pull-output</code></th>
-        <td data-label="desc"><p>switcher for outputing grid <code>pull</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.push-classes</code></th>
+        <td data-label="desc"><p><code>push</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25463,8 +25480,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.push-output</code></th>
-        <td data-label="desc"><p>switcher for outputing grid <code>push</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.offset-classes</code></th>
+        <td data-label="desc"><p><code>offset</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25477,8 +25494,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.offset-output</code></th>
-        <td data-label="desc"><p>switcher for outputing grid <code>offset</code> classes</p>
+        <th scope="row" data-label="name"><code>grid.container-classes</code></th>
+        <td data-label="desc"><p><code>container</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
@@ -25491,15 +25508,29 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.values</code></th>
-        <td data-label="desc"><p>switcher for using modular-scale, space-units or space-units-fallback</p>
+        <th scope="row" data-label="name"><code>grid.container-fluid-classes</code></th>
+        <td data-label="desc"><p><code>container-fluid</code> class name output switcher</p>
 </td>
         <td data-label="type">
         Map key
         </td>
         <td data-label="default">
         
-          <code>&#39;ms&#39; | &#39;space-units&#39; | &#39;space-units-fallback&#39;</code>
+          <code>bool</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.bp-sizing-flow</code></th>
+        <td data-label="desc"><p><code>bp-sizing-flow</code> is a switcher for grid calculation option</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>bool</code>
         
         </td>
       </tr>
@@ -25547,7 +25578,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.space-units</code></th>
+        <th scope="row" data-label="name"><code>grid.custom</code></th>
         <td data-label="desc"><p>units for manual setting of <code>row</code> and <code>gutter</code> values, this key gets validated and used when <code>ms: false</code></p>
 </td>
         <td data-label="type">
@@ -25561,7 +25592,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.space-unit-fallback</code></th>
+        <th scope="row" data-label="name"><code>grid.static</code></th>
         <td data-label="desc"><p>fallback value for space-units, this key gets validated and used when <code>&#39;bp-value-flow&#39;: false</code>, <code>&#39;sizing-output&#39;: false</code>, <code>&#39;bp-output&#39;: false</code></p>
 </td>
         <td data-label="type">
@@ -25603,64 +25634,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.bp-class-names</code></th>
-        <td data-label="desc"><p>breakpoints class names</p>
-</td>
-        <td data-label="type">
-        Map key
-        </td>
-        <td data-label="default">
-        
-          <code>list of strings</code>
-        
-        </td>
-      </tr>
-    
-      <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.space-unit-class-names</code></th>
-        <td data-label="desc"><p>space-units are used for generating <code>gutter</code> and <code>row</code> classes</p>
-</td>
-        <td data-label="type">
-        Map key
-        </td>
-        <td data-label="default">
-        
-          <code>list of strings</code>
-        
-        </td>
-      </tr>
-    
-      <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.direction-class-names</code></th>
-        <td data-label="desc"><p>direction class names</p>
-</td>
-        <td data-label="type">
-        Map key
-        </td>
-        <td data-label="default">
-        
-          <code>list of strings</code>
-        
-        </td>
-      </tr>
-    
-      <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.gutter-class-name</code></th>
-        <td data-label="desc"><p>gutter class names</p>
-</td>
-        <td data-label="type">
-        Map key
-        </td>
-        <td data-label="default">
-        
-          <code>list of strings</code>
-        
-        </td>
-      </tr>
-    
-      <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.row-class-name</code></th>
-        <td data-label="desc"><p>row class names</p>
+        <th scope="row" data-label="name"><code>grid.block-grid-name</code></th>
+        <td data-label="desc"><p>block <code>grid</code> class name</p>
 </td>
         <td data-label="type">
         Map key
@@ -25673,8 +25648,36 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.container-class-name</code></th>
-        <td data-label="desc"><p>container class names</p>
+        <th scope="row" data-label="name"><code>grid.block-bp-names</code></th>
+        <td data-label="desc"><p>block <code>breakpoint</code> class names</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>list of strings</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.element-gutter-names</code></th>
+        <td data-label="desc"><p>element <code>gutter</code> class names</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>list of strings</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.element-row-name</code></th>
+        <td data-label="desc"><p>element <code>row</code> class name</p>
 </td>
         <td data-label="type">
         Map key
@@ -25687,8 +25690,8 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.container-fluid-class-name</code></th>
-        <td data-label="desc"><p>container fluid class names</p>
+        <th scope="row" data-label="name"><code>grid.element-container-name</code></th>
+        <td data-label="desc"><p>element <code>container</code> class name</p>
 </td>
         <td data-label="type">
         Map key
@@ -25701,8 +25704,50 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
       </tr>
     
       <tr class="item__parameter">
-        <th scope="row" data-label="name"><code>grid.container-fluid-class-name</code></th>
-        <td data-label="desc"><p>grid block class names</p>
+        <th scope="row" data-label="name"><code>grid.element-container-fluid-name</code></th>
+        <td data-label="desc"><p>element <code>container-fluid</code> class name</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>string</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.modifier-sizing-names</code></th>
+        <td data-label="desc"><p>modifier <code>sizing</code> class names</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>list of strings</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.modifier-direction-names</code></th>
+        <td data-label="desc"><p>modifier <code>direction</code> class names</p>
+</td>
+        <td data-label="type">
+        Map key
+        </td>
+        <td data-label="default">
+        
+          <code>list of strings</code>
+        
+        </td>
+      </tr>
+    
+      <tr class="item__parameter">
+        <th scope="row" data-label="name"><code>grid.modifier-reset-names</code></th>
+        <td data-label="desc"><p>modifier <code>reset</code> class names</p>
 </td>
         <td data-label="type">
         Map key
