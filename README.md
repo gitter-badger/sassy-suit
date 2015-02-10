@@ -1,6 +1,8 @@
 SassySuit :star:
 =========
 
+[![Join the chat at https://gitter.im/SassySuit/sassy-suit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SassySuit/sassy-suit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 SassySuit - is a handcrafted SASS framework, built with love. 
  
 <hr>
