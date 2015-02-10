@@ -32,7 +32,7 @@
 /// @param {Map key} grid.static - grid static values
 /// @param {Map key} grid.containers - grid container values
 /// @param {Map key} grid.containers-fluid - grid container-fluid values
-/// @param {Map key} grid.block-class-name - grid block class name
+/// @param {Map key} grid.block-grid-name - grid block class name
 /// @param {Map key} grid.block-bp-names - breakpoints block class names
 /// @param {Map key} grid.element-gutter-names - element gutter class names
 /// @param {Map key} grid.element-row-name - element row class name
@@ -66,7 +66,7 @@
 /// @throw #{$element-row-name} 'is invalid value of `grid.element-row-name`'
 /// @throw #{$element-container-name} 'is invalid value of `grid.element-container-name`'
 /// @throw #{$element-container-fluid-name} 'is invalid value of `grid.element-container-fluid-name`'
-/// @throw #{$block-class-name} 'is invalid value of `grid.block-class-name`'
+/// @throw #{$block-grid-name} 'is invalid value of `grid.block-grid-name`'
 ///
 /// @todo clean comments, '@debug' statements, call
 ///
@@ -97,13 +97,12 @@
 		$containers: map-get($map, containers);
 		$containers-fluid: map-get($map, containers-fluid);
 		$block-bp-names: map-get($map, block-bp-names);
-		$block-bp-names: map-get($map, block-bp-names);
 		$modifier-direction-names: map-get($map, modifier-direction-names);
 		$element-gutter-names: map-get($map, element-gutter-names);
 		$element-row-name: map-get($map, element-row-name);
 		$element-container-name: map-get($map, element-container-name);
 		$element-container-fluid-name: map-get($map, element-container-fluid-name);
-		$block-class-name: map-get($map, block-class-name);
+		$block-grid-name: map-get($map, block-grid-name);
 
 		@debug $block-bp-names + "\\\\\\\\\\\\\\\\\/";
 
@@ -201,7 +200,7 @@
 
 		@error #{$modifier-direction-names} 'is invalid value of `grid.modifier-direction-names`';
 
-	} @else if not val($element-gutter-names, string) {
+	} @else if not (val($element-gutter-names, list) and not index(sl-walk($element-gutter-names, val, string), false)) {
 
 		@error #{$element-gutter-names} 'is invalid value of `grid.element-gutter-names`';
 
@@ -217,9 +216,9 @@
 
 		@error #{$element-container-fluid-name} 'is invalid value of `grid.element-container-fluid-name`';
 
-	}  @else if not val($block-class-name, string) {
+	}  @else if not val($block-grid-name, string) {
 
-		@error #{$block-class-name} 'is invalid value of `grid.block-class-name`';
+		@error #{$block-grid-name} 'is invalid value of `grid.block-grid-name`';
 
 	}  @else if val($columns, integer) and val($columns, positive) and
 		val($pull-classes, bool) and
@@ -243,11 +242,11 @@
 		val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size and
 		val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size and
 		val($modifier-direction-names, list) and not index(sl-walk($modifier-direction-names, val, string), false) and length($modifier-direction-names) == 2 and
-		val($element-gutter-names, string) and
+		val($element-gutter-names, list) and not index(sl-walk($element-gutter-names, val, string), false) and
 		val($element-row-name, string) and
 		val($element-container-name, string) and
 		val($element-container-fluid-name, string) and
-		val($block-class-name, string) {
+		val($block-grid-name, string) {
 
 			@return true;
 
