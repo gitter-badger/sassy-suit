@@ -78,31 +78,32 @@
 		exists(bp, mixin) and
 		exists(breakpoints, var) {
 		$columns: map-get($map, columns);
+		$style: map-get($map, style);
+		$sizing: map-get($map, sizing);
+		$direction: map-get($map, direction);
+		$bp: map-get($map, bp);
 		$pull-classes: map-get($map, pull-classes);
 		$push-classes: map-get($map, push-classes);
 		$offset-classes: map-get($map, offset-classes);
-		$style: map-get($map, style);
+		$container-classes: map-get($map, push-classes);
+		$container-fluid-classes: map-get($map, offset-classes);
+		$bp-sizing-flow: map-get($map, bp-sizing-flow);
 		$ms-base: map-get($map, ms-base);
 		$ms-ratio: map-get($map, ms-ratio);
 		$ms-round: map-get($map, ms-round);
-		$bp-sizing-flow: map-get($map, bp-sizing-flow);
-		$sizing: map-get($map, sizing);
-		$bp: map-get($map, bp);
-		$direction: map-get($map, direction);
-		$pull-classes: map-get($map, pull-classes);
-		$push-classes: map-get($map, push-classes);
-		$offset-classes: map-get($map, offset-classes);
 		$custom: map-get($map, custom);
 		$static: map-get($map, static);
 		$containers: map-get($map, containers);
 		$containers-fluid: map-get($map, containers-fluid);
+		$block-grid-name: map-get($map, block-grid-name);
 		$block-bp-names: map-get($map, block-bp-names);
-		$modifier-direction-names: map-get($map, modifier-direction-names);
 		$element-gutter-names: map-get($map, element-gutter-names);
 		$element-row-name: map-get($map, element-row-name);
 		$element-container-name: map-get($map, element-container-name);
 		$element-container-fluid-name: map-get($map, element-container-fluid-name);
-		$block-grid-name: map-get($map, block-grid-name);
+		$modifier-direction-names: map-get($map, modifier-direction-names);
+		$modifier-sizing-names: map-get($map, modifier-sizing-names);
+		$modifier-reset-name: map-get($map, modifier-reset-name);
 
 		@debug $block-bp-names + "\\\\\\\\\\\\\\\\\/";
 
