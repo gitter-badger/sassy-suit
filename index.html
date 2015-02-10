@@ -1942,21 +1942,11 @@
     
   
 
-  
-
-  
-
-  
-
-  
-    
-  
-
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.bp-class-names, $grid.block-bp-names, $grid.modifier-direction-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.block-class-name) { 
+    data-expanded="@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.block-class-name, $grid.block-bp-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.modifier-direction-names) { 
 	@debug $map;
 
 	@if val($map, map) and
@@ -1981,7 +1971,7 @@
 		$static: map-get($map, static);
 		$containers: map-get($map, containers);
 		$containers-fluid: map-get($map, containers-fluid);
-		$bp-class-names: map-get($map, bp-class-names);
+		$block-bp-names: map-get($map, block-bp-names);
 		$block-bp-names: map-get($map, block-bp-names);
 		$modifier-direction-names: map-get($map, modifier-direction-names);
 		$element-gutter-names: map-get($map, element-gutter-names);
@@ -2074,9 +2064,9 @@
 
 		@error #{$containers-fluid} &#39;is invalid value of `grid.containers-fluid`&#39;;
 
-	} @else if not (val($bp-class-names, list) and not index(sl-walk($bp-class-names, val, string), false) and length($bp-class-names) == $list-size) {
+	} @else if not (val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size) {
 
-		@error #{$bp-class-names} &#39;is invalid value of `grid.bp-class-names`&#39;;
+		@error #{$block-bp-names} &#39;is invalid value of `grid.block-bp-names`&#39;;
 
 	} @else if not (val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size) {
 
@@ -2125,7 +2115,7 @@
 		val($static, measurePositive) and
 		val($containers, list) and not index(sl-walk($containers, val, measurePositive), false) and length($containers) == $list-size and
 		val($containers-fluid, list) and not index(sl-walk($containers-fluid, val, measurePositive), false) and (length($containers-fluid) == $list-size) and
-		val($bp-class-names, list) and not index(sl-walk($bp-class-names, val, string), false) and length($bp-class-names) == $list-size and
+		val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size and
 		val($block-bp-names, list) and not index(sl-walk($block-bp-names, val, string), false) and length($block-bp-names) == $list-size and
 		val($modifier-direction-names, list) and not index(sl-walk($modifier-direction-names, val, string), false) and length($modifier-direction-names) == 2 and
 		val($element-gutter-names, string) and
@@ -2144,10 +2134,10 @@
 
     }
  }"
-    data-collapsed="@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.bp-class-names, $grid.block-bp-names, $grid.modifier-direction-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.block-class-name) { ... }"><code>@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.bp-class-names, $grid.block-bp-names, $grid.modifier-direction-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.block-class-name) { ... }</code></pre>
+    data-collapsed="@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.block-class-name, $grid.block-bp-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.modifier-direction-names) { ... }"><code>@function grid-validation($grid: $grid, $grid.columns, $grid.style, $grid.sizing, $grid.direction, $grid.bp, $grid.pull-classes, $grid.push-classes, $grid.offset-classes, $grid.container-classes, $grid.container-fluid-classes, $grid.bp-sizing-flow, $grid.ms-base, $grid.ms-ratio, $grid.ms-round, $grid.custom, $grid.static, $grid.containers, $grid.containers-fluid, $grid.block-class-name, $grid.block-bp-names, $grid.element-gutter-names, $grid.element-row-name, $grid.element-container-name, $grid.element-container-fluid-name, $grid.modifier-direction-names) { ... }</code></pre>
 
   
-    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-validation.scss#L75-L262" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/SassySuit/SassySuit/tools/grid/_grid-validation.scss#L74-L261" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2202,7 +2192,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.columns</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>number of columns</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2217,7 +2208,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.style</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid output style</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2232,7 +2224,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.sizing</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>sizing output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2247,7 +2240,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.direction</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>direction output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2262,7 +2256,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.bp</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>breakpoint output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2277,7 +2272,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.pull-classes</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>pull classes output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2292,7 +2288,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.push-classes</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>push classes output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2307,7 +2304,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.offset-classes</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>offset classes output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2322,7 +2320,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.container-classes</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>container classes output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2337,7 +2336,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.container-fluid-classes</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>container-fluid classes output</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2352,7 +2352,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.bp-sizing-flow</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>breakpoint auto sizing output style</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2367,7 +2368,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.ms-base</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>base value for <code>modular-scale</code></p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2382,7 +2384,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.ms-ratio</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>ratio value for <code>modular-scale</code></p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2397,7 +2400,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.ms-round</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p><code>modular-scale</code> round function switcher</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2412,7 +2416,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.custom</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid custom values</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2427,7 +2432,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.static</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid static values</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2442,7 +2448,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.containers</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid container values</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2457,112 +2464,8 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.containers-fluid</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.bp-class-names</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.block-bp-names</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.modifier-direction-names</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.element-gutter-names</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.element-row-name</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.element-container-name</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
-          <td data-label="type">
-          
-            Map key
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$grid.element-container-fluid-name</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid container-fluid values</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2577,7 +2480,104 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$grid.block-class-name</code></th>
-          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="desc"><p>grid block class name</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.block-bp-names</code></th>
+          <td data-label="desc"><p>breakpoints block class names</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.element-gutter-names</code></th>
+          <td data-label="desc"><p>element gutter class names</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.element-row-name</code></th>
+          <td data-label="desc"><p>element row class name</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.element-container-name</code></th>
+          <td data-label="desc"><p>element container name</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.element-container-fluid-name</code></th>
+          <td data-label="desc"><p>element container-fluid name</p>
+</td>
+          <td data-label="type">
+          
+            Map key
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid.modifier-direction-names</code></th>
+          <td data-label="desc"><p>modifier direction class names</p>
+</td>
           <td data-label="type">
           
             Map key
@@ -2667,7 +2667,7 @@
       <li><h1 id="-containers-fluid-is-invalid-value-of-grid-containers-fluid-">{$containers-fluid} &#39;is invalid value of <code>grid.containers-fluid</code>&#39;</h1>
 </li>
     
-      <li><h1 id="-bp-class-names-is-invalid-value-of-grid-bp-class-names-">{$bp-class-names} &#39;is invalid value of <code>grid.bp-class-names</code>&#39;</h1>
+      <li><h1 id="-block-bp-names-is-invalid-value-of-grid-block-bp-names-">{$block-bp-names} &#39;is invalid value of <code>grid.block-bp-names</code>&#39;</h1>
 </li>
     
       <li><h1 id="-block-bp-names-is-invalid-value-of-grid-block-bp-names-">{$block-bp-names} &#39;is invalid value of <code>grid.block-bp-names</code>&#39;</h1>
@@ -20191,7 +20191,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -20200,7 +20200,7 @@ null</code></pre>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22019,7 +22019,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-first"><code>sl-first</code></a></li>
+    <li><a href="#function-sl-flatten"><code>sl-flatten</code></a></li>
   
 
 
@@ -22028,7 +22028,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-flatten"><code>sl-flatten</code></a></li>
+    <li><a href="#function-sl-first"><code>sl-first</code></a></li>
   
 
 
@@ -22055,7 +22055,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
+    <li><a href="#function-sl-is-symmetrical"><code>sl-is-symmetrical</code></a></li>
   
 
 
@@ -22064,7 +22064,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-is-symmetrical"><code>sl-is-symmetrical</code></a></li>
+    <li><a href="#function-sl-last"><code>sl-last</code></a></li>
   
 
 
@@ -22154,7 +22154,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
+    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
   
 
 
@@ -22163,7 +22163,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-shuffle"><code>sl-shuffle</code></a></li>
+    <li><a href="#function-sl-reverse"><code>sl-reverse</code></a></li>
   
 
 
@@ -22190,7 +22190,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
+    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
   
 
 
@@ -22199,7 +22199,7 @@ e.g. <code>@each $index, $value in to-map($list)</code></p>
 
     
 
-    <li><a href="#function-sl-union"><code>sl-union</code></a></li>
+    <li><a href="#function-sl-to-string"><code>sl-to-string</code></a></li>
   
 
 
